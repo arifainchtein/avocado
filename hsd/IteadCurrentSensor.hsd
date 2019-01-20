@@ -11,7 +11,7 @@
             "Name":"BatteryOutputCurrent",
             "Units":"mA",
             "Value Type":"double",
-            "Sensor Request Position":2,
+            "Sensor Request Queue Position":2,
             "Range Maximum":1000,
             "Range Minimum":0,
             "Initial Value":0,

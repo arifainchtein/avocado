@@ -11,7 +11,7 @@
             "Name": "InternalBatteryVoltage",
             "Units":"Volts",
             "Value Type":"double",
-            "Sensor Request Position":1,
+            "Sensor Request Queue Position":1,
             "Range Maximum":15,
             "Range Minimum":11,
             "Initial Value":0,

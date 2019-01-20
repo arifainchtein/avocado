@@ -11,7 +11,7 @@
             "Name":"Lock Voltage",
             "Units":"Volts",
             "Value Type":"double",
-            "Sensor Request Position":3,
+            "Sensor Request Queue Position":3,
             "Range Maximum":5.5,
             "Range Minimum":0.0,
             "Initial Value":0,

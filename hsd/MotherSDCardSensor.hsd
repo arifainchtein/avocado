@@ -10,7 +10,7 @@
             "Name":"TotalDiskUse",
             "Units":"Kb",
             "Value Type":"long",
-            "Sensor Request Position":13,
+            "Sensor Request Queue Position":13,
             "Range Maximum":100000,
             "Range Minimum":0,
             "Initial Value":0,
