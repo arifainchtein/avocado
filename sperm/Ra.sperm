@@ -1,0 +1,646 @@
+{
+	"Sperm": {
+		"Purpose": {
+			"Teleonome Name": "Ra",
+			"Purpose Type": "Mutate",
+			"Description":"The sperm that mutates Ra"
+		},
+		"Hypothalamus": {
+			"Actions":[{
+                "Target": "@Ra:Human Interface",
+                "Dene Type": "Create Dene Chain",
+                "DeneWords": [
+                    {
+                        "Required": true,
+                        "Value": true,
+                        "Name": "Active",
+                        "Value Type": "boolean"
+                    },
+                    {
+                        "Required": true,
+                        "Value": 1,
+                        "Name": "Execution Position",
+                        "Value Type": "int"
+                    },
+                    {
+                        "Required": true,
+                        "Value": "Pre Homebox Insertion",
+                        "Name": "Execution Point",
+                        "Value Type": "Dene Pointer"
+                    },
+                    {
+                        "Required": true,
+                        "Value": "Action Evaluation Increment Generator Running Time Action",
+                        "Name": "DeneChain Name",
+                        "Value Type": "String"
+                    }
+                ],
+                "Name": "Create Action Evaluation Increment Generator Running Time Action DeneChain"
+            }],
+			"Homeoboxes": [
+				{
+					"Name": "Add Generator Running Time Update",
+					"Denes": [
+						{
+                            "Name": "Metadata",
+                            "Dene Type": "Homeobox Metadata",
+							"Target": "",
+							"DeneWords": [
+                                {
+                                    "Name":"Created On",
+                                    "Value":"05/06/2018",
+                                    "Value Type":"Date",
+                                    "Required":true
+                                },
+                                {
+                                    "Name":"Description",
+                                    "Value":"This homebox adds adds the action to increment the seconds running when the generator is running",
+                                    "Value Type":"String",
+                                    "Required":true
+                                }
+							]
+                        },
+                        {
+							"Name": "Homeobox Index",
+							"Dene Type": "Homebox Index",
+							"DeneWords": [
+                                {
+                                    "Name": "Increment Generator Running Time Action",
+                                    "DeneWord Type": "Hox Dene Pointer",
+                                    "Value": "@Sperm:Hypothalamus:Add Generator Running Time Update:Increment Generator Running Time Action",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Name": "Increment Generator Running Time Action",
+                                    "DeneWord Type": "Hox Dene Pointer",
+                                    "Value": "@Sperm:Hypothalamus:Add Generator Running Time Update:Increment Generator Running Time",
+                                    "Value Type": "Dene Pointer"
+                                }
+                            ]
+						},
+						{
+                            "Name": "DeneWord Carrier For Virtual Actuator Actions",
+                            "Dene Type": "DeneWord Carrier",
+							"Target": "@Ra:Internal:Actuators:Virtual Actuator Actions",
+							"DeneWords": [
+                                    {
+                                        "Target": "@Ra:Internal:Actuators:Virtual Actuator Actions",
+                                        "Required": true,
+                                        "DeneWord Type": "Action",
+                                        "Value": "@Ra:Internal:Actuators:Increment Generator Running Time Action",
+                                        "Name": "Increment Increment Generator Running Time Action",
+                                        "Value Type": "Dene Pointer"
+                                    }
+                            ]
+                        },
+                        {
+                            "Target":"@Ra:Internal:Actuators",
+                            "Dene Type": "Action",
+                            "DeneWords": [
+                                {
+                                    "Required": true,
+                                    "Value": "VirtualActuator",
+                                    "Name": "Codon",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": 10,
+                                    "Name": "Evaluation Position",
+                                    "Value Type": "int"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": true,
+                                    "Name": "Active",
+                                    "Value Type": "boolean"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": "@Ra:Internal:Actuators:Increment Generator Running Time",
+                                    "Name": "Actuator Command Code True Expression",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": "(!GeneratorStatusCondition && !CurrentLoadCondition)",
+                                    "Name": "Expression",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": true,
+                                    "DeneWord Type": "Actuator Condition Pointer",
+                                    "Value": "@Ra:Internal:Actuators:Generator Status Condition",
+                                    "Name": "GeneratorStatusCondition",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": true,
+                                    "DeneWord Type": "Actuator Condition Pointer",
+                                    "Value": "@Ra:Internal:Actuators:Current Load Condition",
+                                    "Name": "CurrentLoadCondition",
+                                    "Value Type": "Dene Pointer"
+                                }
+                                
+                            ],
+                            "Name": "Increment Generator Running Time Action"
+                        },
+                        {
+                            "Target":"@Ra:Internal:Actuators",
+                            "DeneWords": [
+                                {
+                                    "Required": true,
+                                    "Value": "VirtualActuator",
+                                    "Name": "Codon",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": true,
+                                    "Name": "Active",
+                                    "Value Type": "boolean"
+                                },
+                                {
+                                    "Required": true,
+                                    "DeneWord Type": "DeneWord Operation Variable",
+                                    "Value": "@Ra:Purpose:Operational Data:Generator:Generator Running Time",
+                                    "Default": 0,
+                                    "Name": "CurrentGeneratorRunningTime",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": true,
+                                    "DeneWord Type": "DeneWord Operation Variable",
+                                    "Value": "$Current_Timestamp_Millis",
+                                    "Default": 0,
+                                    "Name": "CurrentPulseMilliSeconds",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": true,
+                                    "DeneWord Type": "DeneWord Operation Variable",
+                                    "Value": "$Previous_Pulse_Millis",
+                                    "Default": 0,
+                                    "Name": "PreviousPulseMilliseconds",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": "CurrentGeneratorRunningTime + (CurrentPulseMilliSeconds-PreviousPulseMilliseconds)/600000",
+                                    "Name": "Expression",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": true,
+                                    "DeneWord Type": "DeneWord Operation Destination",
+                                    "Value": "@Ra:Purpose:Operational Data:Generator:Generator Running Time",
+                                    "Name": "Destination",
+                                    "Value Type": "Dene Pointer"
+                                }
+                            ],
+                            "Name": "Increment Generator Running Time"
+                        }
+					]
+                },
+                {
+					"Name": "Add Increment Generator Running Time Action",
+					"Denes": [
+						{
+                            "Name": "Metadata",
+                            "Dene Type": "Homeobox Metadata",
+							"Target": "",
+							"DeneWords": [
+                                {
+                                    "Name":"Created On",
+                                    "Value":"06/06/2018",
+                                    "Value Type":"Date",
+                                    "Required":true
+                                },
+                                {
+                                    "Name":"Description",
+                                    "Value":"This homeobox adds adds the necesary info to add an Action Evaluation Report to the Diagnostic Page",
+                                    "Value Type":"String",
+                                    "Required":true
+                                }
+							]
+                        },
+                        {
+							"Name": "Homeobox Index",
+							"Dene Type": "Homebox Index",
+							"DeneWords": [
+                                {
+                                    "Name": "Increment Generator Running Time Action",
+                                    "DeneWord Type": "Hox Dene Pointer",
+                                    "Value": "@Sperm:Hypothalamus:Add Increment Generator Running Time Action:Action Evaluation Increment Generator Running Time Action",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Name": "Increment Generator Running Time Action",
+                                    "DeneWord Type": "Hox Dene Pointer",
+                                    "Value": "@Sperm:Hypothalamus:Add Increment Generator Running Time Action:Dene Data Source",
+                                    "Value Type": "Dene Pointer"
+                                }
+                            ]
+						},
+                        {
+                            "Target":"@Ra:Human Interface:Diagnostics Page",
+                           "DeneWords": [
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Panel DeneChain Pointer",
+                                    "Value": "@Ra:Human Interface:Action Evaluation Increment Generator Running Time Action",
+                                    "Name": "Action Evaluation Turn Generator On Pointer",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Panel Visualization Style",
+                                    "Value": "Action Evaluation Report",
+                                    "Name": "Action Evaluation Turn Generator On",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": true,
+                                    "DeneWord Type": "Panel In Page Position",
+                                    "Value": 3,
+                                    "Name": "Panel In Page Position",
+                                    "Value Type": "int"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": true,
+                                    "Name": "Visible",
+                                    "Value Type": "boolean"
+                                }
+                            ],
+                            "Name": "Action Evaluation Increment Generator Running Time Action"
+                        },
+                        {
+                           "Target":"@Ra:Human Interface:Action Evaluation Increment Generator Running Time Action",
+                            "DeneWords": [{
+                                "Required": "true",
+                                "DeneWord Type": "Panel Data Source Pointer",
+                                "Value": "@Ra:Internal:Actuators:Increment Generator Running Time Action",
+                                "Name": "Action Evaluation Increment Generator Running Time Action",
+                                "Value Type": "Dene Pointer"
+                            }],
+                            "Name": "Dene Data Source"
+                        }
+					]
+                },
+                {
+					"Name": "Add Generator UI Info",
+					"Denes": [
+						{
+                            "Name": "Metadata",
+                            "Dene Type": "Homeobox Metadata",
+							"Target": "",
+							"DeneWords": [
+                                {
+                                    "Name":"Created On",
+                                    "Value":"06/06/2018",
+                                    "Value Type":"Date",
+                                    "Required":true
+                                },
+                                {
+                                    "Name":"Description",
+                                    "Value":"This homebox adds aa couple of values to the generator pael in the home page",
+                                    "Value Type":"String",
+                                    "Required":true
+                                }
+							]
+                        },
+                        {
+							"Name": "Homeobox Index",
+							"Dene Type": "Homebox Index",
+							"DeneWords": []
+						},
+						{
+                            "Name": "DeneWord Carrier For Generator Turned Off Action Success Tasks True Expression",
+                            "Dene Type": "DeneWord Carrier",
+							"Target": "@Ra:Internal:Actuators",
+							"DeneWords": [
+                                {
+                                    "Target": "@Ra:Human Interface:Generator:Generator Running Time:Visible",
+                                    "DeneWord Type": "Update DeneWord Value",
+                                    "Value": false,
+                                    "Name": "Set Generator Running Time Visible",
+                                    "Value Type": "boolean"
+                                },
+                                {
+                                    "Target": "@Ra:Human Interface:Generator:Start Time:Visible",
+                                    "DeneWord Type": "Update DeneWord Value",
+                                    "Value": false,
+                                    "Name": "Set Generator Running Time Visible",
+                                    "Value Type": "boolean"
+                                }
+                            ]
+                        },
+						{
+                            "Name": "DeneWord Carrier For Generator Turned Off Action Success Tasks True Expression",
+                            "Dene Type": "DeneWord Carrier",
+							"Target": "@Ra:Internal:Actuators:Generator Turned Off Action Success Tasks True Expression",
+							"DeneWords": [
+                                {
+                                    "Target": "@Ra:Human Interface:Generator:Generator Running Time:Visible",
+                                    "DeneWord Type": "Update DeneWord Value",
+                                    "Value": false,
+                                    "Name": "Set Generator Running Time Visible",
+                                    "Value Type": "boolean"
+                                },
+                                {
+                                    "Target": "@Ra:Human Interface:Generator:Start Time:Visible",
+                                    "DeneWord Type": "Update DeneWord Value",
+                                    "Value": false,
+                                    "Name": "Set Generator Running Time Visible",
+                                    "Value Type": "boolean"
+                                }
+                            ]
+                        },
+						{
+                            "Name": "DeneWord Carrier For Generator Turned On Action Success Tasks True Expression",
+                            "Dene Type": "DeneWord Carrier",
+							"Target": "@Ra:Internal:Actuators:Generator Turned On Action Success",
+							"DeneWords": [
+                                {
+                                    "Target": "@Ra:Human Interface:Generator:Start Time:Visible",
+                                    "DeneWord Type": "Update DeneWord Value",
+                                    "Value": true,
+                                    "Name": "Set Generator Running Time Visible",
+                                    "Value Type": "boolean"
+                                }
+                            ]
+                        }
+					]
+                },
+                {
+					"Name": "Add Generator Run Mnemosyne Today",
+					"Denes": [
+						{
+                            "Name": "Metadata",
+                            "Dene Type": "Homeobox Metadata",
+							"Target": "",
+							"DeneWords": [
+                                {
+                                    "Name":"Created On",
+                                    "Value":"08/06/2018",
+                                    "Value Type":"Date",
+                                    "Required":true
+                                },
+                                {
+                                    "Name":"Description",
+                                    "Value":"This homebox adds the ability to keep a running daily total of the generator operation.  It is reset at midnight",
+                                    "Value Type":"String",
+                                    "Required":true
+                                }
+							]
+                        },
+                        {
+							"Name": "Homeobox Index",
+							"Dene Type": "Homebox Index",
+							"DeneWords": [
+                                
+                                {
+                                    "Name": "Generator Use Daily Total",
+                                    "DeneWord Type": "Hox Dene Pointer",
+                                    "Value": "@Sperm:Hypothalamus:Add Generator Run Mnemosyne Today:Aggregate Total Seconds for Daily Generator Use",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Name": "Generator Use Daily Total",
+                                    "DeneWord Type": "Hox Dene Pointer",
+                                    "Value": "@Sperm:Hypothalamus:Add Generator Run Mnemosyne Today:Generator Today Running Seconds",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Name": "Generator Use Daily Total",
+                                    "DeneWord Type": "Hox Dene Pointer",
+                                    "Value": "@Sperm:Hypothalamus:Add Generator Run Mnemosyne Today:Generator Today Running Time",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Name": "Generator Use Daily Total",
+                                    "DeneWord Type": "Hox Dene Pointer",
+                                    "Value": "@Sperm:Hypothalamus:Add Generator Run Mnemosyne Today:Transform TodayTotalGeneratorTime",
+                                    "Value Type": "Dene Pointer"
+                                }
+                            ]
+						},
+						{
+                            "Name": "DeneWord Carrier For Aggregated Generator Time Today",
+                            "Dene Type": "DeneWord Carrier",
+							"Target": "@Ra:Mnemosyne:Mnemosyne Today:Aggregated Generator Time Today",
+							"DeneWords": [
+                                {
+                                    "Required": true,
+                                    "Value": 950,
+                                    "Default": 0,
+                                    "Units": "seconds",
+                                    "Name": "TodayTotalGeneratorSeconds",
+                                    "Value Type": "int"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": "03:04:17",
+                                    "Default": 0,
+                                    "Name": "TodayTotalGeneratorTime",
+                                    "Value Type": "String"
+                                }
+                            ]
+                        },
+						{
+                            "Name": "DeneWord Carrier For Generator Turned Off Mnemosyne Operations True Expression",
+                            "Dene Type": "DeneWord Carrier",
+							"Target": "@Ra:Internal:Actuators:Generator Turned Off Mnemosyne Operations True Expression",
+							"DeneWords": [
+                                {
+                                    "DeneWord Type": "Mnemosyne Operation",
+                                    "Value": "@Ra:Internal:Actuators:Aggregate Total Seconds for Daily Generator Use",
+                                    "Name": "Aggregate Mnemosyne Today Generator Use",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "DeneWord Type": "Mnemosyne Operation",
+                                    "Value": "@Ra:Internal:Actuators:Transform TodayTotalGeneratorTime",
+                                    "Name": "Transform TodayTotalGeneratorTime",
+                                    "Value Type": "Dene Pointer"
+                                }
+                            ]
+                        },
+                        {
+                            "Name": "DeneWord Remover For Mnemosyne today",
+                            "Dene Type": "DeneWord Remover",
+							"DeneWords": [
+                            {
+                                "Required": "true",
+                                "Value": "@Ra:Mnemosyne:Mnemosyne Today:Aggregated Generator Time Today:Bore Pump Aggregated Volume Today",
+                                "Name": "Aggregated Generator Time Today",
+                                "Value Type": "String"
+                            }
+							]
+                        },
+                        {
+                            "Target":"@Ra:Internal:Actuators",
+                            "Dene Type": "Mnemosyne Update Value Operation",
+                            "Timestamp Milliseconds": 1509088420514,
+                            "DeneWords": [
+                                {
+                                    "Required": true,
+                                    "Value": 3,
+                                    "Name": "Execution Position",
+                                    "Value Type": "int"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": "DeneWord Aggregation",
+                                    "Name": "Operation",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": true,
+                                    "DeneWord Type": "Mnemosyne Target",
+                                    "Value": "@Ra:Mnemosyne:Mnemosyne Today:Aggregated Generator Time Today:TodayTotalGeneratorSeconds",
+                                    "Name": "TodayTotalGeneratorSeconds",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": true,
+                                    "DeneWord Type": "Create DeneWord Source",
+                                    "Value": 0,
+                                    "Name": "Bore Pump Aggregated Volume",
+                                    "Value Type": "double"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": "@Ra:Mnemosyne:Mnemosyne Today:Aggregated Generator Time Today:TodayTotalGeneratorSeconds",
+                                    "Default": 0,
+                                    "Name": "Aggregate From",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": true,
+                                    "DeneWord Type": "Create DeneWord",
+                                    "Value": "@Ra:Purpose:Operational Data:Generator:Generator Running Time",
+                                    "Name": "Aggregate Value",
+                                    "Value Type": "Dene Pointer"
+                                }
+                            ],
+                            "Timestamp": "28/10/2017 11:30:26",
+                            "Name": "Aggregate Total Seconds for Daily Generator Use"
+                        },
+                        {
+                            "Target":"@Ra:Human Interface:Generator",
+                            "DeneWords": [
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Panel Data Source Pointer",
+                                    "Value": "@Ra:Mnemosyne:Mnemosyne Today:Aggregated Generator Time Today:TodayTotalGeneratorSeconds",
+                                    "Name": "Battery Voltage",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": true,
+                                    "DeneWord Type": "Panel In Panel Position",
+                                    "Value": 4,
+                                    "Name": "Panel In Panel Position",
+                                    "Value Type": "int"
+                                },
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Panel Display Name",
+                                    "Value": "Today",
+                                    "Name": "Display Name",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": true,
+                                    "Name": "Visible",
+                                    "Value Type": "int"
+                                }
+                            ],
+                            "Name": "Generator Today Running Seconds"
+                        },
+                        {
+                            "Target":"@Ra:Human Interface:Generator",
+                            "DeneWords": [
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Panel Data Source Pointer",
+                                    "Value": "@Ra:Mnemosyne:Mnemosyne Today:Aggregated Generator Time Today:TodayTotalGeneratorTime",
+                                    "Name": "TodayTotalGeneratorTime",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": true,
+                                    "DeneWord Type": "Panel In Panel Position",
+                                    "Value": 5,
+                                    "Name": "Panel In Panel Position",
+                                    "Value Type": "int"
+                                },
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Panel Display Name",
+                                    "Value": "Run Today",
+                                    "Name": "Display Name",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": true,
+                                    "Name": "Visible",
+                                    "Value Type": "int"
+                                }
+                            ],
+                            "Name": "Generator Today Running Time"
+                        },
+                        {
+                            "Target":"@Ra:Internal:Actuators",
+                            "Dene Type": "Mnemosyne Update Value Operation",
+                            "DeneWords": [
+                                {
+                                    "Required": true,
+                                    "Value": 4,
+                                    "Name": "Execution Position",
+                                    "Value Type": "int"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": "DeneWord Transformation",
+                                    "Name": "Operation",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": "Transformation Function Seconds To Elapsed Time",
+                                    "Name": "Function",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": true,
+                                    "DeneWord Type": "Mnemosyne Target",
+                                    "Value": "@Ra:Mnemosyne:Mnemosyne Today:Aggregated Generator Time Today:TodayTotalGeneratorTime",
+                                    "Name": "Generator Elapsed Time",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": true,
+                                    "DeneWord Type": "Transformation Data Source",
+                                    "Value": "@Ra:Mnemosyne:Mnemosyne Today:Aggregated Generator Time Today:TodayTotalGeneratorSeconds",
+                                    "Name": "Generator Elapsed Time",
+                                    "Value Type": "Dene Pointer"
+                                }
+                            ],
+                            "Timestamp": "28/10/2017 11:30:26",
+                            "Name": "Transform TodayTotalGeneratorTime"
+                        }
+                        
+					]
+                }],
+            "Mutations":[]
+		},
+		"Medula": {
+			"Mutations": [{}]
+		}
+	}
+}

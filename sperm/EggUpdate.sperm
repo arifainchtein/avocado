@@ -1,0 +1,630 @@
+{
+	"Sperm": {
+		"Purpose": {
+			"Name": "Egg",
+			"Purpose Type": "Mutate",
+			"Description":"Every homebox represents a set of functionally added to the egg"
+		},
+		"Hypothalamus": {
+			"Actions":[
+                {
+                    "Target": "@Egg:Human Interface",
+                    "Dene Type": "Create Dene Chain",
+                    "DeneWords": [
+                        {
+                            "Required": true,
+                            "Value": true,
+                            "Name": "Active",
+                            "Value Type": "boolean"
+                        },
+                        {
+                            "Required": true,
+                            "Value": 1,
+                            "Name": "Execution Position",
+                            "Value Type": "int"
+                        },
+                        {
+                            "Required": true,
+                            "Value": "Pre Homebox Insertion",
+                            "Name": "Execution Point",
+                            "Value Type": "Dene Pointer"
+                        },
+                        {
+                            "Required": true,
+                            "Value": "System Info Table Panel",
+                            "Name": "DeneChain Name",
+                            "Value Type": "String"
+                        }
+                    ],
+                    "Name": "Create System Info Table Panel DeneChain"
+                }
+            ],
+			"Homeoboxes": [
+				{
+					"Name": "Adding Persistence DeneWords",
+					"Denes": [
+						{
+                            "Name": "Metadata",
+                            "Dene Type": "Homeobox Metadata",
+							"Target": "",
+							"DeneWords": [
+                                {
+                                    "Name":"Created On",
+                                    "Value":"17/04/2018",
+                                    "Value Type":"Date",
+                                    "Required":true
+                                },
+                                {
+                                    "Name":"Description",
+                                    "Value":"This homeobox adds the two persistence denewords that control whether the pulses and organism pulses get stored to the postgres ",
+                                    "Value Type":"String",
+                                    "Required":true
+                                }
+							]
+                        },
+                        {
+							"Name": "Homeobox Index",
+							"Dene Type": "Homebox Index",
+							"DeneWords": []
+						},
+						{
+                            "Name": "DeneWord Carrier For Vital",
+                            "Dene Type": "DeneWord Carrier",
+							"Target": "@Egg:Internal:Descriptive:Vital",
+							"DeneWords": [
+                                {
+                                    "Name":"Persist Organism Pulse",
+                                    "Value":true,
+                                    "Value Type":"boolean",
+                                    "Required":true
+                                },
+                                {
+                                    "Name":"Persist Pulse",
+                                    "Value":true,
+                                    "Value Type":"boolean",
+                                    "Required":true
+                                }
+							]
+						}
+					]
+                },
+                {
+                    "Name":"Adding Mnemosycons",
+                    "Denes":[
+                        {
+                            "Target": "@Egg:Internal:Mnemosycons",
+                            "Dene Type":"Mnemosycon Team Definition",
+                            "DeneWords":[
+                                {
+                                    "DeneWord Type":"Mnemosycon Team Member",
+                                    "Name":"Team Member 1",
+                                     "Required": true,
+                                    "Value": "Sento",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "DeneWord Type":"Mnemosycon Team Member",
+                                    "Name":"Team Member 1",
+                                     "Required": true,
+                                    "Value": "Ra",
+                                    "Value Type": "String"
+                                }
+
+                            ],
+                            "Name":"Mnemosycon Team Definition"
+                        },
+                        {
+                            "Target": "@Egg:Internal:Mnemosycons",
+                            "Dene Type": "Mnemosycon",
+                            "DeneWords": [
+                                {
+                                    "Required": true,
+                                    "Value": "Forget Me",
+                                    "Name": "Codon",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": "@Sento:Internal:Mnemosycons:Forget Me Configuration",
+                                    "Name": "Mnemosyne Analysis Profile",
+                                    "Value Type": "Dene Pointer",
+                                    "DeneWord Type":"Mnemosycon Profile Pointer"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": 1,
+                                    "Units": "Dimensionless",
+                                    "Name": "Execution Position",
+                                    "Value Type": "int"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": false,
+                                    "Name": "Active",
+                                    "Value Type": "boolean"
+                                }
+                            ],
+                            "Name": "Forget Me"
+                        },
+                        {
+                            "Target": "@Egg:Internal:Mnemosycons",
+                            "Dene Type": "Mnemosyne Processing Info",
+                            "DeneWords": [
+                                 {
+                                    "Required": true,
+                                    "Value": "Forget Me",
+                                    "Name": "Codon",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "DeneWord Type": "Mnemosyne Function",
+                                    "Required": true,
+                                    "Value": "forget",
+                                    "Name": "Forget Function",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "DeneWord Type": "Mnemosycon Forget Aproach",
+                                    "Required": true,
+                                    "Value": "Percentage Database To Disk",
+                                    "Name": "Expression",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "DeneWord Type": "Mnemosycon Pathology Mnemosyne Location",
+                                    "Required": true,
+                                    "Value": "@Sento:Mnemosyne:Mnemosyne Today",
+                                    "Name": "Pathology Mnemosyne Location",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": 50,
+                                    "Name": "Maximum Percentage",
+                                    "Value Type": "int"
+                                },
+                                {
+                                     "DeneWord Type": "Mnemosycon Rules List Pointer",
+                                     "Required": true,
+                                    "Value": "@Sento:Internal:Mnemosycons:Forget Me Rules List",
+                                    "Name": "Forget Me Rules List",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                     "DeneWord Type": "Mnemosycon Success Tasks Pointer",
+                                     "Required": true,
+                                    "Value": "@Sento:Internal:Mnemosycons:Forget Me Success Tasks",
+                                    "Name": "Forget Me Success Tasks",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                     "DeneWord Type": "Mnemosycon Failure Tasks Pointer",
+                                     "Required": true,
+                                    "Value": "@Sento:Internal:Mnemosycons:Forget Me Failure Tasks",
+                                    "Name": "Forget Me Failure Tasks",
+                                    "Value Type": "Dene Pointer"
+                                }
+                            ],
+                            "Name": "Forget Me Configuration"
+                        },
+                        {
+                            "Target": "@Egg:Internal:Mnemosycons",
+                            "DeneType":"Mnemosycon Rules List",
+                            "DeneWords":[
+                                {
+                                    "Required": true,
+                                    "Value": "Forget Me",
+                                    "Name": "Codon",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "DeneWord Type": "Mnemosycon Rule Pointer",
+                                    "Required": true,
+                                    "Value": "@Sento:Internal:Mnemosycons:Self Rule",
+                                    "Name": "Self Rule",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "DeneWord Type": "Mnemosycon Rule Pointer",
+                                    "Required": true,
+                                    "Value": "@Sento:Internal:Mnemosycons:Not Team Rule",
+                                    "Name": "Not Team Rule",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "DeneWord Type": "Mnemosycon Rule Pointer",
+                                    "Required": true,
+                                    "Value": "@Sento:Internal:Mnemosycons:Team 7 Day Rule",
+                                    "Name": "Team 7 Day Rule",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "DeneWord Type": "Mnemosycon Rule Pointer",
+                                    "Required": true,
+                                    "Value": "@Sento:Internal:Mnemosycons:Team 1 Day Rule",
+                                    "Name": "Team 1 Day Rule",
+                                    "Value Type": "Dene Pointer"
+                                }
+                            ],
+                            "Name":"Forget Me Rules List"                            	
+                        },
+                        {
+                            "Target": "@Egg:Internal:Mnemosycons",
+                            "DeneType":"Mnemosycon Rule",
+                            "DeneWords":[
+                                {
+                                    "DeneWord Type": "Mnemosycon Rule Source",
+                                    "Required": true,
+                                    "Value": "OrganismPulse",
+                                    "Name": "Source",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "DeneWord Type": "Mnemosycon Rule Until Time Unit",
+                                    "Required": true,
+                                    "Value": "Day",
+                                    "Name": "Time Unit",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "DeneWord Type": "Mnemosycon Rule Until Time Value",
+                                    "Required": true,
+                                    "Value":7,
+                                    "Name": "Time Unit Value",
+                                    "Value Type": "int"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": 1,
+                                    "Name": "Execution Position",
+                                    "Value Type": "int"
+                                },
+                                {
+                                    "DeneWord Type": "Team Parameter",
+                                    "Required": true,
+                                    "Value": "Not Team", 
+                                    "Name": "Team Parameter",
+                                    "Value Type": "String"
+                                }
+                            ],
+                            "Name":"Not Team Rule"                          	
+                        },
+                        {
+                            "Target": "@Egg:Internal:Mnemosycons",
+                            "DeneType":"Mnemosycon Rule",
+                            "DeneWords":[
+                                {
+                                    "DeneWord Type": "Mnemosycon Rule Source",
+                                    "Required": true,
+                                    "Value": "OrganismPulse",
+                                    "Name": "Source",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "DeneWord Type": "Mnemosycon Rule Until Time Unit",
+                                    "Required": true,
+                                    "Value": "Day",
+                                    "Name": "Time Unit",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "DeneWord Type": "Mnemosycon Rule Until Time Value",
+                                    "Required": true,
+                                    "Value":7,
+                                    "Name": "Time Unit",
+                                    "Value Type": "int"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": 2,
+                                    "Name": "Execution Position",
+                                    "Value Type": "int"
+                                },
+                                {
+                                    "DeneWord Type": "Team Parameter",
+                                    "Required": true,
+                                    "Value": "Team",
+                                    "Name": "Team Parameter",
+                                    "Value Type": "String"
+                                }
+                            ],
+                            "Name":"Team 7 Day Rule"                            	
+                        },
+                        {
+                            "Target": "@Egg:Internal:Mnemosycons",
+                            "DeneType":"Mnemosycon Rule",
+                            "DeneWords":[
+                                {
+                                    "DeneWord Type": "Mnemosycon Rule Source",
+                                    "Required": true,
+                                    "Value": "OrganismPulse",
+                                    "Name": "Source",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "DeneWord Type": "Mnemosycon Rule Until Time Unit",
+                                    "Required": true,
+                                    "Value": "Day",
+                                    "Name": "Time Unit",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "DeneWord Type": "Mnemosycon Rule Until Time Value",
+                                    "Required": true,
+                                    "Value":1,
+                                    "Name": "Time Unit",
+                                    "Value Type": "int"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": 3,
+                                    "Name": "Execution Position",
+                                    "Value Type": "int"
+                                },
+                                {
+                                    "DeneWord Type": "Team Parameter",
+                                    "Required": true,
+                                    "Value": "Team",
+                                    "Name": "Team Parameter",
+                                    "Value Type": "String"
+                                }
+                            ],
+                            "Name":"Team 1 Day Rule"                            	
+                        },
+                        {
+                            "Target": "@Egg:Internal:Mnemosycons",
+                            "DeneType":"Mnemosycon Rule",
+                            "DeneWords":[
+                                {
+                                    "DeneWord Type": "Mnemosycon Rule Source",
+                                    "Required": true,
+                                    "Value": "Pulse",
+                                    "Name": "Source",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "DeneWord Type": "Mnemosycon Rule Until Time Unit",
+                                    "Required": true,
+                                    "Value": "Week",
+                                    "Name": "Time Unit",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "DeneWord Type": "Mnemosycon Rule Until Time Value",
+                                    "Required": true,
+                                    "Value": 1,
+                                    "Name": "Time Unit",
+                                    "Value Type": "int"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": 4,
+                                    "Name": "Execution Position",
+                                    "Value Type": "int"
+                                }
+                            ],
+                            "Name":"Self Rule"                            	
+                        },
+                        {
+                            "Target": "@Egg:Internal:Mnemosycons",
+                            "DeneWords": [
+                                {
+                                    "Target": "@Sento:Internal:Mnemosycons:Forget Me:Active",
+                                    "DeneWord Type": "Update DeneWord Value",
+                                    "Value": false,
+                                    "Name": "Update Active",
+                                    "Value Type": "boolean"
+                                }
+                            ],
+                            "Name": "Forget Me Success Tasks"
+                        }
+                    ]
+                },
+                {
+					"Name": "Adding System Info",
+					"Denes": [
+						{
+                            "Name": "Metadata",
+                            "Dene Type": "Homeobox Metadata",
+							"Target": "",
+							"DeneWords": [
+                                {
+                                    "Name":"Created On",
+                                    "Value":"22/04/2018",
+                                    "Value Type":"Date",
+                                    "Required":true
+                                },
+                                {
+                                    "Name":"Description",
+                                    "Value":"This homeobox adds the System Info table to the Diagnostics Page",
+                                    "Value Type":"String",
+                                    "Required":true
+                                }
+							]
+                        },
+                        {
+							"Name": "Homeobox Index",
+							"Dene Type": "Homebox Index",
+							"DeneWords": [
+                                {
+									"Name": "Generator",
+									"DeneWord Type": "Hox Dene Pointer",
+									"Value": "@Sperm:Hypothalamus:Adding System Info:System Info Panel",
+									"Value Type": "Dene Pointer"
+                                },
+                                {
+									"Name": "Generator",
+									"DeneWord Type": "Hox Dene Pointer",
+									"Value": "@Sperm:Hypothalamus:Adding System Info:System Info Table Data",
+									"Value Type": "Dene Pointer"
+								}
+                            ]
+                        },
+                        {
+                            "Target": "@Egg:Human Interface:System Info Table Panel",
+                            "DeneWords": [
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Panel DeneChain Pointer",
+                                    "Value": "@Egg:Human Interface:System Info Table Panel",
+                                    "Name": "System Info Table Pointer",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Panel Visualization Style",
+                                    "Value": "DeneWord Table",
+                                    "Name": "System Info Table Style",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": true,
+                                    "DeneWord Type": "Panel In Page Position",
+                                    "Value": 1,
+                                    "Name": "Panel In Page Position",
+                                    "Value Type": "int"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": true,
+                                    "Name": "Visible",
+                                    "Value Type": "boolean"
+                                }
+                            ],
+                            "Name": "System Info Panel"
+                        },
+                        {
+                            "Target": "@Egg:Human Interface:System Info Table Panel",
+                            "DeneWords": [
+                                {
+                                    "Required": "true",
+                                    "Value": "System Info",
+                                    "Name": "Panel Title",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Display Table DeneWord Pointer",
+                                    "Value": "@Egg:internal:Descriptive:Computer Info:uname info",
+                                    "Name": "uname info ",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Display Table DeneWord Pointer",
+                                    "Value": "@Egg:internal:Descriptive:Computer Info:Distributor ID",
+                                    "Name": "Distributor ID",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Display Table DeneWord Pointer",
+                                    "Value": "@Egg:internal:Descriptive:Computer Info:Codename",
+                                    "Name": "Codename",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Display Table DeneWord Pointer",
+                                    "Value": "@Egg:Purpose:Operational Data:Vital:Current Pulse Frequency",
+                                    "Name": "Current Pulse Frequency",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Display Table DeneWord Pointer",
+                                    "Value": "@Egg:Purpose:Operational Data:Vital:Pulse Size Kb",
+                                    "Name": "Pulse Size Kb",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Display Table DeneWord Pointer",
+                                    "Value": "@Egg:Purpose:Operational Data:System Data:Hypothalamus Build Number",
+                                    "Name": "Hypothalamus Build Number",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Display Table DeneWord Pointer",
+                                    "Value": "@Egg:Purpose:Operational Data:System Data:Heart Build Number",
+                                    "Name": "Heart Build Number",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Display Table DeneWord Pointer",
+                                    "Value": "@Egg:Purpose:Operational Data:System Data:Medula Build Number",
+                                    "Name": "Medula Build Number",
+                                    "Value Type": "Dene Pointer"
+                                }
+                            ],
+                            "Name": "System Info Table Data"
+                        }
+					]
+                }
+            ],
+            "Mutations":[
+                {
+                    "Active": true,
+                    "Execution Mode": "Immediate",
+                    "Invocation Mode": "Time",
+                    "Mutation Event Timestamp": "",
+                    "DeneChains": [
+                    {
+                        "Denes": [{
+                            "Dene Type": "Set DeneWord",
+                            "DeneWords": [{
+                                "Target": "@Egg:Internal:Mnemosycons:Forget Me:Active",
+                                "Required": true,
+                                "Value": true,
+                                "Name": "Update Forget Me Active",
+                                "Value Type": "boolean"
+                            }],
+                            "Name": "Update Forget Me Mnemosycon"
+                        }],
+                        "Name": "On Load"
+                    }, 
+                    {
+                        "Denes": [],
+                        "Name": "Actions To Execute"
+                    }, 
+                    {
+                        "Denes": [],
+                        "Name": "Mutation Processing Logic"
+                    }, 
+                    {
+                        "Denes": [],
+                        "Name": "Mnemosyne Operations"
+                    }, {
+                        "Denes": [{
+                            "Dene Type": "Set DeneWord",
+                            "DeneWords": [
+                            {
+                                "Required": true,
+                                "Value": "Daily",
+                                "Name": "Execution Time",
+                                "Value Type": "String"
+                            },
+                            {
+                                "Required": true,
+                                "Value": 2,
+                                "Name": "Hour in Day",
+                                "Value Type": "int"
+                            }],
+                            "Name": "Time Mutation Configuration"
+                            }
+                        ],
+                        "Name":"Mutation Configuration"
+                       }
+                    ],
+                    "Mutation Type": "State",
+                    "Name": "Activate Forget Me"
+                }
+            ]
+		},
+		"Medula": {
+			"Mutations": [{}]
+		}
+	}
+}

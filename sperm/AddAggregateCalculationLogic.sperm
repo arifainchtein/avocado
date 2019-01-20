@@ -1,0 +1,244 @@
+{
+	"Sperm": {
+		"Purpose": {
+			"Teleonome Name": "Ra",
+			"Purpose Type": "Mutate",
+			"Description":"Aggregates the logic so an action es executed when the generator turns off and calculates the aggregated which is stored in the mnemosyne"
+		},
+		"Hypothalamus": {
+			"Actions":[],
+			"Homeoboxes": [
+				{
+					"Name": "Add Agregate Action",
+					"Denes": [
+						{
+                            "Name": "Metadata",
+                            "Dene Type": "Homeobox Metadata",
+							"Target": "",
+							"DeneWords": [
+                                {
+                                    "Name":"Created On",
+                                    "Value":"27/04/2018",
+                                    "Value Type":"Date",
+                                    "Required":true
+                                },
+                                {
+                                    "Name":"Description",
+                                    "Value":"Adds an action to the virtual actuators.  the action is active:false until after the generator turns off.  when this action executes, it turns itsef off",
+                                    "Value Type":"String",
+                                    "Required":true
+                                }
+							]
+                        },
+                        {
+							"Name": "Homeobox Index",
+							"Dene Type": "Homebox Index",
+							"DeneWords": [
+                                {
+                                    "Name": "Aggregate Generator Run Time Action",
+                                    "DeneWord Type": "Hox Dene Pointer",
+                                    "Value": "@Sperm:Hypothalamus:Add Agregate Action:Aggregate Generator Run Time Action",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Name": "Aggregate Generator Run Time Action Success Tasks True Expression",
+                                    "DeneWord Type": "Hox Dene Pointer",
+                                    "Value": "@Sperm:Hypothalamus:Add Agregate Action:Aggregate Generator Run Time Action Success Tasks True Expression",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Name": "Aggregate Generator Run Time",
+                                    "DeneWord Type": "Hox Dene Pointer",
+                                    "Value": "@Sperm:Hypothalamus:Add Agregate Action:Aggregate Generator Run Time",
+                                    "Value Type": "Dene Pointer"
+                                }
+                            ]
+						},
+						{
+                            "Name": "DeneWord Carrier For Vital",
+                            "Dene Type": "DeneWord Carrier",
+							"Target": "@Ra:Internal:Actuators:Virtual Actuator Actions",
+			 				"DeneWords": [
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Action",
+                                        "Value": "@Ra:Internal:Actuators:Aggregate Generator Run Time",
+                                        "Name": "Aggregate Generator Run Time",
+                                        "Value Type": "Dene Pointer"
+                                    }
+                            ]
+                        },
+						{
+                            "Name": "DeneWord Carrier For Generator",
+                            "Dene Type": "DeneWord Carrier",
+							"Target": "@Ra:Purpose:Operational Data:Generator",
+							"DeneWords": [
+                                {
+                                    "Required": true,
+                                    "Value": 123,
+                                    "Name": "Generator Start Time Millis",
+                                    "Value Type": "long"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": 123,
+                                    "Name": "Generator Stop Time Millis",
+                                    "Value Type": "long"
+                                }
+                            ]
+                        },
+						{
+                            "Name": "DeneWord Carrier For Generator Turned On Action Success Tasks",
+                            "Dene Type": "DeneWord Carrier",
+							"Target": "@Ra:Internal:Actuators:Generator Turned On Action Success Tasks",
+							"DeneWords": [
+                                    {
+                                        "Target": "@Ra:Purpose:Operational Data:Generator:Generator Start Time Millis",
+                                        "DeneWord Type": "Update DeneWord Value",
+                                        "Value": "$Current_Timestamp_Millis",
+                                        "Name": "Set Generator Start Time",
+                                        "Value Type": "String"
+                                    }
+                            ]
+                        },
+						{
+                            "Name": "DeneWord Carrier For Generator Turned Off Action Success Tasks",
+                            "Dene Type": "DeneWord Carrier",
+							"Target": "@Ra:Internal:Actuators:Generator Turned Off Action Success Tasks",
+							"DeneWords": [
+                                    {
+                                        "Target": "@Ra:Purpose:Operational Data:Generator:Generator Stop Time Millis",
+                                        "DeneWord Type": "Update DeneWord Value",
+                                        "Value": "$Current_Timestamp_Millis",
+                                        "Name": "Set Generator Stop Time",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Target": "@Ra:Internal:Actuators:Aggregate Generator Run Time Action",
+                                        "DeneWord Type": "Update DeneWord Value",
+                                        "Value": true,
+                                        "Name": "Activate Aggregate Generator Run Time Action",
+                                        "Value Type": "String"
+                                    }
+                            ]
+                        },
+                        {
+                            "Target": "@Ra:Internal:Actuators",
+                            "Dene Type": "Action",
+                            "DeneWords": [
+                                {
+                                    "Required": true,
+                                    "Value": "VirtualActuator",
+                                    "Name": "Codon",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": 10,
+                                    "Name": "Evaluation Position",
+                                    "Value Type": "int"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": false,
+                                    "Name": "Active",
+                                    "Value Type": "boolean"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": "@Ra:Internal:Actuators:Aggregate Generator Run Time",
+                                    "Name": "Actuator Command Code True Expression",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": "1==1",
+                                    "Name": "Expression",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "DeneWord Type": "Action Success Tasks",
+                                    "Value": "@Ra:Internal:Actuators:Aggregate Generator Run Time Action Success Tasks True Expression",
+                                    "Name": "Action Success Tasks True Expression",
+                                    "Value Type": "Dene Pointer"
+                                }
+                            ],
+                            "Name": "Aggregate Generator Run Time Action"
+                        },
+                        {
+                            "Target": "@Ra:Internal:Actuators",
+                           "DeneWords": [
+                                    {
+                                        "Target": "@Ra:Internal:Actuators:Aggregate Generator Run Time Action:Active",
+                                        "DeneWord Type": "Update DeneWord Value",
+                                        "Value": false,
+                                        "Name": "Activate Aggregate Generator Run Time Action",
+                                        "Value Type": "String"
+                                    }
+                            ],
+                            "Name": "Aggregate Generator Run Time Action Success Tasks True Expression"
+                        },
+                        {
+                            "Target": "@Ra:Internal:Actuators",
+                            "DeneWords": [
+                                {
+                                    "Required": true,
+                                    "Value": "VirtualActuator",
+                                    "Name": "Codon",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": true,
+                                    "Name": "Active",
+                                    "Value Type": "boolean"
+                                },
+                                {
+                                    "Required": true,
+                                    "DeneWord Type": "DeneWord Operation Variable",
+                                    "Value": "@Ra:Mnemosyne:Mnemosyne Today:Aggregated Generator Time Today:Aggregated Generator Time Today",
+                                    "Default": 0,
+                                    "Name": "AggregatedGeneratorTimeToday",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": true,
+                                    "DeneWord Type": "DeneWord Operation Variable",
+                                    "Value": "@Ra:Purpose:Operational Data:Generator:Generator Start Time Millis",
+                                    "Default": 0,
+                                    "Name": "GeneratorStartTimeMillis",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": true,
+                                    "DeneWord Type": "DeneWord Operation Variable",
+                                    "Value": "@Ra:Purpose:Operational Data:Generator:Generator Stop Time Millis",
+                                    "Default": 0,
+                                    "Name": "GeneratorStopTimeMillis",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": "AggregatedGeneratorTimeToday + (GeneratorStopTimeMillis-GeneratorStartTimeMillis)/60000",
+                                    "Name": "Expression",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": true,
+                                    "DeneWord Type": "DeneWord Operation Destination",
+                                    "Value": "@Ra:Mnemosyne:Mnemosyne Today:Aggregated Generator Time Today:Aggregated Generator Time Today",
+                                    "Name": "Destination",
+                                    "Value Type": "Dene Pointer"
+                                }
+                            ],
+                            "Name": "Aggregate Generator Run Time"
+                        }
+					]
+                }],
+            "Mutations":[]
+		},
+		"Medula": {
+			"Mutations": [{}]
+		}
+	}
+}

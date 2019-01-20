@@ -1,0 +1,3005 @@
+{
+	"Sperm": {
+		"Purpose": {
+			"Name": "Tlaloc",
+			"Purpose Type": "Primary",
+			"Description":"Tlaloc is a teleonome that processes data coming from a Vantage Pro Weather Station exported using Weather Display Data"
+		},
+		"PaceMaker": {
+			"Homeoboxes": [
+			{
+				"Name": "CSV MicroController",
+				"Denes": [
+				{
+					"Name": "Homeobox Index",
+					"Dene Type": "Homebox Index",
+					"DeneWords": [{
+						"Name": "CSV MicroController",
+						"DeneWord Type": "Hox Dene Pointer",
+						"Value": "@Sperm:Pacemaker:CSV MicroController:CSV MicroController",
+						"Value Type": "Dene Pointer"
+					}, 
+					{
+						"Name": "CSV MicroController Parameters",
+						"DeneWord Type": "Hox Dene Pointer",
+						"Value": "@Sperm:Pacemaker:CSV MicroController:CSV MicroController Processing Config Parameter List",
+						"Value Type": "Dene Pointer"
+					}, 
+					{
+						"Name": "PathToFile",
+						"DeneWord Type": "Hox Dene Pointer",
+						"Value": "@Sperm:Pacemaker:CSV MicroController:PathToFile",
+						"Value Type": "Dene Pointer"
+					}]
+				},
+				{
+					"Dene Type": "Microcontroller Config Parameter",
+					"DeneWords": [
+						{
+							"Required": true,
+							"Value": "CSV MicroController",
+							"Name": "Codon",
+							"Value Type": "String"
+						},
+						{
+							"Required": true,
+							"DeneWord Type": "Microcontroller Config Parameter",
+							"Value":"WeatherData/TlalocInput.csv",
+							"Name": "PathToFile",
+							"Value Type": "String"
+						}
+					],
+					"Name": "PathToFile",
+					"Target": "@Tlaloc:Internal:Components"		
+				},
+				{
+					"Dene Type": "Microcontroller Config Parameter List",
+					"DeneWords": [
+						{
+							"Required": true,
+							"Value": "CSV MicroController",
+							"Name": "Codon",
+							"Value Type": "String"
+						},
+						{
+							"Required": true,
+							"DeneWord Type": "Microcontroller Config Parameter",
+							"Value":"@Tlaloc:Internal:Components:PathToFile",
+							"Name": "Pitia",
+							"Value Type": "String"
+						}
+					],
+					"Name": "CSV MicroController Processing Config Parameter List",
+					"Target": "@Tlaloc:Internal:Components"
+				},
+				{
+					"Dene Type": "Microcontroller",
+					"DeneWords": [{
+						"Required": true,
+						"Value": 2,
+						"Value Type ": "int",
+						"Name": "Processing Queue Position"
+					}, {
+						"DeneWord Type": "Microcontroller Processing Class Name",
+						"Required": true,
+						"Value": "com.teleonome.framework.microcontroller.csvmicrocontroller.CSVMicroController",
+						"Value Type ": "String",
+						"Name": "CSVMicroController Processing Class Name"
+					}, {
+						"Required": true,
+						"Value": "CSV MicroController",
+						"Name": "Codon",
+						"Value Type": "String"
+					}, {
+						"DeneWord Type": "Microcontroller Config Parameter List",
+						"Required": true,
+						"Value": "@Tlaloc:Internal:Components:CSV MicroController Processing Config Parameter List",
+						"Value Type ": "Dene Pointer",
+						"Name": "CSV MicroController Processing Config Parameter List"
+					}],
+					"Name": "CSV MicroController",
+					"Target": "@Tlaloc:Internal:Components"
+				}]
+			}, 
+			{
+    "Denes": [
+        {
+            "Dene Type": "Homeobox Index",
+            "DeneWords": [
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:Tlaloc Data CVS Sensor",
+                    "Name": "Tlaloc Data CVS Sensor",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:Record Time Millis Value",
+                    "Name": "Record Time Millis Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:Record Time Millis",
+                    "Name": "Record Time Millis",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:Record Timestamp Value",
+                    "Name": "Record Timestamp Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:Record Timestamp",
+                    "Name": "Record Timestamp",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:Ambient Temperature Value",
+                    "Name": "Ambient Temperature Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:Ambient Temperature",
+                    "Name": "Ambient Temperature",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:Ambient Humidity Value",
+                    "Name": "Ambient Humidity Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:Ambient Humidity",
+                    "Name": "Ambient Humidity",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:Dew Point Value",
+                    "Name": "Dew Point Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:Dew Point",
+                    "Name": "Dew Point",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:Pressure Value",
+                    "Name": "Pressure Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:Pressure",
+                    "Name": "Pressure",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:Wind Speed Value",
+                    "Name": "Wind Speed Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:Wind Speed",
+                    "Name": "Wind Speed",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:Gust Speed Value",
+                    "Name": "Gust Speed Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:Gust Speed",
+                    "Name": "Gust Speed",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:Wind Direction Degrees Value",
+                    "Name": "Wind Direction Degrees Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:Wind Direction Degrees",
+                    "Name": "Wind Direction Degrees",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:Wind Direction Label Value",
+                    "Name": "Wind Direction Label Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:Wind Direction Label",
+                    "Name": "Wind Direction Label",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:Rain Last 10 minutes Value",
+                    "Name": "Rain Last 10 minutes Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:Rain Last 10 minutes",
+                    "Name": "Rain Last 10 minutes",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:Rain Today Value",
+                    "Name": "Rain Today Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:Rain Today",
+                    "Name": "Rain Today",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:Rain This Month Value",
+                    "Name": "Rain This Month Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:Rain This Month",
+                    "Name": "Rain This Month",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:Rain This Year Value",
+                    "Name": "Rain This Year Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:Rain This Year",
+                    "Name": "Rain This Year",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:Heat Index Value",
+                    "Name": "Heat Index Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:Heat Index",
+                    "Name": "Heat Index",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:Davis ET Value",
+                    "Name": "Davis ET Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:Davis ET",
+                    "Name": "Davis ET",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:Solar Radiation Value",
+                    "Name": "Solar Radiation Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:Solar Radiation",
+                    "Name": "Solar Radiation",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:UV Value",
+                    "Name": "UV Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:UV",
+                    "Name": "UV",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:Soil Temperature Value",
+                    "Name": "Soil Temperature Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:Soil Temperature",
+                    "Name": "Soil Temperature",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:VP Soil Moisture 1 Value",
+                    "Name": "VP Soil Moisture 1 Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:VP Soil Moisture 1",
+                    "Name": "VP Soil Moisture 1",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:VP Soil Moisture 2 Value",
+                    "Name": "VP Soil Moisture 2 Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:VP Soil Moisture 2",
+                    "Name": "VP Soil Moisture 2",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:VP Soil Moisture 3 Value",
+                    "Name": "VP Soil Moisture 3 Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:VP Soil Moisture 3",
+                    "Name": "VP Soil Moisture 3",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:VP Soil Moisture 4 Value",
+                    "Name": "VP Soil Moisture 4 Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:VP Soil Moisture 4",
+                    "Name": "VP Soil Moisture 4",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:VP Soil Temperature 1 Value",
+                    "Name": "VP Soil Temperature 1 Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:VP Soil Temperature 1",
+                    "Name": "VP Soil Temperature 1",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:VP Soil Temperature 2 Value",
+                    "Name": "VP Soil Temperature 2 Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:VP Soil Temperature 2",
+                    "Name": "VP Soil Temperature 2",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:VP Soil Temperature 3 Value",
+                    "Name": "VP Soil Temperature 3 Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:VP Soil Temperature 3",
+                    "Name": "VP Soil Temperature 3",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:VP Soil Temperature 4 Value",
+                    "Name": "VP Soil Temperature 4 Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:VP Soil Temperature 4",
+                    "Name": "VP Soil Temperature 4",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:Main Greenhouse Humidity Value",
+                    "Name": "Main Greenhouse Humidity Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:Main Greenhouse Humidity",
+                    "Name": "Main Greenhouse Humidity",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:Main Greenhouse Temperature Value",
+                    "Name": "Main Greenhouse Temperature Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:Main Greenhouse Temperature",
+                    "Name": "Main Greenhouse Temperature",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:Today Maximum Wind Speed Value",
+                    "Name": "Today Maximum Wind Speed Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:Today Maximum Wind Speed",
+                    "Name": "Today Maximum Wind Speed",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:Today Maximum Average Wind Speed Value",
+                    "Name": "Today Maximum Average Wind Speed Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:Today Maximum Average Wind Speed",
+                    "Name": "Today Maximum Average Wind Speed",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:Today Maximum Average Wind Speed Time Value",
+                    "Name": "Today Maximum Average Wind Speed Time Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:Today Maximum Average Wind Speed Time",
+                    "Name": "Today Maximum Average Wind Speed Time",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:Maximum Gust Last Hour Value",
+                    "Name": "Maximum Gust Last Hour Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:Maximum Gust Last Hour",
+                    "Name": "Maximum Gust Last Hour",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:Maximum Gust Last Time Value",
+                    "Name": "Maximum Gust Last Time Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:Maximum Gust Last Time",
+                    "Name": "Maximum Gust Last Time",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:Average Wind Speed For Last 60 to 120 Minutes Value",
+                    "Name": "Average Wind Speed For Last 60 to 120 Minutes Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:Average Wind Speed For Last 60 to 120 Minutes",
+                    "Name": "Average Wind Speed For Last 60 to 120 Minutes",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:Average Wind Direction For Last 60 to 120 Minutes Value",
+                    "Name": "Average Wind Direction For Last 60 to 120 Minutes Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:Average Wind Direction For Last 60 to 120 Minutes",
+                    "Name": "Average Wind Direction For Last 60 to 120 Minutes",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:Maximum Daily Average Speed Value",
+                    "Name": "Maximum Daily Average Speed Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:Maximum Daily Average Speed",
+                    "Name": "Maximum Daily Average Speed",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:Indoor Temperature Value",
+                    "Name": "Indoor Temperature Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:Indoor Temperature",
+                    "Name": "Indoor Temperature",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:Indoor Humidity Value",
+                    "Name": "Indoor Humidity Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:Indoor Humidity",
+                    "Name": "Indoor Humidity",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:Sunshine Hours Today Value",
+                    "Name": "Sunshine Hours Today Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:Sunshine Hours Today",
+                    "Name": "Sunshine Hours Today",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:WD ET Value",
+                    "Name": "WD ET Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Hox Dene Pointer",
+                    "Value": "@Sperm:Pacemaker:Tlaloc Data CVS Sensor:WD ET",
+                    "Name": "WD ET",
+                    "Value Type": "Dene Pointer"
+                }
+            ],
+            "Name": "Homeobox Index"
+        },
+        {
+            "Target": "@Tlaloc:Internal:Sensors",
+            "Dene Type": "Sensor",
+            "DeneWords": [
+                {
+                    "Required": true,
+                    "Value": "Tlaloc Data CVS Sensor",
+                    "Name": "Codon",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Sensor Microcontroller Pointer",
+                    "Value": "@Tlaloc:Internal:Components:CSV MicroController",
+                    "Name": "Pointer to Microcontroller",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Sensor Value",
+                    "Value": "@Tlaloc:Internal:Sensors:Record Time Millis Value",
+                    "Name": "Record Time Millis Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Sensor Value",
+                    "Value": "@Tlaloc:Internal:Sensors:Record Timestamp Value",
+                    "Name": "Record Timestamp Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Sensor Value",
+                    "Value": "@Tlaloc:Internal:Sensors:Ambient Temperature Value",
+                    "Name": "Ambient Temperature Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Sensor Value",
+                    "Value": "@Tlaloc:Internal:Sensors:Ambient Humidity Value",
+                    "Name": "Ambient Humidity Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Sensor Value",
+                    "Value": "@Tlaloc:Internal:Sensors:Dew Point Value",
+                    "Name": "Dew Point Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Sensor Value",
+                    "Value": "@Tlaloc:Internal:Sensors:Pressure Value",
+                    "Name": "Pressure Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Sensor Value",
+                    "Value": "@Tlaloc:Internal:Sensors:Wind Speed Value",
+                    "Name": "Wind Speed Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Sensor Value",
+                    "Value": "@Tlaloc:Internal:Sensors:Gust Speed Value",
+                    "Name": "Gust Speed Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Sensor Value",
+                    "Value": "@Tlaloc:Internal:Sensors:Wind Direction Degrees Value",
+                    "Name": "Wind Direction Degrees Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Sensor Value",
+                    "Value": "@Tlaloc:Internal:Sensors:Wind Direction Label Value",
+                    "Name": "Wind Direction Label Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Sensor Value",
+                    "Value": "@Tlaloc:Internal:Sensors:Rain Last 10 minutes Value",
+                    "Name": "Rain Last 10 minutes Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Sensor Value",
+                    "Value": "@Tlaloc:Internal:Sensors:Rain Today Value",
+                    "Name": "Rain Today Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Sensor Value",
+                    "Value": "@Tlaloc:Internal:Sensors:Rain This Month Value",
+                    "Name": "Rain This Month Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Sensor Value",
+                    "Value": "@Tlaloc:Internal:Sensors:Rain This Year Value",
+                    "Name": "Rain This Year Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Sensor Value",
+                    "Value": "@Tlaloc:Internal:Sensors:Heat Index Value",
+                    "Name": "Heat Index Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Sensor Value",
+                    "Value": "@Tlaloc:Internal:Sensors:Davis ET Value",
+                    "Name": "Davis ET Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Sensor Value",
+                    "Value": "@Tlaloc:Internal:Sensors:Solar Radiation Value",
+                    "Name": "Solar Radiation Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Sensor Value",
+                    "Value": "@Tlaloc:Internal:Sensors:UV Value",
+                    "Name": "UV Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Sensor Value",
+                    "Value": "@Tlaloc:Internal:Sensors:Soil Temperature Value",
+                    "Name": "Soil Temperature Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Sensor Value",
+                    "Value": "@Tlaloc:Internal:Sensors:VP Soil Moisture 1 Value",
+                    "Name": "VP Soil Moisture 1 Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Sensor Value",
+                    "Value": "@Tlaloc:Internal:Sensors:VP Soil Moisture 2 Value",
+                    "Name": "VP Soil Moisture 2 Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Sensor Value",
+                    "Value": "@Tlaloc:Internal:Sensors:VP Soil Moisture 3 Value",
+                    "Name": "VP Soil Moisture 3 Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Sensor Value",
+                    "Value": "@Tlaloc:Internal:Sensors:VP Soil Moisture 4 Value",
+                    "Name": "VP Soil Moisture 4 Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Sensor Value",
+                    "Value": "@Tlaloc:Internal:Sensors:VP Soil Temperature 1 Value",
+                    "Name": "VP Soil Temperature 1 Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Sensor Value",
+                    "Value": "@Tlaloc:Internal:Sensors:VP Soil Temperature 2 Value",
+                    "Name": "VP Soil Temperature 2 Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Sensor Value",
+                    "Value": "@Tlaloc:Internal:Sensors:VP Soil Temperature 3 Value",
+                    "Name": "VP Soil Temperature 3 Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Sensor Value",
+                    "Value": "@Tlaloc:Internal:Sensors:VP Soil Temperature 4 Value",
+                    "Name": "VP Soil Temperature 4 Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Sensor Value",
+                    "Value": "@Tlaloc:Internal:Sensors:Main Greenhouse Humidity Value",
+                    "Name": "Main Greenhouse Humidity Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Sensor Value",
+                    "Value": "@Tlaloc:Internal:Sensors:Main Greenhouse Temperature Value",
+                    "Name": "Main Greenhouse Temperature Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Sensor Value",
+                    "Value": "@Tlaloc:Internal:Sensors:Today Maximum Wind Speed Value",
+                    "Name": "Today Maximum Wind Speed Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Sensor Value",
+                    "Value": "@Tlaloc:Internal:Sensors:Today Maximum Average Wind Speed Value",
+                    "Name": "Today Maximum Average Wind Speed Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Sensor Value",
+                    "Value": "@Tlaloc:Internal:Sensors:Today Maximum Average Wind Speed Time Value",
+                    "Name": "Today Maximum Average Wind Speed Time Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Sensor Value",
+                    "Value": "@Tlaloc:Internal:Sensors:Maximum Gust Last Hour Value",
+                    "Name": "Maximum Gust Last Hour Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Sensor Value",
+                    "Value": "@Tlaloc:Internal:Sensors:Maximum Gust Last Time Value",
+                    "Name": "Maximum Gust Last Time Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Sensor Value",
+                    "Value": "@Tlaloc:Internal:Sensors:Average Wind Speed For Last 60 to 120 Minutes Value",
+                    "Name": "Average Wind Speed For Last 60 to 120 Minutes Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Sensor Value",
+                    "Value": "@Tlaloc:Internal:Sensors:Average Wind Direction For Last 60 to 120 Minutes Value",
+                    "Name": "Average Wind Direction For Last 60 to 120 Minutes Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Sensor Value",
+                    "Value": "@Tlaloc:Internal:Sensors:Maximum Daily Average Speed Value",
+                    "Name": "Maximum Daily Average Speed Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Sensor Value",
+                    "Value": "@Tlaloc:Internal:Sensors:Indoor Temperature Value",
+                    "Name": "Indoor Temperature Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Sensor Value",
+                    "Value": "@Tlaloc:Internal:Sensors:Indoor Humidity Value",
+                    "Name": "Indoor Humidity Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Sensor Value",
+                    "Value": "@Tlaloc:Internal:Sensors:Sunshine Hours Today Value",
+                    "Name": "Sunshine Hours Today Value",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "DeneWord Type": "Sensor Value",
+                    "Value": "@Tlaloc:Internal:Sensors:WD ET Value",
+                    "Name": "WD ET Value",
+                    "Value Type": "Dene Pointer"
+                }
+            ],
+            "Name": "Tlaloc Data CVS Sensor"
+        },
+        {
+            "Target": "@Tlaloc:Internal:Sensors",
+            "Dene Type": "Sensor Value Definition",
+            "DeneWords": [
+                {
+                    "Required": true,
+                    "Value": "Tlaloc Data CVS Sensor",
+                    "Name": "Codon",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "long",
+                    "Name": "Value Type",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": 1,
+                    "Name": "Sensor Request Queue Position",
+                    "Value Type": "int"
+                },
+                {
+                    "Required": true,
+                    "Value": "@Tlaloc:Purpose:Sensor Data:Record Time Millis:Record Time Millis Data",
+                    "Name": "Reporting Address",
+                    "Value Type": "Dene Pointer"
+                }
+            ],
+            "Name": "Record Time Millis Value"
+        },
+        {
+            "Target": "@Tlaloc:Purpose:Sensor Data",
+            "Dene Type": "Report",
+            "DeneWords": [{
+                "Required": true,
+                "Value": "1494826140000",
+                "Units": "",
+                "Name": "Record Time Millis Data",
+                "Value Type": "long"
+            }],
+            "Name": "Record Time Millis"
+        },
+        {
+            "Target": "@Tlaloc:Internal:Sensors",
+            "Dene Type": "Sensor Value Definition",
+            "DeneWords": [
+                {
+                    "Required": true,
+                    "Value": "Tlaloc Data CVS Sensor",
+                    "Name": "Codon",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "String",
+                    "Name": "Value Type",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": 2,
+                    "Name": "Sensor Request Queue Position",
+                    "Value Type": "int"
+                },
+                {
+                    "Required": true,
+                    "Value": "@Tlaloc:Purpose:Sensor Data:Record Timestamp:Record Timestamp Data",
+                    "Name": "Reporting Address",
+                    "Value Type": "Dene Pointer"
+                }
+            ],
+            "Name": "Record Timestamp Value"
+        },
+        {
+            "Target": "@Tlaloc:Purpose:Sensor Data",
+            "Dene Type": "Report",
+            "DeneWords": [{
+                "Required": true,
+                "Value": "14:45 12/6/2017",
+                "Units": "",
+                "Name": "Record Timestamp Data",
+                "Value Type": "String"
+            }],
+            "Name": "Record Timestamp"
+        },
+        {
+            "Target": "@Tlaloc:Internal:Sensors",
+            "Dene Type": "Sensor Value Definition",
+            "DeneWords": [
+                {
+                    "Required": true,
+                    "Value": "Tlaloc Data CVS Sensor",
+                    "Name": "Codon",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "Celsius",
+                    "Name": "Units",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "double",
+                    "Name": "Value Type",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": 3,
+                    "Name": "Sensor Request Queue Position",
+                    "Value Type": "int"
+                },
+                {
+                    "Required": true,
+                    "Value": "@Tlaloc:Purpose:Sensor Data:Ambient Temperature:Ambient Temperature Data",
+                    "Name": "Reporting Address",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "Value": 50,
+                    "Name": "Range Maximum",
+                    "Value Type": "double"
+                },
+                {
+                    "Required": true,
+                    "Value": 50,
+                    "Name": "Range Minimum",
+                    "Value Type": "double"
+                }
+            ],
+            "Name": "Ambient Temperature Value"
+        },
+        {
+            "Target": "@Tlaloc:Purpose:Sensor Data",
+            "Dene Type": "Report",
+            "DeneWords": [{
+                "Required": true,
+                "Value": "14.4",
+                "Units": "Celsius",
+                "Name": "Ambient Temperature Data",
+                "Value Type": "double"
+            }],
+            "Name": "Ambient Temperature"
+        },
+        {
+            "Target": "@Tlaloc:Internal:Sensors",
+            "Dene Type": "Sensor Value Definition",
+            "DeneWords": [
+                {
+                    "Required": true,
+                    "Value": "Tlaloc Data CVS Sensor",
+                    "Name": "Codon",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "%",
+                    "Name": "Units",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "double",
+                    "Name": "Value Type",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": 4,
+                    "Name": "Sensor Request Queue Position",
+                    "Value Type": "int"
+                },
+                {
+                    "Required": true,
+                    "Value": "@Tlaloc:Purpose:Sensor Data:Ambient Humidity:Ambient Humidity Data",
+                    "Name": "Reporting Address",
+                    "Value Type": "Dene Pointer"
+                },
+                {
+                    "Required": true,
+                    "Value": 100,
+                    "Name": "Range Maximum",
+                    "Value Type": "double"
+                },
+                {
+                    "Required": true,
+                    "Value": 100,
+                    "Name": "Range Minimum",
+                    "Value Type": "double"
+                }
+            ],
+            "Name": "Ambient Humidity Value"
+        },
+        {
+            "Target": "@Tlaloc:Purpose:Sensor Data",
+            "Dene Type": "Report",
+            "DeneWords": [{
+                "Required": true,
+                "Value": "73",
+                "Units": "%",
+                "Name": "Ambient Humidity Data",
+                "Value Type": "double"
+            }],
+            "Name": "Ambient Humidity"
+        },
+        {
+            "Target": "@Tlaloc:Internal:Sensors",
+            "Dene Type": "Sensor Value Definition",
+            "DeneWords": [
+                {
+                    "Required": true,
+                    "Value": "Tlaloc Data CVS Sensor",
+                    "Name": "Codon",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "Celsius",
+                    "Name": "Units",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "double",
+                    "Name": "Value Type",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": 5,
+                    "Name": "Sensor Request Queue Position",
+                    "Value Type": "int"
+                },
+                {
+                    "Required": true,
+                    "Value": "@Tlaloc:Purpose:Sensor Data:Dew Point:Dew Point Data",
+                    "Name": "Reporting Address",
+                    "Value Type": "Dene Pointer"
+                }
+            ],
+            "Name": "Dew Point Value"
+        },
+        {
+            "Target": "@Tlaloc:Purpose:Sensor Data",
+            "Dene Type": "Report",
+            "DeneWords": [{
+                "Required": true,
+                "Value": "9.6",
+                "Units": "Celsius",
+                "Name": "Dew Point Data",
+                "Value Type": "double"
+            }],
+            "Name": "Dew Point"
+        },
+        {
+            "Target": "@Tlaloc:Internal:Sensors",
+            "Dene Type": "Sensor Value Definition",
+            "DeneWords": [
+                {
+                    "Required": true,
+                    "Value": "Tlaloc Data CVS Sensor",
+                    "Name": "Codon",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "kpa",
+                    "Name": "Units",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "double",
+                    "Name": "Value Type",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": 6,
+                    "Name": "Sensor Request Queue Position",
+                    "Value Type": "int"
+                },
+                {
+                    "Required": true,
+                    "Value": "@Tlaloc:Purpose:Sensor Data:Pressure:Pressure Data",
+                    "Name": "Reporting Address",
+                    "Value Type": "Dene Pointer"
+                }
+            ],
+            "Name": "Pressure Value"
+        },
+        {
+            "Target": "@Tlaloc:Purpose:Sensor Data",
+            "Dene Type": "Report",
+            "DeneWords": [{
+                "Required": true,
+                "Value": "102.1",
+                "Units": "kpa",
+                "Name": "Pressure Data",
+                "Value Type": "double"
+            }],
+            "Name": "Pressure"
+        },
+        {
+            "Target": "@Tlaloc:Internal:Sensors",
+            "Dene Type": "Sensor Value Definition",
+            "DeneWords": [
+                {
+                    "Required": true,
+                    "Value": "Tlaloc Data CVS Sensor",
+                    "Name": "Codon",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "m/s",
+                    "Name": "Units",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "double",
+                    "Name": "Value Type",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": 7,
+                    "Name": "Sensor Request Queue Position",
+                    "Value Type": "int"
+                },
+                {
+                    "Required": true,
+                    "Value": "@Tlaloc:Purpose:Sensor Data:Wind Speed:Wind Speed Data",
+                    "Name": "Reporting Address",
+                    "Value Type": "Dene Pointer"
+                }
+            ],
+            "Name": "Wind Speed Value"
+        },
+        {
+            "Target": "@Tlaloc:Purpose:Sensor Data",
+            "Dene Type": "Report",
+            "DeneWords": [{
+                "Required": true,
+                "Value": "0.6",
+                "Units": "m/s",
+                "Name": "Wind Speed Data",
+                "Value Type": "double"
+            }],
+            "Name": "Wind Speed"
+        },
+        {
+            "Target": "@Tlaloc:Internal:Sensors",
+            "Dene Type": "Sensor Value Definition",
+            "DeneWords": [
+                {
+                    "Required": true,
+                    "Value": "Tlaloc Data CVS Sensor",
+                    "Name": "Codon",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "m/s",
+                    "Name": "Units",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "double",
+                    "Name": "Value Type",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": 8,
+                    "Name": "Sensor Request Queue Position",
+                    "Value Type": "int"
+                },
+                {
+                    "Required": true,
+                    "Value": "@Tlaloc:Purpose:Sensor Data:Gust Speed:Gust Speed Data",
+                    "Name": "Reporting Address",
+                    "Value Type": "Dene Pointer"
+                }
+            ],
+            "Name": "Gust Speed Value"
+        },
+        {
+            "Target": "@Tlaloc:Purpose:Sensor Data",
+            "Dene Type": "Report",
+            "DeneWords": [{
+                "Required": true,
+                "Value": "1.3",
+                "Units": "m/s",
+                "Name": "Gust Speed Data",
+                "Value Type": "double"
+            }],
+            "Name": "Gust Speed"
+        },
+        {
+            "Target": "@Tlaloc:Internal:Sensors",
+            "Dene Type": "Sensor Value Definition",
+            "DeneWords": [
+                {
+                    "Required": true,
+                    "Value": "Tlaloc Data CVS Sensor",
+                    "Name": "Codon",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "double",
+                    "Name": "Value Type",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": 9,
+                    "Name": "Sensor Request Queue Position",
+                    "Value Type": "int"
+                },
+                {
+                    "Required": true,
+                    "Value": "@Tlaloc:Purpose:Sensor Data:Wind Direction Degrees:Wind Direction Degrees Data",
+                    "Name": "Reporting Address",
+                    "Value Type": "Dene Pointer"
+                }
+            ],
+            "Name": "Wind Direction Degrees Value"
+        },
+        {
+            "Target": "@Tlaloc:Purpose:Sensor Data",
+            "Dene Type": "Report",
+            "DeneWords": [{
+                "Required": true,
+                "Value": "345",
+                "Units": "",
+                "Name": "Wind Direction Degrees Data",
+                "Value Type": "double"
+            }],
+            "Name": "Wind Direction Degrees"
+        },
+        {
+            "Target": "@Tlaloc:Internal:Sensors",
+            "Dene Type": "Sensor Value Definition",
+            "DeneWords": [
+                {
+                    "Required": true,
+                    "Value": "Tlaloc Data CVS Sensor",
+                    "Name": "Codon",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "String",
+                    "Name": "Value Type",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": 10,
+                    "Name": "Sensor Request Queue Position",
+                    "Value Type": "int"
+                },
+                {
+                    "Required": true,
+                    "Value": "@Tlaloc:Purpose:Sensor Data:Wind Direction Label:Wind Direction Label Data",
+                    "Name": "Reporting Address",
+                    "Value Type": "Dene Pointer"
+                }
+            ],
+            "Name": "Wind Direction Label Value"
+        },
+        {
+            "Target": "@Tlaloc:Purpose:Sensor Data",
+            "Dene Type": "Report",
+            "DeneWords": [{
+                "Required": true,
+                "Value": "NW",
+                "Units": "",
+                "Name": "Wind Direction Label Data",
+                "Value Type": "String"
+            }],
+            "Name": "Wind Direction Label"
+        },
+        {
+            "Target": "@Tlaloc:Internal:Sensors",
+            "Dene Type": "Sensor Value Definition",
+            "DeneWords": [
+                {
+                    "Required": true,
+                    "Value": "Tlaloc Data CVS Sensor",
+                    "Name": "Codon",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "mm",
+                    "Name": "Units",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "double",
+                    "Name": "Value Type",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": 11,
+                    "Name": "Sensor Request Queue Position",
+                    "Value Type": "int"
+                },
+                {
+                    "Required": true,
+                    "Value": "@Tlaloc:Purpose:Sensor Data:Rain Last 10 minutes:Rain Last 10 minutes Data",
+                    "Name": "Reporting Address",
+                    "Value Type": "Dene Pointer"
+                }
+            ],
+            "Name": "Rain Last 10 minutes Value"
+        },
+        {
+            "Target": "@Tlaloc:Purpose:Sensor Data",
+            "Dene Type": "Report",
+            "DeneWords": [{
+                "Required": true,
+                "Value": "0",
+                "Units": "mm",
+                "Name": "Rain Last 10 minutes Data",
+                "Value Type": "double"
+            }],
+            "Name": "Rain Last 10 minutes"
+        },
+        {
+            "Target": "@Tlaloc:Internal:Sensors",
+            "Dene Type": "Sensor Value Definition",
+            "DeneWords": [
+                {
+                    "Required": true,
+                    "Value": "Tlaloc Data CVS Sensor",
+                    "Name": "Codon",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "mm",
+                    "Name": "Units",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "double",
+                    "Name": "Value Type",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": 12,
+                    "Name": "Sensor Request Queue Position",
+                    "Value Type": "int"
+                },
+                {
+                    "Required": true,
+                    "Value": "@Tlaloc:Purpose:Sensor Data:Rain Today:Rain Today Data",
+                    "Name": "Reporting Address",
+                    "Value Type": "Dene Pointer"
+                }
+            ],
+            "Name": "Rain Today Value"
+        },
+        {
+            "Target": "@Tlaloc:Purpose:Sensor Data",
+            "Dene Type": "Report",
+            "DeneWords": [{
+                "Required": true,
+                "Value": "0.4",
+                "Units": "mm",
+                "Name": "Rain Today Data",
+                "Value Type": "double"
+            }],
+            "Name": "Rain Today"
+        },
+        {
+            "Target": "@Tlaloc:Internal:Sensors",
+            "Dene Type": "Sensor Value Definition",
+            "DeneWords": [
+                {
+                    "Required": true,
+                    "Value": "Tlaloc Data CVS Sensor",
+                    "Name": "Codon",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "mm",
+                    "Name": "Units",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "double",
+                    "Name": "Value Type",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": 13,
+                    "Name": "Sensor Request Queue Position",
+                    "Value Type": "int"
+                },
+                {
+                    "Required": true,
+                    "Value": "@Tlaloc:Purpose:Sensor Data:Rain This Month:Rain This Month Data",
+                    "Name": "Reporting Address",
+                    "Value Type": "Dene Pointer"
+                }
+            ],
+            "Name": "Rain This Month Value"
+        },
+        {
+            "Target": "@Tlaloc:Purpose:Sensor Data",
+            "Dene Type": "Report",
+            "DeneWords": [{
+                "Required": true,
+                "Value": "127.8",
+                "Units": "mm",
+                "Name": "Rain This Month Data",
+                "Value Type": "double"
+            }],
+            "Name": "Rain This Month"
+        },
+        {
+            "Target": "@Tlaloc:Internal:Sensors",
+            "Dene Type": "Sensor Value Definition",
+            "DeneWords": [
+                {
+                    "Required": true,
+                    "Value": "Tlaloc Data CVS Sensor",
+                    "Name": "Codon",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "mm",
+                    "Name": "Units",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "double",
+                    "Name": "Value Type",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": 14,
+                    "Name": "Sensor Request Queue Position",
+                    "Value Type": "int"
+                },
+                {
+                    "Required": true,
+                    "Value": "@Tlaloc:Purpose:Sensor Data:Rain This Year:Rain This Year Data",
+                    "Name": "Reporting Address",
+                    "Value Type": "Dene Pointer"
+                }
+            ],
+            "Name": "Rain This Year Value"
+        },
+        {
+            "Target": "@Tlaloc:Purpose:Sensor Data",
+            "Dene Type": "Report",
+            "DeneWords": [{
+                "Required": true,
+                "Value": "250.6",
+                "Units": "mm",
+                "Name": "Rain This Year Data",
+                "Value Type": "double"
+            }],
+            "Name": "Rain This Year"
+        },
+        {
+            "Target": "@Tlaloc:Internal:Sensors",
+            "Dene Type": "Sensor Value Definition",
+            "DeneWords": [
+                {
+                    "Required": true,
+                    "Value": "Tlaloc Data CVS Sensor",
+                    "Name": "Codon",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "Celsius",
+                    "Name": "Units",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "double",
+                    "Name": "Value Type",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": 15,
+                    "Name": "Sensor Request Queue Position",
+                    "Value Type": "int"
+                },
+                {
+                    "Required": true,
+                    "Value": "@Tlaloc:Purpose:Sensor Data:Heat Index:Heat Index Data",
+                    "Name": "Reporting Address",
+                    "Value Type": "Dene Pointer"
+                }
+            ],
+            "Name": "Heat Index Value"
+        },
+        {
+            "Target": "@Tlaloc:Purpose:Sensor Data",
+            "Dene Type": "Report",
+            "DeneWords": [{
+                "Required": true,
+                "Value": "14.4",
+                "Units": "Celsius",
+                "Name": "Heat Index Data",
+                "Value Type": "double"
+            }],
+            "Name": "Heat Index"
+        },
+        {
+            "Target": "@Tlaloc:Internal:Sensors",
+            "Dene Type": "Sensor Value Definition",
+            "DeneWords": [
+                {
+                    "Required": true,
+                    "Value": "Tlaloc Data CVS Sensor",
+                    "Name": "Codon",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "mm",
+                    "Name": "Units",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "double",
+                    "Name": "Value Type",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": 16,
+                    "Name": "Sensor Request Queue Position",
+                    "Value Type": "int"
+                },
+                {
+                    "Required": true,
+                    "Value": "@Tlaloc:Purpose:Sensor Data:Davis ET:Davis ET Data",
+                    "Name": "Reporting Address",
+                    "Value Type": "Dene Pointer"
+                }
+            ],
+            "Name": "Davis ET Value"
+        },
+        {
+            "Target": "@Tlaloc:Purpose:Sensor Data",
+            "Dene Type": "Report",
+            "DeneWords": [{
+                "Required": true,
+                "Value": "1.4",
+                "Units": "mm",
+                "Name": "Davis ET Data",
+                "Value Type": "double"
+            }],
+            "Name": "Davis ET"
+        },
+        {
+            "Target": "@Tlaloc:Internal:Sensors",
+            "Dene Type": "Sensor Value Definition",
+            "DeneWords": [
+                {
+                    "Required": true,
+                    "Value": "Tlaloc Data CVS Sensor",
+                    "Name": "Codon",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "w/m2",
+                    "Name": "Units",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "double",
+                    "Name": "Value Type",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": 17,
+                    "Name": "Sensor Request Queue Position",
+                    "Value Type": "int"
+                },
+                {
+                    "Required": true,
+                    "Value": "@Tlaloc:Purpose:Sensor Data:Solar Radiation:Solar Radiation Data",
+                    "Name": "Reporting Address",
+                    "Value Type": "Dene Pointer"
+                }
+            ],
+            "Name": "Solar Radiation Value"
+        },
+        {
+            "Target": "@Tlaloc:Purpose:Sensor Data",
+            "Dene Type": "Report",
+            "DeneWords": [{
+                "Required": true,
+                "Value": "325",
+                "Units": "w/m2",
+                "Name": "Solar Radiation Data",
+                "Value Type": "double"
+            }],
+            "Name": "Solar Radiation"
+        },
+        {
+            "Target": "@Tlaloc:Internal:Sensors",
+            "Dene Type": "Sensor Value Definition",
+            "DeneWords": [
+                {
+                    "Required": true,
+                    "Value": "Tlaloc Data CVS Sensor",
+                    "Name": "Codon",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "w/m2",
+                    "Name": "Units",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "double",
+                    "Name": "Value Type",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": 18,
+                    "Name": "Sensor Request Queue Position",
+                    "Value Type": "int"
+                },
+                {
+                    "Required": true,
+                    "Value": "@Tlaloc:Purpose:Sensor Data:UV:UV Data",
+                    "Name": "Reporting Address",
+                    "Value Type": "Dene Pointer"
+                }
+            ],
+            "Name": "UV Value"
+        },
+        {
+            "Target": "@Tlaloc:Purpose:Sensor Data",
+            "Dene Type": "Report",
+            "DeneWords": [{
+                "Required": true,
+                "Value": "0",
+                "Units": "w/m2",
+                "Name": "UV Data",
+                "Value Type": "double"
+            }],
+            "Name": "UV"
+        },
+        {
+            "Target": "@Tlaloc:Internal:Sensors",
+            "Dene Type": "Sensor Value Definition",
+            "DeneWords": [
+                {
+                    "Required": true,
+                    "Value": "Tlaloc Data CVS Sensor",
+                    "Name": "Codon",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "Celsius",
+                    "Name": "Units",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "double",
+                    "Name": "Value Type",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": 19,
+                    "Name": "Sensor Request Queue Position",
+                    "Value Type": "int"
+                },
+                {
+                    "Required": true,
+                    "Value": "@Tlaloc:Purpose:Sensor Data:Soil Temperature:Soil Temperature Data",
+                    "Name": "Reporting Address",
+                    "Value Type": "Dene Pointer"
+                }
+            ],
+            "Name": "Soil Temperature Value"
+        },
+        {
+            "Target": "@Tlaloc:Purpose:Sensor Data",
+            "Dene Type": "Report",
+            "DeneWords": [{
+                "Required": true,
+                "Value": "16",
+                "Units": "Celsius",
+                "Name": "Soil Temperature Data",
+                "Value Type": "double"
+            }],
+            "Name": "Soil Temperature"
+        },
+        {
+            "Target": "@Tlaloc:Internal:Sensors",
+            "Dene Type": "Sensor Value Definition",
+            "DeneWords": [
+                {
+                    "Required": true,
+                    "Value": "Tlaloc Data CVS Sensor",
+                    "Name": "Codon",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "Centibar",
+                    "Name": "Units",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "double",
+                    "Name": "Value Type",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": 20,
+                    "Name": "Sensor Request Queue Position",
+                    "Value Type": "int"
+                },
+                {
+                    "Required": true,
+                    "Value": "@Tlaloc:Purpose:Sensor Data:VP Soil Moisture 1:VP Soil Moisture 1 Data",
+                    "Name": "Reporting Address",
+                    "Value Type": "Dene Pointer"
+                }
+            ],
+            "Name": "VP Soil Moisture 1 Value"
+        },
+        {
+            "Target": "@Tlaloc:Purpose:Sensor Data",
+            "Dene Type": "Report",
+            "DeneWords": [{
+                "Required": true,
+                "Value": "255",
+                "Units": "Centibar",
+                "Name": "VP Soil Moisture 1 Data",
+                "Value Type": "double"
+            }],
+            "Name": "VP Soil Moisture 1"
+        },
+        {
+            "Target": "@Tlaloc:Internal:Sensors",
+            "Dene Type": "Sensor Value Definition",
+            "DeneWords": [
+                {
+                    "Required": true,
+                    "Value": "Tlaloc Data CVS Sensor",
+                    "Name": "Codon",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "Centibar",
+                    "Name": "Units",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "double",
+                    "Name": "Value Type",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": 21,
+                    "Name": "Sensor Request Queue Position",
+                    "Value Type": "int"
+                },
+                {
+                    "Required": true,
+                    "Value": "@Tlaloc:Purpose:Sensor Data:VP Soil Moisture 2:VP Soil Moisture 2 Data",
+                    "Name": "Reporting Address",
+                    "Value Type": "Dene Pointer"
+                }
+            ],
+            "Name": "VP Soil Moisture 2 Value"
+        },
+        {
+            "Target": "@Tlaloc:Purpose:Sensor Data",
+            "Dene Type": "Report",
+            "DeneWords": [{
+                "Required": true,
+                "Value": "255",
+                "Units": "Centibar",
+                "Name": "VP Soil Moisture 2 Data",
+                "Value Type": "double"
+            }],
+            "Name": "VP Soil Moisture 2"
+        },
+        {
+            "Target": "@Tlaloc:Internal:Sensors",
+            "Dene Type": "Sensor Value Definition",
+            "DeneWords": [
+                {
+                    "Required": true,
+                    "Value": "Tlaloc Data CVS Sensor",
+                    "Name": "Codon",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "Centibar",
+                    "Name": "Units",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "double",
+                    "Name": "Value Type",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": 22,
+                    "Name": "Sensor Request Queue Position",
+                    "Value Type": "int"
+                },
+                {
+                    "Required": true,
+                    "Value": "@Tlaloc:Purpose:Sensor Data:VP Soil Moisture 3:VP Soil Moisture 3 Data",
+                    "Name": "Reporting Address",
+                    "Value Type": "Dene Pointer"
+                }
+            ],
+            "Name": "VP Soil Moisture 3 Value"
+        },
+        {
+            "Target": "@Tlaloc:Purpose:Sensor Data",
+            "Dene Type": "Report",
+            "DeneWords": [{
+                "Required": true,
+                "Value": "255",
+                "Units": "Centibar",
+                "Name": "VP Soil Moisture 3 Data",
+                "Value Type": "double"
+            }],
+            "Name": "VP Soil Moisture 3"
+        },
+        {
+            "Target": "@Tlaloc:Internal:Sensors",
+            "Dene Type": "Sensor Value Definition",
+            "DeneWords": [
+                {
+                    "Required": true,
+                    "Value": "Tlaloc Data CVS Sensor",
+                    "Name": "Codon",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "Centibar",
+                    "Name": "Units",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "double",
+                    "Name": "Value Type",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": 23,
+                    "Name": "Sensor Request Queue Position",
+                    "Value Type": "int"
+                },
+                {
+                    "Required": true,
+                    "Value": "@Tlaloc:Purpose:Sensor Data:VP Soil Moisture 4:VP Soil Moisture 4 Data",
+                    "Name": "Reporting Address",
+                    "Value Type": "Dene Pointer"
+                }
+            ],
+            "Name": "VP Soil Moisture 4 Value"
+        },
+        {
+            "Target": "@Tlaloc:Purpose:Sensor Data",
+            "Dene Type": "Report",
+            "DeneWords": [{
+                "Required": true,
+                "Value": "29",
+                "Units": "Centibar",
+                "Name": "VP Soil Moisture 4 Data",
+                "Value Type": "double"
+            }],
+            "Name": "VP Soil Moisture 4"
+        },
+        {
+            "Target": "@Tlaloc:Internal:Sensors",
+            "Dene Type": "Sensor Value Definition",
+            "DeneWords": [
+                {
+                    "Required": true,
+                    "Value": "Tlaloc Data CVS Sensor",
+                    "Name": "Codon",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "Celsius",
+                    "Name": "Units",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "double",
+                    "Name": "Value Type",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": 24,
+                    "Name": "Sensor Request Queue Position",
+                    "Value Type": "int"
+                },
+                {
+                    "Required": true,
+                    "Value": "@Tlaloc:Purpose:Sensor Data:VP Soil Temperature 1:VP Soil Temperature 1 Data",
+                    "Name": "Reporting Address",
+                    "Value Type": "Dene Pointer"
+                }
+            ],
+            "Name": "VP Soil Temperature 1 Value"
+        },
+        {
+            "Target": "@Tlaloc:Purpose:Sensor Data",
+            "Dene Type": "Report",
+            "DeneWords": [{
+                "Required": true,
+                "Value": "16",
+                "Units": "Celsius",
+                "Name": "VP Soil Temperature 1 Data",
+                "Value Type": "double"
+            }],
+            "Name": "VP Soil Temperature 1"
+        },
+        {
+            "Target": "@Tlaloc:Internal:Sensors",
+            "Dene Type": "Sensor Value Definition",
+            "DeneWords": [
+                {
+                    "Required": true,
+                    "Value": "Tlaloc Data CVS Sensor",
+                    "Name": "Codon",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "Celsius",
+                    "Name": "Units",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "double",
+                    "Name": "Value Type",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": 25,
+                    "Name": "Sensor Request Queue Position",
+                    "Value Type": "int"
+                },
+                {
+                    "Required": true,
+                    "Value": "@Tlaloc:Purpose:Sensor Data:VP Soil Temperature 2:VP Soil Temperature 2 Data",
+                    "Name": "Reporting Address",
+                    "Value Type": "Dene Pointer"
+                }
+            ],
+            "Name": "VP Soil Temperature 2 Value"
+        },
+        {
+            "Target": "@Tlaloc:Purpose:Sensor Data",
+            "Dene Type": "Report",
+            "DeneWords": [{
+                "Required": true,
+                "Value": "18",
+                "Units": "Celsius",
+                "Name": "VP Soil Temperature 2 Data",
+                "Value Type": "double"
+            }],
+            "Name": "VP Soil Temperature 2"
+        },
+        {
+            "Target": "@Tlaloc:Internal:Sensors",
+            "Dene Type": "Sensor Value Definition",
+            "DeneWords": [
+                {
+                    "Required": true,
+                    "Value": "Tlaloc Data CVS Sensor",
+                    "Name": "Codon",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "Celsius",
+                    "Name": "Units",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "double",
+                    "Name": "Value Type",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": 26,
+                    "Name": "Sensor Request Queue Position",
+                    "Value Type": "int"
+                },
+                {
+                    "Required": true,
+                    "Value": "@Tlaloc:Purpose:Sensor Data:VP Soil Temperature 3:VP Soil Temperature 3 Data",
+                    "Name": "Reporting Address",
+                    "Value Type": "Dene Pointer"
+                }
+            ],
+            "Name": "VP Soil Temperature 3 Value"
+        },
+        {
+            "Target": "@Tlaloc:Purpose:Sensor Data",
+            "Dene Type": "Report",
+            "DeneWords": [{
+                "Required": true,
+                "Value": "255",
+                "Units": "Celsius",
+                "Name": "VP Soil Temperature 3 Data",
+                "Value Type": "double"
+            }],
+            "Name": "VP Soil Temperature 3"
+        },
+        {
+            "Target": "@Tlaloc:Internal:Sensors",
+            "Dene Type": "Sensor Value Definition",
+            "DeneWords": [
+                {
+                    "Required": true,
+                    "Value": "Tlaloc Data CVS Sensor",
+                    "Name": "Codon",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "Celsius",
+                    "Name": "Units",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "double",
+                    "Name": "Value Type",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": 27,
+                    "Name": "Sensor Request Queue Position",
+                    "Value Type": "int"
+                },
+                {
+                    "Required": true,
+                    "Value": "@Tlaloc:Purpose:Sensor Data:VP Soil Temperature 4:VP Soil Temperature 4 Data",
+                    "Name": "Reporting Address",
+                    "Value Type": "Dene Pointer"
+                }
+            ],
+            "Name": "VP Soil Temperature 4 Value"
+        },
+        {
+            "Target": "@Tlaloc:Purpose:Sensor Data",
+            "Dene Type": "Report",
+            "DeneWords": [{
+                "Required": true,
+                "Value": "255",
+                "Units": "Celsius",
+                "Name": "VP Soil Temperature 4 Data",
+                "Value Type": "double"
+            }],
+            "Name": "VP Soil Temperature 4"
+        },
+        {
+            "Target": "@Tlaloc:Internal:Sensors",
+            "Dene Type": "Sensor Value Definition",
+            "DeneWords": [
+                {
+                    "Required": true,
+                    "Value": "Tlaloc Data CVS Sensor",
+                    "Name": "Codon",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "%",
+                    "Name": "Units",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "double",
+                    "Name": "Value Type",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": 28,
+                    "Name": "Sensor Request Queue Position",
+                    "Value Type": "int"
+                },
+                {
+                    "Required": true,
+                    "Value": "@Tlaloc:Purpose:Sensor Data:Main Greenhouse Humidity:Main Greenhouse Humidity Data",
+                    "Name": "Reporting Address",
+                    "Value Type": "Dene Pointer"
+                }
+            ],
+            "Name": "Main Greenhouse Humidity Value"
+        },
+        {
+            "Target": "@Tlaloc:Purpose:Sensor Data",
+            "Dene Type": "Report",
+            "DeneWords": [{
+                "Required": true,
+                "Value": "255",
+                "Units": "%",
+                "Name": "Main Greenhouse Humidity Data",
+                "Value Type": "double"
+            }],
+            "Name": "Main Greenhouse Humidity"
+        },
+        {
+            "Target": "@Tlaloc:Internal:Sensors",
+            "Dene Type": "Sensor Value Definition",
+            "DeneWords": [
+                {
+                    "Required": true,
+                    "Value": "Tlaloc Data CVS Sensor",
+                    "Name": "Codon",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "Celsius",
+                    "Name": "Units",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "double",
+                    "Name": "Value Type",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": 29,
+                    "Name": "Sensor Request Queue Position",
+                    "Value Type": "int"
+                },
+                {
+                    "Required": true,
+                    "Value": "@Tlaloc:Purpose:Sensor Data:Main Greenhouse Temperature:Main Greenhouse Temperature Data",
+                    "Name": "Reporting Address",
+                    "Value Type": "Dene Pointer"
+                }
+            ],
+            "Name": "Main Greenhouse Temperature Value"
+        },
+        {
+            "Target": "@Tlaloc:Purpose:Sensor Data",
+            "Dene Type": "Report",
+            "DeneWords": [{
+                "Required": true,
+                "Value": "255",
+                "Units": "Celsius",
+                "Name": "Main Greenhouse Temperature Data",
+                "Value Type": "double"
+            }],
+            "Name": "Main Greenhouse Temperature"
+        },
+        {
+            "Target": "@Tlaloc:Internal:Sensors",
+            "Dene Type": "Sensor Value Definition",
+            "DeneWords": [
+                {
+                    "Required": true,
+                    "Value": "Tlaloc Data CVS Sensor",
+                    "Name": "Codon",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "m/s",
+                    "Name": "Units",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "double",
+                    "Name": "Value Type",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": 30,
+                    "Name": "Sensor Request Queue Position",
+                    "Value Type": "int"
+                },
+                {
+                    "Required": true,
+                    "Value": "@Tlaloc:Purpose:Sensor Data:Today Maximum Wind Speed:Today Maximum Wind Speed Data",
+                    "Name": "Reporting Address",
+                    "Value Type": "Dene Pointer"
+                }
+            ],
+            "Name": "Today Maximum Wind Speed Value"
+        },
+        {
+            "Target": "@Tlaloc:Purpose:Sensor Data",
+            "Dene Type": "Report",
+            "DeneWords": [{
+                "Required": true,
+                "Value": "5.4",
+                "Units": "m/s",
+                "Name": "Today Maximum Wind Speed Data",
+                "Value Type": "double"
+            }],
+            "Name": "Today Maximum Wind Speed"
+        },
+        {
+            "Target": "@Tlaloc:Internal:Sensors",
+            "Dene Type": "Sensor Value Definition",
+            "DeneWords": [
+                {
+                    "Required": true,
+                    "Value": "Tlaloc Data CVS Sensor",
+                    "Name": "Codon",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "m/s",
+                    "Name": "Units",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "double",
+                    "Name": "Value Type",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": 31,
+                    "Name": "Sensor Request Queue Position",
+                    "Value Type": "int"
+                },
+                {
+                    "Required": true,
+                    "Value": "@Tlaloc:Purpose:Sensor Data:Today Maximum Average Wind Speed:Today Maximum Average Wind Speed Data",
+                    "Name": "Reporting Address",
+                    "Value Type": "Dene Pointer"
+                }
+            ],
+            "Name": "Today Maximum Average Wind Speed Value"
+        },
+        {
+            "Target": "@Tlaloc:Purpose:Sensor Data",
+            "Dene Type": "Report",
+            "DeneWords": [{
+                "Required": true,
+                "Value": "3.1",
+                "Units": "m/s",
+                "Name": "Today Maximum Average Wind Speed Data",
+                "Value Type": "double"
+            }],
+            "Name": "Today Maximum Average Wind Speed"
+        },
+        {
+            "Target": "@Tlaloc:Internal:Sensors",
+            "Dene Type": "Sensor Value Definition",
+            "DeneWords": [
+                {
+                    "Required": true,
+                    "Value": "Tlaloc Data CVS Sensor",
+                    "Name": "Codon",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "String",
+                    "Name": "Value Type",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": 32,
+                    "Name": "Sensor Request Queue Position",
+                    "Value Type": "int"
+                },
+                {
+                    "Required": true,
+                    "Value": "@Tlaloc:Purpose:Sensor Data:Today Maximum Average Wind Speed Time:Today Maximum Average Wind Speed Time Data",
+                    "Name": "Reporting Address",
+                    "Value Type": "Dene Pointer"
+                }
+            ],
+            "Name": "Today Maximum Average Wind Speed Time Value"
+        },
+        {
+            "Target": "@Tlaloc:Purpose:Sensor Data",
+            "Dene Type": "Report",
+            "DeneWords": [{
+                "Required": true,
+                "Value": "14:01",
+                "Units": "",
+                "Name": "Today Maximum Average Wind Speed Time Data",
+                "Value Type": "String"
+            }],
+            "Name": "Today Maximum Average Wind Speed Time"
+        },
+        {
+            "Target": "@Tlaloc:Internal:Sensors",
+            "Dene Type": "Sensor Value Definition",
+            "DeneWords": [
+                {
+                    "Required": true,
+                    "Value": "Tlaloc Data CVS Sensor",
+                    "Name": "Codon",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "m/s",
+                    "Name": "Units",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "String",
+                    "Name": "Value Type",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": 33,
+                    "Name": "Sensor Request Queue Position",
+                    "Value Type": "int"
+                },
+                {
+                    "Required": true,
+                    "Value": "@Tlaloc:Purpose:Sensor Data:Maximum Gust Last Hour:Maximum Gust Last Hour Data",
+                    "Name": "Reporting Address",
+                    "Value Type": "Dene Pointer"
+                }
+            ],
+            "Name": "Maximum Gust Last Hour Value"
+        },
+        {
+            "Target": "@Tlaloc:Purpose:Sensor Data",
+            "Dene Type": "Report",
+            "DeneWords": [{
+                "Required": true,
+                "Value": "4.5 m/s  N",
+                "Units": "m/s",
+                "Name": "Maximum Gust Last Hour Data",
+                "Value Type": "String"
+            }],
+            "Name": "Maximum Gust Last Hour"
+        },
+        {
+            "Target": "@Tlaloc:Internal:Sensors",
+            "Dene Type": "Sensor Value Definition",
+            "DeneWords": [
+                {
+                    "Required": true,
+                    "Value": "Tlaloc Data CVS Sensor",
+                    "Name": "Codon",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "String",
+                    "Name": "Value Type",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": 34,
+                    "Name": "Sensor Request Queue Position",
+                    "Value Type": "int"
+                },
+                {
+                    "Required": true,
+                    "Value": "@Tlaloc:Purpose:Sensor Data:Maximum Gust Last Time:Maximum Gust Last Time Data",
+                    "Name": "Reporting Address",
+                    "Value Type": "Dene Pointer"
+                }
+            ],
+            "Name": "Maximum Gust Last Time Value"
+        },
+        {
+            "Target": "@Tlaloc:Purpose:Sensor Data",
+            "Dene Type": "Report",
+            "DeneWords": [{
+                "Required": true,
+                "Value": "14:34",
+                "Units": "",
+                "Name": "Maximum Gust Last Time Data",
+                "Value Type": "String"
+            }],
+            "Name": "Maximum Gust Last Time"
+        },
+        {
+            "Target": "@Tlaloc:Internal:Sensors",
+            "Dene Type": "Sensor Value Definition",
+            "DeneWords": [
+                {
+                    "Required": true,
+                    "Value": "Tlaloc Data CVS Sensor",
+                    "Name": "Codon",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "m/s",
+                    "Name": "Units",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "double",
+                    "Name": "Value Type",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": 35,
+                    "Name": "Sensor Request Queue Position",
+                    "Value Type": "int"
+                },
+                {
+                    "Required": true,
+                    "Value": "@Tlaloc:Purpose:Sensor Data:Average Wind Speed For Last 60 to 120 Minutes:Average Wind Speed For Last 60 to 120 Minutes Data",
+                    "Name": "Reporting Address",
+                    "Value Type": "Dene Pointer"
+                }
+            ],
+            "Name": "Average Wind Speed For Last 60 to 120 Minutes Value"
+        },
+        {
+            "Target": "@Tlaloc:Purpose:Sensor Data",
+            "Dene Type": "Report",
+            "DeneWords": [{
+                "Required": true,
+                "Value": "1.5",
+                "Units": "m/s",
+                "Name": "Average Wind Speed For Last 60 to 120 Minutes Data",
+                "Value Type": "double"
+            }],
+            "Name": "Average Wind Speed For Last 60 to 120 Minutes"
+        },
+        {
+            "Target": "@Tlaloc:Internal:Sensors",
+            "Dene Type": "Sensor Value Definition",
+            "DeneWords": [
+                {
+                    "Required": true,
+                    "Value": "Tlaloc Data CVS Sensor",
+                    "Name": "Codon",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "m/s",
+                    "Name": "Units",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "double",
+                    "Name": "Value Type",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": 36,
+                    "Name": "Sensor Request Queue Position",
+                    "Value Type": "int"
+                },
+                {
+                    "Required": true,
+                    "Value": "@Tlaloc:Purpose:Sensor Data:Average Wind Direction For Last 60 to 120 Minutes:Average Wind Direction For Last 60 to 120 Minutes Data",
+                    "Name": "Reporting Address",
+                    "Value Type": "Dene Pointer"
+                }
+            ],
+            "Name": "Average Wind Direction For Last 60 to 120 Minutes Value"
+        },
+        {
+            "Target": "@Tlaloc:Purpose:Sensor Data",
+            "Dene Type": "Report",
+            "DeneWords": [{
+                "Required": true,
+                "Value": "359",
+                "Units": "m/s",
+                "Name": "Average Wind Direction For Last 60 to 120 Minutes Data",
+                "Value Type": "double"
+            }],
+            "Name": "Average Wind Direction For Last 60 to 120 Minutes"
+        },
+        {
+            "Target": "@Tlaloc:Internal:Sensors",
+            "Dene Type": "Sensor Value Definition",
+            "DeneWords": [
+                {
+                    "Required": true,
+                    "Value": "Tlaloc Data CVS Sensor",
+                    "Name": "Codon",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "m/s",
+                    "Name": "Units",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "double",
+                    "Name": "Value Type",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": 37,
+                    "Name": "Sensor Request Queue Position",
+                    "Value Type": "int"
+                },
+                {
+                    "Required": true,
+                    "Value": "@Tlaloc:Purpose:Sensor Data:Maximum Daily Average Speed:Maximum Daily Average Speed Data",
+                    "Name": "Reporting Address",
+                    "Value Type": "Dene Pointer"
+                }
+            ],
+            "Name": "Maximum Daily Average Speed Value"
+        },
+        {
+            "Target": "@Tlaloc:Purpose:Sensor Data",
+            "Dene Type": "Report",
+            "DeneWords": [{
+                "Required": true,
+                "Value": "3.1",
+                "Units": "m/s",
+                "Name": "Maximum Daily Average Speed Data",
+                "Value Type": "double"
+            }],
+            "Name": "Maximum Daily Average Speed"
+        },
+        {
+            "Target": "@Tlaloc:Internal:Sensors",
+            "Dene Type": "Sensor Value Definition",
+            "DeneWords": [
+                {
+                    "Required": true,
+                    "Value": "Tlaloc Data CVS Sensor",
+                    "Name": "Codon",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "Celsius",
+                    "Name": "Units",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "double",
+                    "Name": "Value Type",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": 38,
+                    "Name": "Sensor Request Queue Position",
+                    "Value Type": "int"
+                },
+                {
+                    "Required": true,
+                    "Value": "@Tlaloc:Purpose:Sensor Data:Indoor Temperature:Indoor Temperature Data",
+                    "Name": "Reporting Address",
+                    "Value Type": "Dene Pointer"
+                }
+            ],
+            "Name": "Indoor Temperature Value"
+        },
+        {
+            "Target": "@Tlaloc:Purpose:Sensor Data",
+            "Dene Type": "Report",
+            "DeneWords": [{
+                "Required": true,
+                "Value": "21.2",
+                "Units": "Celsius",
+                "Name": "Indoor Temperature Data",
+                "Value Type": "double"
+            }],
+            "Name": "Indoor Temperature"
+        },
+        {
+            "Target": "@Tlaloc:Internal:Sensors",
+            "Dene Type": "Sensor Value Definition",
+            "DeneWords": [
+                {
+                    "Required": true,
+                    "Value": "Tlaloc Data CVS Sensor",
+                    "Name": "Codon",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "%",
+                    "Name": "Units",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "double",
+                    "Name": "Value Type",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": 39,
+                    "Name": "Sensor Request Queue Position",
+                    "Value Type": "int"
+                },
+                {
+                    "Required": true,
+                    "Value": "@Tlaloc:Purpose:Sensor Data:Indoor Humidity:Indoor Humidity Data",
+                    "Name": "Reporting Address",
+                    "Value Type": "Dene Pointer"
+                }
+            ],
+            "Name": "Indoor Humidity Value"
+        },
+        {
+            "Target": "@Tlaloc:Purpose:Sensor Data",
+            "Dene Type": "Report",
+            "DeneWords": [{
+                "Required": true,
+                "Value": "49",
+                "Units": "%",
+                "Name": "Indoor Humidity Data",
+                "Value Type": "double"
+            }],
+            "Name": "Indoor Humidity"
+        },
+        {
+            "Target": "@Tlaloc:Internal:Sensors",
+            "Dene Type": "Sensor Value Definition",
+            "DeneWords": [
+                {
+                    "Required": true,
+                    "Value": "Tlaloc Data CVS Sensor",
+                    "Name": "Codon",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "hours",
+                    "Name": "Units",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "double",
+                    "Name": "Value Type",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": 40,
+                    "Name": "Sensor Request Queue Position",
+                    "Value Type": "int"
+                },
+                {
+                    "Required": true,
+                    "Value": "@Tlaloc:Purpose:Sensor Data:Sunshine Hours Today:Sunshine Hours Today Data",
+                    "Name": "Reporting Address",
+                    "Value Type": "Dene Pointer"
+                }
+            ],
+            "Name": "Sunshine Hours Today Value"
+        },
+        {
+            "Target": "@Tlaloc:Purpose:Sensor Data",
+            "Dene Type": "Report",
+            "DeneWords": [{
+                "Required": true,
+                "Value": "1.2",
+                "Units": "hours",
+                "Name": "Sunshine Hours Today Data",
+                "Value Type": "double"
+            }],
+            "Name": "Sunshine Hours Today"
+        },
+        {
+            "Target": "@Tlaloc:Internal:Sensors",
+            "Dene Type": "Sensor Value Definition",
+            "DeneWords": [
+                {
+                    "Required": true,
+                    "Value": "Tlaloc Data CVS Sensor",
+                    "Name": "Codon",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "mm",
+                    "Name": "Units",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": "double",
+                    "Name": "Value Type",
+                    "Value Type": "String"
+                },
+                {
+                    "Required": true,
+                    "Value": 41,
+                    "Name": "Sensor Request Queue Position",
+                    "Value Type": "int"
+                },
+                {
+                    "Required": true,
+                    "Value": "@Tlaloc:Purpose:Sensor Data:WD ET:WD ET Data",
+                    "Name": "Reporting Address",
+                    "Value Type": "Dene Pointer"
+                }
+            ],
+            "Name": "WD ET Value"
+        },
+        {
+            "Target": "@Tlaloc:Purpose:Sensor Data",
+            "Dene Type": "Report",
+            "DeneWords": [{
+                "Required": true,
+                "Value": "1.2",
+                "Units": "mm",
+                "Name": "WD ET Data",
+                "Value Type": "double"
+            }],
+            "Name": "WD ET"
+        }
+    ],
+    "Name": "Tlaloc Data CVS Sensor"
+}]
+		},
+		"Medula": {
+			"Mutations": [{}]
+		}
+	}
+}

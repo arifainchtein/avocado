@@ -1,0 +1,115 @@
+{
+	"Sperm": {
+		"Purpose": {
+			"Teleonome Name": "",
+			"Purpose Type": "Mutate",
+			"Description":""
+		},
+		"Hypothalamus": {
+			"Actions":[
+                {
+                    "Target": "@Egg:Human Interface",
+                    "Dene Type": "Create Dene Chain",
+                    "DeneWords": [
+                        {
+                            "Required": true,
+                            "Value": true,
+                            "Name": "Active",
+                            "Value Type": "boolean"
+                        },
+                        {
+                            "Required": true,
+                            "Value": 1,
+                            "Name": "Execution Position",
+                            "Value Type": "int"
+                        },
+                        {
+                            "Required": true,
+                            "Value": "Pre Homebox Insertion",
+                            "Name": "Execution Point",
+                            "Value Type": "Dene Pointer"
+                        },
+                        {
+                            "Required": true,
+                            "Value": "System Info Table Panel",
+                            "Name": "DeneChain Name",
+                            "Value Type": "String"
+                        }
+                    ],
+                    "Name": "Create System Info Table Panel DeneChain"
+                }
+            ],
+			"Homeoboxes": [
+				{
+					"Name": "",
+					"Denes": [
+						{
+                            "Name": "Metadata",
+                            "Dene Type": "Homeobox Metadata",
+							"Target": "",
+							"DeneWords": [
+                                {
+                                    "Name":"Created On",
+                                    "Value":"17/04/2018",
+                                    "Value Type":"Date",
+                                    "Required":true
+                                },
+                                {
+                                    "Name":"Description",
+                                    "Value":"",
+                                    "Value Type":"String",
+                                    "Required":true
+                                }
+							]
+                        },
+                        {
+							"Name": "Homeobox Index",
+							"Dene Type": "Homebox Index",
+							"DeneWords": [{
+                                "Name": "",
+                                "DeneWord Type": "Hox Dene Pointer",
+                                "Value": "@Sperm:Hypothalamus::",
+                                "Value Type": "Dene Pointer"
+                            }]
+						},
+						{
+                            "Name": "DeneWord Carrier For Vital",
+                            "Dene Type": "DeneWord Carrier",
+							"Target": "@Ra:Internal:Actuators:Virtual Actuator Actions",
+							"DeneWords": [
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Action",
+                                        "Value": "@Ra:Internal:Actuators:Generator Turned Off",
+                                        "Name": "Update Aggregate Running Time",
+                                        "Value Type": "Dene Pointer"
+                                    }
+                            ]
+                        },
+						{
+                            "Name": "DeneWord Remover For Vital",
+                            "Dene Type": "DeneWord Remover",
+							"Target": "@Ra:Internal:Actuators:Virtual Actuator Actions",
+							"DeneWords": [
+                                {
+                                    "Required": "true",
+                                    "Value": "@Cleo:Purpose:Operational Data:System Data:PaceMaker Build Number",
+                                    "Name": "PaceMaker Build Number",
+                                    "Value Type": "String"
+                                }
+                            ]
+                        },
+                        {
+                            "Target": "",
+                           "DeneWords": [],
+                           "Name": "Weekly Generator Operation Report"
+                       }
+					]
+                }],
+            "Mutations":[]
+		},
+		"Medula": {
+			"Mutations": [{}]
+		}
+	}
+}

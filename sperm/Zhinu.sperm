@@ -1,0 +1,761 @@
+{
+	"Sperm": {
+		"Purpose": {
+			"Teleonome Name": "Zhinu",
+			"Purpose Type": "Mutate",
+			"Description":"Adds the System Data Dene to the Diagnstic Page, at the top"
+		},
+		"Hypothalamus": {
+			"Actions":[
+                {
+                    "Target": "@Zhinu:Human Interface",
+                    "Dene Type": "Create Dene Chain",
+                    "DeneWords": [
+                        {
+                            "Required": true,
+                            "Value": true,
+                            "Name": "Active",
+                            "Value Type": "boolean"
+                        },
+                        {
+                            "Required": true,
+                            "Value": 1,
+                            "Name": "Execution Position",
+                            "Value Type": "int"
+                        },
+                        {
+                            "Required": true,
+                            "Value": "Pre Homebox Insertion",
+                            "Name": "Execution Point",
+                            "Value Type": "Dene Pointer"
+                        },
+                        {
+                            "Required": true,
+                            "Value": "Zhinu System Info Table Panel",
+                            "Name": "DeneChain Name",
+                            "Value Type": "String"
+                        }
+                    ],
+                    "Name": "Create Zhinu System Info Table Panel DeneChain"
+                },
+                {
+                    "Target": "@Zhinu:Human Interface",
+                    "Dene Type": "Create Dene Chain",
+                    "DeneWords": [
+                        {
+                            "Required": true,
+                            "Value": true,
+                            "Name": "Active",
+                            "Value Type": "boolean"
+                        },
+                        {
+                            "Required": true,
+                            "Value": 2,
+                            "Name": "Execution Position",
+                            "Value Type": "int"
+                        },
+                        {
+                            "Required": true,
+                            "Value": "Pre Homebox Insertion",
+                            "Name": "Execution Point",
+                            "Value Type": "Dene Pointer"
+                        },
+                        {
+                            "Required": true,
+                            "Value": "Tlaloc System Info Table Panel",
+                            "Name": "DeneChain Name",
+                            "Value Type": "String"
+                        }
+                    ],
+                    "Name": "Create Tlaloc System Info Table Panel DeneChain"
+                },
+                {
+                    "Target": "@Zhinu:Human Interface",
+                    "Dene Type": "Create Dene Chain",
+                    "DeneWords": [
+                        {
+                            "Required": true,
+                            "Value": true,
+                            "Name": "Active",
+                            "Value Type": "boolean"
+                        },
+                        {
+                            "Required": true,
+                            "Value": 3,
+                            "Name": "Execution Position",
+                            "Value Type": "int"
+                        },
+                        {
+                            "Required": true,
+                            "Value": "Pre Homebox Insertion",
+                            "Name": "Execution Point",
+                            "Value Type": "Dene Pointer"
+                        },
+                        {
+                            "Required": true,
+                            "Value": "Ra System Info Table Panel",
+                            "Name": "DeneChain Name",
+                            "Value Type": "String"
+                        }
+                    ],
+                    "Name": "Create Ra System Info Table Panel DeneChain"
+                },
+                {
+                    "Target": "@Zhinu:Human Interface",
+                    "Dene Type": "Create Dene Chain",
+                    "DeneWords": [
+                        {
+                            "Required": true,
+                            "Value": true,
+                            "Name": "Active",
+                            "Value Type": "boolean"
+                        },
+                        {
+                            "Required": true,
+                            "Value": 4,
+                            "Name": "Execution Position",
+                            "Value Type": "int"
+                        },
+                        {
+                            "Required": true,
+                            "Value": "Pre Homebox Insertion",
+                            "Name": "Execution Point",
+                            "Value Type": "Dene Pointer"
+                        },
+                        {
+                            "Required": true,
+                            "Value": "Sento System Info Table Panel",
+                            "Name": "DeneChain Name",
+                            "Value Type": "String"
+                        }
+                    ],
+                    "Name": "Create Sento System Info Table Panel DeneChain"
+                },
+                {
+                    "Target": "@Zhinu:Human Interface",
+                    "Dene Type": "Create Dene Chain",
+                    "DeneWords": [
+                        {
+                            "Required": true,
+                            "Value": true,
+                            "Name": "Active",
+                            "Value Type": "boolean"
+                        },
+                        {
+                            "Required": true,
+                            "Value": 5,
+                            "Name": "Execution Position",
+                            "Value Type": "int"
+                        },
+                        {
+                            "Required": true,
+                            "Value": "Pre Homebox Insertion",
+                            "Name": "Execution Point",
+                            "Value Type": "Dene Pointer"
+                        },
+                        {
+                            "Required": true,
+                            "Value": "DamnWatcher System Info Table Panel",
+                            "Name": "DeneChain Name",
+                            "Value Type": "String"
+                        }
+                    ],
+                    "Name": "Create DamnWatcher System Info Table Panel DeneChain"
+                }
+            ],
+			"Homeoboxes": [
+				{
+					"Name": "Adding System Info",
+					"Denes": [
+						{
+                            "Name": "Metadata",
+                            "Dene Type": "Homeobox Metadata",
+							"Target": "",
+							"DeneWords": [
+                                {
+                                    "Name":"Created On",
+                                    "Value":"3/5/2018",
+                                    "Value Type":"Date",
+                                    "Required":true
+                                },
+                                {
+                                    "Name":"Description",
+                                    "Value":"This homeobox adds the System Info table to the Diagnostics Page",
+                                    "Value Type":"String",
+                                    "Required":true
+                                }
+							]
+                        },
+						{
+                            "Name": "DeneWord Carrier For Zhinu",
+                            "Dene Type": "DeneWord Carrier",
+							"Target": "@Zhinu:Purpose:Operational Data:System Data",
+							"DeneWords": [
+                            {
+                                "Required": "true",
+                                "Value": "1158@Tlaloc",
+                                "Name": "Hypothalamus Build Number",
+                                "Value Type": "String"
+                            },
+                            {
+                                 "Required": "true",
+                                "Value": "1158@Tlaloc",
+                                "Name": "Heart Build Number",
+                                "Value Type": "String"
+                            }
+							]
+						},
+						{
+                            "Name": "DeneWord Remover For Zhinu",
+                            "Dene Type": "DeneWord Remover",
+							"Target": "@Zhinu:Purpose:External Data:Tlaloc",
+							"DeneWords": [
+                            {
+                                "Required": "true",
+                                "Value": "@Zhinu:Purpose:Operational Data:System Data:PaceMaker Build Number",
+                                "Name": "PaceMaker Build Number",
+                                "Value Type": "String"
+                            }
+							]
+						},
+						{
+                            "Name": "DeneWord Carrier For Tlaloc",
+                            "Dene Type": "DeneWord Carrier",
+							"Target": "@Zhinu:Purpose:External Data:Tlaloc",
+							"DeneWords": [
+                            {
+                                "Data Location": "@Tlaloc:Purpose:Operational Data:System Data:Hypothalamus Build Number",
+                                "Required": "true",
+                                "Value": "1158@Tlaloc",
+                                "Name": "Hypothalamus Build Number",
+                                "Value Type": "String"
+                            },
+                            {
+                                "Data Location": "@Tlaloc:Purpose:Operational Data:System Data:Heart Build Number",
+                                "Required": "true",
+                                "Value": "1158@Tlaloc",
+                                "Name": "Heart Build Number",
+                                "Value Type": "String"
+                            }
+							]
+						},
+						{
+                            "Name": "DeneWord Remover For Tlaloc",
+                            "Dene Type": "DeneWord Remover",
+							"Target": "@Zhinu:Purpose:External Data:Tlaloc",
+							"DeneWords": [
+                            {
+                                "Required": "true",
+                                "Value": "@Zhinu:Purpose:External Data:Tlaloc:PaceMaker Build Number",
+                                "Name": "PaceMaker Build Number",
+                                "Value Type": "String"
+                            }
+							]
+						},
+						{
+                            "Name": "DeneWord Carrier For Ra",
+                            "Dene Type": "DeneWord Carrier",
+							"Target": "@Zhinu:Purpose:External Data:Ra",
+							"DeneWords": [
+                            {
+                                "Data Location": "@Ra:Purpose:Operational Data:System Data:Hypothalamus Build Number",
+                                "Required": "true",
+                                "Value": "1158@Tlaloc",
+                                "Name": "Hypothalamus Build Number",
+                                "Value Type": "String"
+                            },
+                            {
+                                "Data Location": "@Ra:Purpose:Operational Data:System Data:Heart Build Number",
+                                "Required": "true",
+                                "Value": "1158@Tlaloc",
+                                "Name": "Heart Build Number",
+                                "Value Type": "String"
+                            }
+							]
+						},
+						{
+                            "Name": "DeneWord Remover For Ra",
+                            "Dene Type": "DeneWord Remover",
+							"Target": "@Zhinu:Purpose:External Data:Ra",
+							"DeneWords": [
+                                {
+                                    "Required": "true",
+                                    "Value": "@Zhinu:Purpose:External Data:Ra:PaceMaker Build Number",
+                                    "Name": "PaceMaker Build Number",
+                                    "Value Type": "String"
+                                }
+							]
+						},
+						{
+                            "Name": "DeneWord Carrier For Sento",
+                            "Dene Type": "DeneWord Carrier",
+							"Target": "@Zhinu:Purpose:External Data:Sento",
+							"DeneWords": [
+                            {
+                                "Data Location": "@Sento:Purpose:Operational Data:System Data:Hypothalamus Build Number",
+                                "Required": "true",
+                                "Value": "1158@Tlaloc",
+                                "Name": "Hypothalamus Build Number",
+                                "Value Type": "String"
+                            },
+                            {
+                                "Data Location": "@Sento:Purpose:Operational Data:System Data:Heart Build Number",
+                                "Required": "true",
+                                "Value": "1158@Tlaloc",
+                                "Name": "Heart Build Number",
+                                "Value Type": "String"
+                            }
+							]
+						},
+						{
+                            "Name": "DeneWord Remover For Sento",
+                            "Dene Type": "DeneWord Remover",
+							"Target": "@Zhinu:Purpose:External Data:Sento",
+							"DeneWords": [
+                                {
+                                    "Required": "true",
+                                    "Value": "@Zhinu:Purpose:External Data:Sento:PaceMaker Build Number",
+                                    "Name": "PaceMaker Build Number",
+                                    "Value Type": "String"
+                                }
+							]
+						},
+						{
+                            "Name": "DeneWord Carrier For DamnWatcher",
+                            "Dene Type": "DeneWord Carrier",
+							"Target": "@Zhinu:Purpose:External Data:DamnWatcher",
+							"DeneWords": [
+                            {
+                                "Data Location": "@DamnWatcher:Purpose:Operational Data:System Data:Hypothalamus Build Number",
+                                "Required": "true",
+                                "Value": "1158@Tlaloc",
+                                "Name": "Hypothalamus Build Number",
+                                "Value Type": "String"
+                            },
+                            {
+                                "Data Location": "@DamnWatcher:Purpose:Operational Data:System Data:Heart Build Number",
+                                "Required": "true",
+                                "Value": "1158@Tlaloc",
+                                "Name": "Heart Build Number",
+                                "Value Type": "String"
+                            }
+							]
+						},
+						{
+                            "Name": "DeneWord Remover For DamnWatcher",
+                            "Dene Type": "DeneWord Remover",
+							"Target": "@Zhinu:Purpose:External Data:DamnWatcher",
+							"DeneWords": [
+                                {
+                                    "Required": "true",
+                                    "Value": "@Zhinu:Purpose:External Data:DamnWatcher:PaceMaker Build Number",
+                                    "Name": "PaceMaker Build Number",
+                                    "Value Type": "String"
+                                }
+							]
+						},
+                        {
+							"Name": "Homeobox Index",
+							"Dene Type": "Homebox Index",
+							"DeneWords": [
+                                {
+									"Name": "Zhinu System Info Panel",
+									"DeneWord Type": "Hox Dene Pointer",
+									"Value": "@Sperm:Hypothalamus:Adding System Info:Zhinu System Info Panel",
+									"Value Type": "Dene Pointer"
+                                },
+                                {
+									"Name": "Zhinu System Info Table Data",
+									"DeneWord Type": "Hox Dene Pointer",
+									"Value": "@Sperm:Hypothalamus:Adding System Info:Zhinu System Info Table Data",
+									"Value Type": "Dene Pointer"
+                                },
+                                {
+									"Name": "Tlaloc System Info Panel",
+									"DeneWord Type": "Hox Dene Pointer",
+									"Value": "@Sperm:Hypothalamus:Adding System Info:Tlaloc System Info Panel",
+									"Value Type": "Dene Pointer"
+                                },
+                                {
+									"Name": "Tlaloc System Info Table Data",
+									"DeneWord Type": "Hox Dene Pointer",
+									"Value": "@Sperm:Hypothalamus:Adding System Info:Tlaloc System Info Table Data",
+									"Value Type": "Dene Pointer"
+								},
+                                {
+									"Name": "Ra System Info Panel",
+									"DeneWord Type": "Hox Dene Pointer",
+									"Value": "@Sperm:Hypothalamus:Adding System Info:Ra System Info Panel",
+									"Value Type": "Dene Pointer"
+                                },
+                                {
+									"Name": "Ra System Info Table Data",
+									"DeneWord Type": "Hox Dene Pointer",
+									"Value": "@Sperm:Hypothalamus:Adding System Info:Ra System Info Table Data",
+									"Value Type": "Dene Pointer"
+								},
+                                {
+									"Name": "Sento System Info Panel",
+									"DeneWord Type": "Hox Dene Pointer",
+									"Value": "@Sperm:Hypothalamus:Adding System Info:Sento System Info Panel",
+									"Value Type": "Dene Pointer"
+                                },
+                                {
+									"Name": "Sento System Info Table Data",
+									"DeneWord Type": "Hox Dene Pointer",
+									"Value": "@Sperm:Hypothalamus:Adding System Info:Sento System Info Table Data",
+									"Value Type": "Dene Pointer"
+								},
+                                {
+									"Name": "DamnWatcher System Info Panel",
+									"DeneWord Type": "Hox Dene Pointer",
+									"Value": "@Sperm:Hypothalamus:Adding System Info:DamnWatcher System Info Panel",
+									"Value Type": "Dene Pointer"
+                                },
+                                {
+									"Name": "DamnWatcher System Info Table Data",
+									"DeneWord Type": "Hox Dene Pointer",
+									"Value": "@Sperm:Hypothalamus:Adding System Info:DamnWatcher System Info Table Data",
+									"Value Type": "Dene Pointer"
+								} 
+                            ]
+                        },
+						{
+                            "Target": "@Zhinu:Human Interface:Diagnostics Page",
+                            "DeneWords": [
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Panel DeneChain Pointer",
+                                    "Value": "@Zhinu:Human Interface:Zhinu System Info Table Panel",
+                                    "Name": "System Info Table Pointer",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Panel Visualization Style",
+                                    "Value": "DeneWord Table",
+                                    "Name": "System Info Table Style",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": true,
+                                    "DeneWord Type": "Panel In Page Position",
+                                    "Value": 1,
+                                    "Name": "Panel In Page Position",
+                                    "Value Type": "int"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": true,
+                                    "Name": "Visible",
+                                    "Value Type": "boolean"
+                                }
+                            ],
+                            "Name": "Zhinu System Info Panel" 
+                        },
+                        {
+                            "Target": "@Zhinu:Human Interface:Zhinu System Info Table Panel",
+                            "DeneWords": [
+                                {
+                                    "Required": "true",
+                                    "Value": "Zhinu System Info",
+                                    "Name": "Panel Title",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Display Table DeneWord Pointer",
+                                    "Value": "@Zhinu:Purpose:Operational Data:System Data:Hypothalamus Build Number",
+                                    "Name": "Hypothalamus Build Number",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Display Table DeneWord Pointer",
+                                    "Value": "@Zhinu:Purpose:Operational Data:System Data:Heart Build Number",
+                                    "Name": "Heart Build Number",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Display Table DeneWord Pointer",
+                                    "Value": "@Zhinu:Purpose:Operational Data:System Data:Medula Build Number",
+                                    "Name": "Medula Build Number",
+                                    "Value Type": "Dene Pointer"
+                                }
+                            ],
+                            "Name": "Zhinu System Info Table Data"
+                        },
+						{
+                            "Target": "@Zhinu:Human Interface:Diagnostics Page",
+                            "DeneWords": [
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Panel DeneChain Pointer",
+                                    "Value": "@Zhinu:Human Interface:Tlaloc System Info Table Panel",
+                                    "Name": "System Info Table Pointer",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Panel Visualization Style",
+                                    "Value": "DeneWord Table",
+                                    "Name": "Tlaloc System Info Table Style",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": true,
+                                    "DeneWord Type": "Panel In Page Position",
+                                    "Value": 2,
+                                    "Name": "Panel In Page Position",
+                                    "Value Type": "int"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": true,
+                                    "Name": "Visible",
+                                    "Value Type": "boolean"
+                                }
+                            ],
+                            "Name": "Tlaloc System Info Panel" 
+                        },
+                        {
+                            "Target": "@Zhinu:Human Interface:Tlaloc System Info Table Panel",
+                            "DeneWords": [
+                                {
+                                    "Required": "true",
+                                    "Value": "Tlaloc System Info",
+                                    "Name": "Panel Title",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Display Table DeneWord Pointer",
+                                    "Value": "@Zhinu:Purpose:External Data:Tlaloc:Hypothalamus Build Number",
+                                    "Name": "Hypothalamus Build Number",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Display Table DeneWord Pointer",
+                                    "Value": "@Zhinu:Purpose:External Data:Tlaloc:Heart Build Number",
+                                    "Name": "Heart Build Number",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Display Table DeneWord Pointer",
+                                    "Value": "@Zhinu:Purpose:External Data:Tlaloc:Medula Build Number",
+                                    "Name": "Medula Build Number",
+                                    "Value Type": "Dene Pointer"
+                                }
+                            ],
+                            "Name": "Tlaloc System Info Table Data"
+                        },
+						{
+                            "Target": "@Zhinu:Human Interface:Diagnostics Page",
+                            "DeneWords": [
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Panel DeneChain Pointer",
+                                    "Value": "@Zhinu:Human Interface:Ra System Info Table Panel",
+                                    "Name": "System Info Table Pointer",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Panel Visualization Style",
+                                    "Value": "DeneWord Table",
+                                    "Name": "Ra System Info Table Style",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": true,
+                                    "DeneWord Type": "Panel In Page Position",
+                                    "Value": 3,
+                                    "Name": "Panel In Page Position",
+                                    "Value Type": "int"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": true,
+                                    "Name": "Visible",
+                                    "Value Type": "boolean"
+                                }
+                            ],
+                            "Name": "Ra System Info Panel" 
+                        },
+                        {
+                            "Target": "@Zhinu:Human Interface:Ra System Info Table Panel",
+                            "DeneWords": [
+                                {
+                                    "Required": "true",
+                                    "Value": "Ra System Info",
+                                    "Name": "Panel Title",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Display Table DeneWord Pointer",
+                                    "Value": "@Zhinu:Purpose:External Data:Ra:Hypothalamus Build Number",
+                                    "Name": "Hypothalamus Build Number",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Display Table DeneWord Pointer",
+                                    "Value": "@Zhinu:Purpose:External Data:Ra:Heart Build Number",
+                                    "Name": "Heart Build Number",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Display Table DeneWord Pointer",
+                                    "Value": "@Zhinu:Purpose:External Data:Ra:Medula Build Number",
+                                    "Name": "Medula Build Number",
+                                    "Value Type": "Dene Pointer"
+                                }
+                            ],
+                            "Name": "Ra System Info Table Data"
+                        },
+						{
+                            "Target": "@Zhinu:Human Interface:Diagnostics Page",
+                            "DeneWords": [
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Panel DeneChain Pointer",
+                                    "Value": "@Zhinu:Human Interface:Sento System Info Table Panel",
+                                    "Name": "System Info Table Pointer",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Panel Visualization Style",
+                                    "Value": "DeneWord Table",
+                                    "Name": "Sento System Info Table Style",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": true,
+                                    "DeneWord Type": "Panel In Page Position",
+                                    "Value": 4,
+                                    "Name": "Panel In Page Position",
+                                    "Value Type": "int"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": true,
+                                    "Name": "Visible",
+                                    "Value Type": "boolean"
+                                }
+                            ],
+                            "Name": "Sento System Info Panel" 
+                        },
+                        {
+                            "Target": "@Zhinu:Human Interface:Sento System Info Table Panel",
+                            "DeneWords": [
+                                {
+                                    "Required": "true",
+                                    "Value": "Sento System Info",
+                                    "Name": "Panel Title",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Display Table DeneWord Pointer",
+                                    "Value": "@Zhinu:Purpose:External Data:Sento:Hypothalamus Build Number",
+                                    "Name": "Hypothalamus Build Number",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Display Table DeneWord Pointer",
+                                    "Value": "@Zhinu:Purpose:External Data:Sento:Heart Build Number",
+                                    "Name": "Heart Build Number",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Display Table DeneWord Pointer",
+                                    "Value": "@Zhinu:Purpose:External Data:Sento:Medula Build Number",
+                                    "Name": "Medula Build Number",
+                                    "Value Type": "Dene Pointer"
+                                }
+                            ],
+                            "Name": "Sento System Info Table Data"
+                        },
+						{
+                            "Target": "@Zhinu:Human Interface:Diagnostics Page",
+                            "DeneWords": [
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Panel DeneChain Pointer",
+                                    "Value": "@Zhinu:Human Interface:DamnWatcher System Info Table Panel",
+                                    "Name": "System Info Table Pointer",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Panel Visualization Style",
+                                    "Value": "DeneWord Table",
+                                    "Name": "DamnWatcher System Info Table Style",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": true,
+                                    "DeneWord Type": "Panel In Page Position",
+                                    "Value": 5,
+                                    "Name": "Panel In Page Position",
+                                    "Value Type": "int"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": true,
+                                    "Name": "Visible",
+                                    "Value Type": "boolean"
+                                }
+                            ],
+                            "Name": "DamnWatcher System Info Panel" 
+                        },
+                        {
+                            "Target": "@Zhinu:Human Interface:DamnWatcher System Info Table Panel",
+                            "DeneWords": [
+                                {
+                                    "Required": "true",
+                                    "Value": "DamnWatcher System Info",
+                                    "Name": "Panel Title",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Display Table DeneWord Pointer",
+                                    "Value": "@Zhinu:Purpose:External Data:DamnWatcher:Hypothalamus Build Number",
+                                    "Name": "Hypothalamus Build Number",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Display Table DeneWord Pointer",
+                                    "Value": "@Zhinu:Purpose:External Data:DamnWatcher:Heart Build Number",
+                                    "Name": "Heart Build Number",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Display Table DeneWord Pointer",
+                                    "Value": "@Zhinu:Purpose:External Data:DamnWatcher:Medula Build Number",
+                                    "Name": "Medula Build Number",
+                                    "Value Type": "Dene Pointer"
+                                }
+                            ],
+                            "Name": "DamnWatcher System Info Table Data"
+                        }
+					]
+                }],
+            "Mutations":[]
+		},
+		"Medula": {
+			"Mutations": [{}]
+		}
+	}
+}

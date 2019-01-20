@@ -1,0 +1,23 @@
+{
+    "Homebox Definition Type":"Sensor",
+    "Homeobox Name":"Lock Voltage",
+    "Sensor Name":"Lock Voltage Sensor",
+    "Microcontroller Pointer":"@NewRa:Internal:Compoenents:Mother Microcontroller"
+    "Provider":"https://www.digitalgeppetto.com/products/VoltageLock.html",
+    "Port":"A5",
+    value:[
+        {
+            "Name":"Lock Voltage",
+            "Units":"Volts",
+            "Sensor Request Position":3,
+            "Range Maximum":5.5,
+            "Range Minimum":0.0,
+            "Initial Value":0,
+            "Reporting Value Dene Name":"Lock"
+            "Human Interface Panel":"Now", 
+            "In Panel Position":3,
+            "Panel Display Name":"Lock"
+        }
+    ]
+
+}

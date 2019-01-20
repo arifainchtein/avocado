@@ -1,0 +1,940 @@
+{
+	"Sperm": {
+		"Purpose": {
+			"Name": "MonoNannyNanny",
+			"Purpose Type": "Mutate",
+			"Description":"The sperm to create a MonoNannyNanny"
+		},
+		"Hypothalamus": {
+			"Actions":[
+                {
+                    "Target": "@MonoNannyNanny:Human Interface",
+                    "Dene Type": "Create Dene Chain",
+                    "DeneWords": [
+                        {
+                            "Required": true,
+                            "Value": true,
+                            "Name": "Active",
+                            "Value Type": "boolean"
+                        },
+                        {
+                            "Required": true,
+                            "Value": 1,
+                            "Name": "Execution Position",
+                            "Value Type": "int"
+                        },
+                        {
+                            "Required": true,
+                            "Value": "Pre Homebox Insertion",
+                            "Name": "Execution Point",
+                            "Value Type": "Dene Pointer"
+                        },
+                        {
+                            "Required": true,
+                            "Value": "Action Evaluation Set Ledborg Red",
+                            "Name": "DeneChain Name",
+                            "Value Type": "String"
+                        }
+                    ],
+                    "Name": "Create Human InterfaceAction Evaluation Set Ledborg Red DeneChain"
+                },
+                {
+                    "Target": "@MonoNannyNanny:Human Interface",
+                    "Dene Type": "Create Dene Chain",
+                    "DeneWords": [
+                        {
+                            "Required": true,
+                            "Value": true,
+                            "Name": "Active",
+                            "Value Type": "boolean"
+                        },
+                        {
+                            "Required": true,
+                            "Value": 2,
+                            "Name": "Execution Position",
+                            "Value Type": "int"
+                        },
+                        {
+                            "Required": true,
+                            "Value": "Pre Homebox Insertion",
+                            "Name": "Execution Point",
+                            "Value Type": "Dene Pointer"
+                        },
+                        {
+                            "Required": true,
+                            "Value": "Action Evaluation Set Ledborg Green",
+                            "Name": "DeneChain Name",
+                            "Value Type": "String"
+                        }
+                    ],
+                    "Name": "Create Human InterfaceAction Evaluation Set Ledborg Green DeneChain"
+                },
+                {
+                    "Target": "@MonoNannyNanny:Human Interface",
+                    "Dene Type": "Create Dene Chain",
+                    "DeneWords": [
+                        {
+                            "Required": true,
+                            "Value": true,
+                            "Name": "Active",
+                            "Value Type": "boolean"
+                        },
+                        {
+                            "Required": true,
+                            "Value": 3,
+                            "Name": "Execution Position",
+                            "Value Type": "int"
+                        },
+                        {
+                            "Required": true,
+                            "Value": "Pre Homebox Insertion",
+                            "Name": "Execution Point",
+                            "Value Type": "Dene Pointer"
+                        },
+                        {
+                            "Required": true,
+                            "Value": "Action Evaluation Set Ledborg Blue",
+                            "Name": "DeneChain Name",
+                            "Value Type": "String"
+                        }
+                    ],
+                    "Name": "Create Human InterfaceAction Evaluation Set Ledborg Blue DeneChain"
+                },
+                {
+                "Target": "@MonoNannyNanny:Human Interface",
+                "Dene Type": "Create Dene Chain",
+                "DeneWords": [
+                    {
+                        "Required": true,
+                        "Value": true,
+                        "Name": "Active",
+                        "Value Type": "boolean"
+                    },
+                    {
+                        "Required": true,
+                        "Value": 1,
+                        "Name": "Execution Position",
+                        "Value Type": "int"
+                    },
+                    {
+                        "Required": true,
+                        "Value": "Pre Homebox Insertion",
+                        "Name": "Execution Point",
+                        "Value Type": "Dene Pointer"
+                    },
+                    {
+                        "Required": true,
+                        "Value": "MonoNanny",
+                        "Name": "DeneChain Name",
+                        "Value Type": "String"
+                    }
+                ],
+                "Name": "Create Human Interface MonoNanny DeneChain"
+            }],
+			"Homeoboxes": [
+				{
+					"Name": "Create MonoNannyNanny",
+					"Denes": [
+						{
+                            "Name": "Metadata",
+                            "Dene Type": "Homeobox Metadata",
+							"Target": "",
+							"DeneWords": [
+                                {
+                                    "Name":"Created On",
+                                    "Value":"09/09/2018",
+                                    "Value Type":"Date",
+                                    "Required":true
+                                },
+                                {
+                                    "Name":"Description",
+                                    "Value":"This homeobox converts an Egg to a MonoNannyNanny",
+                                    "Value Type":"String",
+                                    "Required":true
+                                }
+							]
+                        },
+                        {
+							"Name": "Homeobox Index",
+							"Dene Type": "Homebox Index",
+							"DeneWords": [
+                                {
+                                    "Name": "MonoNanny",
+                                    "DeneWord Type": "Hox Dene Pointer",
+                                    "Value": "@Sperm:Hypothalamus:Create MonoNannyNanny:MonoNanny",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Name": "Ledborg MicroController",
+                                    "DeneWord Type": "Hox Dene Pointer",
+                                    "Value": "@Sperm:Hypothalamus:Create MonoNannyNanny:Ledborg MicroController",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Name": "Ledborg Actuator",
+                                    "DeneWord Type": "Hox Dene Pointer",
+                                    "Value": "@Sperm:Hypothalamus:Create MonoNannyNanny:Ledborg Actuator",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Name": "Ledborg Actuator",
+                                    "DeneWord Type": "Hox Dene Pointer",
+                                    "Value": "@Sperm:Hypothalamus:Create MonoNannyNanny:Ledborg Actuator Actions",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Name": "Set Ledborg Blue",
+                                    "DeneWord Type": "Hox Dene Pointer",
+                                    "Value": "@Sperm:Hypothalamus:Create MonoNannyNanny:Set Ledborg Blue",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Name": "Set LedBorg Blue Success Tasks",
+                                    "DeneWord Type": "Hox Dene Pointer",
+                                    "Value": "@Sperm:Hypothalamus:Create MonoNannyNanny:Set LedBorg Blue Success Tasks",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Name": "Set Ledborg Green",
+                                    "DeneWord Type": "Hox Dene Pointer",
+                                    "Value": "@Sperm:Hypothalamus:Create MonoNannyNanny:Set Ledborg Green",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Name": "Set LedBorg Green Success Tasks",
+                                    "DeneWord Type": "Hox Dene Pointer",
+                                    "Value": "@Sperm:Hypothalamus:Create MonoNannyNanny:Set LedBorg Green Success Tasks",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Name": "Set Ledborg Red",
+                                    "DeneWord Type": "Hox Dene Pointer",
+                                    "Value": "@Sperm:Hypothalamus:Create MonoNannyNanny:Set Ledborg Red",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Name": "Set LedBorg Red Success Tasks",
+                                    "DeneWord Type": "Hox Dene Pointer",
+                                    "Value": "@Sperm:Hypothalamus:Create MonoNannyNanny:Set LedBorg Red Success Tasks",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Name": "Update Ledborg",
+                                    "DeneWord Type": "Hox Dene Pointer",
+                                    "Value": "@Sperm:Hypothalamus:Create MonoNannyNanny:Update Ledborg",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Name": "MonoNanny Panel",
+                                    "DeneWord Type": "Hox Dene Pointer",
+                                    "Value": "@Sperm:Hypothalamus:Create MonoNannyNanny:MonoNanny Panel",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Name": "MonoNannyDataSource",
+                                    "DeneWord Type": "Hox Dene Pointer",
+                                    "Value": "@Sperm:Hypothalamus:Create MonoNannyNanny:MonoNannyDataSource",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Name": "Mono Pump Is On Condition",
+                                    "DeneWord Type": "Hox Dene Pointer",
+                                    "Value": "@Sperm:Hypothalamus:Create MonoNannyNanny:Mono Pump Is On Condition",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Name": "DataIsOkCondition",
+                                    "DeneWord Type": "Hox Dene Pointer",
+                                    "Value": "@Sperm:Hypothalamus:Create MonoNannyNanny:DataIsOkCondition",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Name": "Action Evaluation Set Ledborg Red Panel",
+                                    "DeneWord Type": "Hox Dene Pointer",
+                                    "Value": "@Sperm:Hypothalamus:Create MonoNannyNanny:Action Evaluation Set Ledborg Red Panel",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Name": "Action Evaluation Set Ledborg Green Panel",
+                                    "DeneWord Type": "Hox Dene Pointer",
+                                    "Value": "@Sperm:Hypothalamus:Create MonoNannyNanny:Action Evaluation Set Ledborg Green Panel",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Name": "Action Evaluation Set Ledborg Blue Panel",
+                                    "DeneWord Type": "Hox Dene Pointer",
+                                    "Value": "@Sperm:Hypothalamus:Create MonoNannyNanny:Action Evaluation Set Ledborg Blue Panel",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Name": "Action Evaluation Set Ledborg Red Dene Data Source",
+                                    "DeneWord Type": "Hox Dene Pointer",
+                                    "Value": "@Sperm:Hypothalamus:Create MonoNannyNanny:Action Evaluation Set Ledborg Red Dene Data Source",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Name": "Action Evaluation Set Ledborg Green Dene Data Source",
+                                    "DeneWord Type": "Hox Dene Pointer",
+                                    "Value": "@Sperm:Hypothalamus:Create MonoNannyNanny:Action Evaluation Set Ledborg Green Dene Data Source",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Name": "Action Evaluation Set Ledborg Blue Dene Data Source",
+                                    "DeneWord Type": "Hox Dene Pointer",
+                                    "Value": "@Sperm:Hypothalamus:Create MonoNannyNanny:Action Evaluation Set Ledborg Blue Dene Data Source",
+                                    "Value Type": "Dene Pointer"
+                                }
+                            ]
+                        },
+                        {
+                            "Target":"@MonoNannyNanny:Internal:Components",
+                            "Dene Type": "Microcontroller",
+                            "DeneWords": [
+                                {
+                                    "Required": true,
+                                    "Value": 2,
+                                    "Value Type": "int",
+                                    "Name": "Processing Queue Position"
+                                },
+                                {
+                                    "DeneWord Type": "Microcontroller Processing Class Name",
+                                    "Required": true,
+                                    "Value": "com.teleonome.framework.microcontroller.ledborgmicrocontroller.LedborgMicroController",
+                                    "Value Type": "String",
+                                    "Name": "LedborgMicroController Processing Class Name"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": "Ledborg MicroController",
+                                    "Name": "Codon",
+                                    "Value Type": "String"
+                                }
+                            ],
+                            "Name": "Ledborg MicroController"
+                        },
+                        {
+                            "Target":"@MonoNannyNanny:Internal:Actuators",
+                            "Dene Type": "Actuator",
+                            "DeneWords": [
+                                {
+                                    "DeneWord Type": "Actuator Microcontroller Pointer",
+                                    "Required": true,
+                                    "Value": "@MonoNannyNanny:Internal:Components:Ledborg MicroController",
+                                    "Name": "Pointer to Microcontroller",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": 2,
+                                    "Units": "Dimensionless",
+                                    "Name": "Execution Position",
+                                    "Value Type": "int"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": "Ledborg Actuator",
+                                    "Name": "Codon",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": false,
+                                    "DeneWord Type": "Action List",
+                                    "Value": "@MonoNannyNanny:Internal:Actuators:Ledborg Actuator Actions",
+                                    "Name": "Ledborg Actuator Actions",
+                                    "Value Type": "Dene Pointer"
+                                }
+                            ],
+                            "Name": "Ledborg Actuator"
+                        },
+                        {
+                            "Target":"@MonoNannyNanny:Internal:Actuators",
+                            "Dene Type": "Action List",
+                            "DeneWords": [
+                                {
+                                    "Required": true,
+                                    "Value": "VirtualActuator",
+                                    "Name": "Codon",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": true,
+                                    "DeneWord Type": "Action",
+                                    "Value": "@MonoNannyNanny:Internal:Actuators:Set Ledborg Blue",
+                                    "Name": "Set Ledborg Blue",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": true,
+                                    "DeneWord Type": "Action",
+                                    "Value": "@MonoNannyNanny:Internal:Actuators:Set Ledborg Green",
+                                    "Name": "Set Ledborg Green",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": true,
+                                    "DeneWord Type": "Action",
+                                    "Value": "@MonoNannyNanny:Internal:Actuators:Set Ledborg Red",
+                                    "Name": "Set Ledborg Red",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": true,
+                                    "DeneWord Type": "Action",
+                                    "Value": "@MonoNannyNanny:Internal:Actuators:Update Ledborg",
+                                    "Name": "Update Ledborg",
+                                    "Value Type": "Dene Pointer"
+                                }
+                            ],
+                            "Name": "Ledborg Actuator Actions"
+                        },
+                        {
+                            "Target":"@MonoNannyNanny:Internal:Actuators",
+                            "Dene Type": "Action",
+                            "DeneWords": [
+                                {
+                                    "Required": true,
+                                    "Value": "LedBorg Actuator",
+                                    "Name": "Codon",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": true,
+                                    "Name": "Active",
+                                    "Value Type": "boolean"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": 1,
+                                    "Name": "Evaluation Position",
+                                    "Value Type": "int"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": "$DoNothing",
+                                    "Name": "Actuator Command Code True Expression",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": "(DataIsOkCondition && !MonoPumpIsOn)",
+                                    "Name": "Expression",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": true,
+                                    "DeneWord Type": "Actuator Condition Pointer",
+                                    "Value": "@MonoNannyNanny:Internal:Actuators:DataIsOkCondition",
+                                    "Name": "DataIsOkCondition",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": true,
+                                    "DeneWord Type": "Actuator Condition Pointer",
+                                    "Value": "@MonoNannyNanny:Internal:Actuators:Mono Pump Is On Condition",
+                                    "Name": "MonoPumpIsOn",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "DeneWord Type": "Action Success Tasks",
+                                    "Value": "@MonoNannyNanny:Internal:Actuators:Set LedBorg Blue Success Tasks",
+                                    "Name": "Action Success Tasks True Expression",
+                                    "Value Type": "Dene Pointer"
+                                }
+                            ],
+                            "Name": "Set Ledborg Blue"
+                        },
+                        {
+                            "Target":"@MonoNannyNanny:Internal:Actuators",
+                            "DeneWords": [{
+                                "Target": "@MonoNannyNanny:Internal:Actuators:Update Ledborg:Actuator Command Code True Expression",
+                                "DeneWord Type": "Update DeneWord Value",
+                                "Value": "0#0#255",
+                                "Name": "Set LedBorg Blue Success Tasks",
+                                "Value Type": "long"
+                            }],
+                            "Name": "Set LedBorg Blue Success Tasks"
+                        },
+                        {
+                            "Target":"@MonoNannyNanny:Internal:Actuators",
+                            "Dene Type": "Actuator Condition",
+                            "DeneWords": [
+                                {
+                                    "Required": true,
+                                    "Value": "LedBorg Actuator",
+                                    "Name": "Codon",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": "PumpStatus==CompareTo_ON",
+                                    "Name": "Expression",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": true,
+                                    "Name": "On Lack Of Data",
+                                    "Value Type": "boolean"
+                                },
+                                {
+                                    "Required": true,
+                                    "DeneWord Type": "Condition Variable Pointer",
+                                    "Value": "@MonoNannyNanny:Purpose:External Data:MonoNanny:PumpStatus",
+                                    "Name": "PumpStatus",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": true,
+                                    "DeneWord Type": "Condition Variable Pointer",
+                                    "Value": "@MonoNannyNanny:Internal:Reference:On-Off Set:CompareTo_ON",
+                                    "Name": "CompareTo_ON",
+                                    "Value Type": "String"
+                                }
+                            ],
+                            "Name": "Mono Pump Is On Condition"
+                        },
+                        {  
+                            "Target":"@MonoNannyNanny:Internal:Actuators",
+                            "Dene Type": "Actuator Condition",
+                            "DeneWords": [
+                                {  
+                                    "Required": true,
+                                    "Value": "LedBorg Actuator",
+                                    "Name": "Codon",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": "Success==ExternalDataStatus",
+                                    "Name": "Expression",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": false,
+                                    "Name": "On Lack Of Data",
+                                    "Value Type": "boolean"
+                                },
+                                {
+                                    "Required": true,
+                                    "DeneWord Type": "Condition Variable Pointer",
+                                    "Value": "@MonoNannyNanny:Purpose:External Data:MonoNanny:ExternalDataStatus",
+                                    "Name": "ExternalDataStatus",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": true,
+                                    "DeneWord Type": "Condition Variable Pointer",
+                                    "Value": "@MonoNannyNanny:Internal:Reference:Bootstrap Status:Success",
+                                    "Name": "Success",
+                                    "Value Type": "String"
+                                }
+                            ],
+                            "Name": "DataIsOkCondition"
+                        },
+                        {
+                            "Target":"@MonoNannyNanny:Internal:Actuators",
+                            "Dene Type": "Action",
+                            "DeneWords": [
+                                {
+                                    "Required": true,
+                                    "Value": "LedBorg Actuator",
+                                    "Name": "Codon",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": true,
+                                    "Name": "Active",
+                                    "Value Type": "boolean"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": 2,
+                                    "Name": "Evaluation Position",
+                                    "Value Type": "int"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": "$DoNothing",
+                                    "Name": "Actuator Command Code True Expression",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": "(DataIsOkCondition && MonoPumpIsOn)",
+                                    "Name": "Expression",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": true,
+                                    "DeneWord Type": "Actuator Condition Pointer",
+                                    "Value": "@MonoNannyNanny:Internal:Actuators:DataIsOkCondition",
+                                    "Name": "DataIsOkCondition",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": true,
+                                    "DeneWord Type": "Actuator Condition Pointer",
+                                    "Value": "@MonoNannyNanny:Internal:Actuators:Mono Pump Is On Condition",
+                                    "Name": "MonoPumpIsOn",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "DeneWord Type": "Action Success Tasks",
+                                    "Value": "@MonoNannyNanny:Internal:Actuators:Set LedBorg Green Success Tasks",
+                                    "Name": "Action Success Tasks True Expression",
+                                    "Value Type": "Dene Pointer"
+                                }
+                            ],
+                            "Name": "Set Ledborg Green"
+                        },
+                        {
+                            "Target":"@MonoNannyNanny:Internal:Actuators",
+                            "DeneWords": [{
+                                "Target": "@MonoNannyNanny:Internal:Actuators:Update Ledborg:Actuator Command Code True Expression",
+                                "DeneWord Type": "Update DeneWord Value",
+                                "Value": "0#255#0",
+                                "Name": "Set LedBorg Green Success Tasks",
+                                "Value Type": "long"
+                            }],
+                            "Name": "Set LedBorg Green Success Tasks"
+                        },
+                        {
+                            "Target":"@MonoNannyNanny:Internal:Actuators",
+                            "Dene Type": "Action",
+                            "DeneWords": [
+                                {
+                                    "Required": true,
+                                    "Value": "LedBorg Actuator",
+                                    "Name": "Codon",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": true,
+                                    "Name": "Active",
+                                    "Value Type": "boolean"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": 4,
+                                    "Name": "Evaluation Position",
+                                    "Value Type": "int"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": "$DoNothing",
+                                    "Name": "Actuator Command Code True Expression",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": "$DoNothing",
+                                    "Name": "Actuator Command Code False Expression",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": "DataIsOkCondition",
+                                    "Name": "Expression",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": true,
+                                    "DeneWord Type": "Actuator Condition Pointer",
+                                    "Value": "@MonoNannyNanny:Internal:Actuators:DataIsOkCondition",
+                                    "Name": "DataIsOkCondition",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "DeneWord Type": "Action Success Tasks",
+                                    "Value": "@MonoNannyNanny:Internal:Actuators:Set LedBorg Red Success Tasks",
+                                    "Name": "Action Success Tasks False Expression",
+                                    "Value Type": "Dene Pointer"
+                                }
+                            ],
+                            "Name": "Set Ledborg Red"
+                        },
+                        {
+                            "Target":"@MonoNannyNanny:Internal:Actuators",
+                            "DeneWords": [{
+                                "Target": "@MonoNannyNanny:Internal:Actuators:Update Ledborg:Actuator Command Code True Expression",
+                                "DeneWord Type": "Update DeneWord Value",
+                                "Value": "148#0#211",
+                                "Name": "Set LedBorg Red Success Tasks",
+                                "Value Type": "long"
+                            }],
+                            "Name": "Set LedBorg Red Success Tasks"
+                        },
+                        {
+                           "Target":"@MonoNannyNanny:Internal:Actuators",
+                            "Dene Type": "Action",
+                            "DeneWords": [
+                                {
+                                    "Required": true,
+                                    "Value": "LedBorg Actuator",
+                                    "Name": "Codon",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": true,
+                                    "Name": "Active",
+                                    "Value Type": "boolean"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": 6,
+                                    "Name": "Evaluation Position",
+                                    "Value Type": "int"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": "255#0#0",
+                                    "Name": "Actuator Command Code True Expression",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": "1==1",
+                                    "Name": "Expression",
+                                    "Value Type": "String"
+                                }
+                            ],
+                            "Name": "Update Ledborg"
+                        },
+                        {
+                            "Target":"@MonoNannyNanny:Purpose:External Data",
+                            "Dene Type": "External Data Source",
+                            "DeneWords": [
+                                {
+                                    "Required": "true",
+                                    "Value": "success",
+                                    "Value Type": "String",
+                                    "Name": "ExternalDataStatus"
+                                },
+                                {
+                                    "Data Location": "@MonoNanny:Purpose:Operational Data:Vital:Status",
+                                    "Required": "true",
+                                    "Value": " OK 12:41",
+                                    "Name": "Status",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Data Location": "Pulse Timestamp",
+                                    "Required": "true",
+                                    "Value": "08/09/18 14:48",
+                                    "Name": "Pulse Timestamp",
+                                    "Value Type": "Timestamp"
+                                },
+                                {
+                                    "Data Location": "@MonoNanny:Purpose:Operational Data:Pump:PumpStatus",
+                                    "Value": "OFF",
+                                    "Name": "PumpStatus",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Data Location": "@MonoNanny:Purpose:Sensor Data:Flow:Total Volume",
+                                    "Value": 15957,
+                                    "Units":"liters",
+                                    "Name": "Total Volume",
+                                    "Value Type": "double"
+                                },
+                                {
+                                    "Data Location": "@MonoNanny:Purpose:Sensor Data:Flow:Flow",
+                                    "Value": 5.0,
+                                    "Units":"liters/min",
+                                    "Name": "Flow",
+                                    "Value Type": "double"
+                                }
+                            ],
+                            "Name": "MonoNanny"
+                        },
+                        {
+                            "Target":"@MonoNannyNanny:Human Interface:Home Page",
+                            "DeneWords": [
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Panel DeneChain Pointer",
+                                    "Value": "@MonoNannyNanny:Human Interface:MonoNanny",
+                                    "Name": "Now Panel Pointer",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Panel Visualization Style",
+                                    "Value": "Complete Dene Single Value Panel External Data",
+                                    "Name": "Now Panel Style",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": true,
+                                    "DeneWord Type": "Panel In Page Position",
+                                    "Value": 1,
+                                    "Name": "Panel In Page Position",
+                                    "Value Type": "int"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": true,
+                                    "Name": "Visible",
+                                    "Value Type": "boolean"
+                                }
+                            ],
+                            "Name": "MonoNanny Panel"
+                        },
+                        {
+                            "Target":"@MonoNannyNanny:Human Interface:MonoNanny",
+                            "DeneWords": [{
+                                "Required": "true",
+                                "DeneWord Type": "Panel Data Source Pointer",
+                                "Value": "@MonoNannyNanny:Purpose:External Data:MonoNanny",
+                                "Name": "MonoNanny",
+                                "Value Type": "Dene Pointer"
+                            }],
+                            "Name": "MonoNannyDataSource"
+                        },
+                        {
+                            "Target":"@MonoNannyNanny:Human Interface:Diagnostics Page",
+                            "DeneWords": [
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Panel DeneChain Pointer",
+                                    "Value": "@MonoNannyNanny:Human Interface:Action Evaluation Set Ledborg Red",
+                                    "Name": "Action Evaluation Set Ledborg Red Pointer",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Panel Visualization Style",
+                                    "Value": "Action Evaluation Report",
+                                    "Name": "Action Evaluation TSet Ledborg Red Style",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": true,
+                                    "DeneWord Type": "Panel In Page Position",
+                                    "Value": 1,
+                                    "Name": "Panel In Page Position",
+                                    "Value Type": "int"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": true,
+                                    "Name": "Visible",
+                                    "Value Type": "boolean"
+                                }
+                            ],
+                            "Name": "Action Evaluation Set Ledborg Red Panel"
+                        },
+                        {
+                            "Target":"@MonoNannyNanny:Human Interface:Diagnostics Page",
+                            "DeneWords": [
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Panel DeneChain Pointer",
+                                    "Value": "@MonoNannyNanny:Human Interface:Action Evaluation Set Ledborg Green",
+                                    "Name": "Action Evaluation Set Ledborg Red Pointer",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Panel Visualization Style",
+                                    "Value": "Action Evaluation Report",
+                                    "Name": "Action Evaluation Set Ledborg Red Style",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": true,
+                                    "DeneWord Type": "Panel In Page Position",
+                                    "Value": 2,
+                                    "Name": "Panel In Page Position",
+                                    "Value Type": "int"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": true,
+                                    "Name": "Visible",
+                                    "Value Type": "boolean"
+                                }
+                            ],
+                            "Name": "Action Evaluation Set Ledborg Green Panel"
+                        },
+                        {
+                            "Target":"@MonoNannyNanny:Human Interface:Diagnostics Page",
+                            "DeneWords": [
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Panel DeneChain Pointer",
+                                    "Value": "@MonoNannyNanny:Human Interface:Action Evaluation Set Ledborg Blue",
+                                    "Name": "Action Evaluation Set Ledborg Blue Pointer",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Panel Visualization Style",
+                                    "Value": "Action Evaluation Report",
+                                    "Name": "Action Evaluation Set Ledborg Blue Style",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": true,
+                                    "DeneWord Type": "Panel In Page Position",
+                                    "Value": 3,
+                                    "Name": "Panel In Page Position",
+                                    "Value Type": "int"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": true,
+                                    "Name": "Visible",
+                                    "Value Type": "boolean"
+                                }
+                            ],
+                            "Name": "Action Evaluation Set Ledborg Blue Panel"
+                        },
+                        {
+                            "Target":"@MonoNannyNanny:Human Interface:Action Evaluation Set Ledborg Red",
+                            "DeneWords": [{
+                                "Required": "true",
+                                "DeneWord Type": "Panel Data Source Pointer",
+                                "Value": "@MonoNannyNanny:Internal:Actuators:Set Ledborg Red",
+                                "Name": "Set Ledborg Red",
+                                "Value Type": "Dene Pointer"
+                            }],
+                            "Name": "Action Evaluation Set Ledborg Red Dene Data Source"
+                        },
+                        {
+                            "Target":"@MonoNannyNanny:Human Interface:Action Evaluation Set Ledborg Green",
+                            "DeneWords": [{
+                                "Required": "true",
+                                "DeneWord Type": "Panel Data Source Pointer",
+                                "Value": "@MonoNannyNanny:Internal:Actuators:Set Ledborg Green",
+                                "Name": "Set Ledborg Green",
+                                "Value Type": "Dene Pointer"
+                            }],
+                            "Name": "Action Evaluation Set Ledborg Green Dene Data Source"
+                        },
+                        {
+                            "Target":"@MonoNannyNanny:Human Interface:Action Evaluation Set Ledborg Blue",
+                            "DeneWords": [{
+                                "Required": "true",
+                                "DeneWord Type": "Panel Data Source Pointer",
+                                "Value": "@MonoNannyNanny:Internal:Actuators:Set Ledborg Blue",
+                                "Name": "Set Ledborg Blue",
+                                "Value Type": "Dene Pointer"
+                            }],
+                            "Name": "Action Evaluation Set Ledborg Blue Dene Data Source"
+                        }                        
+                    ]
+                }
+			],
+            "Mutations":[]
+		},
+		"Medula": {
+			"Mutations": [{}]
+		}
+	}
+}

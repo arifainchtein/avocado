@@ -1,0 +1,25 @@
+{
+    "Homebox Definition Type":"Sensor",
+    "Homeobox Name":"Battery Current Values",
+    "Sensor Name":"Internal Energy Values",
+    "Microcontroller Pointer":"@NewRa:Internal:Compoenents:Mother Microcontroller",
+    "Provider":"https://www.iteadstudio.com",
+    "Port":"A1",
+    "Model": "ACS712 Current Sensor Brick",
+    value:[
+         {
+            "Name":"BatteryOutputCurrent",
+            "Units":"mA",
+            "Value Type":"double",
+            "Sensor Request Position":2,
+            "Range Maximum":1000,
+            "Range Minimum":0,
+            "Initial Value":0,
+            "Reporting Value Dene Name":"Power Status",
+            "Human Interface Panel":"Internal Power Data" ,
+            "In Panel Position":2,
+            "Panel Display Name":"Bat Current"
+        }
+    ]
+
+}

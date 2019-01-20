@@ -1,0 +1,946 @@
+{
+	"Sperm": {
+		"Purpose": {
+			"Name": "Ra",
+			"Purpose Type": "Mutate",
+			"Description":"To add generator status and its monitoring to the Ra denome"
+		},
+		"Hypothalamus": {
+			"Actions": [
+			{
+				"Target": "@Ra:Human Interface",
+				"Dene Type": "Create Dene Chain",
+				"DeneWords": [
+					{
+						"Required": true,
+						"Value": true,
+						"Name": "Active",
+						"Value Type": "boolean"
+					},
+					{
+						"Required": true,
+						"Value": 1,
+						"Name": "Execution Position",
+						"Value Type": "int"
+					},
+					{
+						"Required": true,
+						"Value": "Pre Homebox Insertion",
+						"Name": "Execution Point",
+						"Value Type": "Dene Pointer"
+					},
+					{
+						"Required": true,
+						"Value": "Generator",
+						"Name": "DeneChain Name",
+						"Value Type": "String"
+					}
+				],
+				"Name": "Create Generator Panel DeneChain"
+			},
+			{
+				"Dene Type": "Update DeneWord",
+				"DeneWords": [
+					{
+						"Required": true,
+						"Value": 1,
+						"Name": "Execution Position",
+						"Value Type": "int"
+					},
+					{
+						"Required": true,
+						"Value": "Post Homebox Insertion",
+						"Name": "Execution Point",
+						"Value Type": "Dene Pointer"
+					},
+					{
+						"Required": true,
+						"Value": "@Sperm:Hypothalamus:Update Home Page Panels Position List",
+						"Name": "DeneWords Update List",
+						"Value Type": "Dene Pointer"
+					}
+				],
+				"Name": "Update Home Page Panels Position"
+			},
+			{
+				"DeneWords": [
+					{
+						"Target": "@Ra:Human Interface:Home Page:Selectronic Capture Panel:Panel In Page Position",
+						"Required": true,
+						"Value": 3,
+						"Name": "Update DeneWord",
+						"Value Type": "int"
+					},
+					{
+						"Target": "@Ra:Human Interface:Home Page:Selectronic Panel:Panel In Page Position",
+						"Required": true,
+						"Value": 4,
+						"Name": "Update DeneWord",
+						"Value Type": "int"
+					},
+					{
+						"Target": "@Ra:Human Interface:Home Page:Selectronic LogData Capture Panel:Panel In Page Position",
+						"Required": true,
+						"Value": 5,
+						"Name": "Update DeneWord",
+						"Value Type": "int"
+					},
+					{
+						"Target": "@Ra:Human Interface:Home Page:Battery Voltage Last 15 minutes:Panel In Page Position",
+						"Required": true,
+						"Value": 6,
+						"Name": "Update DeneWord",
+						"Value Type": "int"
+					},
+					{
+						"Target": "@Ra:Human Interface:Home Page:Battery Voltage Last 24 Hours:Panel In Page Position",
+						"Required": true,
+						"Value": 7,
+						"Name": "Update DeneWord",
+						"Value Type": "int"
+					},
+					{
+						"Target": "@Ra:Human Interface:Home Page:Charge Last 15 minutes:Panel In Page Position",
+						"Required": true,
+						"Value": 8,
+						"Name": "Update DeneWord",
+						"Value Type": "int"
+					},
+					{
+						"Target": "@Ra:Human Interface:Home Page:Load Last 15 minutes:Panel In Page Position",
+						"Required": true,
+						"Value": 9,
+						"Name": "Update DeneWord",
+						"Value Type": "int"
+					},
+					{
+						"Target": "@Ra:Human Interface:Home Page:Charge Last 24 Hours:Panel In Page Position",
+						"Required": true,
+						"Value": 10,
+						"Name": "Update DeneWord",
+						"Value Type": "int"
+					},
+					{
+						"Target": "@Ra:Human Interface:Home Page:Load Last 24 Hours:Panel In Page Position",
+						"Required": true,
+						"Value": 11,
+						"Name": "Update DeneWord",
+						"Value Type": "int"
+					},
+					{
+						"Target": "@Ra:Human Interface:Home Page:Solar Energy Panel:Panel In Page Position",
+						"Required": true,
+						"Value": 12,
+						"Name": "Update DeneWord",
+						"Value Type": "int"
+					},
+					{
+						"Target": "@Ra:Human Interface:Home Page:Forecast Panel:Panel In Page Position",
+						"Required": true,
+						"Value": 13,
+						"Name": "Update DeneWord",
+						"Value Type": "int"
+					},
+					{
+						"Target": "@Ra:Human Interface:Home Page:Today Panel:Panel In Page Position",
+						"Required": true,
+						"Value": 14,
+						"Name": "Update DeneWord",
+						"Value Type": "int"
+					}
+				],
+				"Name": "Update Home Page Panels Position List"
+			}
+			],
+			"Homeoboxes":[
+                {
+					"Name": "Add Generator Monitoring",
+					"Denes": [
+						{
+							"Name": "Homeobox Index",
+							"Dene Type": "Homebox Index",
+							"DeneWords": [
+								{
+									"Name": "Generator",
+									"DeneWord Type": "Hox Dene Pointer",
+									"Value": "@Sperm:Hypothalamus:Add Generator Monitoring:Generator",
+									"Value Type": "Dene Pointer"
+								},
+								{
+									"Name": "Generator Turned On",
+									"DeneWord Type": "Hox Dene Pointer",
+									"Value": "@Sperm:Hypothalamus:Add Generator Monitoring:Generator Turned On",
+									"Value Type": "Dene Pointer"
+								},
+								{
+									"Name": "Generator Turned On Action Success Tasks",
+									"DeneWord Type": "Hox Dene Pointer",
+									"Value": "@Sperm:Hypothalamus:Add Generator Monitoring:Generator Turned On Action Success Tasks",
+									"Value Type": "Dene Pointer"
+								},
+								{
+									"Name": "Current Charge Condition",
+									"DeneWord Type": "Hox Dene Pointer",
+									"Value": "@Sperm:Hypothalamus:Add Generator Monitoring:Current Charge Condition",
+									"Value Type": "Dene Pointer"
+								},
+								{
+									"Name": "Current Load Condition",
+									"DeneWord Type": "Hox Dene Pointer",
+									"Value": "@Sperm:Hypothalamus:Add Generator Monitoring:Current Load Condition",
+									"Value Type": "Dene Pointer"
+								},
+								{
+									"Name": "Generator Status Condition",
+									"DeneWord Type": "Hox Dene Pointer",
+									"Value": "@Sperm:Hypothalamus:Add Generator Monitoring:Generator Status Condition",
+									"Value Type": "Dene Pointer"
+								},
+								{
+									"Name": "Generator Turned Off",
+									"DeneWord Type": "Hox Dene Pointer",
+									"Value": "@Sperm:Hypothalamus:Add Generator Monitoring:Generator Turned Off",
+									"Value Type": "Dene Pointer"
+								},
+								{
+									"Name": "Generator Turned Off Action Success Tasks True Expression",
+									"DeneWord Type": "Hox Dene Pointer",
+									"Value": "@Sperm:Hypothalamus:Add Generator Monitoring:Generator Turned Off Action Success Tasks True Expression",
+									"Value Type": "Dene Pointer"
+								},
+								{
+									"Name": "Generator Turned Off Mnemosyne Operations True Expression",
+									"DeneWord Type": "Hox Dene Pointer",
+									"Value": "@Sperm:Hypothalamus:Add Generator Monitoring:Generator Turned Off Mnemosyne Operations True Expression",
+									"Value Type": "Dene Pointer"
+								},
+								{
+									"Name": "Create Run Completed Dene",
+									"DeneWord Type": "Hox Dene Pointer",
+									"Value": "@Sperm:Hypothalamus:Add Generator Monitoring:Create Run Completed Dene",
+									"Value Type": "Dene Pointer"
+								},
+								{
+									"Name": "Aggregate Total Generator Minutes",
+									"DeneWord Type": "Hox Dene Pointer",
+									"Value": "@Sperm:Hypothalamus:Add Generator Monitoring:Aggregate Total Generator Minutes",
+									"Value Type": "Dene Pointer"
+								},
+								{
+									"Name": "Generator Panel",
+									"DeneWord Type": "Hox Dene Pointer",
+									"Value": "@Sperm:Hypothalamus:Add Generator Monitoring:Generator Panel",
+									"Value Type": "Dene Pointer"
+								},
+								{
+									"Name": "State of Charge",
+									"DeneWord Type": "Hox Dene Pointer",
+									"Value": "@Sperm:Hypothalamus:Add Generator Monitoring:State of Charge",
+									"Value Type": "Dene Pointer"
+								},
+								{
+									"Name": "Start Time",
+									"DeneWord Type": "Hox Dene Pointer",
+									"Value": "@Sperm:Hypothalamus:Add Generator Monitoring:Start Time",
+									"Value Type": "Dene Pointer"
+								},
+								{
+									"Name": "Generator Running Time",
+									"DeneWord Type": "Hox Dene Pointer",
+									"Value": "@Sperm:Hypothalamus:Add Generator Monitoring:Generator Running Time",
+									"Value Type": "Dene Pointer"
+								}
+							]
+						},
+						{
+						 	"Target": "@Ra:Purpose:Operational Data",
+							"DeneWords": [
+								{
+									"Required": true,
+									"Value": "OFF",
+									"Name": "GeneratorStatus",
+									"Value Type": "String"
+								},
+								{
+									"Required": true,
+									"Value": "2",
+									"Name": "Generator Start Time",
+									"Value Type": "Timestamp"
+								},
+								{
+									"Required": true,
+									"Value": 0,
+									"Name": "Generator Running Time",
+									"Value Type": "int"
+								},
+								{
+									"Required": true,
+									"Value": "05/04/2018 15:07:48",
+									"Source": "@Ra:Purpose:Operational Data:Generator:Generator Stop Time",
+									"Name": "Generator Stop Time",
+									"Value Type": "long"
+								},
+								{
+									"Required": "false",
+									"Value": "137",
+									"Units": "seconds",
+									"Source": "@Ra:Purpose:Operational Data:Generator:Last Run Generator Running Time",
+									"Name": "Last Run Generator Running Time",
+									"Value Type": "int"
+								},
+								{
+									"Required": "false",
+									"Value": "05/04/2018 15:04:46",
+									"Source": "@Ra:Purpose:Operational Data:Generator:Last Run Generator Start Time",
+									"Name": "Last Run Generator Start Time",
+									"Value Type": "long"
+								},
+								{
+									"Required": "false",
+									"Value": "05/04/2018 15:07:48",
+									"Source": "@Ra:Purpose:Operational Data:Generator:Last Run Generator Stop Time",
+									"Name": "Last Run Generator Stop Time",
+									"Value Type": "long"
+								},
+								{
+									"Required": "false",
+									"Value": "05/04/2018 15:07:48",
+									"Source": "@Ra:Purpose:Operational Data:Generator:Last Run Generator Stop Cause",
+									"Name": "Last Run Generator Stop Cause",
+									"Value Type": "long"
+								}
+							],
+							"Name": "Generator"
+						},
+						{
+						"Target": "@Ra:Internal:Actuators",
+						"Dene Type": "Action",
+						"DeneWords": [
+							{
+								"Required": true,
+								"Value": "Generator Turned On",
+								"Name": "Codon",
+								"Value Type": "String"
+							},
+							{
+								"Required": true,
+								"Value": true,
+								"Name": "Active",
+								"Value Type": "boolean"
+							},
+							{
+								"Required": true,
+								"Value": 2,
+								"Name": "Evaluation Position",
+								"Value Type": "int"
+							},
+							{
+								"Required": true,
+								"Value": "$DoNothing",
+								"Name": "Actuator Command Code True Expression",
+								"Value Type": "String"
+							},
+							{
+								"Required": true,
+								"Value": "(GeneratorStatusCondition && CurrentChargeCondition && CurrentLoadCondition",
+								"Name": "Expression",
+								"Value Type": "String"
+							},
+							{
+								"Required": true,
+								"DeneWord Type": "Actuator Condition Pointer",
+								"Value": "@Ra:Internal:Actuators:Generator Status Condition",
+								"Name": "GeneratorStatusCondition",
+								"Value Type": "Dene Pointer"
+							},
+							{
+								"Required": true,
+								"DeneWord Type": "Actuator Condition Pointer",
+								"Value": "@Ra:Internal:Actuators:Current Charge Condition",
+								"Name": "CurrentChargeCondition",
+								"Value Type": "Dene Pointer"
+							},
+							{
+								"Required": true,
+								"DeneWord Type": "Actuator Condition Pointer",
+								"Value": "@Ra:Internal:Actuators:Current Load Condition",
+								"Name": "CurrentLoadCondition",
+								"Value Type": "Dene Pointer"
+							},
+							{
+								"DeneWord Type": "Action Success Tasks",
+								"Value": "@Ra:Internal:Actuators:Generator Turned On Action Success Tasks",
+								"Name": "Action Success Tasks True Expression",
+								"Value Type": "Dene Pointer"
+							}
+						],
+						"Name": "Generator Turned On"
+					},
+					{
+						"Target": "@Ra:Internal:Actuators",
+						"DeneWords": [
+							{
+								"Target": "@Ra:Purpose:Operational Data:Generator:GeneratorStatus",
+								"DeneWord Type": "Update DeneWord Value",
+								"Value": "ON",
+								"Name": "Set Generator Status to ON",
+								"Value Type": "String"
+							},
+							{
+								"Target": "@Ra:Purpose:Operational Data:Generator:Generator Start Time",
+								"DeneWord Type": "Update DeneWord Value",
+								"Value": "$Current_Timestamp",
+								"Name": "Set Generator Start Time",
+								"Value Type": "String"
+							},
+							{
+								"Target": "@Ra:Purpose:Operational Data:Generator:Generator Running Time",
+								"DeneWord Type": "Update DeneWord Value",
+								"Value": "0",
+								"Name": "Set Generator Running Time",
+								"Value Type": "long"
+							},
+							{
+								"Target": "@Ra:Human Interface:Generator:Generator Running Time:Visible",
+								"DeneWord Type": "Update DeneWord Value",
+								"Value": true,
+								"Name": "Set Generator Running Time Visible",
+								"Value Type": "boolean"
+							}
+						],
+						"Name": "Generator Turned On Action Success Tasks"
+					},
+					{
+						"Target": "@Ra:Internal:Actuators",
+						"Dene Type": "Actuator Condition",
+						"DeneWords": [
+							{
+								"Required": true,
+								"Value": "Generator Turned On",
+								"Name": "Codon",
+								"Value Type": "String"
+							},
+							{
+								"Required": true,
+								"Value": "Charge>0",
+								"Name": "Expression",
+								"Value Type": "String"
+							},
+							{
+								"Required": true,
+								"Value": false,
+								"Name": "On Lack Of Data",
+								"Value Type": "boolean"
+							},
+							{
+								"Required": true,
+								"DeneWord Type": "Condition Variable Pointer",
+								"Value": "@Ra:Purpose:Sensor Data:Now:Charge",
+								"Name": "Charge",
+								"Value Type": "Dene Pointer"
+							}
+						],
+						"Name": "Current Charge Condition"
+					},
+					{
+						"Target": "@Ra:Internal:Actuators",
+						"Dene Type": "Actuator Condition",
+						"DeneWords": [
+							{
+								"Required": true,
+								"Value": "PuGenerator Turned Onmp",
+								"Name": "Codon",
+								"Value Type": "String"
+							},
+							{
+								"Required": true,
+								"Value": "Load==0",
+								"Name": "Expression",
+								"Value Type": "String"
+							},
+							{
+								"Required": true,
+								"Value": false,
+								"Name": "On Lack Of Data",
+								"Value Type": "boolean"
+							},
+							{
+								"Required": true,
+								"DeneWord Type": "Condition Variable Pointer",
+								"Value": "@Ra:Purpose:Sensor Data:Now:Load",
+								"Name": "Load",
+								"Value Type": "Dene Pointer"
+							}
+						],
+						"Name": "Current Load Condition"
+					},
+					{
+						"Target": "@Ra:Internal:Actuators",
+						"Dene Type": "Actuator Condition",
+						"DeneWords": [
+							{
+								"Required": true,
+								"Value": "Generator Turned On",
+								"Name": "Codon",
+								"Value Type": "String"
+							},
+							{
+								"Required": true,
+								"Value": "GeneratorStatus==CompareTo_OFF",
+								"Name": "Expression",
+								"Value Type": "String"
+							},
+							{
+								"Required": true,
+								"Value": false,
+								"Name": "On Lack Of Data",
+								"Value Type": "boolean"
+							},
+							{
+								"Required": true,
+								"DeneWord Type": "Condition Variable Pointer",
+								"Value": "@Ra:Purpose:Operational Data:Generator:GeneratorStatus",
+								"Default": "OFF",
+								"Name": "GeneratorStatus",
+								"Value Type": "Dene Pointer"
+							},
+							{
+								"Required": true,
+								"DeneWord Type": "Condition Variable Pointer",
+								"Value": "@Ra:Internal:Descriptive:Constants:CompareTo_OFF",
+								"Default": "OFF",
+								"Name": "CompareTo_OFF",
+								"Value Type": "Dene Pointer"
+							}
+						],
+						"Name": "Generator Status Condition"
+					},
+					{
+						"Target": "@Ra:Internal:Actuators",
+						"Dene Type": "Action",
+						"DeneWords": [
+							{
+								"Required": true,
+								"Value": "Generator Turned Off",
+								"Name": "Codon",
+								"Value Type": "String"
+							},
+							{
+								"Required": true,
+								"Value": true,
+								"Name": "Active",
+								"Value Type": "boolean"
+							},
+							{
+								"Required": true,
+								"Value": 1,
+								"Name": "Evaluation Position",
+								"Value Type": "int"
+							},
+							{
+								"Required": true,
+								"Value": "$DoNothing",
+								"Name": "Actuator Command Code True Expression",
+								"Value Type": "String"
+							},
+							{
+								"Required": true,
+								"Value": "(!GeneratorStatusCondition && !CurrentLoadCondition)",
+								"Name": "Expression",
+								"Value Type": "String"
+							},
+							{
+								"Required": true,
+								"DeneWord Type": "Actuator Condition Pointer",
+								"Value": "@Ra:Internal:Actuators:Generator Status Condition",
+								"Name": "GeneratorStatusCondition",
+								"Value Type": "Dene Pointer"
+							},
+							{
+								"Required": true,
+								"DeneWord Type": "Actuator Condition Pointer",
+								"Value": "@Ra:Internal:Actuators:Current Load Condition",
+								"Name": "CurrentLoadCondition",
+								"Value Type": "Dene Pointer"
+							},
+							{
+								"DeneWord Type": "Action Success Tasks",
+								"Value": "@Ra:Internal:Actuators:Generator Turned Off Action Success Tasks True Expression",
+								"Name": "Action Success Tasks True Expression",
+								"Value Type": "Dene Pointer"
+							},
+							{
+								"DeneWord Type": "Mnemosyne Operation Index",
+								"Value": "@Ra:Internal:Actuators:Generator Turned Off Mnemosyne Operations True Expression",
+								"Name": "Mnemosyne Operations True Expression",
+								"Value Type": "Dene Pointer"
+							}
+						],
+						"Name": "Generator Turned Off"
+					},
+					{
+						"Target": "@Ra:Internal:Actuators",
+						"DeneWords": [
+							{
+								"Target": "@Ra:Purpose:Operational Data:Generator:GeneratorStatus",
+								"DeneWord Type": "Update DeneWord Value",
+								"Value": "OFF",
+								"Name": "Set Generator Status to OFF",
+								"Value Type": "String"
+							},
+							{
+								"Target": "@Ra:Purpose:Operational Data:Generator:Last Run Generator Start Time",
+								"DeneWord Type": "Update DeneWord Value",
+								"Value": "@Ra:Purpose:Operational Data:Generator:Generator Start Time",
+								"Name": "Set Last Run Generator Start Time",
+								"Value Type": "Dene Pointer"
+							},
+							{
+								"Target": "@Ra:Purpose:Operational Data:Generator:Last Run Generator Running Time",
+								"DeneWord Type": "Update DeneWord Value",
+								"Value": "@Ra:Purpose:Operational Data:Generator:Generator Running Time",
+								"Name": "Set Last Run Generator Running Time",
+								"Value Type": "Dene Pointer"
+							},
+							{
+								"Target": "@Ra:Purpose:Operational Data:Generator:Last Run Generator Stop Time",
+								"DeneWord Type": "Update DeneWord Value",
+								"Value": "$Current_Timestamp",
+								"Name": "Set Generator Stop Time",
+								"Value Type": "String"
+							},
+							{
+								"Target": "@Ra:Purpose:Operational Data:Generator:Last Run Generator Stop Cause",
+								"DeneWord Type": "Update DeneWord Value",
+								"Value": "Automatic Turn Off",
+								"Name": "Set Generator Stop Cause",
+								"Value Type": "String"
+							},
+							{
+								"Target": "@Ra:Purpose:Operational Data:Generator:Generator Stop Time",
+								"DeneWord Type": "Update DeneWord Value",
+								"Value": "$Current_Timestamp",
+								"Name": "Set Generator Stop Time",
+								"Value Type": "String"
+							}
+						],
+						"Name": "Generator Turned Off Action Success Tasks True Expression"
+					},
+					{
+						"Target": "@Ra:Internal:Actuators",
+						"DeneWords": [
+							{
+								"DeneWord Type": "Mnemosyne Operation",
+								"Value": "@Ra:Internal:Actuators:Create Run Completed Dene",
+								"Name": "Create Run Completed Dene for Daily",
+								"Value Type": "Dene Pointer"
+							},
+							{
+								"DeneWord Type": "Mnemosyne Operation",
+								"Value": "@Ra:Internal:Actuators:Aggregate Total Generator Minutes",
+								"Name": "Aggregate Total Volume for Daily",
+								"Value Type": "Dene Pointer"
+							}
+						],
+						"Name": "Generator Turned Off Mnemosyne Operations True Expression"
+					},
+					{
+						"Target": "@Ra:Internal:Actuators",
+						"Dene Type": "Mnemosyne Create Dene Operation",
+						"DeneWords": [
+							{
+								"Required": true,
+								"Value": "Run Completed",
+								"Name": "New Dene Name",
+								"Value Type": "int"
+							},
+							{
+								"Required": true,
+								"Value": 1,
+								"Name": "Execution Position",
+								"Value Type": "int"
+							},
+							{
+								"Required": true,
+								"DeneWord Type": "Mnemosyne Target",
+								"Value": "@Ra:Mnemosyne:Mnemosyne Today",
+								"Name": "Target Today",
+								"Value Type": "Dene Pointer"
+							},
+							{
+								"Required": true,
+								"DeneWord Type": "Mnemosyne Target",
+								"Value": "@Ra:Mnemosyne:Mnemosyne Current Week",
+								"Name": "Target Current Week",
+								"Value Type": "Dene Pointer"
+							},
+							{
+								"Required": true,
+								"DeneWord Type": "Copy DeneWord",
+								"Value": "@Ra:Purpose:Operational Data:Generator:Last Run Generator Start Time",
+								"Name": "Copy Generator Start Time",
+								"Value Type": "Dene Pointer"
+							},
+							{
+								"Required": true,
+								"DeneWord Type": "Copy DeneWord",
+								"Value": "@Ra:Purpose:Operational Data:Generator:Last Run Generator Stop Time",
+								"Name": "Copy Generator Stop Time",
+								"Value Type": "Dene Pointer"
+							},
+							{
+								"Required": true,
+								"DeneWord Type": "Copy DeneWord",
+								"Value": "@Ra:Purpose:Operational Data:Generator:Last Run Generator Stop Cause",
+								"Name": "Copy Generator Stop Cause",
+								"Value Type": "Dene Pointer"
+							},
+							{
+								"Required": true,
+								"DeneWord Type": "Copy DeneWord",
+								"Value": "@Ra :Purpose:Operational Data:Generator:Last Run Generator Running Time",
+								"Name": "Copy Running Time",
+								"Value Type": "Dene Pointer"
+							}
+						],
+						"Name": "Create Run Completed Dene"
+					},
+					{
+						"Target": "@Ra:Internal:Actuators",
+						"Dene Type": "Mnemosyne Add DeneWord To Dene Operation",
+						"DeneWords": [
+							{
+								"Required": true,
+								"Value": 2,
+								"Name": "Execution Position",
+								"Value Type": "int"
+							},
+							{
+								"Required": true,
+								"Value": "DeneWord Aggregation",
+								"Name": "Operation",
+								"Value Type": "String"
+							},
+							{
+								"Required": true,
+								"DeneWord Type": "Mnemosyne Target",
+								"Value": "@Ra:Mnemosyne:Mnemosyne Today:Run Completed",
+								"Name": "Run Completed",
+								"Value Type": "Dene Pointer"
+							},
+							{
+								"Required": true,
+								"DeneWord Type": "Mnemosyne Target",
+								"Value": "@Ra:Mnemosyne:Mnemosyne Current Week:Run Completed",
+								"Name": "Run Completed",
+								"Value Type": "Dene Pointer"
+							},
+							{
+								"Required": true,
+								"Value": "$Last_Dene_Position",
+								"Name": "Target Position",
+								"Value Type": "int"
+							},
+							{
+								"Required": true,
+								"DeneWord Type": "Create DeneWord Source",
+								"Value": 0,
+								"Name": "Aggregated Volume",
+								"Value Type": "double"
+							},
+							{
+								"Required": true,
+								"Value": "@Ra:Mnemosyne:Mnemosyne Today:Run Completed:Aggregated Generator Time",
+								"Default": 0,
+								"Name": "Aggregate From",
+								"Value Type": "Dene Pointer"
+							},
+							{
+								"Required": true,
+								"Value": "$Previous_To_Last_Dene_Position",
+								"Name": "Aggregate From Dene Position",
+								"Value Type": "int"
+							},
+							{
+								"Required": true,
+								"DeneWord Type": "Create DeneWord",
+								"Value": "@Ra:Purpose:Operational Data:Generator:Last Run Generator Running Time",
+								"Name": "Aggregate Value",
+								"Value Type": "Dene Pointer"
+							}
+						],
+						"Name": "Aggregate Total Generator Minutes"
+					},
+					{
+						"Target": "@Ra:Human Interface:Home Page",
+						"DeneWords": [
+							{
+								"Required": "true",
+								"DeneWord Type": "Panel DeneChain Pointer",
+								"Value": "@Ra:Human Interface:Generator",
+								"Name": "Now Panel Pointer",
+								"Value Type": "Dene Pointer"
+							},
+							{
+								"Required": "true",
+								"DeneWord Type": "Panel Visualization Style",
+								"Value": "Single Value Panel Complete Width",
+								"Name": "Now Panel Style",
+								"Value Type": "String"
+							},
+							{
+								"Required": true,
+								"DeneWord Type": "Panel In Page Position",
+								"Value": 2,
+								"Name": "Panel In Page Position",
+								"Value Type": "int"
+							},
+							{
+								"Required": true,
+								"Value": true,
+								"Name": "Visible",
+								"Value Type": "boolean"
+							}
+						],
+						"Name": "Generator Panel"
+					},
+					{
+						"Target": "@Ra:Human Interface:Generator",
+						"DeneWords": [
+							{
+								"Required": "true",
+								"DeneWord Type": "Panel Data Source Pointer",
+								"Value": "@Ra:Purpose:Operational Data:Generator:GeneratorStatus",
+								"Name": "Battery Voltage",
+								"Value Type": "Dene Pointer"
+							},
+							{
+								"Required": true,
+								"DeneWord Type": "Panel In Panel Position",
+								"Value": 1,
+								"Name": "Panel In Panel Position",
+								"Value Type": "int"
+							},
+							{
+								"Required": "true",
+								"DeneWord Type": "Panel Display Name",
+								"Value": "Status",
+								"Name": "Display Name",
+								"Value Type": "String"
+							},
+							{
+								"Required": true,
+								"Value": true,
+								"Name": "Visible",
+								"Value Type": "int"
+							}
+						],
+						"Name": "State of Charge"
+					},
+					{
+						"Target": "@Ra:Human Interface:Generator",
+						"DeneWords": [
+							{
+								"Required": "true",
+								"DeneWord Type": "Panel Data Source Pointer",
+								"Value": "@Ra:Purpose:Operational Data:Generator:Generator Start Time",
+								"Name": "Generator Start Time",
+								"Value Type": "Dene Pointer"
+							},
+							{
+								"Required": true,
+								"DeneWord Type": "Panel In Panel Position",
+								"Value": 2,
+								"Name": "Panel In Panel Position",
+								"Value Type": "int"
+							},
+							{
+								"Required": "true",
+								"DeneWord Type": "Panel Display Name",
+								"Value": "Start Time",
+								"Name": "Display Name",
+								"Value Type": "String"
+							},
+							{
+								"Required": true,
+								"Value": false,
+								"Name": "Visible",
+								"Value Type": "int"
+							}
+						],
+						"Name": "Start Time"
+					},
+					{
+						"Target": "@Ra:Human Interface:Generator",
+						"DeneWords": [
+							{
+								"Required": "true",
+								"DeneWord Type": "Panel Data Source Pointer",
+								"Value": "@Ra:Purpose:Operational Data:Generator:Generator Running Time",
+								"Name": "Battery Voltage",
+								"Value Type": "Dene Pointer"
+							},
+							{
+								"Required": true,
+								"DeneWord Type": "Panel In Panel Position",
+								"Value": 3,
+								"Name": "Panel In Panel Position",
+								"Value Type": "int"
+							},
+							{
+								"Required": "true",
+								"DeneWord Type": "Panel Display Name",
+								"Value": "Running Time",
+								"Name": "Display Name",
+								"Value Type": "String"
+							},
+							{
+								"Required": true,
+								"Value": false,
+								"Name": "Visible",
+								"Value Type": "int"
+							}
+						],
+						"Name": "Generator Running Time"
+					},
+					{
+						"Target": "@Ra:Human Interface:Generator",
+						"DeneWords": [
+							{
+								"Required": "true",
+								"DeneWord Type": "Panel Data Source Pointer",
+								"Value": "@Ra:Purpose:Operational Data:Generator:Generator Running Time",
+								"Name": "Battery Voltage",
+								"Value Type": "Dene Pointer"
+							},
+							{
+								"Required": true,
+								"DeneWord Type": "Panel In Panel Position",
+								"Value": 4,
+								"Name": "Panel In Panel Position",
+								"Value Type": "int"
+							},
+							{
+								"Required": "true",
+								"DeneWord Type": "Panel Display Name",
+								"Value": "Today",
+								"Name": "Display Name",
+								"Value Type": "String"
+							},
+							{
+								"Required": true,
+								"Value": true,
+								"Name": "Visible",
+								"Value Type": "int"
+							}
+						],
+						"Name": "Generator Running Time Today"
+					}]
+			}],
+			"Mutations":[]
+		},
+		"Medula": {
+			"Mutations": [{}]
+		}
+	}
+}

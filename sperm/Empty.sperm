@@ -1,0 +1,33 @@
+{
+	"Sperm": {
+		"Purpose": {
+			"Name": "",
+			"Purpose Type": "Mutate",
+			"Description":""
+		},
+		"Hypothalamus": {
+			"Actions":[],
+			"Homeoboxes": [
+				{
+					"Name": "DeneWord Carrier",
+					"Denes": [
+						{
+							"Name": "Homeobox Index",
+							"Dene Type": "Homebox Index",
+							"DeneWords": []
+						},
+						{
+							"Name": "DeneWord Carrier For Vital",
+							"Target": "",
+							"DeneWords": [
+							]
+						}
+					]
+				}
+			]
+		},
+		"Medula": {
+			"Mutations": [{}]
+		}
+	}
+}

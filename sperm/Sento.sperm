@@ -1,0 +1,1324 @@
+{
+	"Sperm": {
+		"Purpose": {
+			"Name": "Sento",
+			"Purpose Type": "Primary",
+			"Descriptin":"Sento is a controller for a hot tub where the heat that heats the water comes via a heat exchange (usually through a wood stove) instead of electricity.  It has two temperature probes one that will measure the temperature of the water in the hot tub and one that measures the temperature of the water in the heat exchange, an electrical point to control a pump and a flow meter"
+		},
+		"PaceMaker": {
+			"Homeoboxes": [{
+				"Name": "Control Parameters",
+				"Denes":[
+				{
+					"Name": "Homeobox Index",
+					"Dene Type": "Homebox Index",
+					"DeneWords": [{
+						"Name": "Minimum_Temperature_Differential",
+						"DeneWord Type": "Hox Dene Pointer",
+						"Value": "@Sperm:Pacemaker:Control Parameters:Minimum_Temperature_Differential",
+						"Value Type": "Dene Pointer"
+					}, {
+						"Name": "Tub_Target_Temperature",
+						"DeneWord Type": "Hox Dene Pointer",
+						"Value": "@Sperm:Pacemaker:Control Parameters:Tub_Target_Temperature",
+						"Value Type": "Dene Pointer"
+					},{
+						"Name":"Minimum_Acceptable_Voltage",
+						"DeneWord Type": "Hox Dene Pointer",
+						"Value": "@Sperm:Pacemaker:Control Parameters:Minimum_Acceptable_Voltage",
+						"Value Type": "Dene Pointer"
+					}
+				],
+			},{
+                "DeneWords": [
+                    {
+                        "Required": "true",
+                        "Value": 10,
+                        "Name": "Minimum_Temperature_Differential",
+                        "Value Type": "double",
+                        "DeneWord Type":"Configuration Parameter"
+                    }
+                ],
+                "Name": "Minimum_Temperature_Differential",
+                "Target": "@Sento:Internal:Control Parameters"
+            },{
+                "DeneWords": [
+                    {
+                        "Required": "true",
+                        "Value": 40,
+                        "Name": "Tub_Target_Temperature",
+                        "Value Type": "double",
+                        "DeneWord Type":"Configuration Parameter"
+                    }
+                ],
+                "Name": "Tub_Target_Temperature",
+                "Target": "@Sento:Internal:Control Parameters"
+            },{
+                "DeneWords": [
+                    {
+                        "Required": "true",
+                        "Value": 48,
+                        "Name": "Minimum_Acceptable_Voltage",
+                        "Value Type": "double",
+                        "DeneWord Type":"Configuration Parameter"
+                    }
+                ],
+                "Name": "Minimum_Acceptable_Voltage",
+
+                "Target": "@Sento:Internal:Control Parameters"
+            }
+			]
+			},
+			{
+				"Name": "Arduino Uno MicroController",
+				"Denes": [{
+					"Name": "Homeobox Index",
+					"Dene Type": "Homebox Index",
+					"DeneWords": [{
+						"Name": "Arduino Uno MicroController",
+						"DeneWord Type": "Hox Dene Pointer",
+						"Value": "@Sperm:Pacemaker:Microcontroller:Microcontroller",
+						"Value Type": "Dene Pointer"
+					}, {
+						"Name": "Arduino Uno Serial Parameters",
+						"DeneWord Type": "Hox Dene Pointer",
+						"Value": "@Sperm:Pacemaker:Microcontroller:Serial Parameters",
+						"Value Type": "Dene Pointer"
+					}]
+				}, {
+					"Dene Type": "Arduino Uno Microcontroller",
+					"DeneWords": [{
+						"Required": true,
+						"Value": 1,
+						"Value Type ": "int",
+						"Name": "Processing Queue Position"
+					}, {
+						"DeneWord Type": "Microcontroller Processing Class Name",
+						"Required": true,
+						"Value": "com.teleonome.framework.microcontroller.ArduinoUno",
+						"Value Type ": "String",
+						"Name": "Arduino Uno Microcontroller Processing Class Name"
+					}, {
+						"Required": true,
+						"Value": "Arduino Uno",
+						"Name": "Product Name",
+						"Value Type": "String"
+					}, {
+						"Required": true,
+						"Value": "Main Arduino",
+						"Name": "Codon",
+						"Value Type": "String"
+					}, {
+						"Required": false,
+						"Value": "Web Address",
+						"Name": "SKU Type",
+						"Value Type": "String"
+					}, {
+						"Required": false,
+						"Value": "http://littlerbirdselectronics/1234d",
+						"Name": "SKU URL",
+						"Value Type": "String"
+					}, {
+						"Target": "@Sento:Internal:Components:Serial Parameters",
+						"Required": false,
+						"Value": "@Sento:Internal:Components:Serial Parameters",
+						"Name": "Microcontroller Communication Protocol",
+						"Value Type": "Dene Pointer"
+					}],
+					"Name": "Main Arduino",
+					"Target": "@Sento:Internal:Components"
+				}, {
+					"DeneWords": [{
+						"Required": true,
+						"Value": "Serial",
+						"Name": "Protocol",
+						"Value Type": "String"
+					}, {
+						"Maximum": 4800,
+						"Minimum": 2400,
+						"Required": true,
+						"Value": 9600,
+						"Name": "Serial Data Rate",
+						"Value Type": "int"
+					}, {
+						"Required": true,
+						"Value": "Main Arduino",
+						"Name": "Codon",
+						"Value Type": "String"
+					}],
+					"Name": "Serial Parameters",
+					"Target": "@Sento:Internal:Components"
+				}]
+			}, {
+				"Name": "Tub Thermometer",
+				"Denes": [{
+					"Name": "Homeobox Index",
+					"Dene Type": "Homebox Index",
+					"DeneWords": [{
+						"Name": "Tub Temperature",
+						"DeneWord Type": "Hox Dene Pointer",
+						"Value": "@Sperm:Pacemaker:Tub Thermometer:Tub Thermometer",
+						"Value Type": "Dene Pointer"
+					}, {
+						"Name": "Tub Temperature Value",
+						"DeneWord Type": "Hox Dene Pointer",
+						"Value": "@Sperm:Pacemaker:Homeboxes:Tub Thermometer:Tub Temperature Value",
+						"Value Type": "Dene Pointer"
+					}, {
+						"Name": "Tub Temperature Data",
+						"DeneWord Type": "Hox Dene Pointer",
+						"Value": "@Sperm:Pacemaker:Homeboxes:Tub Thermometer:Tub_Temperature_Data",
+						"Value Type": "Dene Pointer"
+					}]
+				}, {
+					"Dene Type": "Sensor",
+					"DeneWords": [{
+						"DeneWord Type": "Sensor Microcontroller Pointer",
+						"Required": true,
+						"Value": "@Sento:Internal:Components:Main Arduino",
+						"Name": "Pointer to Microcontroller",
+						"Value Type": "Dene Pointer"
+					}, {
+						"Required": true,
+						"Value": "OneWire DS18B20 Temperature",
+						"Name": "Model",
+						"Value Type": "String"
+					}, {
+						"Required": false,
+						"Value": "Web Address",
+						"Name": "SKU Type",
+						"Value Type": "String"
+					}, {
+						"Required": false,
+						"Value": "http://littlerbirdselectronics/1234d",
+						"Name": "SKU URL",
+						"Value Type": "String"
+					}, {
+						"Required": true,
+						"Value": "Tub Thermometer",
+						"Name": "Codon",
+						"Value Type": "String"
+					}, {
+						"Target": "@Sento:Internal:Sensors:Tub Temperature Value",
+						"Required": true,
+						"DeneWord Type": "Sensor Value",
+						"Value": "@Sento:Internal:Sensors:Tub Temperature Value",
+						"Name": "Pump Body Temperature Value",
+						"Value Type": "Dene Pointer"
+					}],
+					"Name": "Tub Thermometer",
+					"Target": "@Sento:Internal:Sensors"
+				}, {
+					"Dene Type": "Sensor Value Definition",
+					"DeneWords": [{
+						"Required": true,
+						"Value": "Tub Thermometer",
+						"Name": "Codon",
+						"Value Type": "String"
+					}, {
+						"Required": true,
+						"Value": "Celsius",
+						"Name": "Unit",
+						"Value Type": "String"
+					}, {
+						"Required": true,
+						"Value": "@Sento:Internal:Components:Main Arduino Analog Ports:Analog 8",
+						"Name": "Port",
+						"Value Type": "Dene Pointer"
+					}, {
+						"Required": true,
+						"Value": "double",
+						"Name": "Value Type",
+						"Value Type": "String"
+					}, {
+						"Required": true,
+						"Value": 11,
+						"Name": "Sensor Request Queue Position",
+						"Value Type": "int"
+					}, {
+						"Required": true,
+						"Value": "@Sento:Internal:Sensors:Tub Temperature Value",
+						"Name": "Data Address",
+						"Value Type": "Dene Pointer"
+					}, {
+						"Required": true,
+						"Value": "@Sento:Purpose:Sensor Data:Tub Thermometer:Tub Temperature",
+						"Name": "Reporting Address",
+						"Value Type": "Dene Pointer"
+					}, {
+						"Required": true,
+						"Value": 60,
+						"Name": "Range Maximum",
+						"Value Type": "double"
+					}, {
+						"Required": true,
+						"Value": -10,
+						"Name": "Range Minimum",
+						"Value Type": "double"
+					}],
+					"Name": "Tub Temperature Value",
+					"Target": "@Sento:Internal:Sensors"
+				}, {
+					"Type": "Reporting",
+					"DeneWords": [{
+						"Required": "false",
+						"Value": "0.00",
+						"Units": "Celsius",
+						"Name": "Tub_Temperature",
+						"Value Type": "double"
+					}],
+					"Name": "Tub Thermometer Data",
+					"Target": "@Sento:Purpose:Sensor Data"
+				}]
+			}, {
+				"Name": "Heat Exchange Thermometer",
+				"Denes": [{
+					"Name": "Homeobox Index",
+					"Dene Type": "Homebox Index",
+					"DeneWords": [{
+						"Name": "Heat Exchange Temperature",
+						"DeneWord Type": "Hox Dene Pointer",
+						"Value": "@Sperm:Pacemaker:Heat Exchange Thermometer:Heat Exchange Thermometer",
+						"Value Type": "Dene Pointer"
+					}, {
+						"Name": "Heat Exchange Temperature Value",
+						"DeneWord Type": "Hox Dene Pointer",
+						"Value": "@Sperm:Pacemaker:Homeboxes:Heat Exchange Thermometer:Heat Exchange Temperature Value",
+						"Value Type": "Dene Pointer"
+					}, {
+						"Name": "Heat Exchange Temperature Data",
+						"DeneWord Type": "Hox Dene Pointer",
+						"Value": "@Sperm:Pacemaker:Homeboxes:Heat Exchange Thermometer:Heat Exchange Temperature Data",
+						"Value Type": "Dene Pointer"
+					}]
+				}, {
+					"Dene Type": "Sensor",
+					"DeneWords": [{
+						"DeneWord Type": "Sensor Microcontroller Pointer",
+						"Required": true,
+						"Value": "@Sento:Internal:Components:Main Arduino",
+						"Name": "Pointer to Microcontroller",
+						"Value Type": "Dene Pointer"
+					}, {
+						"Required": true,
+						"Value": "OneWire DS18B20 Temperature",
+						"Name": "Model",
+						"Value Type": "String"
+					}, {
+						"Required": false,
+						"Value": "Web Address",
+						"Name": "SKU Type",
+						"Value Type": "String"
+					}, {
+						"Required": false,
+						"Value": "http://littlerbirdselectronics/1234d",
+						"Name": "SKU URL",
+						"Value Type": "String"
+					}, {
+						"Required": true,
+						"Value": "Tub Thermometer",
+						"Name": "Codon",
+						"Value Type": "String"
+					}, {
+						"Target": "@Sento:Internal:Sensors:Heat Exchange Temperature Value",
+						"Required": true,
+						"DeneWord Type": "Sensor Value",
+						"Value": "@Sento:Internal:Sensors:Heat Exchange Temperature Value",
+						"Name": "Heat Exchange Temperature Value",
+						"Value Type": "Dene Pointer"
+					}],
+					"Name": "Heat Exchange Thermometer",
+					"Target": "@Sento:Internal:Sensors"
+				}, {
+					"Dene Type": "Sensor Value Definition",
+					"DeneWords": [{
+						"Required": true,
+						"Value": "Tub Thermometer",
+						"Name": "Codon",
+						"Value Type": "String"
+					}, {
+						"Required": true,
+						"Value": "Celsius",
+						"Name": "Unit",
+						"Value Type": "String"
+					}, {
+						"Required": true,
+						"Value": "@Sento:Internal:Components:Main Arduino Analog Ports:Analog 8",
+						"Name": "Port",
+						"Value Type": "Dene Pointer"
+					}, {
+						"Required": true,
+						"Value": "double",
+						"Name": "Value Type",
+						"Value Type": "String"
+					}, {
+						"Required": true,
+						"Value": 11,
+						"Name": "Sensor Request Queue Position",
+						"Value Type": "int"
+					}, {
+						"Required": true,
+						"Value": "@Sento:Internal:Sensors:Heat Exchange Temperature Value",
+						"Name": "Data Address",
+						"Value Type": "Dene Pointer"
+					}, {
+						"Required": true,
+						"Value": "@Sento:Purpose:Sensor Data:Heat Exchange Thermometer Data:Heat_Exchange_Temperature",
+						"Name": "Reporting Address",
+						"Value Type": "Dene Pointer"
+					}, {
+						"Required": true,
+						"Value": 60,
+						"Name": "Range Maximum",
+						"Value Type": "double"
+					}, {
+						"Required": true,
+						"Value": -10,
+						"Name": "Range Minimum",
+						"Value Type": "double"
+					}],
+					"Name": "Heat Exchange Temperature Value",
+					"Target": "@Sento:Internal:Sensors"
+				}, {
+					"Type": "Reporting",
+					"DeneWords": [{
+						"Required": "false",
+						"Value": "0.00",
+						"Units": "Celsius",
+						"Name": "Heat_Exchange_Temperature",
+						"Value Type": "double"
+					}],
+					"Name": "Heat Exchange Thermometer Data",
+					"Target": "@Sento:Purpose:Sensor Data"
+				}]
+			}, {
+				"Denes": [{
+					"Name": "Homeobox Index",
+					"Dene Type": "Homebox Index",
+					"DeneWords": [{
+						"Name": "Tub Temperature",
+						"DeneWord Type": "Hox Dene Pointer",
+						"Value": "@Sperm:Pacemaker:Flow Meter:Flow Meter",
+						"Value Type": "Dene Pointer"
+					}, {
+						"Name": "Flow Value",
+						"DeneWord Type": "Hox Dene Pointer",
+						"Value": "@Sperm:Pacemaker:Flow Meter:Flow Value",
+						"Value Type": "Dene Pointer"
+					}, {
+						"Name": "Tub Temperature Data",
+						"DeneWord Type": "Hox Dene Pointer",
+						"Value": "@Sperm:Pacemaker:Flow Meter:Total Volume Value",
+						"Value Type": "Dene Pointer"
+					}, {
+						"Name": "Flow Value",
+						"DeneWord Type": "Hox Dene Pointer",
+						"Value": "@Sperm:Pacemaker:Flow Meter:Flow Data",
+						"Value Type": "Dene Pointer"
+					}, {
+						"Name": "Tub Temperature Data",
+						"DeneWord Type": "Hox Dene Pointer",
+						"Value": "@Sperm:Pacemaker:Flow Meter:Total Volume Data",
+						"Value Type": "Dene Pointer"
+					}]
+				}, {
+					"Dene Type": "Sensor",
+					"DeneWords": [{
+						"DeneWord Type": "Sensor Microcontroller Pointer",
+						"Required": true,
+						"Value": "@Sento:Internal:Components:Main Arduino",
+						"Name": "Pointer to Microcontroller",
+						"Value Type": "Dene Pointer"
+					}, {
+						"Required": true,
+						"Value": "XX",
+						"Name": "Model",
+						"Value Type": "String"
+					}, {
+						"Required": false,
+						"Value": "50mm",
+						"Name": "Pipe Size",
+						"Value Type": "String"
+					}, {
+						"Required": false,
+						"Value": "Web Address",
+						"Name": "SKU Type",
+						"Value Type": "String"
+					}, {
+						"Required": false,
+						"Value": "http://littlerbirdselectronics/1234d",
+						"Name": "SKU URL",
+						"Value Type": "String"
+					}, {
+						"Required": true,
+						"Value": "Pump Flow Meter",
+						"Name": "Codon",
+						"Value Type": "String"
+					}, {
+						"Required": true,
+						"DeneWord Type": "Sensor Value",
+						"Value": "@Sento:Internal:Sensors:Flow Value",
+						"Units": "liters/minute",
+						"Name": "Flow Value",
+						"Value Type": "Dene Pointer"
+					}, {
+						"Required": true,
+						"DeneWord Type": "Sensor Value",
+						"Value": "@Sento:Internal:Sensors:Total Volume Value",
+						"Units": "liters",
+						"Name": "Total FlowValue",
+						"Value Type": "Dene Pointer"
+					}, {
+						"Required": true,
+						"DeneWord Type": "Sensor Value",
+						"Value": "@Sento:Internal:Sensors:Running Time Value",
+						"Units": "liters",
+						"Name": "Running Time Value",
+						"Value Type": "Dene Pointer"
+					}, {
+						"Required": true,
+						"DeneWord Type": "Sensor Value",
+						"Value": "@Sento:Internal:Sensors:Pump Status Value",
+						"Units": "Dimensionless",
+						"Name": "Pump Status Value",
+						"Value Type": "Dene Pointer"
+					}, {
+						"Required": true,
+						"DeneWord Type": "Sensor Value",
+						"Value": "@Sento:Internal:Sensors:Pump OnTimer Value",
+						"Units": "Dimensionless",
+						"Name": "Pump On Timer Value",
+						"Value Type": "Dene Pointer"
+					}, {
+						"Required": true,
+						"DeneWord Type": "Sensor Value",
+						"Value": "@Sento:Internal:Sensors:Pump OnTimer Type Value",
+						"Units": "Dimensionless",
+						"Name": "Pump On Timer Type Value",
+						"Value Type": "Dene Pointer"
+					}, {
+						"Required": true,
+						"DeneWord Type": "Sensor Value",
+						"Value": "@Sento:Internal:Sensors:Pump Timer Seconds Value",
+						"Units": "seconds",
+						"Name": "Pump Timer Seconds Value",
+						"Value Type": "Dene Pointer"
+					}, {
+						"Required": true,
+						"DeneWord Type": "Sensor Value",
+						"Value": "@Sento:Internal:Sensors:Pump Timer Remaining Seconds Value",
+						"Units": "seconds",
+						"Name": "Pump Timer Remaining Seconds Value",
+						"Value Type": "Dene Pointer"
+					}, {
+						"Required": true,
+						"DeneWord Type": "Sensor Value",
+						"Value": "@Sento:Internal:Sensors:Pump Maximum Body Temperature Value",
+						"Units": "seconds",
+						"Name": "Pump Maximum Body Temperature Value",
+						"Value Type": "Dene Pointer"
+					}, {
+						"Required": true,
+						"DeneWord Type": "Sensor Value",
+						"Value": "@Sento:Internal:Sensors:Minimum Flow Value",
+						"Units": "liters/minute",
+						"Name": "Minimum Flow Value",
+						"Value Type": "Dene Pointer"
+					}, {
+						"Required": true,
+						"DeneWord Type": "Sensor Value",
+						"Value": "@Sento:Internal:Sensors:Pump Stop Cause Value",
+						"Name": "Pump Stop Cause",
+						"Value Type": "Dene Pointer"
+					}],
+					"Name": "Flow Meter"
+				}, {
+					"Dene Type": "Sensor Value Definition",
+					"DeneWords": [{
+						"Required": true,
+						"Value": "Pump Flow Meter",
+						"Name": "Codon",
+						"Value Type": "String"
+					}, {
+						"Required": true,
+						"Value": "liters/minute",
+						"Name": "Unit",
+						"Value Type": "String"
+					}, {
+						"Required": true,
+						"Value": "@Sento:Internal:Components:Main Arduino Digital Ports:Digital 2",
+						"Name": "Port",
+						"Value Type": "Dene Pointer"
+					}, {
+						"Required": true,
+						"Value": "double",
+						"Name": "Value Type",
+						"Value Type": "String"
+					}, {
+						"Required": true,
+						"Value": 1,
+						"Name": "Sensor Request Queue Position",
+						"Value Type": "int"
+					}, {
+						"Required": true,
+						"Value": "@Sento:Purpose:Sensor Data:Flow:Flow",
+						"Name": "Reporting Address",
+						"Value Type": "Dene Pointer"
+					}, {
+						"Required": true,
+						"Value": 120,
+						"Name": "Range Maximum",
+						"Value Type": "double"
+					}, {
+						"Required": true,
+						"Value": 0,
+						"Name": "Range Minimum",
+						"Value Type": "double"
+					}],
+					"Name": "Flow Value"
+				}, {
+					"Dene Type": "Sensor Value Definition",
+					"DeneWords": [{
+						"Required": true,
+						"Value": "Pump Flow Meter",
+						"Name": "Codon",
+						"Value Type": "String"
+					}, {
+						"Required": true,
+						"Value": "liters",
+						"Name": "Unit",
+						"Value Type": "String"
+					}, {
+						"Required": true,
+						"Value": "@Sento:Internal:Components:Main Arduino Digital Ports:Digital 2",
+						"Name": "Port",
+						"Value Type": "Dene Pointer"
+					}, {
+						"Required": true,
+						"Value": "double",
+						"Name": "Value Type",
+						"Value Type": "String"
+					}, {
+						"Required": true,
+						"Value": 2,
+						"Name": "Sensor Request Queue Position",
+						"Value Type": "int"
+					}, {
+						"Required": true,
+						"Value": "@Sento:Purpose:Sensor Data:Flow:Total Volume Data",
+						"Name": "Reporting Address",
+						"Value Type": "Dene Pointer"
+					}, {
+						"Required": true,
+						"Value": 500000,
+						"Name": "Range Maximum",
+						"Value Type": "double"
+					}, {
+						"Required": true,
+						"Value": 0,
+						"Name": "Range Minimum",
+						"Value Type": "double"
+					}],
+					"Name": "Total Volume Value"
+				}, {
+					"Type": "Reporting",
+					"DeneWords": [{
+						"Required": true,
+						"Value": "0.00",
+						"Units": "l",
+						"Name": "Total Volume Data",
+						"Value Type": "double"
+					}],
+					"Name": "Total Volume Data",
+					"Target": "@Sento:Purpose:Sensor Data"
+				}, {
+					"Type": "Reporting",
+					"DeneWords": [{
+						"Required": true,
+						"Value": "0.00",
+						"Units": "l/min",
+						"Name": "Flow Data",
+						"Value Type": "double"
+					}],
+					"Name": "Flow Data",
+					"Target": "@Sento:Purpose:Sensor Data"
+				}],
+				"Name": "Flow Meter"
+			}, {
+
+				"Denes": [{
+						"Name": "Homeobox Index",
+						"Dene Type": "Homebox Index",
+						"DeneWords": [{
+							"Name": "Pump",
+							"DeneWord Type": "Hox Dene Pointer",
+							"Value": "@Sperm:Pacemaker:Pump:Pump",
+							"Value Type": "Dene Pointer"
+						}, {
+							"Name": "Running Time Value",
+							"DeneWord Type": "Hox Dene Pointer",
+							"Value": "@Sperm:Pacemaker:Pump:Running Time Value",
+							"Value Type": "Dene Pointer"
+						}, {
+							"Name": "Pump Status Value",
+							"DeneWord Type": "Hox Dene Pointer",
+							"Value": "@Sperm:Pacemaker:Pump:Pump Status Value",
+							"Value Type": "Dene Pointer"
+						}, {
+							"Name": "Pump Actions",
+							"DeneWord Type": "Hox Dene Pointer",
+							"Value": "@Sperm:Pacemaker:Pump:Pump Actions",
+							"Value Type": "Dene Pointer"
+						}, {
+							"Name": "Pump On Start Actions",
+							"DeneWord Type": "Hox Dene Pointer",
+							"Value": "@Sperm:Pacemaker:Pump:Pump On Start Actions",
+							"Value Type": "Dene Pointer"
+						}, {
+							"Name": "Turn Pump On",
+							"DeneWord Type": "Hox Dene Pointer",
+							"Value": "@Sperm:Pacemaker:Pump:Turn Pump On",
+							"Value Type": "Dene Pointer"
+						},
+						 {
+							"Name": "Turn Pump On Action Success Tasks",
+							"DeneWord Type": "Hox Dene Pointer",
+							"Value": "@Sperm:Pacemaker:Pump:Turn Pump On Action Success Tasks",
+							"Value Type": "Dene Pointer"
+						},
+						 {
+							"Name": "Turn Pump Off",
+							"DeneWord Type": "Hox Dene Pointer",
+							"Value": "@Sperm:Pacemaker:Pump:Turn Pump Off",
+							"Value Type": "Dene Pointer"
+						},
+						{
+							"Name": "Pump Operational Data",
+							"DeneWord Type": "Hox Dene Pointer",
+							"Value": "@Sperm:Pacemaker:Pump:Pump Operational Data",
+							"Value Type": "Dene Pointer"
+						},
+						{
+							"Name": "Pump_Status_Condition",
+							"DeneWord Type": "Hox Dene Pointer",
+							"Value": "@Sperm:Pacemaker:Pump:Pump_Status_Condition",
+							"Value Type": "Dene Pointer"
+						},
+						{
+							"Name": "Available_Heat_Condition",
+							"DeneWord Type": "Hox Dene Pointer",
+							"Value": "@Sperm:Pacemaker:Pump:Available_Heat_Condition",
+							"Value Type": "Dene Pointer"
+						},
+						{
+							"Name": "Available_Heat_Condition",
+							"DeneWord Type": "Hox Dene Pointer",
+							"Value": "@Sperm:Pacemaker:Pump:Available_Energy_Condition",
+							"Value Type": "Dene Pointer"
+						},
+						 {
+							"Name": "Available_Heat_Condition",
+							"DeneWord Type": "Hox Dene Pointer",
+							"Value": "@Sperm:Pacemaker:Pump:Current_Tub_Temperature_Condition",
+							"Value Type": "Dene Pointer"
+						},
+						 {
+							"Name": "Available_Heat_Condition",
+							"DeneWord Type": "Hox Dene Pointer",
+							"Value": "@Sperm:Pacemaker:Pump:Ra",
+							"Value Type": "Dene Pointer"
+						}
+						]
+					}, {
+						"Dene Type": "Actuator",
+						"DeneWords": [{
+							"DeneWord Type": "Actuator Microcontroller Pointer",
+							"Required": true,
+							"Value": "@Sento:Internal:Components:Main Arduino",
+							"Name": "Pointer to Microcontroller",
+							"Value Type": "Dene Pointer"
+						}, {
+							"Required": true,
+							"Value": 3,
+							"Units": "Dimensionless",
+							"Name": "Execution Position",
+							"Value Type": "int"
+						}, {
+							"Required": false,
+							"Value": "@Sento:Internal:Components:Main Arduino Digital Ports:Digital 5",
+							"Name": "Pin Device",
+							"Value Type": "String"
+						}, {
+							"Required": false,
+							"DeneWord Type": "On Start Action List",
+							"Value": "@Sento:Internal:Actuators:Pump On Start Actions",
+							"Name": "Pump On Start Actions",
+							"Value Type": "Meme Pointer"
+						}, {
+							"Required": false,
+							"DeneWord Type": "Action List",
+							"Value": "@Sento:Internal:Actuators:Pump Actions",
+							"Name": "Pump Actions",
+							"Value Type": "Meme Pointer"
+						}, {
+							"Required": true,
+							"Value": "Pump",
+							"Name": "Codon",
+							"Value Type": "String"
+						}],
+						"Target": "@Sento:Internal:Actuators",						
+						"Name": "Pump"
+					}, {
+						"Dene Type": "Sensor Value Definition",
+						"DeneWords": [{
+							"Required": true,
+							"Value": "Pump Flow Meter",
+							"Name": "Codon",
+							"Value Type": "String"
+						}, {
+							"Required": true,
+							"Value": "seconds",
+							"Name": "Unit",
+							"Value Type": "String"
+						}, {
+							"Required": true,
+							"Value": "@Sento:Internal:Components:Main Arduino Digital Ports:Digital 2",
+							"Name": "Port",
+							"Value Type": "Dene Pointer"
+						}, {
+							"Required": true,
+							"Value": "int",
+							"Name": "Value Type",
+							"Value Type": "String"
+						}, {
+							"Required": true,
+							"Value": 3,
+							"Name": "Sensor Request Queue Position",
+							"Value Type": "int"
+						}, {
+							"Required": true,
+							"Value": "@Sento:Purpose:Operational Data:Pump:Running Time",
+							"Name": "Reporting Address",
+							"Value Type": "Dene Pointer"
+						}, {
+							"Required": true,
+							"Value": 1000000,
+							"Name": "Range Maximum",
+							"Value Type": "double"
+						}, {
+							"Required": true,
+							"Value": 0,
+							"Name": "Range Minimum",
+							"Value Type": "double"
+						}],
+						"Name": "Running Time Value",
+						"Target": "@Sento:Internal:Sensors"
+					}, {
+						"Dene Type": "Sensor Value Definition",
+						"DeneWords": [{
+							"Required": true,
+							"Value": "Pump Flow Meter",
+							"Name": "Codon",
+							"Value Type": "String"
+						}, {
+							"Required": true,
+							"Value": "@Sento:Internal:Components:Main Arduino Digital Ports:Digital 2",
+							"Name": "Port",
+							"Value Type": "Dene Pointer"
+						}, {
+							"Required": true,
+							"Value": "String",
+							"Name": "Value Type",
+							"Value Type": "String"
+						}, {
+							"Required": true,
+							"Value": 4,
+							"Name": "Sensor Request Queue Position",
+							"Value Type": "int"
+						}, {
+							"Required": true,
+							"Value": "@Sento:Purpose:Operational Data:Pump:PumpStatus",
+							"Name": "Reporting Address",
+							"Value Type": "Dene Pointer"
+						}],
+						"Name": "Pump Status Value",
+						"Target": "@Sento:Internal:Sensors"
+					},{
+                                "DeneWords": [
+                                    {
+                                        "Required": true,
+                                        "Value": "4",
+                                        "Units": "liters/minute",
+                                        "Name": "Minimum Flow",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": 4.5,
+                                        "Units": "Dimensionless",
+                                        "Name": "Flow Calibration Factor",
+                                        "Value Type": "double"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "OFF",
+                                        "Name": "PumpStatus",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": 1476494851,
+                                        "Source": "@Sento:Purpose:Operational Data:Pump:Pump Stop Time",
+                                        "Name": "Pump Stop Time",
+                                        "Value Type": "long"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": 1475981307,
+                                        "Source": "@Sento:Purpose:Operational Data:Pump:Pump Start Time",
+                                        "Name": "Pump Start Time",
+                                        "Value Type": "long"
+                                    },
+                                    {
+                                        "Required": "false",
+                                        "Value": "0",
+                                        "Units": "seconds",
+                                        "Source": "@Sento:Purpose:Operational Data:Pump:Running Time",
+                                        "Name": "Running Time",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": "false",
+                                        "Value": "17121",
+                                        "Units": "seconds",
+                                        "Source": "@Sento:Purpose:Operational Data:Pump:Last Run Running Time",
+                                        "Name": "Last Run Running Time",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": "false",
+                                        "Value": 1475981307,
+                                        "Source": "@Sento:Purpose:Operational Data:Pump:Last Run Pump Start Time",
+                                        "Name": "Last Run Pump Start Time",
+                                        "Value Type": "long"
+                                    },
+                                    {
+                                        "Required": "false",
+                                        "Value": 1476494851,
+                                        "Source": "@Sento:Purpose:Operational Data:Pump:Last Run Pump Stop Time",
+                                        "Name": "Last Run Pump Stop Time",
+                                        "Value Type": "long"
+                                    },
+                                    {
+                                        "Required": "false",
+                                        "Value": "1552",
+                                        "Units": "liters",
+                                        "Source": "@Sento:Purpose:Operational Data:Pump:Last Run Total Volume",
+                                        "Name": "Last Run Total Volume",
+                                        "Value Type": "double"
+                                    }
+                                ],
+                                "Name": "Pump Operational Data",
+                                "Target": "@Sento:Purpose:Operational Data"
+                            },
+					{
+                                "Dene Type": "Action List",
+                                "DeneWords": [
+                                    {
+                                        "Required": true,
+                                        "Value": "Pump",
+                                        "Name": "Codon",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Target": "@Sento:Internal:Actuators:Turn Pump Off On Startup",
+                                        "Required": true,
+                                        "DeneWord Type": "Action",
+                                        "Value": "@Sento:Internal:Actuators:Turn Pump Off On Startup",
+                                        "Name": "Turn Pump Off",
+                                        "Value Type": "Dene Pointer"
+                                    }
+                                ],
+                                "Name": "Pump On Start Actions",
+                                "Target": "@Sento:Internal:Actuators"
+                            },
+                            {
+                                "Dene Type": "Action List",
+                                "DeneWords": [
+                                    {
+                                        "Required": true,
+                                        "Value": "Pump",
+                                        "Name": "Codon",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Target": "@Sento:Internal:Actuators:Turn Pump Off",
+                                        "Required": true,
+                                        "DeneWord Type": "Action",
+                                        "Value": "@Sento:Internal:Actuators:Turn Pump Off",
+                                        "Name": "Turn Pump Off",
+                                        "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "Target": "@Sento:Internal:Actuators:Turn Pump On",
+                                        "Required": true,
+                                        "DeneWord Type": "Action",
+                                        "Value": "@Sento:Internal:Actuators:Turn Pump On",
+                                        "Name": "Turn Pump On",
+                                        "Value Type": "Dene Pointer"
+                                    }
+                                ],
+                                "Name": "Pump Actions",
+                                "Target": "@Sento:Internal:Actuators"
+                            },{
+                                "Dene Type": "Action",
+                                "DeneWords": [
+                                    {
+                                        "Required": true,
+                                        "Value": "Pump",
+                                        "Name": "Codon",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": false,
+                                        "Name": "Active",
+                                        "Value Type": "boolean"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": 2,
+                                        "Name": "Evaluation Position",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "Turn On",
+                                        "Name": "Actuator Command Code",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "(Pump_Status_Condition && Available_Heat_Condition && Available_Energy_Condition && Current_Tub_Temperature_Condition)",
+                                        "Name": "Expression",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Actuator Condition Pointer",
+                                        "Value": "@Sento:Internal:Actuators:Available_Heat_Condition",
+                                        "Name": "Available_Heat_Condition",
+                                        "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Actuator Condition Pointer",
+                                        "Value": "@Sento:Internal:Actuators:Available_Energy_Condition",
+                                        "Name": "Available_Energy_Condition",
+                                        "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Actuator Condition Pointer",
+                                        "Value": "@Sento:Internal:Actuators:Current_Tub_Temperature_Condition",
+                                        "Name": "Current_Tub_Temperature_Condition",
+                                        "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "DeneWord Type": "Action Success Tasks",
+                                        "Value": "@Sento:Internal:Actuators:Turn Pump On Action Success Tasks",
+                                        "Name": "Action Success Tasks",
+                                        "Value Type": "Dene Pointer"
+                                    }
+                                ],
+                                "Name": "Turn Pump On",
+                                 "Target": "@Sento:Internal:Actuators"
+                            },
+                            {
+                                "DeneWords": [
+                                    {
+                                        "Target": "@Sento:Purpose:Operational Data:Pump:PumpStatus",
+                                        "DeneWord Type": "Update DeneWord Value",
+                                        "Value": "ON",
+                                        "Name": "Set Pump Status to ON",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Target": "@Sento:Purpose:Operational Data:Pump:Pump Start Time",
+                                        "DeneWord Type": "Update DeneWord Value",
+                                        "Value": "$Current_Timestamp_Millis",
+                                        "Name": "Set Pump Start Time",
+                                        "Value Type": "long"
+                                    },
+                                    {
+                                        "Target": "@Sento:Purpose:Operational Data:Pump:Running Time",
+                                        "DeneWord Type": "Update DeneWord Value",
+                                        "Value": "0",
+                                        "Name": "Set Pump Running Time",
+                                        "Value Type": "long"
+                                    },
+                                    {
+                                        "Target": "@Sento:Purpose:Sensor Data:Flow:Total Volume",
+                                        "DeneWord Type": "Update DeneWord Value",
+                                        "Value": "0",
+                                        "Name": "Set Total Volume",
+                                        "Value Type": "long"
+                                    },
+                                    {
+                                        "Target": "@Sento:Purpose:Sensor Data:Flow:Flow",
+                                        "DeneWord Type": "Update DeneWord Value",
+                                        "Value": "0",
+                                        "Name": "Set Total Volume",
+                                        "Value Type": "long"
+                                    },
+                                    {
+                                        "Target": "@Sento:Purpose:Operational Data:Vital:Operational Status Red Value",
+                                        "Required": true,
+                                        "DeneWord Type": "Update DeneWord Value",
+                                        "Value": 0,
+                                        "Name": "Set Operational Status Red Value",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Target": "@Sento:Purpose:Operational Data:Vital:Operational Status Green Value",
+                                        "Required": true,
+                                        "DeneWord Type": "Update DeneWord Value",
+                                        "Value": 0,
+                                        "Name": "Set Operational Status Green Value",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Target": "@Sento:Purpose:Operational Data:Vital:Operational Status Blue Value",
+                                        "Required": true,
+                                        "DeneWord Type": "Update DeneWord Value",
+                                        "Value": 255,
+                                        "Name": "Set Operational Status Blue Value",
+                                        "Value Type": "int"
+                                    }
+                                ],
+                                "Name": "Turn Pump On Action Success Tasks",
+                                 "Target": "@Sento:Internal:Actuators"
+                            },
+                            {
+                                "Dene Type": "Actuator Condition",
+                                "DeneWords": [
+                                    {
+                                        "Required": true,
+                                        "Value": "Pump",
+                                        "Name": "Codon",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "PumpStatus==CompareTo_OFF",
+                                        "Name": "Expression",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": false,
+                                        "Name": "On Lack Of Data",
+                                        "Value Type": "boolean"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Condition Variable Pointer",
+                                        "Value": "@Sento:Purpose:Operational Data:Pump:PumpStatus",
+                                        "Default": "OFF",
+                                        "Name": "PumpStatus",
+                                        "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Condition Variable Pointer",
+                                        "Value": "@Sento:Internal:Descriptive:Constants:CompareTo_OFF",
+                                        "Default": "OFF",
+                                        "Name": "CompareTo_OFF",
+                                        "Value Type": "Dene Pointer"
+                                    }
+                                ],
+                                "Name": "Pump_Status_Condition",
+                                 "Target": "@Sento:Internal:Actuators"
+                            },
+                            {
+                                "Dene Type": "Actuator Condition",
+                                "DeneWords": [
+                                    {
+                                        "Required": true,
+                                        "Value": "Pump",
+                                        "Name": "Codon",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "Exchange_Temperature > Tub_Temperature + Temperature_Differential",
+                                        "Name": "Expression",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": false,
+                                        "Name": "On Lack Of Data",
+                                        "Value Type": "boolean"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Condition Variable Pointer",
+                                        "Value": "@Sento:Purpose:Sensor Data:Heat Exchange Thermomether Data:Heat_Exchange_Temperature",
+                                        "Default": "OFF",
+                                        "Name": "Exchange_Temperature",
+                                        "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Condition Variable Pointer",
+                                        "Value": "@Sento:Purpose:Sensor Data:Tub Thermomether Data:Tub_Temperature",
+                                        "Default": "OFF",
+                                        "Name": "Tub_Temperature",
+                                        "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Condition Variable Pointer",
+                                        "Value": "@Sento:Internal:Control Parameters:Minimum_Temperature_Differential",
+                                        "Name": "Temperature_Differential",
+                                        "Value Type": "Dene Pointer"
+                                    }
+                                ],
+                                "Name": "Available_Heat_Condition",
+                                 "Target": "@Sento:Internal:Actuators"
+                            },
+                            {
+                                "Dene Type": "Actuator Condition",
+                                "DeneWords": [
+                                    {
+                                        "Required": true,
+                                        "Value": "Pump",
+                                        "Name": "Codon",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "Current_Voltage > Minimum_Acceptable_Voltage",
+                                        "Name": "Expression",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": false,
+                                        "Name": "On Lack Of Data",
+                                        "Value Type": "boolean"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Condition Variable Pointer",
+                                       	"Value": "@Sento:Purpose:External Data:Ra:BatteryVoltage",
+										"Name": "Current_Voltage",
+                                        "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Condition Variable Pointer",
+                                        "Value": "@Sento:Internal:Control Parameters:Minimum_Acceptable_Voltage",
+                                        "Name": "Minimum_Acceptable_Voltage",
+                                        "Value Type": "Dene Pointer"
+                                    }
+                                ],
+                                "Name": "Available_Energy_Condition",
+                                 "Target": "@Sento:Internal:Actuators"
+                            },
+                            {
+                            "Dene Type": "Reporting",
+                            "DeneWords": [
+                                {
+                                    "Data Location": "@Ra:Pulse Timestamp",
+                                    "Required": "true",
+                                    "Value": "05/02/2016 10:38:00 +1100",
+                                    "Name": "Pulse Timestamp",
+                                    "Value Type": "Timestamp"
+                                },
+                                {
+                                    "Data Location": "@Ra:Purpose:Solar Energy System:Current Data:Battery Voltage",
+                                    "Required": "true",
+                                    "Value": "52.8",
+                                    "Units": "Volts",
+                                    "Name": "BatteryVoltage",
+                                    "Value Type": "double"
+                                }
+                            ],
+                            "Name": "Ra",
+                            "Target": "@Sento:Purpose:External Data"
+                        },
+                        {
+                                "Dene Type": "Actuator Condition",
+                                "DeneWords": [
+                                    {
+                                        "Required": true,
+                                        "Value": "Pump",
+                                        "Name": "Codon",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "Tub_Temperature < Tub_Target_Temperature",
+                                        "Name": "Expression",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": false,
+                                        "Name": "On Lack Of Data",
+                                        "Value Type": "boolean"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Condition Variable Pointer",
+                                        "Value": "@Sento:Purpose:Sensor Data:Tub Thermomether Data:Tub_Temperature",
+                                        "Default": "OFF",
+                                        "Name": "Tub_Temperature",
+                                        "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Condition Variable Pointer",
+                                        "Value": "@Sento:Internal:Control Parameters:Tub_Target_Temperature",
+                                        "Name": "Tub_Target_Temperature",
+                                        "Value Type": "Dene Pointer"
+                                    }
+                                ],
+                                "Name": "Current_Tub_Temperature_Condition",
+                                 "Target": "@Sento:Internal:Actuators"
+                            }
+				],
+				"Name": "Pump"
+			},
+			{
+				"Denes":[],
+				"Name":"Ambient Temperature and Humidity"
+			},
+			{
+				"Denes":[],
+				"Name":"Battery Voltage"
+			},
+			{
+				"Denes":[],
+				"Name":"Identity LED"
+			},
+			{
+				"Denes":[],
+				"Name":"Tub Temp LED"
+			},
+			{
+				"Denes":[],
+				"Name":"Pump Status LED"
+			},
+			{
+				"Denes":[],
+				"Name":"LCD Screen"
+			}]
+		},
+		"Medula": {
+			"Mutations": [{}]
+		}
+	}
+}

@@ -1,0 +1,679 @@
+{
+	"Sperm": {
+		"Purpose": {
+			"Teleonome Name": "",
+			"Purpose Type": "Mutate",
+			"Description":""
+		},
+		"Hypothalamus": {
+			"Actions":[
+                {
+                    "Target": "@Ra:Human Interface",
+                    "Dene Type": "Create Dene Chain",
+                    "DeneWords": [
+                        {
+                            "Required": true,
+                            "Value": true,
+                            "Name": "Active",
+                            "Value Type": "boolean"
+                        },
+                        {
+                            "Required": true,
+                            "Value": 1,
+                            "Name": "Execution Position",
+                            "Value Type": "int"
+                        },
+                        {
+                            "Required": true,
+                            "Value": "Pre Homebox Insertion",
+                            "Name": "Execution Point",
+                            "Value Type": "Dene Pointer"
+                        },
+                        {
+                            "Required": true,
+                            "Value": "Weekly Generator Operation Report",
+                            "Name": "DeneChain Name",
+                            "Value Type": "String"
+                        }
+                    ],
+                    "Name": "Create Weekly Generator Report DeneChain"
+                },
+                {
+                    "Target": "@Ra:Human Interface",
+                    "Dene Type": "Create Dene Chain",
+                    "DeneWords": [
+                        {
+                            "Required": true,
+                            "Value": true,
+                            "Name": "Active",
+                            "Value Type": "boolean"
+                        },
+                        {
+                            "Required": true,
+                            "Value": 1,
+                            "Name": "Execution Position",
+                            "Value Type": "int"
+                        },
+                        {
+                            "Required": true,
+                            "Value": "Pre Homebox Insertion",
+                            "Name": "Execution Point",
+                            "Value Type": "Dene Pointer"
+                        },
+                        {
+                            "Required": true,
+                            "Value": "Daily Generator Operation Report",
+                            "Name": "DeneChain Name",
+                            "Value Type": "String"
+                        }
+                    ],
+                    "Name": "Create Daily Generator Report DeneChain"
+                }               
+            ],
+			"Homeoboxes": [
+				{
+					"Name": "Create Weekly Generator Run Table",
+					"Denes": [
+						{
+                            "Name": "Metadata",
+                            "Dene Type": "Homeobox Metadata",
+							"Target": "",
+							"DeneWords": [
+                                {
+                                    "Name":"Created On",
+                                    "Value":"17/04/2018",
+                                    "Value Type":"Date",
+                                    "Required":true
+                                },
+                                {
+                                    "Name":"Description",
+                                    "Value":"Creates a table in the History Page that shows when the generator run",
+                                    "Value Type":"String",
+                                    "Required":true
+                                }
+							]
+                        },
+                        {
+							"Name": "Homeobox Index",
+							"Dene Type": "Homebox Index",
+							"DeneWords": [{
+                                "Name": "",
+                                "DeneWord Type": "Hox Dene Pointer",
+                                "Value": "@Sperm:Hypothalamus:Create Weekly Generator Run Table:Generator Weekly Report Panel",
+                                "Value Type": "Dene Pointer"
+                            },
+                            {
+                                "Name": "Generator Weekly Report Panel",
+                                "DeneWord Type": "Hox Dene Pointer",
+                                "Value": "@Sperm:Hypothalamus:Create Weekly Generator Run Table:Dene Data Source",
+                                "Value Type": "Dene Pointer"
+                            },
+                            {
+                                "Name": "Generator Weekly History Col 1",
+                                "DeneWord Type": "Hox Dene Pointer",
+                                "Value": "@Sperm:Hypothalamus:Create Weekly Generator Run Table:Generator Weekly History Col 1",
+                                "Value Type": "Dene Pointer"
+                            },
+                            {
+                                "Name": "Generator Weekly History Col 2",
+                                "DeneWord Type": "Hox Dene Pointer",
+                                "Value": "@Sperm:Hypothalamus:Create Weekly Generator Run Table:Generator Weekly History Col 2",
+                                "Value Type": "Dene Pointer"
+                            },
+                            {
+                                "Name": "Generator Weekly History Col 3",
+                                "DeneWord Type": "Hox Dene Pointer",
+                                "Value": "@Sperm:Hypothalamus:Create Weekly Generator Run Table:Generator Weekly History Col 3",
+                                "Value Type": "Dene Pointer"
+                            },
+                            {
+                                "Name": "Generator Weekly History Col 4",
+                                "DeneWord Type": "Hox Dene Pointer",
+                                "Value": "@Sperm:Hypothalamus:Create Weekly Generator Run Table:Generator Weekly History Col 4",
+                                "Value Type": "Dene Pointer"
+                            }
+                        ]
+						},
+						{
+                            "Name": "DeneWord Carrier For Vital",
+                            "Dene Type": "DeneWord Carrier",
+							"Target": "",
+							"DeneWords": []
+                        },
+                        {
+                            "Target":"@Ra:Human Interface:History Page",
+                            "DeneWords": [
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Panel DeneChain Pointer",
+                                    "Value": "@Ra:Human Interface:Weekly Generator Operation Report",
+                                    "Name": "Now Panel Pointer",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Panel Visualization Style",
+                                    "Value": "Mnemosyne Table Panel",
+                                    "Name": "Daily History Panel Style",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": true,
+                                    "DeneWord Type": "Panel In Page Position",
+                                    "Value": 2,
+                                    "Name": "Panel In Page Position",
+                                    "Value Type": "int"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": true,
+                                    "Name": "Visible",
+                                    "Value Type": "boolean"
+                                }
+                            ],
+                            "Name": "Generator Weekly Report Panel"
+                        },
+                        {
+                            "Target":"@Ra:Human Interface:Weekly Generator Operation Report",
+                            "DeneWords": [
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Panel Data Source Pointer",
+                                    "Value": "@Ra:Mnemosyne:Mnemosyne Current Week:Run Completed",
+                                    "Name": "Data Source Pointer",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": "true",
+                                    "Value": "Descending",
+                                    "Name": "Sorting Order",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": "true",
+                                    "Value": "@Ra:Mnemosyne:Mnemosyne Current Week:Run Completed:Last Run Generator Start Time",
+                                    "Name": "Sorting Parameter",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": "true",
+                                    "Value": "Generator Weekly Report",
+                                    "Name": "Panel Title",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Display Table Column Definition Pointer",
+                                    "Value": "@Ra:Human Interface:Weekly Generator Operation Report:Generator Weekly History Col 1",
+                                    "Name": "Generator Weekly History Col 1",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Display Table Column Definition Pointer",
+                                    "Value": "@Ra:Human Interface:Weekly Generator Operation Report:Generator Weekly History Col 2",
+                                    "Name": "Generator Weekly History Col 2",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Display Table Column Definition Pointer",
+                                    "Value": "@Ra:Human Interface:Weekly Generator Operation Report:Generator Weekly History Col 3",
+                                    "Name": "Generator Weekly History Col 3",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Display Table Column Definition Pointer",
+                                    "Value": "@Ra:Human Interface:Weekly Generator Operation Report:Generator Weekly History Col 4",
+                                    "Name": "Generator Weekly History Col 4",
+                                    "Value Type": "Dene Pointer"
+                                }
+                            ],
+                            "Name": "Dene Data Source"
+                        },
+                        {
+                            "Target":"@Ra:Human Interface:Weekly Generator Operation Report",
+                            "DeneWords": [
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Column Data Source Pointer",
+                                    "Value": "@Ra:Mnemosyne:Mnemosyne Current Week:Run Completed:Last Run Generator Start Time",
+                                    "Name": "Start Time",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "DeneWord Type": "Column In Table Position",
+                                    "Required": "true",
+                                    "Value": 1,
+                                    "Name": "Column Position",
+                                    "Value Type": "int"
+                                },
+                                {
+                                    "DeneWord Type": "Column Header",
+                                    "Required": "true",
+                                    "Value": "Start",
+                                    "Name": "Column Header",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "DeneWord Type": "TDClassInfo",
+                                    "Required": "true",
+                                    "Value": "",
+                                    "Name": "TDClassInfo",
+                                    "Value Type": "String"
+                                }
+                            ],
+                            "Name": "Generator Weekly History Col 1"
+                        },
+                        {
+                            "Target":"@Ra:Human Interface:Weekly Generator Operation Report",
+                            "DeneWords": [
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Column Data Source Pointer",
+                                    "Value": "@Ra:Mnemosyne:Mnemosyne Current Week:Run Completed:Last Run Generator Stop Time",
+                                    "Name": "Last Run Generator Stop Time",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "DeneWord Type": "Column In Table Position",
+                                    "Required": "true",
+                                    "Value": 2,
+                                    "Name": "Column Position",
+                                    "Value Type": "int"
+                                },
+                                {
+                                    "DeneWord Type": "Column Header",
+                                    "Required": "true",
+                                    "Value": "Stop",
+                                    "Name": "Column Header",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "DeneWord Type": "TDClassInfo",
+                                    "Required": "true",
+                                    "Value": "",
+                                    "Name": "TDClassInfo",
+                                    "Value Type": "String"
+                                }
+                            ],
+                            "Name": "Generator Weekly History Col 2"
+                        },
+                        {
+                            "Target":"@Ra:Human Interface:Weekly Generator Operation Report",
+                            "DeneWords": [
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Column Data Source Pointer",
+                                    "Value": "@Ra:Mnemosyne:Mnemosyne Current Week:Run Completed:Last Run Generator Stop Cause",
+                                    "Name": "Last Run Generato Stop Cause",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "DeneWord Type": "Column In Table Position",
+                                    "Required": "true",
+                                    "Value": 3,
+                                    "Name": "Column Position",
+                                    "Value Type": "int"
+                                },
+                                {
+                                    "DeneWord Type": "Column Header",
+                                    "Required": "true",
+                                    "Value": "Cause",
+                                    "Name": "Column Header",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "DeneWord Type": "TDClassInfo",
+                                    "Required": "true",
+                                    "Value": "visible-md visible-lg",
+                                    "Name": "TDClassInfo",
+                                    "Value Type": "String"
+                                }
+                            ],
+                            "Name": "Generator Weekly History Col 3"
+                        },
+                        {
+                            "Target":"@Ra:Human Interface:Weekly Generator Operation Report",
+                            "DeneWords": [
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Column Data Source Pointer",
+                                    "Value": "@Ra:Mnemosyne:Mnemosyne Current Week:Run Completed:Last Run Generator Running Time",
+                                    "Name": "Last Run Generator Stop Time",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "DeneWord Type": "Column In Table Position",
+                                    "Required": "true",
+                                    "Value": 4,
+                                    "Name": "Column Position",
+                                    "Value Type": "int"
+                                },
+                                {
+                                    "DeneWord Type": "Column Header",
+                                    "Required": "true",
+                                    "Value": "Run <br><em>seconds<\/em>",
+                                    "Name": "Column Header",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "DeneWord Type": "TDClassInfo",
+                                    "Required": "true",
+                                    "Value": "",
+                                    "Name": "TDClassInfo",
+                                    "Value Type": "String"
+                                }
+                            ],
+                            "Name": "Generator Weekly History Col 4"
+                        }
+					]
+                },
+                {
+					"Name": "Create Daily Generator Run Table",
+					"Denes": [
+						{
+                            "Name": "Metadata",
+                            "Dene Type": "Homeobox Metadata",
+							"Target": "",
+							"DeneWords": [
+                                {
+                                    "Name":"Created On",
+                                    "Value":"17/04/2018",
+                                    "Value Type":"Date",
+                                    "Required":true
+                                },
+                                {
+                                    "Name":"Description",
+                                    "Value":"Creates a table in the History Page that shows when the generator run daily",
+                                    "Value Type":"String",
+                                    "Required":true
+                                }
+							]
+                        },
+                        {
+							"Name": "Homeobox Index",
+							"Dene Type": "Homebox Index",
+							"DeneWords": [
+                            {
+                                "Name": "Generator Daily Report Panel",
+                                "DeneWord Type": "Hox Dene Pointer",
+                                "Value": "@Sperm:Hypothalamus:Create Daily Generator Run Table:Generator Daily Report Panel",
+                                "Value Type": "Dene Pointer"
+                            },
+                            {
+                                "Name": "Generator Daily Report Panel",
+                                "DeneWord Type": "Hox Dene Pointer",
+                                "Value": "@Sperm:Hypothalamus:Create Daily Generator Run Table:Dene Data Source",
+                                "Value Type": "Dene Pointer"
+                            },
+                            {
+                                "Name": "Generator Daily History Col 1",
+                                "DeneWord Type": "Hox Dene Pointer",
+                                "Value": "@Sperm:Hypothalamus:Create Daily Generator Run Table:Generator Daily History Col 1",
+                                "Value Type": "Dene Pointer"
+                            },
+                            {
+                                "Name": "Generator Daily History Col 2",
+                                "DeneWord Type": "Hox Dene Pointer",
+                                "Value": "@Sperm:Hypothalamus:Create Daily Generator Run Table:Generator Daily History Col 2",
+                                "Value Type": "Dene Pointer"
+                            },
+                            {
+                                "Name": "Generator Daily History Col 3",
+                                "DeneWord Type": "Hox Dene Pointer",
+                                "Value": "@Sperm:Hypothalamus:Create Daily Generator Run Table:Generator Daily History Col 3",
+                                "Value Type": "Dene Pointer"
+                            },
+                            {
+                                "Name": "Generator Daily History Col 4",
+                                "DeneWord Type": "Hox Dene Pointer",
+                                "Value": "@Sperm:Hypothalamus:Create Daily Generator Run Table:Generator Daily History Col 4",
+                                "Value Type": "Dene Pointer"
+                            }
+                        ]
+						},
+						{
+                            "Name": "DeneWord Carrier For Vital",
+                            "Dene Type": "DeneWord Carrier",
+							"Target": "",
+							"DeneWords": []
+                        },
+                        {
+                            "Target":"@Ra:Human Interface:History Page",
+                            "DeneWords": [
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Panel DeneChain Pointer",
+                                    "Value": "@Ra:Human Interface:Daily Generator Operation Report",
+                                    "Name": "Now Panel Pointer",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Panel Visualization Style",
+                                    "Value": "Mnemosyne Table Panel",
+                                    "Name": "Daily History Panel Style",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": true,
+                                    "DeneWord Type": "Panel In Page Position",
+                                    "Value": 1,
+                                    "Name": "Panel In Page Position",
+                                    "Value Type": "int"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": true,
+                                    "Name": "Visible",
+                                    "Value Type": "boolean"
+                                }
+                            ],
+                            "Name": "Generator Daily Report Panel"
+                        },
+                        {
+                            "Target":"@Ra:Human Interface:Daily Generator Operation Report",
+                            "DeneWords": [
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Panel Data Source Pointer",
+                                    "Value": "@Ra:Mnemosyne:Mnemosyne Today:Run Completed",
+                                    "Name": "Data Source Pointer",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": "true",
+                                    "Value": "Descending",
+                                    "Name": "Sorting Order",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": "true",
+                                    "Value": "@Ra:Mnemosyne:Mnemosyne Today:Run Completed:Last Run Generator Start Time",
+                                    "Name": "Sorting Parameter",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": "true",
+                                    "Value": "Generator Daily Report",
+                                    "Name": "Panel Title",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Display Table Column Definition Pointer",
+                                    "Value": "@Ra:Human Interface:Daily Generator Operation Report:Generator Daily History Col 1",
+                                    "Name": "Generator Weekly History Col 1",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Display Table Column Definition Pointer",
+                                    "Value": "@Ra:Human Interface:Daily Generator Operation Report:Generator Daily History Col 2",
+                                    "Name": "Generator Weekly History Col 2",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Display Table Column Definition Pointer",
+                                    "Value": "@Ra:Human Interface:Daily Generator Operation Report:Generator Daily History Col 3",
+                                    "Name": "Generator Weekly History Col 3",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Display Table Column Definition Pointer",
+                                    "Value": "@Ra:Human Interface:Daily Generator Operation Report:Generator Daily History Col 4",
+                                    "Name": "Generator Daily History Col 4",
+                                    "Value Type": "Dene Pointer"
+                                }
+                            ],
+                            "Name": "Dene Data Source"
+                        },
+                        {
+                            "Target":"@Ra:Human Interface:Daily Generator Operation Report",
+                             "DeneWords": [
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Column Data Source Pointer",
+                                    "Value": "@Ra:Mnemosyne:Mnemosyne Today:Run Completed:Last Run Generator Start Time",
+                                    "Name": "Start Time",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "DeneWord Type": "Column In Table Position",
+                                    "Required": "true",
+                                    "Value": 1,
+                                    "Name": "Column Position",
+                                    "Value Type": "int"
+                                },
+                                {
+                                    "DeneWord Type": "Column Header",
+                                    "Required": "true",
+                                    "Value": "Start",
+                                    "Name": "Column Header",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "DeneWord Type": "TDClassInfo",
+                                    "Required": "true",
+                                    "Value": "",
+                                    "Name": "TDClassInfo",
+                                    "Value Type": "String"
+                                }
+                            ],
+                            "Name": "Generator Daily History Col 1"
+                        },
+                        {
+                            "Target":"@Ra:Human Interface:Daily Generator Operation Report",
+                            "DeneWords": [
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Column Data Source Pointer",
+                                    "Value": "@Ra:Mnemosyne:Mnemosyne Today:Run Completed:Last Run Generator Stop Time",
+                                    "Name": "Last Run Generator Stop Time",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "DeneWord Type": "Column In Table Position",
+                                    "Required": "true",
+                                    "Value": 2,
+                                    "Name": "Column Position",
+                                    "Value Type": "int"
+                                },
+                                {
+                                    "DeneWord Type": "Column Header",
+                                    "Required": "true",
+                                    "Value": "Stop",
+                                    "Name": "Column Header",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "DeneWord Type": "TDClassInfo",
+                                    "Required": "true",
+                                    "Value": "",
+                                    "Name": "TDClassInfo",
+                                    "Value Type": "String"
+                                }
+                            ],
+                            "Name": "Generator Daily History Col 2"
+                        },
+                        {
+                            "Target":"@Ra:Human Interface:Daily Generator Operation Report",
+                             "DeneWords": [
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Column Data Source Pointer",
+                                    "Value": "@Ra:Mnemosyne:Mnemosyne Today:Run Completed:Last Run Generator Stop Cause",
+                                    "Name": "Last Run Generato Stop Cause",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "DeneWord Type": "Column In Table Position",
+                                    "Required": "true",
+                                    "Value": 3,
+                                    "Name": "Column Position",
+                                    "Value Type": "int"
+                                },
+                                {
+                                    "DeneWord Type": "Column Header",
+                                    "Required": "true",
+                                    "Value": "Cause",
+                                    "Name": "Column Header",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "DeneWord Type": "TDClassInfo",
+                                    "Required": "true",
+                                    "Value": "visible-md visible-lg",
+                                    "Name": "TDClassInfo",
+                                    "Value Type": "String"
+                                }
+                            ],
+                            "Name": "Generator Daily History Col 3"
+                        },
+                        {
+                            "Target":"@Ra:Human Interface:Daily Generator Operation Report",
+                            "DeneWords": [
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Column Data Source Pointer",
+                                    "Value": "@Ra:Mnemosyne:Mnemosyne Today:Run Completed:Last Run Generator Running Time",
+                                    "Name": "Last Run Generator Stop Time",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "DeneWord Type": "Column In Table Position",
+                                    "Required": "true",
+                                    "Value": 4,
+                                    "Name": "Column Position",
+                                    "Value Type": "int"
+                                },
+                                {
+                                    "DeneWord Type": "Column Header",
+                                    "Required": "true",
+                                    "Value": "Run <br><em>seconds<\/em>",
+                                    "Name": "Column Header",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "DeneWord Type": "TDClassInfo",
+                                    "Required": "true",
+                                    "Value": "",
+                                    "Name": "TDClassInfo",
+                                    "Value Type": "String"
+                                }
+                            ],
+                            "Name": "Generator Daily History Col 4"
+                        }
+					]
+                }],
+            "Mutations":[]
+		},
+		"Medula": {
+			"Mutations": [{}]
+		}
+	}
+}

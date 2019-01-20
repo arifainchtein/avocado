@@ -1,0 +1,25 @@
+{
+    "Homebox Definition Type":"Sensor",
+    "Homeobox Name":"Mother Internal Energy Values",
+    "Sensor Name":"Internal Energy Values",
+    "Microcontroller Pointer":"@NewRa:Internal:Compoenents:Mother Microcontroller",
+    "Provider":"https://www.seeed.com",
+    "Port":"A0",
+   "Model": "Grove Voltage Divider",
+    value:[
+        {
+            "Name": "InternalBatteryVoltage",
+            "Units":"Volts",
+            "Value Type":"double",
+            "Sensor Request Position":1,
+            "Range Maximum":15,
+            "Range Minimum":11,
+            "Initial Value":0,
+            "Reporting Value Dene Name":"Power Status"
+            "Human Interface Panel":"Internal Power Data", 
+            "In Panel Position":1,
+            "Panel Display Name":"Bat Voltage"
+        }
+    ]
+
+}

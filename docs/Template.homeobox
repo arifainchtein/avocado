@@ -1,0 +1,61 @@
+                {
+					"Name": "",
+					"Denes": [
+						{
+                            "Name": "Metadata",
+                            "Dene Type": "Homeobox Metadata",
+							"Target": "",
+							"DeneWords": [
+                                {
+                                    "Name":"Created On",
+                                    "Value":"06/06/2018",
+                                    "Value Type":"Date",
+                                    "Required":true
+                                },
+                                {
+                                    "Name":"Description",
+                                    "Value":"This homebox ...",
+                                    "Value Type":"String",
+                                    "Required":true
+                                }
+							]
+                        },
+                        {
+							"Name": "Homeobox Index",
+							"Dene Type": "Homebox Index",
+							"DeneWords": [
+                                {
+                                    "Name": "...",
+                                    "DeneWord Type": "Hox Dene Pointer",
+                                    "Value": "@Sperm:Hypothalamus:...:...",
+                                    "Value Type": "Dene Pointer"
+                                }
+                            ]
+						},
+						{
+                            "Name": "DeneWord Carrier For ...",
+                            "Dene Type": "DeneWord Carrier",
+							"Target": "@Dene...",
+							"DeneWords": [
+                                {
+                                    "DeneWord Type": "Update DeneWord Value",
+                                    "Value": ...,
+                                    "Name": "...",
+                                    "Value Type": "..."
+                                }
+                            ]
+                        },
+						{
+                            "Name": "DeneWord Remover For ...",
+                            "Dene Type": "DeneWord Remover",
+							"DeneWords": [
+                            {
+                                "Required": "true",
+                                "Value": "@DeneWord...",
+                                "Name": "...",
+                                "Value Type": "..."
+                            }
+							]
+						}
+					]
+                }

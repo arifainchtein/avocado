@@ -1,0 +1,128 @@
+{
+    "Homebox Definition Type":"Sensor",
+    "Homeobox Name":"Mother Internal Energy Values",
+    "Sensor Name":"Mother Internal Energy Values",
+    "Microcontroller Pointer":"@NewRa:Internal:Compoenents:Mother Microcontroller",
+    "Provider":"https://www.digitalstables.com",
+    "Port":"Internal",
+    value:[
+       {
+            "Name":"InternalBatteryStateOfCharge",
+            "Units":"%",
+            "Value Type":"double",
+            "Sensor Request Position":3,
+            "Range Maximum":100,
+            "Range Minimum":0,
+            "Initial Value":0,
+            "Reporting Value Dene Name":"Power Status",
+            "Human Interface Panel":"Internal Power Data" ,
+            "In Panel Position":3,
+            "Panel Display Name":"Battery SOC"
+        },
+        {
+            "Name":"DailyMinBatteryVoltage",
+            "Units":"Volts",
+            "Value Type":"double",
+            "Sensor Request Position":4,
+            "Range Maximum":15,
+            "Range Minimum":11,
+            "Initial Value":0,
+            "Reporting Value Dene Name":"Daily Power Stats",
+            "Human Interface Panel":"Internal Power Daily Stats" ,
+            "In Panel Position":1,
+            "Panel Display Name":"Minimum Bat"
+        },
+        {
+            "Name":"DailyMaxBatteryVoltage",
+            "Units":"Volts",
+            "Value Type":"double",
+            "Sensor Request Position":5,
+            "Range Maximum":15,
+            "Range Minimum":11,
+            "Initial Value":0,
+            "Reporting Value Dene Name":"Daily Power Stats",
+            "Human Interface Panel":"Internal Power Daily Stats" ,
+            "In Panel Position":2,
+            "Panel Display Name":"Maximum Batt"
+        },
+        {
+            "Name":"DailyMinBatteryCurrent",
+            "Units":"mA",
+            "Value Type":"double",
+            "Sensor Request Position":6,
+            "Range Maximum":1000,
+            "Range Minimum":0,
+            "Initial Value":0,
+            "Reporting Value Dene Name":"Daily Power Stats",
+            "Human Interface Panel":"Internal Power Daily Stats" ,
+            "In Panel Position":3,
+            "Panel Display Name":"Min Current"
+        },
+        {
+            "Name":"DailyMaxBatteryCurrent",
+            "Units":"mA",
+            "Value Type":"double",
+            "Sensor Request Position":7,
+            "Range Maximum":1000,
+            "Range Minimum":0,
+            "Initial Value":0,
+            "Reporting Value Dene Name":"Daily Power Stats",
+            "Human Interface Panel":"Internal Power Daily Stats" ,
+            "In Panel Position":4,
+            "Panel Display Name":"Max Current"
+        },
+        {
+            "Name":"DailyBatteryOutEnergy",
+            "Units":"mAHr",
+            "Value Type":"double",
+            "Sensor Request Position":8,
+            "Range Maximum":20000,
+            "Range Minimum":0,
+            "Initial Value":0,
+            "Reporting Value Dene Name":"Daily Power Stats",
+            "Human Interface Panel":"Internal Power Daily Stats" ,
+            "In Panel Position":5,
+            "Panel Display Name":"Bat Energy Out"
+        },
+        {
+            "Name":"DailyPoweredDownInLoopSeconds",
+            "Units":"sec",
+            "Value Type":"int",
+            "Sensor Request Position":9,
+            "Range Maximum":20000,
+            "Range Minimum":0,
+            "Initial Value":0,
+            "Reporting Value Dene Name":"Daily Power Stats",
+            "Human Interface Panel":"Internal Power Daily Stats" ,
+            "In Panel Position":6,
+            "Panel Display Name":"Bat Energy Out"
+        },
+        {
+            "Name":"HourlyBatteryOutEnergy",
+            "Units":"mAHr",
+            "Value Type":"double",
+            "Sensor Request Position":10,
+            "Range Maximum":20000,
+            "Range Minimum":0,
+            "Initial Value":0,
+            "Reporting Value Dene Name":"Hourly Power Stats",
+            "Human Interface Panel":"Internal Power Daily Stats" ,
+            "In Panel Position":1,
+            "Panel Display Name":"Bat Energy Out"
+        },
+        {
+            "Name":"HourlyPoweredDownInLoopSeconds",
+            "Units":"sec",
+            "Value Type":"int",
+            "Sensor Request Position":11,
+            "Range Maximum":20000,
+            "Range Minimum":0,
+            "Initial Value":0,
+            "Reporting Value Dene Name":"Hourly Power Stats",
+            "Human Interface Panel":"Internal Power Hourly Stats" ,
+            "In Panel Position":2,
+            "Panel Display Name":"Secs Down"
+        }
+    ]
+
+}

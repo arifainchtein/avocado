@@ -1,0 +1,218 @@
+{
+	"Sperm": {
+		"Purpose": {
+			"Teleonome Name": "BasicArduino",
+			"Purpose Type": "Mutate",
+			"Description":"Adds info to convert a regular Egg into a BasicArduino Teleonome"
+		},
+		"Hypothalamus": {
+			"Actions":[],
+			"Homeoboxes": [
+				{
+					"Name": "Basic Arduino Configuration",
+					"Denes": [
+						{
+                            "Name": "Metadata",
+                            "Dene Type": "Homeobox Metadata",
+							"Target": "",
+							"DeneWords": [
+                                {
+                                    "Name":"Created On",
+                                    "Value":"11/07/2018",
+                                    "Value Type":"Date",
+                                    "Required":true
+                                },
+                                {
+                                    "Name":"Description",
+                                    "Value":"This homebox adds all the missing info to create the BasicArduino",
+                                    "Value Type":"String",
+                                    "Required":true
+                                }
+							]
+						},
+						{
+							"Name": "Homeobox Index",
+							"Dene Type": "Homebox Index",
+							"DeneWords": [
+								{
+                                    "Name": "Increment Generator Running Time Action",
+                                    "DeneWord Type": "Hox Dene Pointer",
+                                    "Value": "@Sperm:Hypothalamus:Basic Arduino Configuration:Generate Weather Data Command Action",
+                                    "Value Type": "Dene Pointer"
+								},
+								{
+                                    "Name": "Increment Generator Running Time Action",
+                                    "DeneWord Type": "Hox Dene Pointer",
+                                    "Value": "@Sperm:Hypothalamus:Basic Arduino Configuration:Generate Weather Data Command",
+                                    "Value Type": "Dene Pointer"
+								},
+								{
+                                    "Name": "Increment Generator Running Time Action",
+                                    "DeneWord Type": "Hox Dene Pointer",
+                                    "Value": "@Sperm:Hypothalamus:Basic Arduino Configuration:Set Weather Data",
+                                    "Value Type": "Dene Pointer"
+                                }
+							]
+						},
+						{
+                            "Name": "DeneWord Carrier For Mother Actuator Actions",
+                            "Dene Type": "DeneWord Carrier",
+							"Target": "@NewEgg:Internal:Actuators:Mother Actuator Actions",
+							"DeneWords": [
+                                    {
+                                        "Target": "@NewEgg:Internal:Actuators:Mother Actuator Actions",
+                                        "Required": true,
+                                        "DeneWord Type": "Action",
+                                        "Value": "@NewEgg:Internal:Actuators:Generate Weather Data Command Action",
+                                        "Name": "Generate Weather Data Command Action",
+                                        "Value Type": "Dene Pointer"
+									},
+									{
+                                        "Target": "@NewEgg:Internal:Actuators:Mother Actuator Actions",
+                                        "Required": true,
+                                        "DeneWord Type": "Action",
+                                        "Value": "@NewEgg:Internal:Actuators:Set Weather Data",
+                                        "Name": "Set Weather Data",
+                                        "Value Type": "Dene Pointer"
+                                    }
+                            ]
+						},
+						{
+                            "Target":"@NewEgg:Internal:Actuators",
+                            "Dene Type": "Action",
+                            "DeneWords": [
+                                {
+                                    "Required": true,
+                                    "Value": "Mother Actuator",
+                                    "Name": "Codon",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": 1,
+                                    "Name": "Evaluation Position",
+                                    "Value Type": "int"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": true,
+                                    "Name": "Active",
+                                    "Value Type": "boolean"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": "@NewEgg:Internal:Actuators:Generate Weather Data Command",
+                                    "Name": "Actuator Command Code True Expression",
+                                    "Value Type": "String"
+                                },
+								{
+									"Required": true,
+									"Value": "1==1",
+									"Name": "Expression",
+									"Value Type": "String"
+								}
+                                
+                            ],
+                            "Name": "Generate Weather Data Command Action"
+						},
+						{
+							"Target":"@NewEgg:Internal:Actuators",
+							"Dene Type": "Action",
+							"DeneWords": [
+								{
+									"Required": true,
+									"Value": "Mother Actuator",
+									"Name": "Codon",
+									"Value Type": "String"
+								},
+								{
+									"Required": true,
+									"Value": 99,
+									"Name": "Evaluation Position",
+									"Value Type": "int"
+								},
+								{
+									"Required": true,
+									"Value": true,
+									"Name": "Active",
+									"Value Type": "boolean"
+								},
+								{
+									"Required": true,
+									"DeneWord Type": "DeneWord Operation Variable",
+									"Value": "@NewEgg:Purpose:Sensor Data:Daily Weather Forecast:Daily Forecast Day 1 Rain",
+									"Default": 0,
+									"Name": "RainDataTomorrow",
+									"Value Type": "Dene Pointer"
+								},
+								{
+									"Required": true,
+									"DeneWord Type": "DeneWord Operation Variable",
+									"Value": "@NewEgg:Purpose:Sensor Data:Daily Weather Forecast:Daily Forecast Day 1 Maximum Temperature",
+									"Default": 0,
+									"Name": "MaxTempTomorrow",
+									"Value Type": "Dene Pointer"
+								},
+								{
+									"Required": true,
+									"Value": "\"SetWeather#\"+MaxTempTomorrow+\"#\"+RainDataTomorrow",
+									"Name": "Expression",
+									"Value Type": "Dene Pointer"
+								},
+								{
+									"Required": true,
+									"DeneWord Type": "DeneWord Operation Destination",
+									"Value": "@NewRa:Internal:Actuators:Set Weather Data:Actuator Command Code True Expression",
+									"Name": "Destination",
+									"Value Type": "Dene Pointer"
+								}
+							],
+							"Name": "Generate Weather Data Command"
+						},
+						{
+							"Target":"@NewEgg:Internal:Actuators",
+							"Dene Type": "Action",
+							"DeneWords": [
+								{
+									"Required": true,
+									"Value": "Mother Actuator",
+									"Name": "Codon",
+									"Value Type": "String"
+								},
+								{
+									"Required": true,
+									"Value": true,
+									"Name": "Active",
+									"Value Type": "boolean"
+								},
+								{
+									"Required": true,
+									"Value": 2,
+									"Name": "Evaluation Position",
+									"Value Type": "int"
+								},
+								{
+									"Required": true,
+									"Value": "SetWeather#0#0",
+									"Name": "Actuator Command Code True Expression",
+									"Value Type": "String"
+								},
+								{
+									"Required": true,
+									"Value": "1==1",
+									"Name": "Expression",
+									"Value Type": "String"
+								}
+							],
+							"Name": "Set Weather Data"
+						}
+					]
+				}
+			],
+            "Mutations":[]
+		},
+		"Medula": {
+			"Mutations": [{}]
+		}
+	}
+}

@@ -1,0 +1,48 @@
+{
+	"Sperm": {
+		"Purpose": {
+			"Teleonome Name": "BasicArduino",
+			"Purpose Type": "Mutate",
+			"Description":"Adds info to convert a regular Egg into a BasicArduino Teleonome"
+		},
+		"Hypothalamus": {
+			"Actions":[],
+			"Homeoboxes": [
+				{
+					"Name": "Minimum Arduino Configuration",
+                    "Denes": 
+                    [
+						{
+                            "Name": "Metadata",
+                            "Dene Type": "Homeobox Metadata",
+							"Target": "",
+							"DeneWords": [
+                                {
+                                    "Name":"Created On",
+                                    "Value":"11/09/2018",
+                                    "Value Type":"Date",
+                                    "Required":true
+                                },
+                                {
+                                    "Name":"Description",
+                                    "Value":"This homebox adds all the missing info to create the MinimumArduino",
+                                    "Value Type":"String",
+                                    "Required":true
+                                }
+							]
+						},
+						{
+							"Name": "Homeobox Index",
+							"Dene Type": "Homebox Index",
+							"DeneWords": []
+						}
+					]
+				}
+			],
+            "Mutations":[]
+		},
+		"Medula": {
+			"Mutations": [{}]
+		}
+	}
+}

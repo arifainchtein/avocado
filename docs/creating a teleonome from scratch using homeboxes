@@ -1,0 +1,14 @@
+creating a new denome from scratch.
+
+start with an egg and create a sperm, with having the option among following homeboxes.
+Each row represents a homeboxes
+create user interface panel called now of type complete-width_single_value
+Sensors 
+1)battery voltage sensor - with user interface allocated to now
+2)battery out current sensor
+3)battery in current sensor
+4)Solar panel out current
+
+Actuators
+
+

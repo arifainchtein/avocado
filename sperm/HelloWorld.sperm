@@ -1,0 +1,326 @@
+{
+	"Sperm": {
+		"Purpose": {
+			"Name": "HelloWorld",
+			"Purpose Type": "Simplest Teleonome",
+			"Description": "This Teleonome has no sensors and only one actuator, an RGB LED that changes color according to its identity.  Blue if its in rganism mode and green if its in host mode"
+		},
+		"PaceMaker": {
+			"Homeoboxes": [
+				
+				{
+					"Name": "General Status LED",
+					"Denes": [
+						{
+							"Name": "Homeobox Index",
+							"Dene Type": "Homebox Index",
+							"DeneWords": [
+								{
+									"Name": "Arduino Uno MicroController",
+									"DeneWord Type": "Hox Dene Pointer",
+									"Value": "@Sperm:Pacemaker:General Status LED:Identity LED",
+									"Value Type": "Dene Pointer"
+								},
+								{
+									"Name": "Arduino Uno Serial Parameters",
+									"DeneWord Type": "Hox Dene Pointer",
+									"Value": "@Sperm:Pacemaker:General Status LED:Identity LED Actions",
+									"Value Type": "Dene Pointer"
+								},
+								{
+									"Name": "Arduino Uno Serial Parameters",
+									"DeneWord Type": "Hox Dene Pointer",
+									"Value": "@Sperm:Pacemaker:General Status LED:Set Identity Color",
+									"Value Type": "Dene Pointer"
+								},
+								{
+									"Name": "Arduino Uno Serial Parameters",
+									"DeneWord Type": "Hox Dene Pointer",
+									"Value": "@Sperm:Pacemaker:General Status LED:IdentityCondition",
+									"Value Type": "Dene Pointer"
+								}
+							]
+						},
+								{
+									"Dene Type": "Actuator",
+									"DeneWords": [
+										{
+											"DeneWord Type": "Actuator Microcontroller Pointer",
+											"Required": true,
+											"Value": "@HelloWorld:Internal:Components:Main Arduino",
+											"Name": "Pointer to Microcontroller",
+											"Value Type": "Dene Pointer"
+										},
+										{
+											"Required": true,
+											"Value": 1,
+											"Units": "Dimensionless",
+											"Name": "Execution Position",
+											"Value Type": "int"
+										},
+										{
+											"Required": false,
+											"Value": "@HelloWorld:Internal:Components:Main Arduino Digital Ports:Digital 7",
+											"Name": "Pin Device",
+											"Value Type": "String"
+										},
+										{
+											"Required": false,
+											"DeneWord Type": "On Start Action List",
+											"Value": "@HelloWorld:Internal:Actuators:Identity LED On Start Actions",
+											"Name": "Pump On Start Actions",
+											"Value Type": "Dene Pointer"
+										},
+										{
+											"Required": false,
+											"DeneWord Type": "Action List",
+											"Value": "@HelloWorld:Internal:Actuators:Identity LED Actions",
+											"Name": "Pump Actions",
+											"Value Type": "Dene Pointer"
+										},
+										{
+											"Required": true,
+											"Value": "Identity LED",
+											"Name": "Codon",
+											"Value Type": "String"
+										}
+									],
+									"Target": "@HelloWorld:Internal:Actuators",
+									"Name": "Identity LED"
+								},
+                            	{
+                            	    "Dene Type": "Action List",
+                                	"DeneWords": [
+                                    	{
+                                        	"Required": true,
+                                        	"Value": "Identity LED",
+                                      	  	"Name": "Codon",
+                                        	"Value Type": "String"
+                                    	},
+                                    	{
+                                        	"Target": "@HelloWorld:Internal:Actuators:Set Identity Color",
+                                        	"Required": true,
+                                        	"DeneWord Type": "Action",
+                                        	"Value": "@HelloWorld:Internal:Actuators:Set Identity Color",
+                                        	"Name": "Set Identity Status",
+                                        	"Value Type": "Dene Pointer"
+                                    	}
+                                	],
+                                	"Name": "Identity LED Actions",
+									"Target": "@HelloWorld:Internal:Actuators"
+                            	},
+								{
+									"Dene Type": "Action",
+									"DeneWords": [
+										{
+											"Required": true,
+											"Value": "Identity LED",
+											"Name": "Codon",
+											"Value Type": "String"
+										},
+										{
+											"Required": true,
+											"Value": false,
+											"Name": "Active",
+											"Value Type": "boolean"
+										},
+										{
+											"Required": true,
+											"Value": 1,
+											"Name": "Evaluation Position",
+											"Value Type": "int"
+										},
+										{
+											"Required": true,
+											"Value": "SetColor#1#0#255#0",
+											"Name": "Actuator Command Code True Expression",
+											"Value Type": "String"
+										},
+										{
+											"Required": true,
+											"Value": "SetColor#1#0#0#255",
+											"Name": "Actuator Command Code False Expression",
+											"Value Type": "String"
+										},
+										{
+											"Required": true,
+											"Value": "(IdentityCondition)",
+											"Name": "Expression",
+											"Value Type": "String"
+										},
+										{
+											"Required": true,
+											"DeneWord Type": "Actuator Condition Pointer",
+											"Value": "@HelloWorld:Internal:Actuators:IdentityCondition",
+											"Name": "IdentityCondition",
+											"Value Type": "Dene Pointer"
+										}
+									],
+									"Name": "Set Identity Color",
+									"Target": "@HelloWorld:Internal:Actuators"
+								},
+								{
+									"Dene Type": "Actuator Condition",
+									"DeneWords": [
+										{
+											"Required": true,
+											"Value": "Identity LED",
+											"Name": "Codon",
+											"Value Type": "String"
+										},
+										{
+											"Required": true,
+											"Value": "IdentityMode == Self",
+											"Name": "Expression",
+											"Value Type": "String"
+										},
+										{
+											"Required": true,
+											"Value": true,
+											"Name": "On Lack Of Data",
+											"Value Type": "boolean"
+										},
+										{
+											"Required": true,
+											"DeneWord Type": "Condition Variable Pointer",
+											"Value": "@HelloWorld:Purpose:Operational Data:Vital:IdentityMode",
+											"Default": "Self",
+											"Name": "IdentityMode",
+											"Value Type": "Dene Pointer"
+										},
+										{
+											"Required": true,
+											"DeneWord Type": "Condition Variable Pointer",
+											"Value": "@HelloWorld:Internal:Reference:Identity Set:Self",
+											"Default": "Self",
+											"Name": "OK",
+											"Value Type": "Dene Pointer"
+										}
+									],
+									"Name": "IdentityCondition",
+									"Target": "@HelloWorld:Internal:Actuators"
+								}
+							]
+						
+					
+				},
+				{
+					"Name": "Arduino Uno MicroController",
+					"Denes": [
+						{
+							"Name": "Homeobox Index",
+							"Dene Type": "Homebox Index",
+							"DeneWords": [
+								{
+									"Name": "Arduino Uno MicroController",
+									"DeneWord Type": "Hox Dene Pointer",
+									"Value": "@Sperm:Pacemaker:Arduino Uno MicroController:Main Arduino",
+									"Value Type": "Dene Pointer"
+								},
+								{
+									"Name": "Arduino Uno Serial Parameters",
+									"DeneWord Type": "Hox Dene Pointer",
+									"Value": "@Sperm:Pacemaker:Arduino Uno MicroController:Serial Parameters",
+									"Value Type": "Dene Pointer"
+								}
+							]
+						},
+						{
+							"Dene Type": "Arduino Uno Microcontroller",
+							"DeneWords": [
+								{
+									"Required": true,
+									"Value": 1,
+									"Value Type ": "int",
+									"Name": "Processing Queue Position"
+								},
+								{
+									"DeneWord Type": "Microcontroller Processing Class Name",
+									"Required": true,
+									"Value": "com.teleonome.framework.microcontroller.ArduinoUno",
+									"Value Type ": "String",
+									"Name": "Arduino Uno Microcontroller Processing Class Name"
+								},
+								{
+									"Required": true,
+									"Value": "Arduino Uno",
+									"Name": "Product Name",
+									"Value Type": "String"
+								},
+								{
+									"Required": true,
+									"Value": "Main Arduino",
+									"Name": "Codon",
+									"Value Type": "String"
+								},
+								{
+									"Required": false,
+									"Value": "Web Address",
+									"Name": "SKU Type",
+									"Value Type": "String"
+								},
+								{
+									"Required": false,
+									"Value": "http://littlerbirdselectronics/1234d",
+									"Name": "SKU URL",
+									"Value Type": "String"
+								},
+								{
+									"Target": "@HelloWorld:Internal:Components:Serial Parameters",
+									"Required": false,
+									"Value": "@HelloWorld:Internal:Components:Serial Parameters",
+									"Name": "Microcontroller Communication Protocol",
+									"Value Type": "Dene Pointer"
+								},
+								{
+									"Required": true,
+									"Value": "Main Arduin",
+									"Name": "Codon",
+									"Value Type": "String"
+								}
+							],
+							"Name": "Main Arduino",
+							"Target": "@HelloWorld:Internal:Components"
+						},
+						{
+							"DeneWords": [
+								{
+									"Required": true,
+									"Value": "Serial",
+									"Name": "Protocol",
+									"Value Type": "String"
+								},
+								{
+									"Required": true,
+									"Value": "Main Arduin",
+									"Name": "Codon",
+									"Value Type": "String"
+								},
+								{
+									"Maximum": 4800,
+									"Minimum": 2400,
+									"Required": true,
+									"Value": 9600,
+									"Name": "Serial Data Rate",
+									"Value Type": "int"
+								},
+								{
+									"Required": true,
+									"Value": "Main Arduino",
+									"Name": "Codon",
+									"Value Type": "String"
+								}
+							],
+							"Name": "Serial Parameters",
+							"Target": "@HelloWorld:Internal:Components"
+						}
+				
+					]
+				}
+			]			
+		},
+		"Medula": {
+			"Mutations": [{}]
+		}
+	}
+}
