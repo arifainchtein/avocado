@@ -2,7 +2,7 @@
     "Homebox Definition Type":"Sensor",
     "Homeobox Name":"Mother Internal Energy Values",
     "Sensor Name":"Internal Energy Values",
-    "Microcontroller Pointer":"@NewRa:Internal:Compoenents:Mother Microcontroller",
+    "Microcontroller Pointer":"@NewRa:Internal:Components:Mother Microcontroller",
     "Provider":"https://www.digitalstables.com",
     "Port":"Internal",
     value:[

@@ -1,0 +1,24 @@
+{
+    "Homebox Definition Type":"Sensor",
+    "Homeobox Name":"Mother SD Card Sensor",
+    "Sensor Name":"Mother SD Card Sensor",
+    "Microcontroller Pointer":"@NewRa:Internal:Components:Mother Microcontroller",
+    "Provider":"https://www.digitalstables.com",
+    "Port":"Internal",
+    value:[
+        {
+            "Name":"TotalDiskUse",
+            "Units":"Kb",
+            "Value Type":"long",
+            "Sensor Request Position":13,
+            "Range Maximum":100000,
+            "Range Minimum":0,
+            "Initial Value":0,
+            "Reporting Value Dene Name":"SD Card",
+            "Human Interface Panel":"Sd Card" ,
+            "In Panel Position":1,
+            "Panel Display Name":"SD Card"
+        }
+    ]
+
+}
