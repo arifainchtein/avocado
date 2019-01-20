@@ -5,7 +5,7 @@
     "Microcontroller Pointer":"@NewRa:Internal:Compoenents:Mother Microcontroller",
     "Provider":"https://www.digitalstables.com",
     "Port":"Internal",
-    value:[
+    "Values":[
        {
             "Name":"InternalBatteryStateOfCharge",
             "Units":"%",

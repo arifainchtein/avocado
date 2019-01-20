@@ -6,7 +6,7 @@
     "Provider":"https://www.seeed.com",
     "Port":"A0",
    "Model": "Grove Voltage Divider",
-    value:[
+    "Values":[
         {
             "Name": "InternalBatteryVoltage",
             "Units":"Volts",

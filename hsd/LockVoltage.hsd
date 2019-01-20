@@ -6,7 +6,7 @@
     "Provider":"https://www.digitalstables.com",
     "Port":"A5",
     "Model": "DigitalStablesShield.html",
-    value:[
+    "Values":[
         {
             "Name":"Lock Voltage",
             "Units":"Volts",

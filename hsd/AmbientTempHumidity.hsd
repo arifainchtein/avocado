@@ -5,7 +5,7 @@
     "Microcontroller Pointer":"@NewRa:Internal:Compoenents:Mother Microcontroller"
     "Provider":"https://www.pakronics.com.au/products/grove-temperature-humidity-sensor-pro-ss101020019",
     "Port":"A0",
-    value:[
+    "Values":[
         {
             "Name":"Air Temperature",
             "Units":"Celsius",

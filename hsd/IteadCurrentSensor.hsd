@@ -6,7 +6,7 @@
     "Provider":"https://www.iteadstudio.com",
     "Port":"A1",
     "Model": "ACS712 Current Sensor Brick",
-    value:[
+    "Values":[
          {
             "Name":"BatteryOutputCurrent",
             "Units":"mA",
