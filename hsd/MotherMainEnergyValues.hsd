@@ -1,5 +1,5 @@
 {
-    "Homebox Definition Type":"Sensor",
+    "Homeobox Definition Type":"Sensor",
     "Homeobox Name":"Mother Internal Energy Values",
     "Sensor Name":"Internal Energy Values",
     "Microcontroller Pointer":"@NewRa:Internal:Components:Mother Microcontroller",

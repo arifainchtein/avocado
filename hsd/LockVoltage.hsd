@@ -1,5 +1,5 @@
 {
-    "Homebox Definition Type":"Sensor",
+    "Homeobox Definition Type":"Sensor",
     "Homeobox Name":"Lock Voltage",
     "Sensor Name":"Lock Voltage Sensor",
     "Microcontroller Pointer":"@NewRa:Internal:Compoenents:Mother Microcontroller"

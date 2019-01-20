@@ -1,5 +1,5 @@
 {
-    "Homebox Definition Type":"Sensor",
+    "Homeobox Definition Type":"Sensor",
     "Homeobox Name":"Mother SD Card Sensor",
     "Sensor Name":"Mother SD Card Sensor",
     "Microcontroller Pointer":"@NewRa:Internal:Components:Mother Microcontroller",
