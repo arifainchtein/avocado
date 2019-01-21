@@ -1156,13 +1156,13 @@
                                     {
                                         "DeneWord Type": "Microcontroller Processing Class Name",
                                         "Required": true,
-                                        "Value": "com.teleonome.framework.microcontroller.SimpleMicroController",
+                                        "Value": "com.teleonome.framework.Microcontroller.SimpleMicrocontroller",
                                         "Value Type": "String",
                                         "Name": "Simple Microcontroller Processing Class Name"
                                     },
                                     {
                                         "Required": true,
-                                        "Value": "SimpleMicroController",
+                                        "Value": "SimpleMicrocontroller",
                                         "Name": "Codon",
                                         "Value Type": "String"
                                     },
@@ -1187,7 +1187,7 @@
                                     {
                                         "DeneWord Type": "Microcontroller Processing Class Name",
                                         "Required": true,
-                                        "Value": "com.teleonome.framework.microcontroller.gnuserialport.GNUArduinoUno",
+                                        "Value": "com.teleonome.framework.Microcontroller.gnuserialport.GNUArduinoUno",
                                         "Value Type": "String",
                                         "Name": "Arduino Uno Microcontroller Processing Class Name"
                                     },
@@ -1199,7 +1199,7 @@
                                     },
                                     {
                                         "Required": true,
-                                        "Value": "Mother MicroController",
+                                        "Value": "Mother Microcontroller",
                                         "Name": "Codon",
                                         "Value Type": "String"
                                     },
@@ -1223,7 +1223,7 @@
                                         "Value Type": "Dene Pointer"
                                     }
                                 ],
-                                "Name": "Mother MicroController"
+                                "Name": "Mother Microcontroller"
                             },
                             {
                                 "DeneWords": [
@@ -1243,7 +1243,7 @@
                                     },
                                     {
                                         "Required": true,
-                                        "Value": "Mother MicroController",
+                                        "Value": "Mother Microcontroller",
                                         "Name": "Codon",
                                         "Value Type": "String"
                                     }
@@ -1965,7 +1965,7 @@
                                     {
                                         "DeneWord Type": "Actuator Microcontroller Pointer",
                                         "Required": true,
-                                        "Value": "@Egg:Internal:Components:Mother MicroController",
+                                        "Value": "@Egg:Internal:Components:Mother Microcontroller",
                                         "Name": "Pointer to Microcontroller",
                                         "Value Type": "Dene Pointer"
                                     },
