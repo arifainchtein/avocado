@@ -1586,6 +1586,10 @@
                                 "Name": "Static Mnemosycon Success Tasks"
                             },
                             {
+                                "DeneWords": [],
+                                "Name": "Static Mnemosycon Failure Tasks"
+                            },
+                            {
                                 "DeneType": "Mnemosycon Rules List",
                                 "DeneWords": [
                                     {
@@ -1810,6 +1814,10 @@
                                     "Value Type": "boolean"
                                 }],
                                 "Name": "Dynamic Mnemosycon Success Tasks"
+                            },
+                            {
+                                "DeneWords": [],
+                                "Name": "Dynamic Mnemosycon Failure Tasks"
                             },
                             {
                                 "DeneWords": [{
