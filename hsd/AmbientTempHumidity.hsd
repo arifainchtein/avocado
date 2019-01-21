@@ -2,7 +2,7 @@
     "Homebox Definition Type":"Sensor",
     "Homeobox Name":"Add Temperature and Humidity Sensor",
     "Sensor Name":"Temp and Hunidity Sensor",
-    "Microcontroller Pointer":"@NewRa:Internal:Compoenents:Mother Microcontroller",
+    "Microcontroller Pointer":"@Egg:Internal:Compoenents:Mother Microcontroller",
     "Provider":"https://www.pakronics.com.au/products/grove-temperature-humidity-sensor-pro-ss101020019",
     "Port":"A0",
     "Values":[

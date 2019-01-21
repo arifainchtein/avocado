@@ -2,7 +2,7 @@
     "Homeobox Definition Type":"Sensor",
     "Homeobox Name":"Battery Current",
     "Sensor Name":"Battery Current Values",
-    "Microcontroller Pointer":"@NewRa:Internal:Compoenents:Mother Microcontroller",
+    "Microcontroller Pointer":"@Egg:Internal:Compoenents:Mother Microcontroller",
     "Provider":"https://www.iteadstudio.com",
     "Port":"A1",
     "Model": "ACS712 Current Sensor Brick",
