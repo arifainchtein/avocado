@@ -28,7 +28,7 @@
 						"Value": "@Sperm:Pacemaker:Control Parameters:Minimum_Acceptable_Voltage",
 						"Value Type": "Dene Pointer"
 					}
-				],
+				]
 			},{
                 "DeneWords": [
                     {
