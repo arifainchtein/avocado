@@ -15,7 +15,7 @@
             "Range Maximum":15,
             "Range Minimum":11,
             "Initial Value":0,
-            "Reporting Value Dene Name":"Power Status"
+            "Reporting Value Dene Name":"Power Status",
             "Human Interface Panel":"Internal Power Data", 
             "In Panel Position":1,
             "Panel Display Name":"Bat Voltage"

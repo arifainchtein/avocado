@@ -2,7 +2,7 @@
     "Homebox Definition Type":"Sensor",
     "Homeobox Name":"Add Temperature and Humidity Sensor",
     "Sensor Name":"Temp and Hunidity Sensor",
-    "Microcontroller Pointer":"@NewRa:Internal:Compoenents:Mother Microcontroller"
+    "Microcontroller Pointer":"@NewRa:Internal:Compoenents:Mother Microcontroller",
     "Provider":"https://www.pakronics.com.au/products/grove-temperature-humidity-sensor-pro-ss101020019",
     "Port":"A0",
     "Values":[
@@ -13,7 +13,7 @@
             "Range Maximum":50,
             "Range Minimum":-10,
             "Initial Value":0,
-            "Reporting Value Dene Name":"Air"
+            "Reporting Value Dene Name":"Air",
             "Human Interface Panel":"Now", 
             "In Panel Position":1,
             "Panel Display Name":"Temperature"
