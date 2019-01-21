@@ -2,7 +2,7 @@
     "Homeobox Definition Type":"Sensor",
     "Homeobox Name":"Lock Voltage",
     "Sensor Name":"Lock Voltage Sensor",
-    "Microcontroller Pointer":"@Egg:Internal:Compoenents:Mother Microcontroller",
+    "Microcontroller Pointer":"@Egg:Internal:Components:Mother Microcontroller",
     "Provider":"https://www.digitalstables.com",
     "Port":"A5",
     "Model": "DigitalStablesShield.html",

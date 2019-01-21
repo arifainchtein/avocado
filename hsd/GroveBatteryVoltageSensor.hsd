@@ -2,7 +2,7 @@
     "Homeobox Definition Type":"Sensor",
     "Homeobox Name":"Grove Voltage Divider",
     "Sensor Name":"Grove Voltage Divider",
-    "Microcontroller Pointer":"@Egg:Internal:Compoenents:Mother Microcontroller",
+    "Microcontroller Pointer":"@Egg:Internal:Components:Mother Microcontroller",
     "Provider":"https://www.seeed.com",
     "Port":"A0",
    "Model": "Grove Voltage Divider",
