@@ -1,7 +1,7 @@
 {
     "Homeobox Definition Type":"Sensor",
-    "Homeobox Name":"Mother Internal Energy Values",
-    "Sensor Name":"Internal Energy Values",
+    "Homeobox Name":"Grove Voltage Divider",
+    "Sensor Name":"Grove Voltage Divider",
     "Microcontroller Pointer":"@NewRa:Internal:Compoenents:Mother Microcontroller",
     "Provider":"https://www.seeed.com",
     "Port":"A0",

@@ -22,7 +22,7 @@
 						"DeneWord Type": "Hox Dene Pointer",
 						"Value": "@Sperm:Pacemaker:Control Parameters:Tub_Target_Temperature",
 						"Value Type": "Dene Pointer"
-					},{
+					},{	
 						"Name":"Minimum_Acceptable_Voltage",
 						"DeneWord Type": "Hox Dene Pointer",
 						"Value": "@Sperm:Pacemaker:Control Parameters:Minimum_Acceptable_Voltage",
