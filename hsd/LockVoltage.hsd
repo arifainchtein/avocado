@@ -2,7 +2,7 @@
     "Homeobox Definition Type":"Sensor",
     "Homeobox Name":"Lock Voltage",
     "Sensor Name":"Lock Voltage Sensor",
-    "Microcontroller Pointer":"@NewRa:Internal:Compoenents:Mother Microcontroller"
+    "Microcontroller Pointer":"@NewRa:Internal:Compoenents:Mother Microcontroller",
     "Provider":"https://www.digitalstables.com",
     "Port":"A5",
     "Model": "DigitalStablesShield.html",
@@ -15,7 +15,7 @@
             "Range Maximum":5.5,
             "Range Minimum":0.0,
             "Initial Value":0,
-            "Reporting Value Dene Name":"Lock"
+            "Reporting Value Dene Name":"Lock",
             "Human Interface Panel":"Now", 
             "In Panel Position":3,
             "Panel Display Name":"Lock"
