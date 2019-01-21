@@ -2279,7 +2279,7 @@
                                     {
                                         "Required": true,
                                         "DeneWord Type": "DeneWord Operation Variable",
-                                        "Value": "@Egg:Purpose:External Data:Egg:FreeSpace",
+                                        "Value": "@Egg:Purpose:Operational Data:System Data:Free Space",
                                         "Default": 0,
                                         "Name": "FreeSpace",
                                         "Value Type": "Dene Pointer"
@@ -2287,7 +2287,7 @@
                                     {
                                         "Required": true,
                                         "DeneWord Type": "DeneWord Operation Variable",
-                                        "Value": "@Egg:Purpose:External Data:Egg:TotalSpace",
+                                        "Value": "@Egg:Purpose:Operational Data:System Data:Total Space",
                                         "Default": 0,
                                         "Name": "TotalSpace",
                                         "Value Type": "Dene Pointer"
@@ -2295,7 +2295,7 @@
                                     {
                                         "Required": true,
                                         "DeneWord Type": "DeneWord Operation Variable",
-                                        "Value": "@Egg:Purpose:External Data:Egg:DatabaseSize",
+                                        "Value": "@Egg:Purpose:Operational Data:System Data:Database Size",
                                         "Default": 0,
                                         "Name": "DatabaseSpace",
                                         "Value Type": "Dene Pointer"
@@ -3026,6 +3026,27 @@
                                     },
                                     {
                                         "Required": true,
+                                        "Value": 200,
+                                        "Units": "MB",
+                                        "Name": "Mutation Event Table Size",
+                                        "Value Type": "double"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": 2.448,
+                                        "Units": "MB",
+                                        "Name": "Command Requests Table Size",
+                                        "Value Type": "double"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": 2.448,
+                                        "Units": "MB",
+                                        "Name": "Mother Remembered Values Table Size",
+                                        "Value Type": "double"
+                                    },
+                                    {
+                                        "Required": true,
                                         "Value": "63.0",
                                         "Units": "MB",
                                         "Name": "Remembered DeneWords Table Size",
@@ -3294,32 +3315,7 @@
                     },
                     {
                         "Denes": [{
-                            "DeneWords": [
-                                {
-                                    "Required": true,
-                                    "Value": "Data Stale",
-                                    "Name": "Cause",
-                                    "Value Type": "String"
-                                },
-                                {
-                                    "Required": true,
-                                    "Value": "@Egg:Purpose:External Data:MonoNanny",
-                                    "Name": "Location",
-                                    "Value Type": "Dene Pointer"
-                                },
-                                {
-                                    "Required": true,
-                                    "Value": "1536674154541",
-                                    "Name": "Last Pulse Timestamp in Millis",
-                                    "Value Type": "long"
-                                },
-                                {
-                                    "Required": true,
-                                    "Value": "11/09/18 23:55",
-                                    "Name": "Last Pulse Timestamp",
-                                    "Value Type": "String"
-                                }
-                            ],
+                            "DeneWords": [],
                             "Name": "External Data Pathology"
                         }],
                         "Name": "Pathology"
