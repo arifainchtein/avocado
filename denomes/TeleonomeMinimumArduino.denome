@@ -1156,7 +1156,7 @@
                                     {
                                         "DeneWord Type": "Microcontroller Processing Class Name",
                                         "Required": true,
-                                        "Value": "com.teleonome.framework.Microcontroller.SimpleMicrocontroller",
+                                        "Value": "com.teleonome.framework.microcontroller.SimpleMicrocontroller",
                                         "Value Type": "String",
                                         "Name": "Simple Microcontroller Processing Class Name"
                                     },
