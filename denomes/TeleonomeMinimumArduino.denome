@@ -1156,7 +1156,7 @@
                                     {
                                         "DeneWord Type": "Microcontroller Processing Class Name",
                                         "Required": true,
-                                        "Value": "com.teleonome.framework.microcontroller.SimpleMicrocontroller",
+                                        "Value": "com.teleonome.framework.microcontroller.SimpleMicroController",
                                         "Value Type": "String",
                                         "Name": "Simple Microcontroller Processing Class Name"
                                     },
@@ -1187,7 +1187,7 @@
                                     {
                                         "DeneWord Type": "Microcontroller Processing Class Name",
                                         "Required": true,
-                                        "Value": "com.teleonome.framework.Microcontroller.gnuserialport.GNUArduinoUno",
+                                        "Value": "com.teleonome.framework.microcontroller.gnuserialport.GNUArduinoUno",
                                         "Value Type": "String",
                                         "Name": "Arduino Uno Microcontroller Processing Class Name"
                                     },
