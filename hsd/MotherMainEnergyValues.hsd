@@ -7,6 +7,19 @@
     "Port":"Internal",
     "Values":[
         {
+            "Name":"LockCapacitorVoltage",
+            "Units":"Volts",
+            "Value Type":"double",
+            "Sensor Request Queue Position":3,
+            "Range Maximum":6,
+            "Range Minimum":0,
+            "Initial Value":0,
+            "Reporting Value Dene Name":"Power Status",
+            "Human Interface Panel":"Internal Power Data" ,
+            "In Panel Position":4,
+            "Panel Display Name":"Battery SOC"
+        },
+        {
             "Name":"InternalBatteryStateOfCharge",
             "Units":"%",
             "Value Type":"double",
@@ -23,12 +36,11 @@
             "Name":"OperatingStatus",
             "Units":"",
             "Value Type":"String",
-            "Sensor Request Queue Position":45,
-            
+            "Sensor Request Queue Position":5,
             "Initial Value":"WPS",
             "Reporting Value Dene Name":"Power Status",
             "Human Interface Panel":"Internal Power Data" ,
-            "In Panel Position":3,
+            "In Panel Position":5,
             "Panel Display Name":"Oper Status"
         },
         {
@@ -140,13 +152,10 @@
             "Units":"",
             "Value Type":"boolean",
             "Sensor Request Queue Position":15,
-            "Range Maximum":1,
-            "Range Minimum":0,
-            "Initial Value":false,
-            "Reporting Value Dene Name":"Hourly Power Stats",
-            "Human Interface Panel":"Internal Power Hourly Stats" ,
-            "In Panel Position":2,
-            "Panel Display Name":"Secs Down"
+            "Reporting Value Dene Name":"Power Status",
+            "Human Interface Panel":"Internal Power Data" ,
+            "In Panel Position":4,
+            "Panel Display Name":"Pause Dur WPS"
         }
     ]
 
