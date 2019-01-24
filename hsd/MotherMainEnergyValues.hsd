@@ -16,7 +16,7 @@
             "Initial Value":0,
             "Reporting Value Dene Name":"Power Status",
             "Human Interface Panel":"Internal Power Data" ,
-            "In Panel Position":4,
+            "Panel In Panel Position":4,
             "Panel Display Name":"Battery SOC"
         },
         {
@@ -29,7 +29,7 @@
             "Initial Value":0,
             "Reporting Value Dene Name":"Power Status",
             "Human Interface Panel":"Internal Power Data" ,
-            "In Panel Position":3,
+            "Panel In Panel Position":3,
             "Panel Display Name":"Battery SOC"
         },
         {
@@ -40,7 +40,7 @@
             "Initial Value":"WPS",
             "Reporting Value Dene Name":"Power Status",
             "Human Interface Panel":"Internal Power Data" ,
-            "In Panel Position":5,
+            "Panel In Panel Position":5,
             "Panel Display Name":"Oper Status"
         },
         {
@@ -53,7 +53,7 @@
             "Initial Value":0,
             "Reporting Value Dene Name":"Daily Power Stats",
             "Human Interface Panel":"Internal Power Daily Stats" ,
-            "In Panel Position":1,
+            "Panel In Panel Position":1,
             "Panel Display Name":"Minimum Bat"
         },
         {
@@ -66,7 +66,7 @@
             "Initial Value":0,
             "Reporting Value Dene Name":"Daily Power Stats",
             "Human Interface Panel":"Internal Power Daily Stats" ,
-            "In Panel Position":2,
+            "Panel In Panel Position":2,
             "Panel Display Name":"Maximum Batt"
         },
         {
@@ -79,7 +79,7 @@
             "Initial Value":0,
             "Reporting Value Dene Name":"Daily Power Stats",
             "Human Interface Panel":"Internal Power Daily Stats" ,
-            "In Panel Position":3,
+            "Panel In Panel Position":3,
             "Panel Display Name":"Min Current"
         },
         {
@@ -92,7 +92,7 @@
             "Initial Value":0,
             "Reporting Value Dene Name":"Daily Power Stats",
             "Human Interface Panel":"Internal Power Daily Stats" ,
-            "In Panel Position":4,
+            "Panel In Panel Position":4,
             "Panel Display Name":"Max Current"
         },
         {
@@ -105,7 +105,7 @@
             "Initial Value":0,
             "Reporting Value Dene Name":"Daily Power Stats",
             "Human Interface Panel":"Internal Power Daily Stats" ,
-            "In Panel Position":5,
+            "Panel In Panel Position":5,
             "Panel Display Name":"Bat Energy Out"
         },
         {
@@ -118,7 +118,7 @@
             "Initial Value":0,
             "Reporting Value Dene Name":"Daily Power Stats",
             "Human Interface Panel":"Internal Power Daily Stats" ,
-            "In Panel Position":6,
+            "Panel In Panel Position":6,
             "Panel Display Name":"Bat Energy Out"
         },
         {
@@ -131,7 +131,7 @@
             "Initial Value":0,
             "Reporting Value Dene Name":"Hourly Power Stats",
             "Human Interface Panel":"Internal Power Hourly Stats" ,
-            "In Panel Position":1,
+            "Panel In Panel Position":1,
             "Panel Display Name":"Bat Energy Out"
         },
         {
@@ -144,7 +144,7 @@
             "Initial Value":0,
             "Reporting Value Dene Name":"Hourly Power Stats",
             "Human Interface Panel":"Internal Power Hourly Stats" ,
-            "In Panel Position":2,
+            "Panel In Panel Position":2,
             "Panel Display Name":"Secs Down"
         },
         {
@@ -154,7 +154,7 @@
             "Sensor Request Queue Position":15,
             "Reporting Value Dene Name":"Power Status",
             "Human Interface Panel":"Internal Power Data" ,
-            "In Panel Position":4,
+            "Panel In Panel Position":4,
             "Panel Display Name":"Pause Dur WPS"
         }
     ]

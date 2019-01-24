@@ -15,7 +15,7 @@
             "Initial Value":0,
             "Reporting Value Dene Name":"Air",
             "Human Interface Panel":"Now", 
-            "In Panel Position":1,
+            "Panel In Panel Position":1,
             "Panel Display Name":"Temperature"
         },
          {
@@ -27,7 +27,7 @@
             "Initial Value":20,
             "Reporting Value Dene Name":"Air",
             "Human Interface Panel":"Now" ,
-            "In Panel Position":2,
+            "Panel In Panel Position":2,
             "Panel Display Name":"Humidity"
         }
     ]

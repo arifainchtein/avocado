@@ -17,7 +17,7 @@
             "Initial Value":0,
             "Reporting Value Dene Name":"Power Status",
             "Human Interface Panel":"Internal Power Data", 
-            "In Panel Position":1,
+            "Panel In Panel Position":1,
             "Panel Display Name":"Bat Voltage"
         }
     ]
