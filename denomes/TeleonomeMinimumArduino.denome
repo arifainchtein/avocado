@@ -2478,7 +2478,7 @@
                                         "Value Type": "String"
                                     }
                                 ],
-                                "Name": "Egg Disk Pie Chart Data"
+                                "Name": "Disk Pie Chart Data"
                             },
                             {
                                 "DeneWords": [
@@ -2525,7 +2525,7 @@
                                         "Value Type": "int"
                                     }
                                 ],
-                                "Name": "Egg Database Pie Chart Data"
+                                "Name": "Database Pie Chart Data"
                             }
                         ],
                         "Name": "Analysis"
@@ -4082,7 +4082,7 @@
                                         "Value Type": "boolean"
                                     }
                                 ],
-                                "Name": "Egg Disk Usage"
+                                "Name": "Disk Usage"
                             },
                             {
                                 "DeneWords": [
@@ -4114,7 +4114,7 @@
                                         "Value Type": "boolean"
                                     }
                                 ],
-                                "Name": "Egg Database Usage"
+                                "Name": "Database Usage"
                             }
                         ],
                         "Name": "System Diagnostics Panel"
@@ -4133,13 +4133,13 @@
                                     "Required": "true",
                                     "DeneWord Type": "Panel Title",
                                     "Value": "Disk Usage",
-                                    "Name": "Egg Disk Space Title",
+                                    "Name": "Disk Space Title",
                                     "Value Type": "Dene Pointer"
                                 }
                             ],
-                            "Name": "Egg Disk Pie Chart"
+                            "Name": "Disk Pie Chart"
                         }],
-                        "Name": "Egg Disk Usage"
+                        "Name": "Disk Usage"
                     },
                     {
                         "Denes": [{
@@ -4155,13 +4155,13 @@
                                     "Required": "true",
                                     "DeneWord Type": "Panel Title",
                                     "Value": "Database Usage",
-                                    "Name": "Egg Database Space Title",
+                                    "Name": "Database Space Title",
                                     "Value Type": "Dene Pointer"
                                 }
                             ],
-                            "Name": "Egg Database Pie Chart"
+                            "Name": "Database Pie Chart"
                         }],
-                        "Name": "Egg Database Usage"
+                        "Name": "Database Usage"
                     },
                     {
                         "DeneChain Type": "Human Interface Web Page",
