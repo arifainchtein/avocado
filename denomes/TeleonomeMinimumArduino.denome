@@ -2220,14 +2220,14 @@
                             {
                                 "DeneWords": [
                                     {
-                                        "Target": "@Egg:Purpose:Analysis:Egg Disk Pie Chart Data:Available",
+                                        "Target": "@Egg:Purpose:Analysis:Disk Pie Chart Data:Available",
                                         "DeneWord Type": "Update DeneWord Value",
                                         "Value": "@Egg:Purpose:Operational Data:System Data:Usable Space",
                                         "Name": "Set Avaialble",
                                         "Value Type": "Dene Pointer"
                                     },
                                     {
-                                        "Target": "@Egg:Purpose:Analysis:Egg Disk Pie Chart Data:Database",
+                                        "Target": "@Egg:Purpose:Analysis:Disk Pie Chart Data:Database",
                                         "DeneWord Type": "Update DeneWord Value",
                                         "Value": "@Egg:Purpose:Operational Data:System Data:Database Size",
                                         "Name": "Set Database",
@@ -2248,14 +2248,14 @@
                                     {
                                         "Required": true,
                                         "DeneWord Type": "DeneWord Operation Destination",
-                                        "Value": "@Egg:Mnemosyne:Mnemosyne Pulse:Egg Disk Usage:Egg Disk Usage",
+                                        "Value": "@Egg:Mnemosyne:Mnemosyne Pulse:Disk Usage:Disk Usage",
                                         "Name": "Destination",
                                         "Value Type": "Dene Pointer"
                                     },
                                     {
                                         "Required": true,
                                         "DeneWord Type": "Data Source Pointer",
-                                        "Value": "@Egg:Purpose:Analysis:Egg Disk Pie Chart Data",
+                                        "Value": "@Egg:Purpose:Analysis:Disk Pie Chart Data",
                                         "Name": "Source",
                                         "Value Type": "Dene Pointer"
                                     }
@@ -2309,7 +2309,7 @@
                                     {
                                         "Required": true,
                                         "DeneWord Type": "DeneWord Operation Destination",
-                                        "Value": "@Egg:Purpose:Analysis:Egg Disk Pie Chart Data:Other",
+                                        "Value": "@Egg:Purpose:Analysis:Disk Pie Chart Data:Other",
                                         "Name": "Destination",
                                         "Value Type": "Dene Pointer"
                                     }
@@ -2376,35 +2376,35 @@
                             {
                                 "DeneWords": [
                                     {
-                                        "Target": "@Egg:Purpose:Analysis:Egg Database Pie Chart Data:Pulse",
+                                        "Target": "@Egg:Purpose:Analysis:Database Pie Chart Data:Pulse",
                                         "DeneWord Type": "Update DeneWord Value",
                                         "Value": "@Egg:Purpose:Operational Data:System Data:Pulse Table Size",
                                         "Name": "Set Pulse Table Size",
                                         "Value Type": "Dene Pointer"
                                     },
                                     {
-                                        "Target": "@Egg:Purpose:Analysis:Egg Database Pie Chart Data:Organism Pulse",
+                                        "Target": "@Egg:Purpose:Analysis:Database Pie Chart Data:Organism Pulse",
                                         "DeneWord Type": "Update DeneWord Value",
                                         "Value": "@Egg:Purpose:Operational Data:System Data:Organism Pulse Table Size",
                                         "Name": "Set Organism Pulse Table Size",
                                         "Value Type": "Dene Pointer"
                                     },
                                     {
-                                        "Target": "@Egg:Purpose:Analysis:Egg Database Pie Chart Data:Remembered DeneWords",
+                                        "Target": "@Egg:Purpose:Analysis:Database Pie Chart Data:Remembered DeneWords",
                                         "DeneWord Type": "Update DeneWord Value",
                                         "Value": "@Egg:Purpose:Operational Data:System Data:Remembered DeneWords Table Size",
                                         "Name": "Set Remembered DeneWords Table Size",
                                         "Value Type": "Dene Pointer"
                                     },
                                     {
-                                        "Target": "@Egg:Purpose:Analysis:Egg Database Pie Chart Data:Mutation Event",
+                                        "Target": "@Egg:Purpose:Analysis:Database Pie Chart Data:Mutation Event",
                                         "DeneWord Type": "Update DeneWord Value",
                                         "Value": "@Egg:Purpose:Operational Data:System Data:Mutation Event Table Size",
                                         "Name": "Set Remembered DeneWords Table Size",
                                         "Value Type": "Dene Pointer"
                                     },
                                     {
-                                        "Target": "@Egg:Purpose:Analysis:Egg Database Pie Chart Data:Command Requests",
+                                        "Target": "@Egg:Purpose:Analysis:Database Pie Chart Data:Command Requests",
                                         "DeneWord Type": "Update DeneWord Value",
                                         "Value": "@Egg:Purpose:Operational Data:System Data:Command Requests Table Size",
                                         "Name": "Set Remembered DeneWords Table Size",
@@ -2425,14 +2425,14 @@
                                     {
                                         "Required": true,
                                         "DeneWord Type": "DeneWord Operation Destination",
-                                        "Value": "@Egg:Mnemosyne:Mnemosyne Pulse:Egg Database Usage:Egg Database Usage",
+                                        "Value": "@Egg:Mnemosyne:Mnemosyne Pulse:Database Usage:Database Usage",
                                         "Name": "Destination",
                                         "Value Type": "Dene Pointer"
                                     },
                                     {
                                         "Required": true,
                                         "DeneWord Type": "Data Source Pointer",
-                                        "Value": "@Egg:Purpose:Analysis:Egg Database Pie Chart Data",
+                                        "Value": "@Egg:Purpose:Analysis:Database Pie Chart Data",
                                         "Name": "Source",
                                         "Value Type": "Dene Pointer"
                                     }
@@ -4057,7 +4057,7 @@
                                     {
                                         "Required": "true",
                                         "DeneWord Type": "Panel DeneChain Pointer",
-                                        "Value": "@Egg:Human Interface:Egg Disk Usage",
+                                        "Value": "@Egg:Human Interface:Disk Usage",
                                         "Name": "Now Panel Pointer",
                                         "Value Type": "Dene Pointer"
                                     },
@@ -4089,7 +4089,7 @@
                                     {
                                         "Required": "true",
                                         "DeneWord Type": "Panel DeneChain Pointer",
-                                        "Value": "@Egg:Human Interface:Egg Database Usage",
+                                        "Value": "@Egg:Human Interface:Database Usage",
                                         "Name": "Now Panel Pointer",
                                         "Value Type": "Dene Pointer"
                                     },
@@ -4125,7 +4125,7 @@
                                 {
                                     "Required": "true",
                                     "DeneWord Type": "Panel Data Source Pointer",
-                                    "Value": "@Egg:Mnemosyne:Mnemosyne Pulse:Egg Disk Usage:Egg Disk Usage",
+                                    "Value": "@Egg:Mnemosyne:Mnemosyne Pulse:Disk Usage:Disk Usage",
                                     "Name": "Disk Space",
                                     "Value Type": "Dene Pointer"
                                 },
@@ -4147,7 +4147,7 @@
                                 {
                                     "Required": "true",
                                     "DeneWord Type": "Panel Data Source Pointer",
-                                    "Value": "@Egg:Mnemosyne:Mnemosyne Pulse:Egg Database Usage:Egg Database Usage",
+                                    "Value": "@Egg:Mnemosyne:Mnemosyne Pulse:Database Usage:Database Usage",
                                     "Name": "Database Space",
                                     "Value Type": "Dene Pointer"
                                 },
