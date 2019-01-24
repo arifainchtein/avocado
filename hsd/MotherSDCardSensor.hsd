@@ -15,9 +15,9 @@
             "Range Minimum":0,
             "Initial Value":0,
             "Reporting Value Dene Name":"SD Card",
-            "Human Interface Panel":"Sd Card" ,
+            "Human Interface Panel":"SD Card" ,
             "Panel In Panel Position":1,
-            "Panel Display Name":"SD Card"
+            "Panel Display Name":"Disk Use"
         }
     ]
 
