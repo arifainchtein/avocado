@@ -66,7 +66,7 @@
                                 "DeneWords": [{
                                     "Target": "@Egg:Internal:Mnemosycons:New DeneWord To Remember",
                                     "Required": true,
-                                    "Value": "Remember Egg-MainBatteryVoltage",
+                                    "Value": "Remember-MainBatteryVoltage",
                                     "Name": "Update Dene Name",
                                     "Value Type": "String"
                                 }],
@@ -1094,7 +1094,7 @@
                                 "DeneWords": [
                                     {
                                         "Required": true,
-                                        "Value": "Linux Egg 4.14.34-v7+ #1110 SMP Mon Apr 16 15:18:51 BST 2018 armv7l GNU/Linux",
+                                        "Value": "Linux 4.14.34-v7+ #1110 SMP Mon Apr 16 15:18:51 BST 2018 armv7l GNU/Linux",
                                         "Name": "uname info",
                                         "Value Type": "String"
                                     },
@@ -1871,7 +1871,7 @@
                                         "Value Type": "Dene Pointer"
                                     }
                                 ],
-                                "Name": "Remember Egg-Free Space"
+                                "Name": "Remember-Free Space"
                             }
                         ],
                         "Name": "Mnemosycons"
@@ -2183,7 +2183,7 @@
                                     },
                                     {
                                         "Required": true,
-                                        "Value": "@Egg:Internal:Actuators:Generate Egg Disk Availalble Chart",
+                                        "Value": "@Egg:Internal:Actuators:Generate Disk Availalble Chart",
                                         "Name": "Actuator Command Code True Expression",
                                         "Value Type": "String"
                                     },
@@ -2195,27 +2195,27 @@
                                     },
                                     {
                                         "DeneWord Type": "Action Success Tasks",
-                                        "Value": "@Egg:Internal:Actuators:Generate Egg Disk Availalble Chart Action Success Tasks",
+                                        "Value": "@Egg:Internal:Actuators:Generate Disk Availalble Chart Action Success Tasks",
                                         "Name": "Action Success Tasks True Expression",
                                         "Value Type": "Dene Pointer"
                                     },
                                     {
                                         "DeneWord Type": "Mnemosyne Operation Index",
-                                        "Value": "@Egg:Internal:Actuators:Generate Egg Disk Availalble Chart Action Mnemosyne Operations True Expression",
+                                        "Value": "@Egg:Internal:Actuators:Generate Disk Availalble Chart Action Mnemosyne Operations True Expression",
                                         "Name": "Mnemosyne Operations True Expression",
                                         "Value Type": "Dene Pointer"
                                     }
                                 ],
-                                "Name": "Generate Egg Disk Availalble Chart Action"
+                                "Name": "Generate Disk Availalble Chart Action"
                             },
                             {
                                 "DeneWords": [{
                                     "DeneWord Type": "Mnemosyne Operation",
-                                    "Value": "@Egg:Internal:Actuators:Convert Egg Analysis to JSONArray Mnemosyne Operation",
+                                    "Value": "@Egg:Internal:Actuators:Convert Analysis to JSONArray Mnemosyne Operation",
                                     "Name": "Aggregate Total Volume for Daily",
                                     "Value Type": "Dene Pointer"
                                 }],
-                                "Name": "Generate Egg Disk Availalble Chart Action Mnemosyne Operations True Expression"
+                                "Name": "Generate Disk Availalble Chart Action Mnemosyne Operations True Expression"
                             },
                             {
                                 "DeneWords": [
@@ -2234,7 +2234,7 @@
                                         "Value Type": "Dene Pointer"
                                     }
                                 ],
-                                "Name": "Generate Egg Disk Availalble Chart Action Success Tasks"
+                                "Name": "Generate Disk Availalble Chart Action Success Tasks"
                             },
                             {
                                 "Dene Type": "Mnemosyne Convert DeneWords to JSONArray",
@@ -2260,7 +2260,7 @@
                                         "Value Type": "Dene Pointer"
                                     }
                                 ],
-                                "Name": "Convert Egg Analysis to JSONArray Mnemosyne Operation"
+                                "Name": "Convert Analysis to JSONArray Mnemosyne Operation"
                             },
                             {
                                 "DeneWords": [
@@ -2314,7 +2314,7 @@
                                         "Value Type": "Dene Pointer"
                                     }
                                 ],
-                                "Name": "Generate Egg Disk Availalble Chart"
+                                "Name": "Generate Disk Availalble Chart"
                             },
                             {
                                 "Dene Type": "Action",
@@ -2351,18 +2351,18 @@
                                     },
                                     {
                                         "DeneWord Type": "Action Success Tasks",
-                                        "Value": "@Egg:Internal:Actuators:Generate Egg Database Usage Chart Action Success Tasks",
+                                        "Value": "@Egg:Internal:Actuators:Generate Database Usage Chart Action Success Tasks",
                                         "Name": "Action Success Tasks True Expression",
                                         "Value Type": "Dene Pointer"
                                     },
                                     {
                                         "DeneWord Type": "Mnemosyne Operation Index",
-                                        "Value": "@Egg:Internal:Actuators:Generate Egg Database Usage Chart Action Mnemosyne Operations True Expression",
+                                        "Value": "@Egg:Internal:Actuators:Generate Database Usage Chart Action Mnemosyne Operations True Expression",
                                         "Name": "Mnemosyne Operations True Expression",
                                         "Value Type": "Dene Pointer"
                                     }
                                 ],
-                                "Name": "Generate Egg Database Usage Chart Action"
+                                "Name": "Generate Database Usage Chart Action"
                             },
                             {
                                 "DeneWords": [{
@@ -2371,7 +2371,7 @@
                                     "Name": "Create Database Pie",
                                     "Value Type": "Dene Pointer"
                                 }],
-                                "Name": "Generate Egg Database Usage Chart Action Mnemosyne Operations True Expression"
+                                "Name": "Generate Database Usage Chart Action Mnemosyne Operations True Expression"
                             },
                             {
                                 "DeneWords": [
@@ -2411,7 +2411,7 @@
                                         "Value Type": "Dene Pointer"
                                     }
                                 ],
-                                "Name": "Generate Egg Database Usage Chart Action Success Tasks"
+                                "Name": "Generate Database Usage Chart Action Success Tasks"
                             },
                             {
                                 "Dene Type": "Mnemosyne Convert DeneWords to JSONArray",
