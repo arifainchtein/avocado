@@ -5,6 +5,7 @@
     "Microcontroller Pointer":"@Egg:Internal:Components:Mother Microcontroller",
     "Provider":"https://www.digitalstables.com",
     "Port":"Internal",
+
     "Values":[
         {
             "Name":"LockCapacitorVoltage",
@@ -117,6 +118,7 @@
             "Range Minimum":0,
             "Initial Value":0,
             "Reporting Value Dene Name":"Daily Power Stats",
+            "Human Interface Container":"@Egg:Human Interface:Home Page" ,
             "Human Interface Panel":"Internal Power Daily Stats" ,
             "Panel In Panel Position":6,
             "Panel Display Name":"Bat Energy Out"
