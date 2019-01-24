@@ -4,7 +4,7 @@
             "Name":"Internal Power Hourly Stats" ,
             "Panel Visualization Style":"Single Value Complete Width",
             "Panel DeneChain Pointer":"@Egg:Human Interface:Internal Power Hourly Stats",
-            "Panel In Page Position ":1,
+            "Panel In Page Pointer":1,
 		    "Visible":true,
             "Target":"@Egg:Human interface:Home Page"
         }
