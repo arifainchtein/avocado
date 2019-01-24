@@ -3805,7 +3805,7 @@
                                     {
                                         "Required": true,
                                         "DeneWord Type": "NavBar Pointer",
-                                        "Value": "@Mnemocyte:Human Interface:Update System Parameters",
+                                        "Value": "@Egg:Human Interface:Update System Parameters",
                                         "Name": "Update System Parameters",
                                         "Value Type": "Dene Pointer"
                                     },
@@ -3818,97 +3818,9 @@
                                     }
                                 ],
                                 "Name": "Update System Parameters"
-                            },
-                            {
-                                "DeneWords": [
-                                    {
-                                        "Required": true,
-                                        "DeneWord Type": "NavBar Pointer",
-                                        "Value": "@Mnemocyte:Human Interface:Update Hot Tub Parameters",
-                                        "Name": "Update OpenWeatherMap Parameters",
-                                        "Value Type": "Dene Pointer"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "DeneWord Type": "NavBar Position",
-                                        "Value": 2,
-                                        "Name": "NavBar Position",
-                                        "Value Type": "int"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "DeneWord Type": "NavBar Text",
-                                        "Value": "Hot Tub",
-                                        "Name": "NavBar Text",
-                                        "Value Type": "String"
-                                    }
-                                ],
-                                "Name": "Update Hot Tub Parameters"
-                            },
-                            {
-                                "DeneWords": [
-                                    {
-                                        "Required": true,
-                                        "DeneWord Type": "NavBar Pointer",
-                                        "Value": "@Mnemocyte:Human Interface:Update Bore Pump Parameters",
-                                        "Name": "Update OpenWeatherMap Parameters",
-                                        "Value Type": "Dene Pointer"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "DeneWord Type": "NavBar Position",
-                                        "Value": 3,
-                                        "Name": "NavBar Position",
-                                        "Value Type": "int"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "DeneWord Type": "NavBar Text",
-                                        "Value": "Bore Pump",
-                                        "Name": "NavBar Text",
-                                        "Value Type": "String"
-                                    }
-                                ],
-                                "Name": "Update Bore Pump Parameters"
                             }
                         ],
                         "Name": "Update Parameters"
-                    },
-                    {
-                        "Denes": [{
-                            "DeneWords": [
-                                {
-                                    "Required": "true",
-                                    "DeneWord Type": "Panel Data Source Pointer",
-                                    "Value": "@Egg:Purpose:Operational Data:Vital:Current Pulse Frequency",
-                                    "Name": "Current Pulse Frequency",
-                                    "Value Type": "Dene Pointer"
-                                },
-                                {
-                                    "Required": true,
-                                    "DeneWord Type": "Panel In Panel Position",
-                                    "Value": 1,
-                                    "Name": "Panel In Panel Position",
-                                    "Value Type": "int"
-                                },
-                                {
-                                    "Required": true,
-                                    "DeneWord Type": "Restart Needed",
-                                    "Value": false,
-                                    "Name": "Restart Needed",
-                                    "Value Type": "boolean"
-                                },
-                                {
-                                    "Required": true,
-                                    "DeneWord Type": "Panel Display Name",
-                                    "Value": "Pulse Frequency",
-                                    "Name": "Display Name",
-                                    "Value Type": "String"
-                                }
-                            ],
-                            "Name": "Update Pulse Frequency"
-                        }],
-                        "Name": "Update System Parameters"
                     },
                     {
                         "Denes": [{
