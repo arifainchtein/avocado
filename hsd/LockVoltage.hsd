@@ -15,10 +15,10 @@
             "Range Maximum":5.5,
             "Range Minimum":0.0,
             "Initial Value":0,
-            "Reporting Value Dene Name":"Lock",
-            "Human Interface Panel":"Now", 
+            "Reporting Value Dene Name":"Lock Voltage",
+            "Human Interface Panel":"Internal Power Data" ,
             "Panel In Panel Position":3,
-            "Panel Display Name":"Lock"
+            "Panel Display Name":"Lock Voltage"
         }
     ]
 
