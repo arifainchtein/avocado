@@ -31,7 +31,7 @@
             "Name":"Pump Is On",
             "Condition Name":"PumpIsOnCondition",
             "Evaluation Position":1,
-            "Threshold" Value:"CompareTo_ON",
+            "Threshold Value":"CompareTo_ON",
             "Expression":"PumpStatus==CompareTo_ON"   
         },
         {
