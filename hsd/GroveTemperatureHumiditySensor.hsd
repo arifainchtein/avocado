@@ -23,6 +23,7 @@
         {
            "Name":"Air Humidity",
            "Units":"Celsius",
+           "Value Type":"double",
            "Sensor Request Queue Position":4,
            "Range Maximum":100,
            "Range Minimum":0,
