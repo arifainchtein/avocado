@@ -1,8 +1,9 @@
 {
    "Homeobox Definition Type":"ExternalDataMultiColorLED",
     "Homeobox Name":"MonoNanny Pump Status",
-    "Actuator Name":"Main Arduino Actuator",
+    "Action Group Name":"Ra Battery Voltage",
     "Microcontroller Pointer":"@Egg:Internal:Components:Mother Microcontroller",
+    "Actuator Action List Pointer":"@Egg:Internal:Actuators:Mother Actuator",
     "Provider":"https://www.digitalstables.com",
     "Data Source Pointer":"@Egg:Purpose:External Data:MonoNanny:PumpStatus",
       "External Data Source Pointer":"@MonoNanny:Purpose:Operational Data:Pump:PumpStatus",
