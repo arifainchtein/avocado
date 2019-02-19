@@ -23,19 +23,19 @@
              "Color":"Green",
              "Color RGB":"0,255,0",
             "Status Value":"success",
-            "Value":50
+            "Threshold Value":50
         },
         {
             "Name":"YellowThreshold",
             "Color":"Yellow",
             "Color RGB":"255,255,0",
             "Status Value":"warning",
-            "Value":48
+            "Threshold Value":48
         },
         {
             "Name":"RedThreshold",
             "Color":"Red",
-            "Value":47,
+            "Threshold Value":47,
             "Color RGB":"255,0,0",
             "Status Value":"danger"
             
@@ -43,7 +43,7 @@
         {
             "Name":"OrangeThreshold",
             "Color":"Orange",
-            "Value":44,
+            "Threshold Value":44,
             "Color RGB":"255, 165, 0",
             "Status Value":"crisis"
         }

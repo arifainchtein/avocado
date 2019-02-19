@@ -15,7 +15,7 @@
         {
             "Name":"RedThreshold",
             "Color":"Red",
-            "Value":41,
+            "Threshold Value":41,
             "Color RGB":"255,0,0",
             "Status Value":"danger"
             
@@ -25,14 +25,14 @@
              "Color":"Green",
              "Color RGB":"0,255,0",
             "Status Value":"success",
-            "Value":39
+            "Threshold Value":39
         },
         {
             "Name":"YellowThreshold",
             "Color":"Yellow",
             "Color RGB":"255,255,0",
             "Status Value":"warning",
-            "Value":35
+            "Threshold Value":35
         },
         {
             "Name":"BlueThreshold",
