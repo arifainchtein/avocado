@@ -208,9 +208,21 @@
                                         "Value": "primary",
                                         "Name": "Primary",
                                         "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": "true",
+                                        "Value": "crisis",
+                                        "Name": "Crisis",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": "true",
+                                        "Value": "stale",
+                                        "Name": "Stale",
+                                        "Value Type": "String"
                                     }
                                 ],
-                                "Name": "Bootstrap Status"
+                                "Name": "Status"
                             },
                             {
                                 "DeneWords": [

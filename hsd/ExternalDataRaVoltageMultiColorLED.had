@@ -1,0 +1,89 @@
+{
+    "Homeobox Definition Type":"ExternalDataMultiColorLED",
+    "Homeobox Name":"Ra Battery Voltage Status",
+    "Action Group Name":"Ra Battery Voltage",
+    "Microcontroller Pointer":"@Egg:Internal:Components:Mother Microcontroller",
+    "Actuator Action List Pointer":"@Egg:Internal:Actuators:Mother Actuator",
+    "Provider":"https://www.digitalstables.com",
+    "Data Source Pointer":"@Egg:Purpose:External Data:Ra:BatteryVoltage",
+    "External Data Source Pointer":"@Ra:Purpose:Sensor Data:Now:Battery Voltage",
+    "MicroControllerBaseCommand":"UpdateTeleonomeStatus",
+    "LED Position":2,
+    "Units":"Volts",
+    "Thresholds":[
+        {
+            "Name":"BlueThreshold",
+            "Color Name":"Blue",
+            "Color RGB":"0,0,255",
+            "Status Value":"primary",
+            "Threshold Value":54
+        },
+        {
+             "Name":"GreenThreshold",
+             "Color":"Green",
+             "Color RGB":"0,255,0",
+            "Status Value":"success",
+            "Value":50
+        },
+        {
+            "Name":"YellowThreshold",
+            "Color":"Yellow",
+            "Color RGB":"255,255,0",
+            "Status Value":"warning",
+            "Value":48
+        },
+        {
+            "Name":"RedThreshold",
+            "Color":"Red",
+            "Value":47,
+            "Color RGB":"255,0,0",
+            "Status Value":"danger"
+            
+        },
+        {
+            "Name":"OrangeThreshold",
+            "Color":"Orange",
+            "Value":44,
+            "Color RGB":"255, 165, 0",
+            "Status Value":"crisis"
+        }
+    ],    
+    "Cases":[
+        {
+            "Name":"Battery Voltage is Blue",
+             "Evaluation Position":1,
+              "Threshold":"BlueThreshold",
+            "Condition Name":"VoltageIsBlueCondition",
+            "Expression":"BatteryVoltage>BlueThreshold"   
+        },
+        {
+            "Name":"Battery Voltage is Green",
+            "Evaluation Position":2,
+             "Threshold":"GreenThreshold",
+            "Condition Name":"VoltageIsGreeneCondition",
+            "Expression": "BatteryVoltage>GreenVoltageThreshold && BatteryVoltage<BlueVoltageThreshold" 
+        },
+        {
+            "Name":"Battery Voltage is Yellow",
+            "Evaluation Position":3,
+            "Condition Name":"VoltageIsYellowCondition",
+             "Threshold":"YellowThreshold",
+            "Expression":"BatteryVoltage>YellowVoltageThreshold && BatteryVoltage<GreenVoltageThreshold"  
+        },
+        {
+            "Name":"Battery Voltage is Red",
+            "Evaluation Position":4,
+             "Threshold":"RedThreshold",
+            "Condition Name":"VoltageIsRedCondition",
+            "Expression":"BatteryVoltage>RedVoltageThreshold && BatteryVoltage<YellowVoltageThreshold"  
+        },
+        {
+            "Name":"Battery Voltage is Orange",
+            "Evaluation Position":5, 
+            "Threshold":"OrangeThreshold",
+            "Condition Name":"VoltageIsOrangeCondition",
+            "Expression":"BatteryVoltage>OrangeVoltageThreshold && BatteryVoltage<RedVoltageThreshold" 
+        }
+    ]
+
+}

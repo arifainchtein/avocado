@@ -9,7 +9,7 @@
         {
             "Name":"Air Temperature",
             "Units":"Celsius",
-            "Sensor Request Queue Position":3,
+            "Sensor Request Queue Position":16,
             "Range Maximum":50,
             "Range Minimum":-10,
             "Initial Value":0,
@@ -21,7 +21,7 @@
          {
             "Name":"Air Humidity",
             "Units":"Celsius",
-            "Sensor Request Queue Position":4,
+            "Sensor Request Queue Position":17,
             "Range Maximum":100,
             "Range Minimum":0,
             "Initial Value":20,

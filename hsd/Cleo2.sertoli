@@ -1,0 +1,21 @@
+{
+     "Containers":[
+        {
+            "Name":"Internal Power Hourly Stats" ,
+            "Panel Visualization Style":"Single Value Complete Width",
+            "Panel DeneChain Pointer":"@Egg:Human Interface:Internal Power Hourly Stats",
+            "Panel In Page Position":1,
+		    "Visible":true,
+            "Target":"@Egg:Human interface:Home Page"
+        }
+    ],
+    "HomeBoxDefinitions":{
+       "Sensors":[ "MotherMainEnergyValues.hsd","LockVoltage.hsd","IteadCurrentSensor.hsd","GroveBatteryVoltageSensor.hsd"," MotherSDCardSensor.hsd", "GroveTemperatureHumiditySensor.hsd"],
+       "Actuators":
+       [
+            {
+                "MultiColorLED": ["ExternalDataRaVoltageMultiColorLED.had","ExternalDataMonoNannyPumpStatus.had","ExternalDataSentoPumpStatus.had","ExternalDataSentoTubTemperatureMultiColorLED.had"]
+            }
+        ]
+    }
+}

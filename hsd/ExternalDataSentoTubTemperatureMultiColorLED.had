@@ -1,0 +1,90 @@
+{
+    "Homeobox Definition Type":"ExternalDataMultiColorLED",
+    "Homeobox Name":"Sento Tub Temperature Status",
+    "Actuator Name":"Main Arduino Actuator",
+    "Microcontroller Pointer":"@Egg:Internal:Components:Mother Microcontroller",
+     "Actuator Action List Pointer":"@Egg:Internal:Actuators:Mother Actuator Actions",
+    "Provider":"https://www.digitalstables.com",
+     "External Data Source Pointer":"@Sento:Purpose:Sensor Data:Tub Temperature:TubTemperature",
+    "Data Source Pointer":"@Egg:Purpose:External Data:Sento:TubTemperature",
+    "MicroControllerBaseCommand":"UpdateTeleonomeStatus",
+    "LED Position":3,
+    "Units":"Volts",
+    "Thresholds":[
+        ,
+        {
+            "Name":"RedThreshold",
+            "Color":"Red",
+            "Value":41,
+            "Color RGB":"255,0,0",
+            "Status Value":"danger"
+            
+        },
+        {
+             "Name":"GreenThreshold",
+             "Color":"Green",
+             "Color RGB":"0,255,0",
+            "Status Value":"success",
+            "Value":39
+        },
+        {
+            "Name":"YellowThreshold",
+            "Color":"Yellow",
+            "Color RGB":"255,255,0",
+            "Status Value":"warning",
+            "Value":35
+        },
+        {
+            "Name":"BlueThreshold",
+            "Color Name":"Blue",
+            "Color RGB":"0,0,255",
+            "Status Value":"primary",
+            "Threshold Value":30
+        },
+        {
+            "Name":"OrangeThreshold",
+            "Color Name":"Orange",
+            "Color RGB":"148, 0, 21",
+            "Status Value":"primary",
+            "Threshold Value":30
+        }
+    ],    
+    "Cases":[
+        {
+            "Name":"TubTemperature is Red",
+            "Condition Name":"TubTemperatureIsRedCondition",
+            "Evaluation Position":1,
+            "Threshold":"RedThreshold",
+            "Expression":"TubTemperature>RedThreshold"  
+        },
+        {
+            "Name":"TubTemperature is Green",
+            "Evaluation Position":2,
+            "Threshold":"GreenThreshold",
+            "Condition Name":"TubTemperatureIsGreenCondition",
+            "Expression": "TubTemperature>GreenVoltageThreshold && TubTemperature<RedThreshold" 
+        },
+        {
+            "Name":"TubTemperature is Yellow",
+            "Evaluation Position":3,
+            "Threshold":"YellowThreshold",
+            "Condition Name":"TubTemperatureIsYellowCondition",
+            "Expression":"TubTemperature>YellowThreshold && TubTemperature<GreenThreshold"  
+        },
+        {
+            "Name":"TubTemperature is Blue",
+            "Evaluation Position":4,
+            "Threshold":"BlueThreshold",
+            "Condition Name":"TubTemperatureIsBlueCondition",
+            "Expression":"TubTemperature>BlueThreshold && TubTemperature<YellowThreshold"   
+        },
+        {
+            "Name":"TubTemperature is Orange",
+            "Evaluation Position":5,
+            "Threshold":"OrangeThreshold",
+            "Condition Name":"TubTemperatureIsOrangeCondition",
+            "Expression":"TubTemperature<BlueThreshold"   
+        }
+    ]
+
+}
