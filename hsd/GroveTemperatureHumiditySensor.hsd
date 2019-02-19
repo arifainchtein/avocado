@@ -1,28 +1,28 @@
 {
     "Homeobox Definition Type":"Sensor",
-    "Homeobox Name":"Grove Voltage Divider",
-    "Sensor Name":"Grove Voltage Divider",
+    "Homeobox Name":"Grove Temperature Humidity Sensor",
+    "Sensor Name":"Grove Temperature Humidity Sensor",
     "Microcontroller Pointer":"@Egg:Internal:Components:Mother Microcontroller",
     "Provider":"https://www.seeed.com",
     "Port":"A0",
-   "Model": "Grove Voltage Divider",
+   "Model": "Grove Temperature Humidity",
     "Values":[
         {
-            "Name": "InternalBatteryVoltage",
-            "Units":"Volts",
+            "Name": "Air Temperature",
+            "Units":"Celsius",
             "Value Type":"double",
             "Sensor Request Queue Position":1,
-            "Range Maximum":15,
-            "Range Minimum":11,
+            "Range Maximum":50,
+            "Range Minimum":-10,
             "Initial Value":0,
-            "Reporting Value Dene Name":"Power Status",
-            "Human Interface Panel":"Internal Power Data", 
+            "Reporting Value Dene Name":"Air",
+            "Human Interface Panel":"Now", 
             "Panel In Panel Position":1,
-            "Panel Display Name":"Bat Voltage"
+            "Panel Display Name":"Temperature"
         },
         {
            "Name":"Air Humidity",
-           "Units":"Celsius",
+           "Units":"%",
            "Value Type":"double",
            "Sensor Request Queue Position":4,
            "Range Maximum":100,
@@ -31,7 +31,7 @@
            "Reporting Value Dene Name":"Air",
            "Human Interface Panel":"Now" ,
            "Panel In Panel Position":2,
-           "Panel Display Name":"Humidity"
+           "Panel Displayy Name":"Humidity"
        }
     ]
 
