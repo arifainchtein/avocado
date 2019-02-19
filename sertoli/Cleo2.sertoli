@@ -10,7 +10,7 @@
         }
     ],
     "HomeBoxDefinitions":{
-       "Sensors":[ "MotherMainEnergyValues.hsd","LockVoltage.hsd","IteadCurrentSensor.hsd","GroveBatteryVoltageSensor.hsd"," MotherSDCardSensor.hsd", "GroveTemperatureHumiditySensor.hsd"],
+       "Sensors":[ "MotherMainEnergyValues.hsd","LockVoltage.hsd","IteadCurrentSensor.hsd","GroveBatteryVoltageSensor.hsd","MotherSDCardSensor.hsd", "GroveTemperatureHumiditySensor.hsd"],
        "Actuators":
        [
             {
