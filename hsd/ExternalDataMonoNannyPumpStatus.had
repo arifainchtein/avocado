@@ -3,12 +3,11 @@
     "Homeobox Name":"MonoNanny Pump Status",
     "Action Group Name":"Ra Battery Voltage",
     "Microcontroller Pointer":"@Egg:Internal:Components:Mother Microcontroller",
-    "Actuator Action List Pointer":"@Egg:Internal:Actuators:Mother Actuator",
+    "Actuator Action List Pointer":"@Egg:Internal:Actuators:Mother Actuator Actions",
     "Provider":"https://www.digitalstables.com",
     "Data Source Pointer":"@Egg:Purpose:External Data:MonoNanny:PumpStatus",
       "External Data Source Pointer":"@MonoNanny:Purpose:Operational Data:Pump:PumpStatus",
     "MicroControllerBaseCommand":"UpdateTeleonomeStatus",
-     "Actuator Action List Pointer":"@Egg:Internal:Actuators:Mother Actuator Actions",
     "LED Position":1,
     "Units":"Volts",
     "Thresholds":[

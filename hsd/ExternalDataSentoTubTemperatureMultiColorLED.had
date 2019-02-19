@@ -3,7 +3,7 @@
     "Homeobox Name":"Sento Tub Temperature Status",
     "Action Group Name":"Ra Battery Voltage",
     "Microcontroller Pointer":"@Egg:Internal:Components:Mother Microcontroller",
-    "Actuator Action List Pointer":"@Egg:Internal:Actuators:Mother Actuator",
+    "Actuator Action List Pointer":"@Egg:Internal:Actuators:Mother Actuator Actions",
     "Provider":"https://www.digitalstables.com",
      "External Data Source Pointer":"@Sento:Purpose:Sensor Data:Tub Temperature:TubTemperature",
     "Data Source Pointer":"@Egg:Purpose:External Data:Sento:TubTemperature",

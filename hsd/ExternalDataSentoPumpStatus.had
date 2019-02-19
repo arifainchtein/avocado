@@ -3,13 +3,12 @@
     "Homeobox Name":"Sento Pump Status",
     "Action Group Name":"Ra Battery Voltage",
     "Microcontroller Pointer":"@Egg:Internal:Components:Mother Microcontroller",
-    "Actuator Action List Pointer":"@Egg:Internal:Actuators:Mother Actuator",
+    "Actuator Action List Pointer":"@Egg:Internal:Actuators:Mother Actuator Actions",
     "Provider":"https://www.digitalstables.com",
     "External Data Source Pointer":"@Sento:Purpose:Operational Data:Pump:PumpStatus",
     "Data Source Pointer":"@Egg:Purpose:External Data:Sento:PumpStatus",
     "MicroControllerBaseCommand":"UpdateTeleonomeStatus",
-     "Actuator Action List Pointer":"@Egg:Internal:Actuators:Mother Actuator Actions",
-    "LED Position":0,
+     "LED Position":0,
     "Units":"Volts",
     "Thresholds":[
         {
