@@ -11,11 +11,6 @@
     ],
     "HomeBoxDefinitions":{
        "Sensors":[ "MotherMainEnergyValues.hsd","LockVoltage.hsd","IteadCurrentSensor.hsd","GroveBatteryVoltageSensor.hsd","MotherSDCardSensor.hsd", "GroveTemperatureHumiditySensor.hsd"],
-       "Actuators":
-       [
-            {
-                "MultiColorLED": ["ExternalDataRaVoltageMultiColorLED.had","ExternalDataMonoNannyPumpStatus.had","ExternalDataSentoPumpStatus.had","ExternalDataSentoTubTemperatureMultiColorLED.had"]
-            }
-        ]
+       "Actuators":["ExternalDataRaVoltageMultiColorLED.had","ExternalDataMonoNannyPumpStatus.had","ExternalDataSentoPumpStatus.had","ExternalDataSentoTubTemperatureMultiColorLED.had"]
     }
 }
