@@ -5,8 +5,8 @@
     "Microcontroller Pointer":"@Egg:Internal:Components:Mother Microcontroller",
     "Actuator Action List Pointer":"@Egg:Internal:Actuators:Mother Actuator Actions",
     "Provider":"https://www.digitalstables.com",
-    "Data Source Pointer":{
-        "Identity":"@Egg:Purpose:External Data:Ra:BatteryVoltage",
+    "Data Source":{
+        "Data Source Pointer":"@Egg:Purpose:External Data:Ra:BatteryVoltage",
         "Units":"Volts",
         "Value Type":"double"
     },
