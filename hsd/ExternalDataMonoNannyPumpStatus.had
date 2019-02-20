@@ -5,11 +5,14 @@
     "Microcontroller Pointer":"@Egg:Internal:Components:Mother Microcontroller",
     "Actuator Action List Pointer":"@Egg:Internal:Actuators:Mother Actuator Actions",
     "Provider":"https://www.digitalstables.com",
-    "Data Source Pointer":"@Egg:Purpose:External Data:MonoNanny:PumpStatus",
+    "Data Source":{
+        "Data Source Pointer":"@Egg:Purpose:External Data:MonoNanny:PumpStatus",
+        "Units":"",
+        "Value Type":"String"
+    },
       "External Data Source Pointer":"@MonoNanny:Purpose:Operational Data:Pump:PumpStatus",
     "MicroControllerBaseCommand":"UpdateTeleonomeStatus",
     "LED Position":1,
-    "Units":"Volts",
     "Thresholds":[
         {
             "Name":"CompareTo_ON",

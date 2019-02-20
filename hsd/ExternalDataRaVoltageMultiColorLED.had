@@ -5,11 +5,15 @@
     "Microcontroller Pointer":"@Egg:Internal:Components:Mother Microcontroller",
     "Actuator Action List Pointer":"@Egg:Internal:Actuators:Mother Actuator Actions",
     "Provider":"https://www.digitalstables.com",
-    "Data Source Pointer":"@Egg:Purpose:External Data:Ra:BatteryVoltage",
+    "Data Source Pointer":{
+        "Identity":"@Egg:Purpose:External Data:Ra:BatteryVoltage",
+        "Units":"Volts",
+        "Value Type":"double"
+    },
     "External Data Source Pointer":"@Ra:Purpose:Sensor Data:Now:Battery Voltage",
     "MicroControllerBaseCommand":"UpdateTeleonomeStatus",
     "LED Position":2,
-    "Units":"Volts",
+   
     "Thresholds":[
         {
             "Name":"BlueThreshold",

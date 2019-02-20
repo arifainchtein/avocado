@@ -6,10 +6,12 @@
     "Actuator Action List Pointer":"@Egg:Internal:Actuators:Mother Actuator Actions",
     "Provider":"https://www.digitalstables.com",
     "External Data Source Pointer":"@Sento:Purpose:Operational Data:Pump:PumpStatus",
-    "Data Source Pointer":"@Egg:Purpose:External Data:Sento:PumpStatus",
-    "MicroControllerBaseCommand":"UpdateTeleonomeStatus",
+    "Data Source Pointer":{
+        "Identity":"@Egg:Purpose:External Data:Sento:PumpStatus",
+        "Units":"",
+        "Value Type":"String"
+    },
      "LED Position":0,
-    "Units":"Volts",
     "Thresholds":[
         {
             "Name":"CompareTo_OFF",
