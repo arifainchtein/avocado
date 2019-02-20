@@ -6,8 +6,8 @@
     "Actuator Action List Pointer":"@Egg:Internal:Actuators:Mother Actuator Actions",
     "Provider":"https://www.digitalstables.com",
     "External Data Source Pointer":"@Sento:Purpose:Operational Data:Pump:PumpStatus",
-    "Data Source Pointer":{
-        "Identity":"@Egg:Purpose:External Data:Sento:PumpStatus",
+    "Data Source":{
+        "Data Source Pointer":"@Egg:Purpose:External Data:Sento:PumpStatus",
         "Units":"",
         "Value Type":"String"
     },

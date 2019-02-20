@@ -6,8 +6,8 @@
     "Actuator Action List Pointer":"@Egg:Internal:Actuators:Mother Actuator Actions",
     "Provider":"https://www.digitalstables.com",
      "External Data Source Pointer":"@Sento:Purpose:Sensor Data:Tub Temperature:TubTemperature",
-     "Data Source Pointer":{
-        "Identity":"@Egg:Purpose:External Data:Sento:TubTemperature",
+     "Data Source":{
+        "Data Source Pointer":"@Egg:Purpose:External Data:Sento:TubTemperature",
         "Units":"Celsius",
         "Value Type":"double"
     },
