@@ -545,31 +545,31 @@
                                     {
                                         "Required": "true",
                                         "Value": "success",
-                                        "Name": "Success",
+                                        "Name": "success",
                                         "Value Type": "String"
                                     },
                                     {
                                         "Required": "true",
                                         "Value": "warning",
-                                        "Name": "Warning",
+                                        "Name": "warning",
                                         "Value Type": "String"
                                     },
                                     {
                                         "Required": "true",
                                         "Value": "danger",
-                                        "Name": "Danger",
+                                        "Name": "danger",
                                         "Value Type": "String"
                                     },
                                     {
                                         "Required": "true",
                                         "Value": "crisis",
-                                        "Name": "Crisis",
+                                        "Name": "crisis",
                                         "Value Type": "String"
                                     },
                                     {
                                         "Required": "true",
                                         "Value": "primary",
-                                        "Name": "Primary",
+                                        "Name": "primary",
                                         "Value Type": "String"
                                     }
                                 ],
