@@ -1,18 +1,18 @@
 {
-   "Homeobox Definition Type":"ExternalDataMultiColorLED",
+    "Homeobox Definition Type":"ExternalDataMultiColorLED",
     "Homeobox Name":"MonoNanny Pump Status",
-    "Action Group Name":"Ra Battery Voltage",
+    "Action Group Name":"MonoNanny Pump Status",
     "Microcontroller Pointer":"@Egg:Internal:Components:Mother Microcontroller",
     "Actuator Action List Pointer":"@Egg:Internal:Actuators:Mother Actuator Actions",
     "Provider":"https://www.digitalstables.com",
+    "External Data Source Pointer":"@MonoNanny:Purpose:Operational Data:Pump:PumpStatus",
     "Data Source":{
         "Data Source Pointer":"@Egg:Purpose:External Data:MonoNanny:PumpStatus",
         "Units":"",
         "Value Type":"String"
     },
-      "External Data Source Pointer":"@MonoNanny:Purpose:Operational Data:Pump:PumpStatus",
-    "MicroControllerBaseCommand":"UpdateTeleonomeStatus",
     "LED Position":1,
+    "MicroControllerBaseCommand":"UpdateTeleonomeStatus",
     "Thresholds":[
         {
             "Name":"CompareTo_ON",

@@ -1,7 +1,7 @@
 {
-"Homeobox Definition Type":"ExternalDataMultiColorLED",
+    "Homeobox Definition Type":"ExternalDataMultiColorLED",
     "Homeobox Name":"Sento Pump Status",
-    "Action Group Name":"Ra Battery Voltage",
+    "Action Group Name":"Sento Pump Status",
     "Microcontroller Pointer":"@Egg:Internal:Components:Mother Microcontroller",
     "Actuator Action List Pointer":"@Egg:Internal:Actuators:Mother Actuator Actions",
     "Provider":"https://www.digitalstables.com",
@@ -11,8 +11,8 @@
         "Units":"",
         "Value Type":"String"
     },
-     "LED Position":0,
-     "MicroControllerBaseCommand":"UpdateTeleonomeStatus",
+    "LED Position":0,
+    "MicroControllerBaseCommand":"UpdateTeleonomeStatus",
     "Thresholds":[
         {
             "Name":"CompareTo_OFF",
@@ -34,14 +34,14 @@
             "Name":"Pump Is On",
             "Condition Name":"PumpIsOnCondition",
             "Evaluation Position":1,
-             "Threshold":"CompareTo_OFF",
+            "Threshold":"CompareTo_ON",
             "Expression":"PumpStatus==CompareTo_ON"   
         },
         {
             "Name":"Pump Is Off",
             "Condition Name":"PumpIsOffCondition",
             "Evaluation Position":2,
-            "Threshold":"CompareTo_ON",
+            "Threshold":"CompareTo_OFF",
             "Expression": "PumpStatus==CompareTo_OFF" 
         }
     ]

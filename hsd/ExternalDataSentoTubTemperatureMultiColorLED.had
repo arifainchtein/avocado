@@ -1,7 +1,7 @@
 {
     "Homeobox Definition Type":"ExternalDataMultiColorLED",
     "Homeobox Name":"Sento Tub Temperature Status",
-    "Action Group Name":"Ra Battery Voltage",
+    "Action Group Name":"Sento Tub Temperature Status",
     "Microcontroller Pointer":"@Egg:Internal:Components:Mother Microcontroller",
     "Actuator Action List Pointer":"@Egg:Internal:Actuators:Mother Actuator Actions",
     "Provider":"https://www.digitalstables.com",
