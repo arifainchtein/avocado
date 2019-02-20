@@ -12,6 +12,7 @@
         "Value Type":"String"
     },
      "LED Position":0,
+     "MicroControllerBaseCommand":"UpdateTeleonomeStatus",
     "Thresholds":[
         {
             "Name":"CompareTo_OFF",
