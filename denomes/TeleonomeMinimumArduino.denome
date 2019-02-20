@@ -562,12 +562,18 @@
                                     },
                                     {
                                         "Required": "true",
+                                        "Value": "crisis",
+                                        "Name": "Crisis",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": "true",
                                         "Value": "primary",
                                         "Name": "Primary",
                                         "Value Type": "String"
                                     }
                                 ],
-                                "Name": "Bootstrap Status"
+                                "Name": "Status"
                             },
                             {
                                 "DeneWords": [
