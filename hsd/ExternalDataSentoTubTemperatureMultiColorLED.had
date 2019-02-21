@@ -64,7 +64,7 @@
             "Evaluation Position":2,
             "Threshold":"GreenThreshold",
             "Condition Name":"TubTemperatureIsGreenCondition",
-            "Expression": "TubTemperature>GreenVoltageThreshold && TubTemperature<RedThreshold" 
+            "Expression": "TubTemperature>GreenThreshold && TubTemperature<RedThreshold" 
         },
         {
             "Name":"TubTemperature is Yellow",
