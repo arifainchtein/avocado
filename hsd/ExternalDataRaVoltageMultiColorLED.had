@@ -65,7 +65,7 @@
             "Evaluation Position":2,
              "Threshold":"GreenThreshold",
             "Condition Name":"VoltageIsGreeneCondition",
-            "Expression": "BatteryVoltage>GreenThreshold && BatteryVoltage<BlueeThreshold" 
+            "Expression": "BatteryVoltage>GreenThreshold && BatteryVoltage<BlueThreshold" 
         },
         {
             "Name":"Battery Voltage is Yellow",
