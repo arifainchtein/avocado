@@ -47,8 +47,8 @@
             "Name":"OrangeThreshold",
             "Color Name":"Orange",
             "Color RGB":"148, 0, 21",
-            "Status Value":"primary",
-            "Threshold Value":30
+            "Status Value":"crisis",
+            "Threshold Value":0
         }
     ],    
     "Cases":[
