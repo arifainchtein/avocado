@@ -85,7 +85,7 @@
             "Evaluation Position":5,
             "Threshold":"OrangeThreshold",
             "Condition Name":"TubTemperatureIsOrangeCondition",
-            "Expression":"TubTemperature<BlueThreshold"   
+            "Expression":"TubTemperature<OrangeThreshold"   
         }
     ]
 

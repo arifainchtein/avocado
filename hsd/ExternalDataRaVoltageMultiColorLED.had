@@ -65,28 +65,28 @@
             "Evaluation Position":2,
              "Threshold":"GreenThreshold",
             "Condition Name":"VoltageIsGreeneCondition",
-            "Expression": "BatteryVoltage>GreenVoltageThreshold && BatteryVoltage<BlueVoltageThreshold" 
+            "Expression": "BatteryVoltage>GreenThreshold && BatteryVoltage<BlueeThreshold" 
         },
         {
             "Name":"Battery Voltage is Yellow",
             "Evaluation Position":3,
             "Condition Name":"VoltageIsYellowCondition",
              "Threshold":"YellowThreshold",
-            "Expression":"BatteryVoltage>YellowVoltageThreshold && BatteryVoltage<GreenVoltageThreshold"  
+            "Expression":"BatteryVoltage>YellowThreshold && BatteryVoltage<GreenThreshold"  
         },
         {
             "Name":"Battery Voltage is Red",
             "Evaluation Position":4,
              "Threshold":"RedThreshold",
             "Condition Name":"VoltageIsRedCondition",
-            "Expression":"BatteryVoltage>RedVoltageThreshold && BatteryVoltage<YellowVoltageThreshold"  
+            "Expression":"BatteryVoltage>RedThreshold && BatteryVoltage<YellowThreshold"  
         },
         {
             "Name":"Battery Voltage is Orange",
             "Evaluation Position":5, 
             "Threshold":"OrangeThreshold",
             "Condition Name":"VoltageIsOrangeCondition",
-            "Expression":"BatteryVoltage>OrangeVoltageThreshold && BatteryVoltage<RedVoltageThreshold" 
+            "Expression":"BatteryVoltage>OrangeThreshold && BatteryVoltage<RedThreshold" 
         }
     ]
 
