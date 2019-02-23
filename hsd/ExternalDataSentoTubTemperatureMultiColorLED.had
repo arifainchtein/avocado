@@ -27,7 +27,7 @@
              "Color":"Green",
              "Color RGB":"0,255,0",
             "Status Value":"success",
-            "Threshold Value":39
+            "Threshold Value":38
         },
         {
             "Name":"YellowThreshold",
