@@ -19,7 +19,23 @@
 
     ],
     "HomeBoxDefinitions":{
-       "Sensors":[ "MotherMainEnergyValues.hsd","LockVoltage.hsd","IteadCurrentSensor.hsd","GroveBatteryVoltageSensor.hsd","MotherSDCardSensor.hsd", "GroveTemperatureHumiditySensor.hsd"],
-       "Actuators":["ExternalDataRaVoltageMultiColorLED.had","ExternalDataMonoNannyPumpStatus.had","ExternalDataSentoPumpStatus.had","ExternalDataSentoTubTemperatureMultiColorLED.had", "SFTPPublisher.had"]
+       "Sensors":[ 
+           "MotherMainEnergyValues.hsd",
+           "LockVoltage.hsd",
+           "IteadCurrentSensor.hsd",
+           "GroveBatteryVoltageSensor.hsd",
+           "MotherSDCardSensor.hsd", 
+           "GroveTemperatureHumiditySensor.hsd"
+        ],
+       "Actuators":[
+            "ExternalDataRaVoltageMultiColorLED.had",
+            "ExternalDataMonoNannyPumpStatus.had",
+            "ExternalDataSentoPumpStatus.had",
+            "ExternalDataSentoTubTemperatureMultiColorLED.had", 
+            "SFTPPublisher.had"
+        ],
+       "Human Interface":[
+           "Home Page Panels"
+       ]    
     }
 }
