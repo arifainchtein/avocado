@@ -19,25 +19,25 @@
                 {
                     "Panel Data Source Pointer": "@Sento:Purpose:External Data:Ra:BatteryVoltage",
                     "Panel In Panel Position":1,
-                    "Display Name":"Ra Battery",
+                    "Panel Display Name":"Ra Battery",
                     "Visible":true
                 },
                 {
                     "Panel Data Source Pointer": "@Egg:Purpose:External Data:Sento:TubTemperature",
                     "Panel In Panel Position":2,
-                    "Display Name":"Tub Temp",
+                    "Panel Display Name":"Tub Temp",
                     "Visible":true
                 },
                 {
                     "Panel Data Source Pointer": "@Egg:Purpose:External Data:Sento:PumpStatus",
                     "Panel In Panel Position":3,
-                    "Display Name":"Sento Pump",
+                    "Panel Display Name":"Sento Pump",
                     "Visible":true
                 },
                 {
                     "Panel Data Source Pointer": "@Egg:Purpose:External Data:MonoNanny:PumpStatus",
                     "Panel In Panel Position":4,
-                    "Display Name":"MonoNanny Pump",
+                    "Panel Display Name":"MonoNanny Pump",
                     "Visible":true
                 }
             ]
