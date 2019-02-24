@@ -7,14 +7,14 @@
             "Name":"Organism View",
             "Panel In Page Position":1,
             "Panel Visualization Style": "Organism View Panel",
-            "Processor":" ",
+            "Processor":"OrganismViewGenerator",
             "Visible":true
         },
         {
             "Name":"Now",
             "Panel In Page Position":2,
             "Panel Visualization Style": "Single Value Panel Complete Width",
-            "Processor":"SingleValuePanel ompleteWidth",
+            "Processor":"SingleValuePanelCompleteWidthGenerator",
             "Values":[
                 {
                     "Panel Data Source Pointer": "@Sento:Purpose:External Data:Ra:BatteryVoltage",
