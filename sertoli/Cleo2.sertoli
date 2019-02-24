@@ -19,13 +19,6 @@
 
     ],
     "HomeBoxDefinitions":{
-       "Sensors":[],
-       "Actuators":[],
-       "Human Interface":[
-           "HomePagePanels.hud"
-       ]    
-    },
-    "HomeBoxDefinitions1":{
        "Sensors":[ 
            "MotherMainEnergyValues.hsd",
            "LockVoltage.hsd",
