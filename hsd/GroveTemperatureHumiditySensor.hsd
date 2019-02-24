@@ -11,26 +11,26 @@
             "Name": "Air Temperature",
             "Units":"Celsius",
             "Value Type":"double",
-            "Sensor Request Queue Position":1,
+            "Sensor Request Queue Position":16,
             "Range Maximum":50,
             "Range Minimum":-10,
             "Initial Value":0,
             "Reporting Value Dene Name":"Air",
             "Human Interface Panel":"Now", 
-            "Panel In Panel Position":16,
+            "Panel In Panel Position":160,
             "Panel Display Name":"Temperature"
         },
         {
            "Name":"Air Humidity",
            "Units":"%",
            "Value Type":"double",
-           "Sensor Request Queue Position":4,
+           "Sensor Request Queue Position":17,
            "Range Maximum":100,
            "Range Minimum":0,
            "Initial Value":20,
            "Reporting Value Dene Name":"Air",
            "Human Interface Panel":"Now" ,
-           "Panel In Panel Position":17,
+           "Panel In Panel Position":11,
            "Panel Display Name":"Humidity"
        }
     ]
