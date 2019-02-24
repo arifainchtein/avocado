@@ -571,6 +571,12 @@
                                         "Value": "primary",
                                         "Name": "primary",
                                         "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": "true",
+                                        "Value": "stale",
+                                        "Name": "stale",
+                                        "Value Type": "String"
                                     }
                                 ],
                                 "Name": "Status"

@@ -17,7 +17,7 @@
             "Processor":"SingleValuePanelCompleteWidthGenerator",
             "Values":[
                 {
-                    "Panel Data Source Pointer": "@Sento:Purpose:External Data:Ra:BatteryVoltage",
+                    "Panel Data Source Pointer": "@Egg:Purpose:External Data:Ra:BatteryVoltage",
                     "Panel In Panel Position":1,
                     "Panel Display Name":"Ra Battery",
                     "Visible":true
@@ -37,7 +37,7 @@
                 {
                     "Panel Data Source Pointer": "@Egg:Purpose:External Data:MonoNanny:PumpStatus",
                     "Panel In Panel Position":4,
-                    "Panel Display Name":"MonoNanny Pump",
+                    "Panel Display Name":"MonoNanny",
                     "Visible":true
                 }
             ]
