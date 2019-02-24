@@ -1,7 +1,7 @@
 {
     "Homeobox Name":"Home Page Panels",
     "Homeobox Definition Type":"UserInterfaceDefinition",
-    "Page Identity":"@Egg:Human Interface:Home Page",
+    "Container Page Identity":"@Egg:Human Interface:Home Page",
     "Panels":[
         {
             "Name":"Organism View",
