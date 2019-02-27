@@ -579,7 +579,15 @@
                         "Name": "Mnemosyne Current Year"
                     },
                     {
-                        "Denes": [],
+                        "Denes": [{
+                            "DeneWords": [{
+                                "Required": true,
+                                "Value": 0,
+                                "Name": "Counter",
+                                "Value Type": "int"
+                            }],
+                            "Name": "WPS Cycle Pulse Count"
+                        }],
                         "Name": "Mnemosyne Pulse Count"
                     },
                     {
@@ -904,6 +912,12 @@
                                     },
                                     {
                                         "Required": "true",
+                                        "Value": "WPS",
+                                        "Name": "Operational_Status_WPS",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": "true",
                                         "Value": "Normal",
                                         "Name": "Operational_Status_Normal",
                                         "Value Type": "String"
@@ -916,6 +930,66 @@
                                     }
                                 ],
                                 "Name": "Constants"
+                            },
+                            {
+                                "DeneWords": [
+                                    {
+                                        "Required": true,
+                                        "Value": 12.4,
+                                        "Units": "Volts",
+                                        "Name": "Battery_Voltage_WPS_Minimum",
+                                        "Value Type": "double"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": 12.6,
+                                        "Units": "Volts",
+                                        "Name": "Battery_Voltage_WPS_Enter",
+                                        "Value Type": "double"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": 12.8,
+                                        "Units": "Volts",
+                                        "Name": "Battery_Voltage_WPS_Exit",
+                                        "Value Type": "double"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": 4,
+                                        "Name": "Pulses_Per_WPS_Cycle",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": 600,
+                                        "Units": "seconds",
+                                        "Name": "Sleep Time",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": 60,
+                                        "Units": "seconds",
+                                        "Name": "WPS Pulse Frequency",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": 10,
+                                        "Units": "seconds",
+                                        "Name": "Seconds To Power Off",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": 120,
+                                        "Units": "seconds",
+                                        "Name": "Seconds_To_Forced_WPS",
+                                        "Value Type": "int"
+                                    }
+                                ],
+                                "Name": "WPS Parameters"
                             },
                             {
                                 "DeneWords": [
