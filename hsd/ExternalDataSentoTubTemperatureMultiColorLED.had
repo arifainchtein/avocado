@@ -57,7 +57,7 @@
             "Condition Name":"TubTemperatureIsRedCondition",
             "Evaluation Position":1,
             "Threshold":"RedThreshold",
-            "Expression":"TubTemperature=>RedThreshold"  ,
+            "Expression":"TubTemperature>=RedThreshold"  ,
             "Generate Action Evaluation Panel":true, 
             "Panel In Page Position":6
         },

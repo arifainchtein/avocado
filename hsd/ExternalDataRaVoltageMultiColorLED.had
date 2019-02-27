@@ -58,7 +58,7 @@
              "Evaluation Position":1,
               "Threshold":"BlueVoltageThreshold",
             "Condition Name":"VoltageIsBlueCondition",
-            "Expression":"BatteryVoltage>BlueVoltageThreshold" ,
+            "Expression":"BatteryVoltage>=BlueVoltageThreshold" ,
             "Generate Action Evaluation Panel":true, 
             "Panel In Page Position":1
         },
@@ -67,7 +67,7 @@
             "Evaluation Position":2,
              "Threshold":"GreenVoltageThreshold",
             "Condition Name":"VoltageIsGreeneCondition",
-            "Expression": "BatteryVoltage>GreenVoltageThreshold && BatteryVoltage<BlueVoltageThreshold" ,
+            "Expression": "BatteryVoltage>=GreenVoltageThreshold && BatteryVoltage<BlueVoltageThreshold" ,
             "Generate Action Evaluation Panel":true, 
             "Panel In Page Position":2
         },
@@ -76,7 +76,7 @@
             "Evaluation Position":3,
             "Condition Name":"VoltageIsYellowCondition",
              "Threshold":"YellowVoltageThreshold",
-            "Expression":"BatteryVoltage>YellowVoltageThreshold && BatteryVoltage<GreenVoltageThreshold"  ,
+            "Expression":"BatteryVoltage>=YellowVoltageThreshold && BatteryVoltage<GreenVoltageThreshold"  ,
             "Generate Action Evaluation Panel":true, 
             "Panel In Page Position":3
         },
@@ -85,7 +85,7 @@
             "Evaluation Position":4,
              "Threshold":"RedVoltageThreshold",
             "Condition Name":"VoltageIsRedCondition",
-            "Expression":"BatteryVoltage>RedVoltageThreshold && BatteryVoltage<YellowVoltageThreshold"  ,
+            "Expression":"BatteryVoltage>=RedVoltageThreshold && BatteryVoltage<YellowVoltageThreshold"  ,
             "Generate Action Evaluation Panel":true, 
             "Panel In Page Position":4
         },
@@ -94,7 +94,7 @@
             "Evaluation Position":5, 
             "Threshold":"OrangeVoltageThreshold",
             "Condition Name":"VoltageIsOrangeCondition",
-            "Expression":"BatteryVoltage>OrangeVoltageThreshold && BatteryVoltage<RedVoltageThreshold" ,
+            "Expression":"BatteryVoltage>=OrangeVoltageThreshold && BatteryVoltage<RedVoltageThreshold" ,
             "Generate Action Evaluation Panel":true,
             "Panel In Page Position":5
         }
