@@ -2,7 +2,6 @@
     "Denome": {
         "Denome Standard Source": "http://digitalgeppetto/arifainchtein/standards",
         "Mutations": [
-            ,
             {
                 "Active": true,
                 "Mutation Event Timestamp in Milliseconds": 1468722080571,
