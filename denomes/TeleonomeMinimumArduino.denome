@@ -2,6 +2,96 @@
     "Denome": {
         "Denome Standard Source": "http://digitalgeppetto/arifainchtein/standards",
         "Mutations": [
+            ,
+            {
+                "Active": true,
+                "Mutation Event Timestamp in Milliseconds": 1468722080571,
+                "Execution Mode": "Immediate",
+                "Mutation Event Timestamp": "Sun 2016.07.17 12:21:20 +1000",
+                "Mutation Type": "State",
+                "DeneChains": [
+                    {
+                        "Denes": [{
+                            "Dene Type": "Set DeneWord",
+                            "DeneWords": [
+                                {
+                                    "Target": "@Egg:Internal:Actuators:Notify Mother Enter WPS Action:Active",
+                                    "Required": true,
+                                    "Value": true,
+                                    "Name": "Active",
+                                    "Value Type": "boolean"
+                                },
+                                {
+                                    "Target": "@Egg:Internal:Actuators:Shutdown Action:Active",
+                                    "Required": true,
+                                    "Value": true,
+                                    "Name": "Active",
+                                    "Value Type": "boolean"
+                                },
+                                {
+                                    "Target": "@Egg:Purpose:Sensor Data:Power Status:InternalBatteryVoltage",
+                                    "Required": true,
+                                    "Value": 12.45,
+                                    "Name": "Voltage At WPS",
+                                    "Value Type": "double"
+                                }
+                            ],
+                            "Name": "Notify And Shutdown"
+                        }],
+                        "Name": "On Load"
+                    },
+                    {
+                        "Denes": [
+                            {
+                                "Dene Type": "Action List",
+                                "DeneWords": [
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Actuator Pointer",
+                                        "Value": "@Egg:Internal:Actuators:Mother Actuator",
+                                        "Name": "Mother Actuator",
+                                        "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Action",
+                                        "Value": "@Egg:Internal:Actuators:Notify Mother Enter WPS Action",
+                                        "Name": "Notify Mother Enter WPS Action",
+                                        "Value Type": "Dene Pointer"
+                                    }
+                                ],
+                                "Name": "Notify Mother Enter WPS Actions"
+                            },
+                            {
+                                "Dene Type": "Action List",
+                                "DeneWords": [
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Actuator Pointer",
+                                        "Value": "@Egg:Internal:Actuators:VirtualActuator",
+                                        "Name": "Mother Actuator",
+                                        "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Action",
+                                        "Value": "@Egg:Internal:Actuators:Shutdown Action",
+                                        "Name": "Shutdown Action",
+                                        "Value Type": "Dene Pointer"
+                                    }
+                                ],
+                                "Name": "Shutdown"
+                            }
+                        ],
+                        "Name": "Actions To Execute"
+                    },
+                    {
+                        "Denes": [],
+                        "Name": "Mutation Processing Logic"
+                    }
+                ],
+                "Name": "Enter WPS"
+            },
             {
                 "Active": true,
                 "Mutation Event Timestamp in Milliseconds": 1545020375443,
@@ -2228,6 +2318,509 @@
                                     "Value Type": "Dene Pointer"
                                 }],
                                 "Name": "Generate Disk Availalble Chart Action Mnemosyne Operations True Expression"
+                            },
+                            {
+                                "Dene Type": "Action",
+                                "DeneWords": [
+                                    {
+                                        "Required": true,
+                                        "Value": "Mother Actuator",
+                                        "Name": "Codon",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": true,
+                                        "Name": "Active",
+                                        "Value Type": "boolean"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": 4,
+                                        "Name": "Evaluation Position",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "ExitWPS",
+                                        "Name": "Actuator Command Code True Expression",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "(ExitWPSCondition)",
+                                        "Name": "Expression",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Actuator Condition Pointer",
+                                        "Value": "@Egg:Internal:Actuators:Exit WPS Condition",
+                                        "Name": "ExitWPSCondition",
+                                        "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "DeneWord Type": "Action Success Tasks",
+                                        "Value": "@Egg:Internal:Actuators:Exit WPS Action True Tasks",
+                                        "Name": "Action Success Tasks True Expression",
+                                        "Value Type": "Dene Pointer"
+                                    }
+                                ],
+                                "Name": "Exit WPS Action"
+                            },
+                            {
+                                "DeneWords": [{
+                                    "Target": "@Egg:Purpose:Operational Data:Vital:OperationalMode",
+                                    "DeneWord Type": "Update DeneWord Value",
+                                    "Value": "@Egg:Internal:Descriptive:Constants:Operational_Status_Normal",
+                                    "Name": "Set Operational Stauts Normal Command",
+                                    "Value Type": "Dene Pointer"
+                                }],
+                                "Name": "Exit WPS Action True Tasks"
+                            },
+                            {
+                                "Dene Type": "Actuator Condition",
+                                "DeneWords": [
+                                    {
+                                        "Required": true,
+                                        "Value": "Mother Actuator",
+                                        "Name": "Codon",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "((OperationalMode==Operational_Status_WPS) && (InternalBatteryVoltage > Battery_Voltage_WPS_Exit))",
+                                        "Name": "Expression",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": false,
+                                        "Name": "On Lack Of Data",
+                                        "Value Type": "boolean"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Condition Variable Pointer",
+                                        "Value": "@Egg:Purpose:Operational Data:Vital:OperationalMode",
+                                        "Name": "OperationalMode",
+                                        "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Condition Variable Pointer",
+                                        "Value": "@Egg:Internal:Descriptive:Constants:Operational_Status_WPS",
+                                        "Name": "Operational_Status_WPS",
+                                        "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Condition Variable Pointer",
+                                        "Value": "@Egg:Internal:Descriptive:WPS Parameters:Battery_Voltage_WPS_Exit",
+                                        "Name": "Battery_Voltage_WPS_Exit",
+                                        "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Condition Variable Pointer",
+                                        "Value": "@Egg:Purpose:Sensor Data:Power Status:InternalBatteryVoltage",
+                                        "Name": "InternalBatteryVoltage",
+                                        "Value Type": "Dene Pointer"
+                                    }
+                                ],
+                                "Name": "Exit WPS Condition"
+                            },
+                            {
+                                "Dene Type": "Action",
+                                "DeneWords": [
+                                    {
+                                        "Required": true,
+                                        "Value": "Mother Actuator",
+                                        "Name": "Codon",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": true,
+                                        "Name": "Active",
+                                        "Value Type": "boolean"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": 5,
+                                        "Name": "Evaluation Position",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "@Egg:Internal:Actuators:Update Enter WPS Command",
+                                        "Name": "Actuator Command Code True Expression",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "$DoNothing",
+                                        "Name": "Actuator Command Code False Expression",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "(EnterWPSCondition)",
+                                        "Name": "Expression",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Actuator Condition Pointer",
+                                        "Value": "@Egg:Internal:Actuators:Enter WPS Condition",
+                                        "Name": "EnterWPSCondition",
+                                        "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "DeneWord Type": "Action Success Tasks",
+                                        "Value": "@Egg:Internal:Actuators:Enter WPS Action True Tasks",
+                                        "Name": "Action Success Tasks True Expression",
+                                        "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "DeneWord Type": "Action Success Tasks",
+                                        "Value": "@Egg:Internal:Actuators:Enter WPS Action False Tasks",
+                                        "Name": "Action Success Tasks False Expression",
+                                        "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "DeneWord Type": "Mnemosyne Operation Index",
+                                        "Value": "@Egg:Internal:Actuators:Enter WPS Action True Expression Mnemosyne Operations",
+                                        "Name": "Mnemosyne Operations True Expression",
+                                        "Value Type": "Dene Pointer"
+                                    }
+                                ],
+                                "Name": "Enter WPS Action"
+                            },
+                            {
+                                "DeneWords": [
+                                    {
+                                        "Target": "@Egg:Internal:Actuators:Prepare Mother Notification Enter WPS:Active",
+                                        "DeneWord Type": "Update DeneWord Value",
+                                        "Value": true,
+                                        "Name": "Prepare Mother Notification Enter WPS Active",
+                                        "Value Type": "boolean"
+                                    },
+                                    {
+                                        "Target": "@Egg:Purpose:Operational Data:Vital:OperationalMode",
+                                        "DeneWord Type": "Update DeneWord Value",
+                                        "Value": "@Egg:Internal:Descriptive:Constants:Operational_Status_WPS",
+                                        "Name": "Update OperationalMode",
+                                        "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "Target": "@Egg:Internal:Actuators:Prepare Mother Notification Enter WPS:Active",
+                                        "DeneWord Type": "Update DeneWord Value",
+                                        "Value": true,
+                                        "Name": "Update Active",
+                                        "Value Type": "Dene Pointer"
+                                    }
+                                ],
+                                "Name": "Enter WPS Action True Tasks"
+                            },
+                            {
+                                "DeneWords": [
+                                    {
+                                        "Target": "@Egg:Internal:Actuators:Notify Mother Enter WPS Action:Active",
+                                        "DeneWord Type": "Update DeneWord Value",
+                                        "Value": false,
+                                        "Name": "Notify Mother Enter WPS",
+                                        "Value Type": "boolean"
+                                    },
+                                    {
+                                        "Target": "@Egg:Internal:Actuators:Prepare Mother Notification Enter WPS:Active",
+                                        "DeneWord Type": "Update DeneWord Value",
+                                        "Value": false,
+                                        "Name": "Prepare Mother Notification Enter WPS",
+                                        "Value Type": "boolean"
+                                    },
+                                    {
+                                        "Target": "@Egg:Mnemosyne:Mnemosyne Pulse Count:WPS Cycle Pulse Count:Counter",
+                                        "DeneWord Type": "Update DeneWord Value",
+                                        "Value": 0,
+                                        "Name": "Update WPS Cycle Pulse Count Counter",
+                                        "Value Type": "int"
+                                    }
+                                ],
+                                "Name": "Enter WPS Action False Tasks"
+                            },
+                            {
+                                "DeneWords": [{
+                                    "DeneWord Type": "Mnemosyne Operation",
+                                    "Value": "@Egg:Internal:Actuators:Increment Pulse Count WPS",
+                                    "Name": "Increment Pulse Count WPS",
+                                    "Value Type": "Dene Pointer"
+                                }],
+                                "Name": "Enter WPS Action True Expression Mnemosyne Operations"
+                            },
+                            {
+                                "Dene Type": "Mnemosyne Update Counter",
+                                "DeneWords": [
+                                    {
+                                        "Required": true,
+                                        "Value": 1,
+                                        "Name": "Execution Position",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Counter Pointer",
+                                        "Value": "@Egg:Mnemosyne:Mnemosyne Pulse Count:WPS Cycle Pulse Count:Counter",
+                                        "Name": "Counter",
+                                        "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Counter Limit",
+                                        "Value": "@Egg:Internal:Descriptive:WPS Parameters:Pulses_Per_WPS_Cycle",
+                                        "Name": "Counter Limit",
+                                        "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Counter Increment",
+                                        "Value": 1,
+                                        "Name": "Counter Increment",
+                                        "Value Type": "int"
+                                    }
+                                ],
+                                "Name": "Increment Pulse Count WPS"
+                            },
+                            {
+                                "Dene Type": "Actuator Condition",
+                                "DeneWords": [
+                                    {
+                                        "Required": true,
+                                        "Value": "Mother Actuator",
+                                        "Name": "Codon",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "((OperationalMode!=Operational_Status_WPS) && (InternalBatteryVoltage <=Battery_Voltage_WPS_Enter))",
+                                        "Name": "Expression",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": false,
+                                        "Name": "On Lack Of Data",
+                                        "Value Type": "boolean"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Condition Variable Pointer",
+                                        "Value": "@Egg:Internal:Descriptive:WPS Parameters:Battery_Voltage_WPS_Enter",
+                                        "Name": "Battery_Voltage_WPS_Enter",
+                                        "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Condition Variable Pointer",
+                                        "Value": "@Egg:Purpose:Sensor Data:Power Status:InternalBatteryVoltage",
+                                        "Name": "InternalBatteryVoltage",
+                                        "Value Type": "Dene Pointer"
+                                    }
+                                ],
+                                "Name": "Enter WPS Condition"
+                            },
+                            {
+                                "DeneWords": [
+                                    {
+                                        "Required": true,
+                                        "Value": "Mother Actuator",
+                                        "Name": "Codon",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": true,
+                                        "Name": "Active",
+                                        "Value Type": "boolean"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "DeneWord Operation Variable",
+                                        "Value": "@Egg:Internal:Descriptive:WPS Parameters:Seconds To Power Off",
+                                        "Default": 60,
+                                        "Name": "SecondsToTurnPowerOff",
+                                        "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "DeneWord Operation Variable",
+                                        "Value": "@Egg:Internal:Descriptive:WPS Parameters:Sleep Time",
+                                        "Default": 600,
+                                        "Name": "SecondsToSleep",
+                                        "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "DeneWord Operation Variable",
+                                        "Value": "@Egg:Internal:Descriptive:WPS Parameters:WPS Pulse Frequency",
+                                        "Default": 60,
+                                        "Name": "WPSPulseFrequency",
+                                        "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "\"EnterWPS#\"+SecondsToTurnPowerOff+\"#\"+SecondsToSleep +\"#\" +WPSPulseFrequency",
+                                        "Name": "Expression",
+                                        "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "DeneWord Operation Destination",
+                                        "Value": "@Egg:Internal:Actuators:Notify Mother Enter WPS Action:Actuator Command Code True Expression",
+                                        "Name": "Destination",
+                                        "Value Type": "Dene Pointer"
+                                    }
+                                ],
+                                "Name": "Update Enter WPS Command"
+                            },
+                            {
+                                "Dene Type": "Action",
+                                "DeneWords": [
+                                    {
+                                        "Required": true,
+                                        "Value": "Mother Actuator",
+                                        "Name": "Codon",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "Execution Point Post Pulse",
+                                        "Name": "Execution Point",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": true,
+                                        "Name": "Active",
+                                        "Value Type": "boolean"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": 98,
+                                        "Name": "Evaluation Position",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "Enter WPS",
+                                        "Name": "Actuator Command Code True Expression",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "(ExecuteWPSCondition)",
+                                        "Name": "Expression",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Actuator Condition Pointer",
+                                        "Value": "@Egg:Internal:Actuators:Execute WPS Condition",
+                                        "Name": "ExecuteWPSCondition",
+                                        "Value Type": "Dene Pointer"
+                                    }
+                                ],
+                                "Name": "Prepare Mother Notification Enter WPS"
+                            },
+                            {
+                                "DeneWords": [{
+                                    "Target": "@Egg:Internal:Actuators:Notify Mother Enter WPS Action:Active",
+                                    "DeneWord Type": "Update DeneWord Value",
+                                    "Value": false,
+                                    "Name": "Notify Mother Enter WPS",
+                                    "Value Type": "boolean"
+                                }],
+                                "Name": "Enter WPS Action False Tasks"
+                            },
+                            {
+                                "Dene Type": "Actuator Condition",
+                                "DeneWords": [
+                                    {
+                                        "Required": true,
+                                        "Value": "Mother Actuator",
+                                        "Name": "Codon",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "Counter>= Pulses_Per_WPS_Cycle",
+                                        "Name": "Expression",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": false,
+                                        "Name": "On Lack Of Data",
+                                        "Value Type": "boolean"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Condition Variable Pointer",
+                                        "Value": "@Egg:Mnemosyne:Mnemosyne Pulse Count:WPS Cycle Pulse Count:Counter",
+                                        "Name": "Counter",
+                                        "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Condition Variable Pointer",
+                                        "Value": "@Egg:Internal:Descriptive:WPS Parameters:Pulses_Per_WPS_Cycle",
+                                        "Name": "Pulses_Per_WPS_Cycle",
+                                        "Value Type": "Dene Pointer"
+                                    }
+                                ],
+                                "Name": "Execute WPS Condition"
+                            },
+                            {
+                                "Dene Type": "Action",
+                                "DeneWords": [
+                                    {
+                                        "Required": true,
+                                        "Value": "Mother Actuator",
+                                        "Name": "Codon",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": false,
+                                        "Name": "Active",
+                                        "Value Type": "boolean"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": 99,
+                                        "Name": "Evaluation Position",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "Execution Point Post Pulse",
+                                        "Name": "Execution Point",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "EnterWPS#10#600#60",
+                                        "Name": "Actuator Command Code True Expression",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "1==1",
+                                        "Name": "Expression",
+                                        "Value Type": "String"
+                                    }
+                                ],
+                                "Name": "Notify Mother Enter WPS Action"
                             },
                             {
                                 "DeneWords": [

@@ -57,7 +57,7 @@
             "Condition Name":"TubTemperatureIsRedCondition",
             "Evaluation Position":1,
             "Threshold":"RedThreshold",
-            "Expression":"TubTemperature>RedThreshold"  ,
+            "Expression":"TubTemperature=>RedThreshold"  ,
             "Generate Action Evaluation Panel":true, 
             "Panel In Page Position":6
         },
@@ -66,7 +66,7 @@
             "Evaluation Position":2,
             "Threshold":"GreenThreshold",
             "Condition Name":"TubTemperatureIsGreenCondition",
-            "Expression": "TubTemperature>GreenThreshold && TubTemperature<RedThreshold" ,
+            "Expression": "TubTemperature>=GreenThreshold && TubTemperature<RedThreshold" ,
             "Generate Action Evaluation Panel":true, 
             "Panel In Page Position":7
         },
@@ -75,7 +75,7 @@
             "Evaluation Position":3,
             "Threshold":"YellowThreshold",
             "Condition Name":"TubTemperatureIsYellowCondition",
-            "Expression":"TubTemperature>YellowThreshold && TubTemperature<GreenThreshold" ,
+            "Expression":"TubTemperature>=YellowThreshold && TubTemperature<GreenThreshold" ,
             "Generate Action Evaluation Panel":true, 
             "Panel In Page Position":8 
         },
@@ -84,7 +84,7 @@
             "Evaluation Position":4,
             "Threshold":"BlueThreshold",
             "Condition Name":"TubTemperatureIsBlueCondition",
-            "Expression":"TubTemperature>BlueThreshold && TubTemperature<YellowThreshold"  ,
+            "Expression":"TubTemperature>=BlueThreshold && TubTemperature<YellowThreshold"  ,
             "Generate Action Evaluation Panel":true , 
             "Panel In Page Position":9
         },
@@ -93,7 +93,7 @@
             "Evaluation Position":5,
             "Threshold":"OrangeThreshold",
             "Condition Name":"TubTemperatureIsOrangeCondition",
-            "Expression":"TubTemperature<OrangeThreshold"   ,
+            "Expression":"TubTemperature<BlueThreshold"   ,
             "Generate Action Evaluation Panel":true, 
             "Panel In Page Position":10
         }
