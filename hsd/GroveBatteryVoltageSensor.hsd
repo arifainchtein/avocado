@@ -20,6 +20,48 @@
             "Panel In Panel Position":1,
             "Panel Display Name":"Bat Voltage"
         }
+    ],
+    "Arduino":[
+        
+        {
+            "Libraries" : [
+               "#include <DHT.h>;"
+            ]
+        },
+        {
+            "Variable Declarations" : [
+                "#define batteryVoltagePin $Port"
+            ]
+        },
+        {
+            "Setup" : []
+        },
+        {
+            "Loop" : [
+                "float batteryVoltage = getBatteryVoltage();"
+            ]
+        },
+        {
+            "Other" : [
+                {
+                    "Function1":
+                    [
+                        "float getBatteryVoltage(){",
+                            "long  sensorValue=analogRead(batteryVoltagePin);",
+                            "long  sum=0;",
+                            "for(int i=0;i<10;i++){",
+                                "sum=sensorValue+sum;",
+                                "sensorValue=analogRead(batteryVoltagePin);",
+                                "delay(2);",
+                            "}",
+                            "sum=sum/10;",
+                            "float value =(10*sum*4.980/1023.00);",
+                            "return value;",
+                            "}"
+                    ]
+                }
+            ]
+        }
     ]
 
 }

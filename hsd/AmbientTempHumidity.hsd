@@ -30,6 +30,35 @@
             "Panel In Panel Position":2,
             "Panel Display Name":"Humidity"
         }
+    ],
+    "Arduino":[
+        
+        {
+            "Libraries" : [
+               "#include <DHT.h>;"
+            ]
+        },
+        {
+            "Variable Declarations" : [
+                "#define DHTPIN A0",
+                "#define DHTTYPE DHT22",
+                "DHT dht(DHTPIN, DHTTYPE);",
+                "float ambientTemperature = 0;",
+                 "float ambientHumidity = 0;"
+            ]
+        },
+        {
+            "Setup" : []
+        },
+        {
+            "Loop" : [
+                "ambientTemperature = dht.readTemperature();",
+	            "ambientHumidity = dht.readHumidity();"
+            ]
+        },
+        {
+            "Other" : []
+        }
     ]
 
 }
