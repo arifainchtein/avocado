@@ -8,19 +8,6 @@
 
     "Values":[
         {
-            "Name":"LockCapacitorVoltage",
-            "Units":"Volts",
-            "Value Type":"double",
-            "Sensor Request Queue Position":3,
-            "Range Maximum":6,
-            "Range Minimum":0,
-            "Initial Value":0,
-            "Reporting Value Dene Name":"Power Status",
-            "Human Interface Panel":"Internal Power Data" ,
-            "Panel In Panel Position":4,
-            "Panel Display Name":"Battery SOC"
-        },
-        {
             "Name":"InternalBatteryStateOfCharge",
             "Units":"%",
             "Value Type":"double",
