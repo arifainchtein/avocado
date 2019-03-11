@@ -1,0 +1,12 @@
+{
+     "Containers":[],
+    "HomeBoxDefinitions":{
+       "Sensors":[],
+       "Actuators":[
+            "FourValueFourDigitDisplay.had",
+        ],
+       "Human Interface":[
+           "InfoBoxHomePagePanels.hud"
+       ]    
+    }
+}
