@@ -12,13 +12,13 @@
                 {
                     "Panel Data Source Pointer": "@Egg:Purpose:External Data:Ra:BatteryVoltage",
                     "Panel In Panel Position":1,
-                    "Panel Display Name":"Ra Battery",
+                    "Panel Display Name":"Ra Battery Voltage",
                     "Visible":true
                 },
                 {
                     "Panel Data Source Pointer": "@Egg:Purpose:External Data:Ra:Load",
                     "Panel In Panel Position":2,
-                    "Panel Display Name":"Ra Battery",
+                    "Panel Display Name":"Ra Load",
                     "Visible":true
                 },
                 {
