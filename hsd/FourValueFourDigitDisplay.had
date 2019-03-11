@@ -8,7 +8,7 @@
        {
             "Name":"Display 1",
             "Clock Pin":21,
-            "Data pin":20,
+            "Data Pin":20,
             "External Data Source Pointer":"@Ra:Purpose:Sensor Data:Now:Battery Voltage",
             "Data Source":{
                 "Data Source Pointer":"@Egg:Purpose:External Data:Ra:BatteryVoltage",
@@ -19,7 +19,7 @@
         {
             "Name":"Display 2",
             "Clock Pin":19,
-            "Data pin":26,
+            "Data Pin":26,
             "External Data Source Pointer":"@Ra:Purpose:Sensor Data:Now:Load",
             "Data Source":{
                 "Data Source Pointer":"@Egg:Purpose:External Data:Ra:Load",
@@ -30,7 +30,7 @@
         {
             "Name":"Display 3",
             "Clock Pin":22,
-            "Data pin":27,
+            "Data Pin":27,
             "External Data Source Pointer":"@Sento:Purpose:Sensor Data:Tub Temperature:TubTemperature" ,
             "Data Source":{
                 "Data Source Pointer":"@Egg:Purpose:External Data:Sento:TubTemperature",
@@ -41,7 +41,7 @@
         {
             "Name":"Display 4",
             "Clock Pin":5,
-            "Data pin":6,
+            "Data Pin":6,
             "IdExternal Data Source Pointerentity":"@MonoNanny:Purpose:Sensor Data:Flow:Flow" ,
             "Data Source":{
                 "Data Source Pointer":"@Egg:Purpose:External Data:MonoNanny:Flow",
