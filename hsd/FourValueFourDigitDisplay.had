@@ -42,7 +42,7 @@
             "Name":"Display 4",
             "Clock Pin":5,
             "Data Pin":6,
-            "IdExternal Data Source Pointerentity":"@MonoNanny:Purpose:Sensor Data:Flow:Flow" ,
+            "External Data Source Pointer":"@MonoNanny:Purpose:Sensor Data:Flow:Flow" ,
             "Data Source":{
                 "Data Source Pointer":"@Egg:Purpose:External Data:MonoNanny:Flow",
                 "Units":"l/m",
