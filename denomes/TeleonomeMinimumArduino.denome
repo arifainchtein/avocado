@@ -4612,6 +4612,12 @@
                             "DeneWords": [
                                 {
                                     "Required": true,
+                                    "Value": "@Egg:Human Interface:Denome Analysis Panel",
+                                    "Name": "Pointer To Denome Analysis Info Panel",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": true,
                                     "Value": "@Egg:Human Interface:Synchronous Cycle Panel",
                                     "Name": "Pointer To Device Info Panel",
                                     "Value Type": "Dene Pointer"
@@ -4638,6 +4644,31 @@
                             "Name": "Diagnostics Info"
                         }],
                         "Name": "Diagnostics Info"
+                    },
+                    {
+                        "DeneChain Type": "Human Interface Web Page",
+                        "Denes": [],
+                        "Name": "Denome Analysis Panel"
+                    },
+                    {
+                        "DeneChain Type": "Human Interface Web Page",
+                        "Denes": [],
+                        "Name": "Synchronous Cycle Panel"
+                    },
+                    {
+                        "DeneChain Type": "Human Interface Web Page",
+                        "Denes": [],
+                        "Name": "Mnemosycons Panel"
+                    },
+                    {
+                        "DeneChain Type": "Human Interface Web Page",
+                        "Denes": [],
+                        "Name": "Asynchronous Cycle Panel"
+                    },
+                    {
+                        "DeneChain Type": "Human Interface Web Page",
+                        "Denes": [],
+                        "Name": "System Diagnostics Panel"
                     },
                     {
                         "DeneChain Type": "Human Interface Web Page",
@@ -4752,11 +4783,6 @@
                             "Name": "Database Pie Chart"
                         }],
                         "Name": "Database Usage"
-                    },
-                    {
-                        "DeneChain Type": "Human Interface Web Page",
-                        "Denes": [],
-                        "Name": "Synchronous Cycle Panel"
                     },
                     {
                         "DeneChain Type": "Human Interface Web Page",

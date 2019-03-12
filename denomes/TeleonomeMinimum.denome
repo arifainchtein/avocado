@@ -2613,8 +2613,102 @@
                     },
                     {
                         "DeneChain Type": "Human Interface Web Page",
-                        "Denes": [],
+                        "Denes": [{
+                            "DeneWords": [
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Panel DeneChain Pointer",
+                                    "Value": "@Egg:Human Interface:Diagnostics Info",
+                                    "Name": "Diagnostics Info Form Pointer",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Panel Visualization Style",
+                                    "Value": "Diagnostics Info",
+                                    "Name": "Diagnostics Info Style",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": true,
+                                    "DeneWord Type": "Panel In Page Position",
+                                    "Value": 1,
+                                    "Name": "Panel In Page Position",
+                                    "Value Type": "int"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": true,
+                                    "Name": "Visible",
+                                    "Value Type": "boolean"
+                                }
+                            ],
+                            "Name": "Diagnostics Info Panel"
+                        }],
                         "Name": "Diagnostics Page"
+                    },
+                    {
+                        "Denes": [{
+                            "DeneWords": [
+                                {
+                                    "Required": true,
+                                    "Value": "@Egg:Human Interface:Denome Analysis Panel",
+                                    "Name": "Pointer To Denome Analysis Info Panel",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": "@Egg:Human Interface:Synchronous Cycle Panel",
+                                    "Name": "Pointer To Device Info Panel",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": "@Egg:Human Interface:Asynchronous Cycle Panel",
+                                    "Name": "Pointer To Asynchronous Cycle Panel",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": "@Egg:Human Interface:System Diagnostics Panel",
+                                    "Name": "Pointer To System Diagnostics Panel",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": "@Egg:Human Interface:Mnemosycons Panel",
+                                    "Name": "Pointer To System Mnemosycons Panel",
+                                    "Value Type": "Dene Pointer"
+                                }
+                            ],
+                            "Name": "Diagnostics Info"
+                        }],
+                        "Name": "Diagnostics Info"
+                    },
+                    {
+                        "DeneChain Type": "Human Interface Web Page",
+                        "Denes": [],
+                        "Name": "Denome Analysis Panel"
+                    },
+                    {
+                        "DeneChain Type": "Human Interface Web Page",
+                        "Denes": [],
+                        "Name": "Synchronous Cycle Panel"
+                    },
+                    {
+                        "DeneChain Type": "Human Interface Web Page",
+                        "Denes": [],
+                        "Name": "Mnemosycons Panel"
+                    },
+                    {
+                        "DeneChain Type": "Human Interface Web Page",
+                        "Denes": [],
+                        "Name": "Asynchronous Cycle Panel"
+                    },
+                    {
+                        "DeneChain Type": "Human Interface Web Page",
+                        "Denes": [],
+                        "Name": "System Diagnostics Panel"
                     },
                     {
                         "DeneChain Type": "Human Interface Web Page",
