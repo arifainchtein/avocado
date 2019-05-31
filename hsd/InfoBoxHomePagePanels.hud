@@ -36,7 +36,7 @@
                 {
                     "Panel Data Source Pointer": "@Egg:Purpose:External Data:Sento:HeatExchangeTemperature",
                     "Panel In Panel Position":5,
-                    "Panel Display Name":"MonoNanny",
+                    "Panel Display Name":"Heat exc",
                     "Visible":true
                 },
                 {
