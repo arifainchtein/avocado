@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<style>
+ .disabled {
+     pointer-events:none; 
+    opacity:0.6;        
+}
+ .breadcrumb    {
+    background-color: white;
+}
+.CloseDetail{
+    margin-top:-37px;
+         }
+  .panel-heading-microcontroller{
+ }
+ .panel-default > .panel-heading-microcontroller {
+    background: rgb(185, 240, 174); 
+     color: #000; 
+     font-size: 24px; 
+ }
+	#Detail-Area{
+   	margin-top:10px;
+   	z-index: 100;
+   }
+   .sensor{
+   	margin-top:20px;
+   }
+   .actionExpression{
+   	font-size:18px;
+   	padding-top:50px;
+   	padding-bottom:20px;
+   }
+   .ActionTitle{
+   	font-size:18px;
+   }
+   .ActionDetailSection{
+    	margin-top:0px;
+   	margin-left:20px;
+  		margin-right:20px;
+    }
+   .ActionDetailHeader{
+    	padding-top:15px;
+   	padding-bottom:15px;
+  		background-color:rgb(72, 192, 225);
+    }
+    .actuator-selector{
+ 		margin-top:20px;
+     }
+     .actuator-level{
+		margin-left:100px;
+	}
+    .dropdown-submenu {
+        position: relative;
+     }
+   .dropdown-submenu .dropdown-menu {
+     	top: 0;
+    	left: 100%;
+     	margin-top: -1px;
+   }
+	.ReportTable {
+  		font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  		border-collapse: collapse;
+  		width: 100%;
+	}
+	.ReportTable td, #ReportTable th {
+  		border: 1px solid #ddd;
+	  	padding: 8px;
+	}
+	.ReportTable tr:nth-child(even){background-color: #f2f2f2;}
+	.ReportTable tr:hover {background-color: #ddd;}
+	.ReportTable th {
+		padding-top: 12px;
+  		padding-bottom: 12px;
+  		text-align: left;
+  		background-color: rgb(72, 192, 225);
+  		color: black;
+	}
+	a:hover, a:visited, a:link, a:active {
+		text-decoration: none;
+	}
+	.controls {
+		margin-bottom: 10px;
+	}
+	.collapse-group {
+		padding: 10px;
+		border: 1px solid darkgrey;
+		margin-bottom: 10px;
+	}
+	.panel-title .trigger:before {
+		content: '\e082';
+		font-family: 'Glyphicons Halflings';
+		vertical-align: text-bottom;
+	}
+	.panel-title .trigger.collapsed:before {
+		content: '\e081';
+	}
+	#MainDiagram{
+		display: block;
+		margin: auto;
+	}
+	.Microcontroller{
+		fill: rgb(185, 240, 174);
+		stroke: black;
+		stroke-width: 4px;
+	}
+	.MicrocontrollerSelected{
+		stroke: red;
+		stroke-width: 6px;
+	}
+	#mnemosycons{
+		fill: rgb(241, 159, 223);
+		stroke: black;
+		stroke-width: 4px;
+	}
+</style>
+</head>
+<body>
+<div class="container" >
+<svg  id="MainDiagram" height="350" width="1720">
+<defs>
+<marker id="arrow" markerWidth="10" markerHeight="10" refX="0" refY="3" orient="auto" markerUnits="strokeWidth" viewBox="0 0 10 10">
+<path d="M0,0 L0,6 L9,3 z" fill="#00" />
+</marker>
+</defs>
+<g>
+<text x="400" y="30" font-family="Verdana" font-size="20" >Egg</text>
+<rect x="50" y="50" width="850" height="250" rx="11" ry="11" style="fill: rgb(232, 237, 238);; stroke: black; stroke-width: 4px;"/>
+<rect  x="100" y="100" width="180" height="50 " rx="11" ry="11" style="fill: rgb(174, 235, 240);; stroke: black; stroke-width: 4px;"/>
+<text x="110" y="130" font-family="Verdana" font-size="12" >External Data</text>
+<line x1="280" y1="125" x2="340" y2="125" style="stroke:#000; stroke-width:2" marker-end="url(#arrow)" />
+<rect id="SimpleMicroController" class="Microcontroller" data-name="Simple Micro Controller"  x="360" y="100" width="470" height="50" rx="11" ry="11" />
+<text class="MicrocontrollerText" data-name="Simple Micro Controller"  x="370" y="130" font-family="Verdana" font-size="12" >Simple Micro Controller</text>
+<line x1="810" y1="150" x2="810" y2="200" style="stroke:#000; stroke-width:2" marker-end="url(#arrow)" />
+<rect x="650" y="210" width="180" height="50" rx="11" ry="11" style="fill: rgb(241, 220, 159); stroke: black; stroke-width: 4px;"/>
+<text x="660" y="240" font-family="Verdana" font-size="12" >Analyticons</text>
+<line x1="650" y1="240" x2="600" y2="240" style="stroke:#000; stroke-width:2" marker-end="url(#arrow)" />
+<rect x="400" y="210" width="180" height="50" rx="11" ry="11" style="fill: rgb(241, 159, 223); stroke: black; stroke-width: 4px;"/>
+<text x="410" y="240" font-family="Verdana" font-size="12" >Mnemosycons</text>
+<line x1="400" y1="240" x2="350" y2="240" style="stroke:#000; stroke-width:2" marker-end="url(#arrow)" />
+<rect x="100" y="210" width="250" height="50" rx="11" ry="11" style="fill: rgb(241, 192, 159); stroke: black; stroke-width: 4px;"/>
+<text x="110" y="240" font-family="Verdana" font-size="12" >Asynchronous Period (60 seconds)</text>
+<line x1="190" y1="210" x2="190" y2="170" style="stroke:#000; stroke-width:2" marker-end="url(#arrow)" />
+</g>
+</svg>
+</div>
+<div class="container" id="Detail-Area">
+	<div class="row Microcontroller-Details"  id="SimpleMicroController-Details">
+		<div class="panel panel-default">
+			<div class="panel-heading panel-heading-microcontroller">
+				<div class="col-10 text-center">
+					Simple Micro Controller
+				</div>
+				<div class="col-2"> 
+					<button type="button" class="btn-md pull-right CloseDetail" >&times;</button>
+				</div>
+			</div>
+			<div class="panel-body">
+				<ul class="nav nav-tabs justify-content-center">
+					<li class="nav-item">
+						<a class="nav-link active" href="#" onclick="return show_detail('SimpleMicroController-SensorDetails');">Sensors (0)</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#" onclick="return show_detail('SimpleMicroController-ActuatorDetails');">Actuators (1)</a>
+					</li>
+				</ul>
+				<div class="SensorDetail" id="SimpleMicroController-SensorDetails" style="display: none;"> 
+					<h3>No Sensors</h3><br>
+				</div>
+				<div class="ActuatorDetail" id="SimpleMicroController-ActuatorDetails" style="display: none;"> 
+				<div class="row">
+					<div class="col-sm-4  dropdown">
+						<button class="btn btn-primary dropdown-toggle actuator-selector" type="button" data-toggle="dropdown">1-Virtual Actuator
+						<span class="caret"></span></button>
+						<ul class="col-sm-12 text-center dropdown-menu actuator-level">
+							<li><a tabindex="-1"  href="#"  class="disabled" >Select Action</a></li>
+							<li><a tabindex="-1" class="action-link"  href="#"  onclick="return show_action('ShutdownActionSection');" >1.1 - Shutdown Action</a></li>
+			           </ul>
+					</div>
+				</div>
+					<div class="row">
+						<hr class="col-xs-12"  >
+					</div>
+					<div class="ActionDetailSection" id="ShutdownActionSection" style="display:none">
+						<div class="ActionDetailBreadcrumb" id="ShutdownActionCardBreadcrumb" >
+							<nav class="" aria-label="breadcrumb">
+								<ol class="breadcrumb">
+									<li class="breadcrumb-item"><a href="#">Simple Micro Controller</a></li>
+									<li class="breadcrumb-item"><a href="#">Virtual Actuator</a></li>
+									<li class="breadcrumb-item active" aria-current="page">Shutdown Action</li>
+								</ol>
+							</nav>
+						</div>
+						<div class=" ActionDetail" id="ShutdownActionCard" >
+							<div class="ActionDetailHeader text-center">
+								<span class="ActionTitle">Shutdown Action</span> 
+							</div>
+							<div class="collapse-group">
+								<div class="controls">
+									<button class="btn btn-primary action-detail-open-button" type="button">
+										Open all
+									</button>
+									<button class="btn btn-primary action-detail-close-button" type="button">
+										Close all
+									</button>
+							 	</div>
+							 	<div class="panel panel-default">
+							 		<div class="panel-heading" role="tab" id="headingOne">
+							 		 	<h4 class="panel-title">
+							 		 		<a role="button" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="trigger collapsed">Evaluation Expression</a>
+							 		 	</h4>
+							    	</div>
+							 		<div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+							 			<div class="panel-body">
+							 		 		1==1
+							       </div>
+							    </div>
+							 </div>
+							 <div class="panel panel-default">
+							 	<div class="panel-heading" role="tab" id="headingTwo">
+							 		 <h4 class="panel-title">
+							 		 	<a role="button" data-toggle="collapse" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" class="trigger collapsed">Post Evaluation</a>
+							 		 </h4>
+							    </div>
+							 	<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+							 		<div class="panel-body">
+										<h3>Post-Analysis</h3>
+										<p class="card-text">Actuator Command Code True Expression:$Shutdown</p>
+										<p class="card-text">Actuator Command Code False Expression:</p>
+											<a href="#" class="card-link">Card link</a>
+											<a href="#" class="card-link">Another link</a>
+							       </div>
+							    </div>
+							 </div>
+						 </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+	function show_detail(toShow){
+		$('.SensorDetail').hide();
+		        $('.ActuatorDetail').hide();
+		       $('.ActionDetailSection').hide();
+		var show = document.getElementById(toShow);
+		show.style.display = "";
+	}
+	function show_action(toShow) {
+	$('.ActionDetailSection').hide();
+		var show = document.getElementById(toShow);
+		show.style.display = "";
+	}
+
+	
+
+	$(document).ready(function(){
+	    $('.Microcontroller-Details').hide();
+	    $(".action-detail-open-button").on("click", function() {
+	    	$(this).closest('.collapse-group').find('.collapse').collapse('show');
+	    });
+	    $(".action-detail-close-button").on("click", function() {
+	    	$(this).closest('.collapse-group').find('.collapse').collapse('hide');
+	    });
+	    $('.dropdown-submenu a.test').on("click", function(e){
+	    	$('.dropdown-submenu>ul').hide();
+	    	$(this).next('ul').toggle();
+	    	e.stopPropagation();
+	    	e.preventDefault();
+	    });
+	    $('.dropdown-submenu a.test').on("click", function(e){
+	    	$('.dropdown-submenu>ul').hide();
+	    	$(this).next('ul').toggle();
+	    	e.stopPropagation();
+	    	e.preventDefault();
+	    });
+	   $(".Microcontroller").on('click',function(){
+	   		var id = $(this).attr('id');
+	   		var rect = document.getElementById(id);
+	   		rect.setAttribute('style', 'stroke:red;stroke-width: 6px');
+	   		$('.Microcontroller-Details').hide();
+	   		$('.Microcontroller-Details').hide();
+	   		var microName = $(this).data("name");
+	   		$('.ActionDetailSection').hide();
+	   		$("#" + microName.replace(/ /g,'') +"-Details").show();
+	    });
+	    $(".CloseDetail").on('click',function(){
+	   		$('.Microcontroller').attr('style', 'stroke:black;stroke-width: 4px');
+	    	$('.ActionDetailSection').hide();
+	    	$('.SensorDetail').hide();
+	    	$('.Microcontroller-Details').hide();
+	    	$("#MainDiagram").show();
+	    });
+	});
+</script>
+</body></html>
