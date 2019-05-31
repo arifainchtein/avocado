@@ -1,0 +1,13 @@
+{
+    "Firmware":"DigitalStables"
+    "Storage Manager":"EEPROMDataStorageManager",
+    "PageSize (byte)":128,
+    "Size (kb)":128,
+    "RTC":"SoftRTC",
+    "Telephatons":[
+        {
+            "Type":"I2C",
+            "Name":"InfoPanel"
+        }
+    ]
+}

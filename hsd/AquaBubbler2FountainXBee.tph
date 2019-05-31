@@ -1,0 +1,24 @@
+{       
+    "Homeobox Name":"AquaBubbler Two Fountains",
+    "Homeobox Definition Type":"AquaBubblerXBeeTelepathon",
+    "AquaBubbler Name":"AquaBubbler1",
+    "Microcontroller Pointer":"@Egg:Internal:Components:Main Arduino",
+    "Execution Position":2,
+    "AquaBubbler Model":"AquaBubbler 2 Fountain",
+    "AquaBubbler Board Version":"Version 1.0",
+    "Number Of Water Points":2,
+    "XBee 64 Bit Address":{
+        "MSB": "0x0013a200",
+        "LSB": "0x403e0f30"
+    },
+    "Events":[
+        {
+            "Name": "AquaBubbler1 Flow Event",
+            "Event Data Structure":"FlowMeter",
+            "Event Mnemosyne Destination":"Mnemosyne Current Hour",
+            "Aggregators":["Mnemosyne Current Hour", "Mnemosyne Today"] ,                 
+            "Aggregate Value``":"TotalVolume"
+        }
+    ]
+             
+}
