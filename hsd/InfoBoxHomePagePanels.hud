@@ -34,7 +34,7 @@
                     "Visible":true
                 },
                 {
-                    "Panel Data Source Pointer": "@Egg:Purpose:External Data:MonoNanny:Flow",
+                    "Panel Data Source Pointer": "@Egg:Purpose:External Data:Sento:HeatExchangeTemperature",
                     "Panel In Panel Position":5,
                     "Panel Display Name":"MonoNanny",
                     "Visible":true
