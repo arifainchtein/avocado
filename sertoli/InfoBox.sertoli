@@ -1,7 +1,8 @@
 {
      "Containers":[],
     "HomeBoxDefinitions":{
-       "Sensors":[],
+        "Components":[],
+        "Sensors":[],
        "Actuators":[
             "FourValueFourDigitDisplay.had"
         ],

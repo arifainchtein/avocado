@@ -15,7 +15,7 @@
             "Panel In Page Position":1,
 		    "Visible":true,
             "Target":"@Egg:Human interface:Home Page"
-        },
+        }
 
     ],
     "HomeBoxDefinitions":{
