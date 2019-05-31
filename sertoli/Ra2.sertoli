@@ -1,4 +1,5 @@
 {
+     "Egg":"Energy
      "Containers":[
         {
             "Name":"Internal Power Hourly Stats" ,
@@ -9,7 +10,20 @@
             "Target":"@Egg:Human interface:Home Page"
         }
     ],
-    "HomeBoxDefinitions":[
-        "MotherMainEnergyValues.hsd","LockVoltage.hsd","IteadCurrentSensor.hsd","GroveBatteryVoltageSensor.hsd"
-    ]
+    "HomeBoxDefinitions":{
+        "MicroControllers":[
+            "PlSeries.mcu"
+        ],
+        "Sensors":[
+            "MotherMainEnergyValues.hsd",
+            "LockVoltage.hsd",
+            "IteadCurrentSensor.hsd",
+            "GroveBatteryVoltageSensor.hsd"
+        ],
+        "Actuators":[],
+        "Human Interface":[],
+        "Files":[]
+    }
+
+    
 }

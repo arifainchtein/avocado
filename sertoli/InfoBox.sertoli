@@ -3,10 +3,20 @@
     "HomeBoxDefinitions":{
        "Sensors":[],
        "Actuators":[
-            "FourValueFourDigitDisplay.had",
+            "FourValueFourDigitDisplay.had"
         ],
        "Human Interface":[
            "InfoBoxHomePagePanels.hud"
+       ],
+       "Files":[
+           {
+               "File Source":"www.digitalgeppetto.com/avocado/files/single.py",
+               "File Destination":"/home/pi/Teleonome/single.py"
+           },
+           {
+               "File Source":"www.digitalgeppetto.com/avocado/files/tm1637.py",
+               "File Destination":"/home/pi/Teleonome/tm1637.py"
+           }
        ]    
     }
 }

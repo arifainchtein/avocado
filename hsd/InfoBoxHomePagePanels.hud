@@ -1,4 +1,4 @@
-{
+ls avocado/sertoli/{
     "Homeobox Name":"Home Page Panels",
     "Homeobox Definition Type":"UserInterfaceDefinition",
     "Container Page Identity":"@Egg:Human Interface:Home Page",
@@ -22,15 +22,27 @@
                     "Visible":true
                 },
                 {
-                    "Panel Data Source Pointer": "@Egg:Purpose:External Data:Sento:TubTemperature",
+                    "Panel Data Source Pointer": "@Egg:Purpose:External Data:Ra:Charge",
                     "Panel In Panel Position":3,
+                    "Panel Display Name":"Ra Charge",
+                    "Visible":true
+                },
+                {
+                    "Panel Data Source Pointer": "@Egg:Purpose:External Data:Sento:TubTemperature",
+                    "Panel In Panel Position":4,
                     "Panel Display Name":"Tub Temp",
                     "Visible":true
                 },
                 {
                     "Panel Data Source Pointer": "@Egg:Purpose:External Data:MonoNanny:Flow",
-                    "Panel In Panel Position":4,
+                    "Panel In Panel Position":5,
                     "Panel Display Name":"MonoNanny",
+                    "Visible":true
+                },
+                {
+                    "Panel Data Source Pointer": "@Egg:Purpose:External Data:Ra:Generator Running Time",
+                    "Panel In Panel Position":6,
+                    "Panel Display Name":"Generator",
                     "Visible":true
                 }
             ]
