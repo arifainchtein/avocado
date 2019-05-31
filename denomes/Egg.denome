@@ -1528,6 +1528,16 @@
                                 "Name": "Static Mnemosycon Success Tasks"
                             },
                             {
+                                "DeneWords": [{
+                                    "Target": "@Egg:Internal:Mnemosycons:Static Mnemosycon:Active",
+                                    "DeneWord Type": "Update DeneWord Value",
+                                    "Value": true,
+                                    "Name": "Update Active",
+                                    "Value Type": "boolean"
+                                }],
+                                "Name": "Static Mnemosycon Failure Tasks"
+                            },
+                            {
                                 "DeneType": "Mnemosycon Rules List",
                                 "DeneWords": [
                                     {
@@ -1595,6 +1605,16 @@
                                     "Value Type": "boolean"
                                 }],
                                 "Name": "Dynamic Mnemosycon Success Tasks"
+                            },
+                            {
+                                "DeneWords": [{
+                                    "Target": "@Egg:Internal:Mnemosycons:Dynamic Mnemosycon:Active",
+                                    "DeneWord Type": "Update DeneWord Value",
+                                    "Value": true,
+                                    "Name": "Update Active",
+                                    "Value Type": "boolean"
+                                }],
+                                "Name": "Dynamic Mnemosycon Failure Tasks"
                             },
                             {
                                 "DeneWords": [{
