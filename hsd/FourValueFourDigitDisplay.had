@@ -55,7 +55,7 @@
             "Data Pin":11,
             "External Data Source Pointer":"@Sento:Purpose:Sensor Data:Heat Exchange Temperature:HeatExchangeTemperature" ,
             "Data Source":{
-                "Data Source Pointer":"@Egg:Purpose:External Data:Sento:HeatExchangeTemperature                     ",
+                "Data Source Pointer":"@Egg:Purpose:External Data:Sento:HeatExchangeTemperature",
                 "Units":"Celsius",
                 "Value Type":"double"
             }           
