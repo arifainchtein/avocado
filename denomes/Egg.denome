@@ -179,6 +179,86 @@
                     {
                         "Denes": [{
                             "Dene Type": "Set DeneWord",
+                            "DeneWords": [{
+                                "Target": "@Egg:Internal:Actuators:Create Daily Partitions:Active",
+                                "Required": true,
+                                "Value": true,
+                                "Name": "Update DeneWord",
+                                "Value Type": "boolean"
+                            }],
+                            "Name": "Update DeneWord"
+                        }],
+                        "Name": "On Load"
+                    },
+                    {
+                        "Denes": [{
+                            "Dene Type": "Action List",
+                            "DeneWords": [
+                                {
+                                    "Required": true,
+                                    "DeneWord Type": "Actuator Pointer",
+                                    "Value": "@Egg:Internal:Actuators:Virtual Actuator",
+                                    "Name": "Virtual Actuator",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": true,
+                                    "DeneWord Type": "Action",
+                                    "Value": "@Egg:Internal:Actuators:Create Daily Partitions",
+                                    "Name": "CreateDailyPartitions",
+                                    "Value Type": "String"
+                                }
+                            ],
+                            "Name": "Create Daily Table Partitions"
+                        }],
+                        "Name": "Actions To Execute"
+                    },
+                    {
+                        "Denes": [],
+                        "Name": "Mnemosycons To Execute"
+                    },
+                    {
+                        "Denes": [],
+                        "Name": "Mutation Processing Logic"
+                    },
+                    {
+                        "Denes": [],
+                        "Name": "Mnemosyne Operations"
+                    },
+                    {
+                        "Denes": [{
+                            "Dene Type": "Set DeneWord",
+                            "DeneWords": [
+                                {
+                                    "Required": true,
+                                    "Value": "Daily",
+                                    "Name": "Execution Time",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": 23,
+                                    "Name": "Hour in Day",
+                                    "Value Type": "int"
+                                }
+                            ],
+                            "Name": "Time Mutation Configuration"
+                        }],
+                        "Name": "Mutation Configuration"
+                    }
+                ],
+                "Mutation Type": "State",
+                "Invocation Mode": "Time",
+                "Name": "Create Next Day Partitions Mnemosycons"
+            },
+            {
+                "Active": true,
+                "Execution Mode": "Immediate",
+                "Mutation Event Timestamp": "",
+                "DeneChains": [
+                    {
+                        "Denes": [{
+                            "Dene Type": "Set DeneWord",
                             "DeneWords": [
                                 {
                                     "Target": "@Egg:Internal:Mnemosycons:Dynamic Mnemosycon:Active",
@@ -1750,6 +1830,60 @@
                                     }
                                 ],
                                 "Name": "Shutdown Action"
+                            },
+                            {
+                                "Dene Type": "Action",
+                                "DeneWords": [
+                                    {
+                                        "Required": true,
+                                        "Value": "VirtualActuator",
+                                        "Name": "Codon",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": false,
+                                        "Name": "Active",
+                                        "Value Type": "boolean"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": 5,
+                                        "Name": "Evaluation Position",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "$CreateDailyPartitions",
+                                        "Name": "Actuator Command Code True Expression",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "1==1",
+                                        "Name": "Expression",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "DeneWord Type": "Action Success Tasks",
+                                        "Value": "@Egg:Internal:Actuators:Create Daily Partitions Action Success Tasks",
+                                        "Name": "Action Success Tasks True Expression",
+                                        "Value Type": "Dene Pointer"
+                                    }
+                                ],
+                                "Name": "Create Daily Partitions"
+                            },
+                            {
+                                "DeneWords": [
+                                    {
+                                        "Target": "@Egg:Internal:Actuators:Create Daily Partitions:Active",
+                                        "DeneWord Type": "Update DeneWord Value",
+                                        "Value": false,
+                                        "Name": "Set Active",
+                                        "Value Type": "Dene Pointer"
+                                    }
+                                ],
+                                "Name": "Create Daily Partitions Action Success Tasks"
                             },
                             {
                                 "Dene Type": "Action List",

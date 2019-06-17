@@ -1,0 +1,164 @@
+{
+	"Sperm": {
+		"Purpose": {
+			"Teleonome Name": "InfoBox",
+			"Purpose Type": "Mutate",
+			"Description":"Adds a Data Transformation to the InfoBox"
+		},
+		"Hypothalamus": {
+			"Actions":[],
+			"Homeoboxes": [
+				{
+					"Name": "Add Data Transformation Generator Running Time",
+					"Denes": [
+						{
+                            "Name": "Metadata",
+                            "Dene Type": "Homeobox Metadata",
+							"Target": "",
+							"DeneWords": [
+                                {
+                                    "Name":"Created On",
+                                    "Value":"05/06/2018",
+                                    "Value Type":"Date",
+                                    "Required":true
+                                },
+                                {
+                                    "Name":"Description",
+                                    "Value":"This homebox adds adds the action to transform the data of the generator running time from seconds to a fractiona hour, ie 5400 seconds becomes 1.30 hours",
+                                    "Value Type":"String",
+                                    "Required":true
+                                }
+							]
+                        },
+                        {
+							"Name": "Homeobox Index",
+							"Dene Type": "Homebox Index",
+							"DeneWords": [
+                                {
+                                    "Name": "Increment Generator Running Time Action",
+                                    "DeneWord Type": "Hox Dene Pointer",
+                                    "Value": "@Sperm:Hypothalamus:Add Data Transformation Generator Running Time:Transform Generator Running Time Action",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Name": "Increment Generator Running Time Action",
+                                    "DeneWord Type": "Hox Dene Pointer",
+                                    "Value": "@Sperm:Hypothalamus:Add Data Transformation Generator Running Time:Transform Generator Running Time",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Name": "Increment Generator Running Time Action",
+                                    "DeneWord Type": "Hox Dene Pointer",
+                                    "Value": "@Sperm:Hypothalamus:Add Data Transformation Generator Running Time:Generator Runtime Fractional Time",
+                                    "Value Type": "Dene Pointer"
+                                }
+                            ]
+						},
+						{
+                            "Name": "DeneWord Carrier For Virtual Actuator Actions",
+                            "Dene Type": "DeneWord Carrier",
+							"Target": "@InfoBox:Internal:Actuators:Virtual Actuator Actions",
+							"DeneWords": [
+                                    {
+                                        "Target": "@InfoBox:Internal:Actuators:Virtual Actuator Actions",
+                                        "Required": true,
+                                        "DeneWord Type": "Action",
+                                        "Value": "@InfoBox:Internal:Actuators:Transform Generator Running Time Action",
+                                        "Name": "Transform Generator Running Time Action",
+                                        "Value Type": "Dene Pointer"
+                                    }
+                            ]
+                        },
+                        {
+                            "Target":"@InfoBox:Internal:Actuators",
+                            "Dene Type": "Action",
+                           "DeneWords": [
+                               {
+                                   "Required": true,
+                                   "Value": "Virtual Actuator",
+                                   "Name": "Codon",
+                                   "Value Type": "String"
+                               },
+                               {
+                                   "Required": true,
+                                   "Value": true,
+                                   "Name": "Active",
+                                   "Value Type": "boolean"
+                               },
+                               {
+                                   "Required": true,
+                                   "Value": 2,
+                                   "Name": "Evaluation Position",
+                                   "Value Type": "int"
+                               },
+                               {
+                                   "Required": true,
+                                   "Value": "@InfoBox:Internal:Actuators:Transform Generator Running Time",
+                                   "Name": "Actuator Command Code True Expression",
+                                   "Value Type": "String"
+                               },
+                               {
+                                   "Required": true,
+                                   "Value": "1==1",
+                                   "Name": "Expression",
+                                   "Value Type": "String"
+                               }
+                           ],
+                           "Name": "Transform Generator Running Time Action"
+                       },
+                       {   
+                            "Target":"@InfoBox:Internal:Actuators",
+                            "Dene Type":"Data Transformation",
+                            "DeneWords":[
+                                {
+                                    "Name":"Active",
+                                    "Value":true,
+                                    "Required":true,
+                                    "Value Type":"boolean"
+                                },
+                                {
+                                    "DeneWord Type":"Transformation Function",
+                                    "Name":"Transformation Function",
+                                    "Value":"secondsToFractionalTime",
+                                    "Required":true,
+                                    "Value Type":"String"
+                                },
+                                {
+                                    "Name":"DeneWord Operation Variable",
+                                    "Value":"@InfoBox:Purpose:External Data:Ra:Generator Running Time",
+                                    "Required":true,
+                                    "Value Type":"Dene Pointer",
+                                    "DeneWord Type":"DeneWord Operation Variable"
+                                },
+                                {
+                                    "DeneWord Type":"DeneWord Operation Destination",
+                                    "Name":"DeneWord Operation Destination",
+                                    "Value":"@InfoBox:Purpose:Analysis:Generator Runtime Fractional Time:Generator Runtime Fractional Time",
+                                    "Required":true,
+                                    "Value Type":"Dene Pointer"
+                                }
+                            ],
+                            "Name":"Transform Generator Running Time"
+                        },
+                        {   
+                            "Target":"@InfoBox:Purpose:Analysis",
+                            "DeneWords":[
+                                {
+                                     "Name":"Generator Runtime Fractional Time",
+                                    "Value":0.0,
+                                    "Required":true,
+                                    "Value Type":"double"
+                                }
+                            ],
+                            "Name":"Generator Runtime Fractional Time"
+                        }
+					]
+                }
+                ],
+            "Mutations":[]
+		},
+		"Medula": {
+			"Mutations": [{}]
+		}
+	}
+}

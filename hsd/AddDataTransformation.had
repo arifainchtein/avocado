@@ -1,0 +1,10 @@
+{
+    "Homeobox Definition Type":"AddDataTransformation",
+    "Homeobox Name":"Add Data Transformation Generator Running Time",
+    "Function Name":"secondsToFractionalTime",
+    "Data Source":"@Egg:Purpose:External Data:Ra:Generator Running Time",
+    "Destination":"@Egg:Purpose:Analysis:Generator Runtime Fractional Time:Generator Runtime Fractional Time",
+    "Default Value":0.0,
+    "Destination Data Value Type":"double"
+
+}
