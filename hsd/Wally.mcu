@@ -1,4 +1,21 @@
+
 {
-    "Storage Manager":"SDCardManager",
-    "RTC":"GravityRTC"
+    "Homeobox Definition Type":"MicroController",
+    "Homeobox Name":"Mother MicroController",
+    "Component Name":"Mother MicroController",
+    "Is Mother":true,
+    "Class": "com.teleonome.framework.microcontroller.gnuserialport.GNUArduinoUno",                             
+    "Software":{
+        "Processing Queue Position":2,
+        "Parameters":[
+            {
+                "Serial Data Rate":9600,
+                "Sample Frequency":1
+            }
+        ]
+    },
+    "Hardware":{
+        "Storage Manager":"SDCardManager",
+        "Time Manager":"GravityRTC"
+    }
 }

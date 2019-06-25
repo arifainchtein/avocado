@@ -9,9 +9,9 @@
             "Name":"Display 1",
             "Clock Pin":21,
             "Data Pin":20,
-            "External Data Source Pointer":"@WeatherInfoPanel:Purpose:Sensor Data:Network Sensor:NumberOfDevices",
+            "External Data Source Pointer":"@Tlaloc:Purpose:Sensor Data:Daily Weather Forecast:Daily Forecast Day 1 Minimum Temperature",
             "Data Source":{
-                "Data Source Pointer":"@Egg:Purpose:Sensor Data:Network Sensor:NumberOfDevices",
+                "Data Source Pointer":"@Egg:Purpose:External Data:Tlaloc:Daily Forecast Day 1 Minimum Temperature",
                 "Units":"",
                 "Value Type":"int"
             }

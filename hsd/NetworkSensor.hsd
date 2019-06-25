@@ -2,10 +2,9 @@
     "Homeobox Definition Type":"Sensor",
     "Homeobox Name":"Network Sensor",
     "Sensor Name":"Network Sensor",
-    "Microcontroller Pointer":"@Egg:Internal:Components:Network Sensor Microcontroller",
+    "Microcontroller Pointer":"@Egg:Internal:Components:Network Inspector MicroController",
     "Provider":"https://www.digitalstables.com",
     "Port":"Internal",
-
     "Values":[
         {
             "Name":"NumberOfDevices",
@@ -42,7 +41,9 @@
             "Reporting Value Dene Name":"Network Status",
             "Human Interface Panel":"Network Status" ,
             "Panel In Panel Position":3,
-            "Panel Display Name":"Device Changes"
+            "Panel Display Name":"Device Changes",
+            "Range Maximum":255,
+            "Range Minimum":0
         },
         {
             "Name":"DownloadSpeed",
@@ -52,7 +53,9 @@
             "Reporting Value Dene Name":"Network Status",
             "Human Interface Panel":"Network Status" ,
             "Panel In Panel Position":4,
-            "Panel Display Name":"Download Speed"
+            "Panel Display Name":"Download Speed",
+            "Range Maximum":1000000,
+            "Range Minimum":0
         },
         {
             "Name":"UploadSpeed",
@@ -62,7 +65,9 @@
             "Reporting Value Dene Name":"Network Status",
             "Human Interface Panel":"Network Status" ,
             "Panel In Panel Position":5,
-            "Panel Display Name":"Upload Speed"
+            "Panel Display Name":"Upload Speed",
+            "Range Maximum":1000000,
+            "Range Minimum":0
         },
         {
             "Name":"PingTime",
@@ -72,7 +77,26 @@
             "Reporting Value Dene Name":"Network Status",
             "Human Interface Panel":"Network Status" ,
             "Panel In Panel Position":6,
-            "Panel Display Name":"Ping Time"
+            "Panel Display Name":"Ping Time",
+            "Range Maximum":1000,
+            "Range Minimum":0
+        },
+        {
+            "Name":"SampleTimeMillis",
+            "Units":"millisec",
+            "Value Type":"long",
+            "Sensor Request Queue Position":7,
+            "Reporting Value Dene Name":"Network Status"
+        },
+        {
+            "Name":"SampleTimeString",
+            "Units":"",
+            "Value Type":"String",
+            "Sensor Request Queue Position":8,
+            "Reporting Value Dene Name":"Network Status",
+            "Human Interface Panel":"Network Status" ,
+            "Panel In Panel Position":8,
+            "Panel Display Name":"Sample Time"
         }
     ]
 

@@ -738,12 +738,6 @@
                                     "Value": "Float",
                                     "Name": "CompareTo_FLOAT",
                                     "Value Type": "String"
-                                },
-                                {
-                                    "Required": "true",
-                                    "Value": "Float",
-                                    "Name": "CompareTo_FLOAT",
-                                    "Value Type": "String"
                                 }],
                                 "Name": "Compare to Unit Type"
                             }

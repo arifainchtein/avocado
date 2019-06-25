@@ -1,4 +1,4 @@
 {
     "Storage Manager":"SDCardManager",
-    "RTC":"GravityRTC"
+    "Time Manager":"GravityRTC"
 }

@@ -1,7 +1,10 @@
 {
+    "Description":"This Sertoli file will generate a Teleonomen with a Network Sensor and a 6 4-Digit-Seven-Segment display",
      "Containers":[],
     "HomeBoxDefinitions":{
-        "Components":[],
+        "Components":[
+            "NetworkInspectorMicroController.mcu"
+        ],
         "Sensors":[
             "NetworkSensor.hsd"
         ],
