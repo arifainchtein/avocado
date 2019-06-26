@@ -11,6 +11,6 @@
      "Action Name": "Generate Analysis",
      "Actuator Command Code True Expression": "Generate Analysis",
      "Condition Name" : "NetworkSensorCounterCondition",
-     "Counter Limit":5,
+     "Counter Limit":3,
      "Counter Increment":1                                   
 }
