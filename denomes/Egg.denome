@@ -1246,6 +1246,12 @@
                                         "Name": "Processing Queue Position"
                                     },
                                     {
+                                        "Required": true,
+                                        "Value": true,
+                                        "Name": "Mother Microcontroller",
+                                        "Value Type": "boolean"
+                                    },
+                                    {
                                         "DeneWord Type": "Microcontroller Processing Class Name",
                                         "Required": true,
                                         "Value": "com.teleonome.framework.microcontroller.SimpleMicroController",
