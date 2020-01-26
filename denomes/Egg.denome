@@ -103,7 +103,7 @@
                             "DeneWords": [{
                                 "Required": true,
                                 "Value": "",
-                                "Deletion Target": "@Egg:Internal:Mnemosycons:Remember Tlaloc-Heat Index Data:DeneWord To Remember",
+                                "Deletion Target": "@Egg:Internal:Mnemosycons:Remember Egg-Heat Index Data:DeneWord To Remember",
                                 "Name": "DeneWord To Stop Remembering",
                                 "Value Type": "String"
                             }],
@@ -149,7 +149,7 @@
                         "Denes": [{
                             "Dene Type": "Set DeneWord",
                             "DeneWords": [{
-                                "Target": "@Egg:Internal:Descriptive:Control Parameters:TubTargetTemperature",
+                                "Target": "@Egg:Purpose:Operational Data:Vital:Current Pulse Frequency",
                                 "Required": true,
                                 "Value": 38,
                                 "Name": "Update DeneWord",
@@ -1791,6 +1791,20 @@
                                         "Value": "@Egg:Internal:Actuators:Shutdown Action",
                                         "Name": "Shutdown Action",
                                         "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Action",
+                                        "Value": "@Egg:Internal:Actuators:Generate Egg Disk Availalble Chart Action",
+                                        "Name": "Generate Egg Disk Availalble Chart",
+                                        "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Action",
+                                        "Value": "@Egg:Internal:Actuators:Generate Egg Database Usage Chart Action",
+                                        "Value Type": "Dene Pointer",
+                                        "Name": "Generate Egg Database Usage Chart Action"
                                     }
                                 ],
                                 "Name": "Virtual Actuator Actions"
@@ -2025,6 +2039,285 @@
                                     }
                                 ],
                                 "Name": "Set SSID"
+                            },
+                            {
+                                "Dene Type": "Action",
+                                "DeneWords": [
+                                    {
+                                        "Required": true,
+                                        "Value": "VirtualActuator",
+                                        "Name": "Codon",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": true,
+                                        "Name": "Active",
+                                        "Value Type": "boolean"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": 5,
+                                        "Name": "Evaluation Position",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "@Egg:Internal:Actuators:Generate Egg Disk Availalble Chart",
+                                        "Name": "Actuator Command Code True Expression",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "1==1",
+                                        "Name": "Expression",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "DeneWord Type": "Action Success Tasks",
+                                        "Value": "@Egg:Internal:Actuators:Generate Egg Disk Availalble Chart Action Success Tasks",
+                                        "Name": "Action Success Tasks True Expression",
+                                        "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "DeneWord Type": "Mnemosyne Operation Index",
+                                        "Value": "@Egg:Internal:Actuators:Generate Egg Disk Availalble Chart Action Mnemosyne Operations True Expression",
+                                        "Name": "Mnemosyne Operations True Expression",
+                                        "Value Type": "Dene Pointer"
+                                    }
+                                ],
+                                "Name": "Generate Egg Disk Availalble Chart Action"
+                            },
+                            {
+                                "DeneWords": [{
+                                    "DeneWord Type": "Mnemosyne Operation",
+                                    "Value": "@Egg:Internal:Actuators:Convert Egg Analysis to JSONArray Mnemosyne Operation",
+                                    "Name": "Aggregate Total Volume for Daily",
+                                    "Value Type": "Dene Pointer"
+                                }],
+                                "Name": "Generate Egg Disk Availalble Chart Action Mnemosyne Operations True Expression"
+                            },
+                            {
+                                "DeneWords": [
+                                    {
+                                        "Target": "@Egg:Purpose:Analysis:Egg Disk Pie Chart Data:Available",
+                                        "DeneWord Type": "Update DeneWord Value",
+                                        "Value": "@Egg:Purpose:Operational Data:System Data:Usable Space",
+                                        "Name": "Set Avaialble",
+                                        "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "Target": "@Egg:Purpose:Analysis:Egg Disk Pie Chart Data:Database",
+                                        "DeneWord Type": "Update DeneWord Value",
+                                        "Value": "@Egg:Purpose:Operational Data:System Data:Database Size",
+                                        "Name": "Set Database",
+                                        "Value Type": "Dene Pointer"
+                                    }
+                                ],
+                                "Name": "Generate Egg Disk Availalble Chart Action Success Tasks"
+                            },
+                            {
+                                "Dene Type": "Mnemosyne Convert DeneWords to JSONArray",
+                                "DeneWords": [
+                                    {
+                                        "Required": true,
+                                        "Value": 3,
+                                        "Name": "Execution Position",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "DeneWord Operation Destination",
+                                        "Value": "@Egg:Mnemosyne:Mnemosyne Pulse:Egg Disk Usage:Egg Disk Usage",
+                                        "Name": "Destination",
+                                        "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Data Source Pointer",
+                                        "Value": "@Egg:Purpose:Analysis:Egg Disk Pie Chart Data",
+                                        "Name": "Source",
+                                        "Value Type": "Dene Pointer"
+                                    }
+                                ],
+                                "Name": "Convert Egg Analysis to JSONArray Mnemosyne Operation"
+                            },
+                            {
+                                "DeneWords": [
+                                    {
+                                        "Required": true,
+                                        "Value": "VirtualActuator",
+                                        "Name": "Codon",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": true,
+                                        "Name": "Active",
+                                        "Value Type": "boolean"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "DeneWord Operation Variable",
+                                        "Value": "@Egg:Purpose:External Data:Egg:FreeSpace",
+                                        "Default": 0,
+                                        "Name": "FreeSpace",
+                                        "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "DeneWord Operation Variable",
+                                        "Value": "@Egg:Purpose:External Data:Egg:TotalSpace",
+                                        "Default": 0,
+                                        "Name": "TotalSpace",
+                                        "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "DeneWord Operation Variable",
+                                        "Value": "@Egg:Purpose:External Data:Egg:DatabaseSize",
+                                        "Default": 0,
+                                        "Name": "DatabaseSpace",
+                                        "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "TotalSpace-FreeSpace-DatabaseSpace",
+                                        "Name": "Expression",
+                                        "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "DeneWord Operation Destination",
+                                        "Value": "@Egg:Purpose:Analysis:Egg Disk Pie Chart Data:Other",
+                                        "Name": "Destination",
+                                        "Value Type": "Dene Pointer"
+                                    }
+                                ],
+                                "Name": "Generate Egg Disk Availalble Chart"
+                            },
+                            {
+                                "Dene Type": "Action",
+                                "DeneWords": [
+                                    {
+                                        "Required": true,
+                                        "Value": "VirtualActuator",
+                                        "Name": "Codon",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": true,
+                                        "Name": "Active",
+                                        "Value Type": "boolean"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": 6,
+                                        "Name": "Evaluation Position",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "$DoNothing",
+                                        "Name": "Actuator Command Code True Expression",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "1==1",
+                                        "Name": "Expression",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "DeneWord Type": "Action Success Tasks",
+                                        "Value": "@Egg:Internal:Actuators:Generate Egg Database Usage Chart Action Success Tasks",
+                                        "Name": "Action Success Tasks True Expression",
+                                        "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "DeneWord Type": "Mnemosyne Operation Index",
+                                        "Value": "@Egg:Internal:Actuators:Generate Egg Database Usage Chart Action Mnemosyne Operations True Expression",
+                                        "Name": "Mnemosyne Operations True Expression",
+                                        "Value Type": "Dene Pointer"
+                                    }
+                                ],
+                                "Name": "Generate Egg Database Usage Chart Action"
+                            },
+                            {
+                                "DeneWords": [{
+                                    "DeneWord Type": "Mnemosyne Operation",
+                                    "Value": "@Egg:Internal:Actuators:Convert Database Analysis to JSONArray Mnemosyne Operation",
+                                    "Name": "Create Database Pie",
+                                    "Value Type": "Dene Pointer"
+                                }],
+                                "Name": "Generate Egg Database Usage Chart Action Mnemosyne Operations True Expression"
+                            },
+                            {
+                                "DeneWords": [
+                                    {
+                                        "Target": "@Egg:Purpose:Analysis:Egg Database Pie Chart Data:Pulse",
+                                        "DeneWord Type": "Update DeneWord Value",
+                                        "Value": "@Egg:Purpose:Operational Data:System Data:Pulse Table Size",
+                                        "Name": "Set Pulse Table Size",
+                                        "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "Target": "@Egg:Purpose:Analysis:Egg Database Pie Chart Data:Organism Pulse",
+                                        "DeneWord Type": "Update DeneWord Value",
+                                        "Value": "@Egg:Purpose:Operational Data:System Data:Organism Pulse Table Size",
+                                        "Name": "Set Organism Pulse Table Size",
+                                        "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "Target": "@Egg:Purpose:Analysis:Egg Database Pie Chart Data:Remembered DeneWords",
+                                        "DeneWord Type": "Update DeneWord Value",
+                                        "Value": "@Egg:Purpose:Operational Data:System Data:Remembered DeneWords Table Size",
+                                        "Name": "Set Remembered DeneWords Table Size",
+                                        "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "Target": "@Egg:Purpose:Analysis:Egg Database Pie Chart Data:Mutation Event",
+                                        "DeneWord Type": "Update DeneWord Value",
+                                        "Value": "@Egg:Purpose:Operational Data:System Data:Mutation Event Table Size",
+                                        "Name": "Set Remembered DeneWords Table Size",
+                                        "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "Target": "@Egg:Purpose:Analysis:Egg Database Pie Chart Data:Command Requests",
+                                        "DeneWord Type": "Update DeneWord Value",
+                                        "Value": "@Egg:Purpose:Operational Data:System Data:Command Requests Table Size",
+                                        "Name": "Set Remembered DeneWords Table Size",
+                                        "Value Type": "Dene Pointer"
+                                    }
+                                ],
+                                "Name": "Generate Egg Database Usage Chart Action Success Tasks"
+                            },
+                            {
+                                "Dene Type": "Mnemosyne Convert DeneWords to JSONArray",
+                                "DeneWords": [
+                                    {
+                                        "Required": true,
+                                        "Value": 3,
+                                        "Name": "Execution Position",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "DeneWord Operation Destination",
+                                        "Value": "@Egg:Mnemosyne:Mnemosyne Pulse:Egg Database Usage:Egg Database Usage",
+                                        "Name": "Destination",
+                                        "Value Type": "Dene Pointer"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "DeneWord Type": "Data Source Pointer",
+                                        "Value": "@Egg:Purpose:Analysis:Egg Database Pie Chart Data",
+                                        "Name": "Source",
+                                        "Value Type": "Dene Pointer"
+                                    }
+                                ],
+                                "Name": "Convert Database Analysis to JSONArray Mnemosyne Operation"
                             }
                         ],
                         "Name": "Actuators"
@@ -2692,7 +2985,86 @@
                         "Name": "External Data"
                     },
                     {
-                        "Denes": [],
+                        "Denes": [
+                            {
+                                "DeneWords": [
+                                    {
+                                        "Required": "true",
+                                        "Color": "#aa0055",
+                                        "DeneWordType": "Analysis Value",
+                                        "Value": 341,
+                                        "Units": "MB",
+                                        "Name": "Database",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": "true",
+                                        "Color": "#d0d0d0",
+                                        "DeneWordType": "Analysis Value",
+                                        "Value": 22536,
+                                        "Units": "MB",
+                                        "Name": "Available",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": "true",
+                                        "Color": "#2B60DE",
+                                        "Value": 2130,
+                                        "Units": "MB",
+                                        "Name": "Other",
+                                        "Value Type": "String"
+                                    }
+                                ],
+                                "Name": "Egg Disk Pie Chart Data"
+                            },
+                            {
+                                "DeneWords": [
+                                    {
+                                        "Required": "true",
+                                        "Color": "#aa0055",
+                                        "DeneWordType": "Analysis Value",
+                                        "Value": 3.800192,
+                                        "Units": "MB",
+                                        "Name": "Pulse",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": "true",
+                                        "Color": "#d0d0d0",
+                                        "DeneWordType": "Analysis Value",
+                                        "Value": 162.024,
+                                        "Units": "MB",
+                                        "Name": "Organism Pulse",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": "true",
+                                        "Color": "#2B60DE",
+                                        "Value": 4.296,
+                                        "Units": "MB",
+                                        "Name": "Remembered DeneWords",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": "true",
+                                        "Color": "#EAC117",
+                                        "Value": 1.9119999999999997,
+                                        "Units": "MB",
+                                        "Name": "Command Requests",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": "true",
+                                        "Color": "#52D017",
+                                        "Value": 125.10419200000001,
+                                        "Units": "MB",
+                                        "Name": "Mutation Event",
+                                        "Value Type": "int"
+                                    }
+                                ],
+                                "Name": "Egg Database Pie Chart Data"
+                            }
+                        ],
                         "Name": "Analysis"
                     },
                     {

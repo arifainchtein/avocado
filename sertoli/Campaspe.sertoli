@@ -1,35 +1,28 @@
 {
     "Containers":[],
-    "Telepathons":[
-            "AquaBubbler2FountainXBee.tph",
-            "InfoPanel.tph"
-            
-    ],
+    
     
     "HomeBoxDefinitions":{
         
         "Components":[
-            "Valentino.mcu",
-            "PlSeries.mcu"
+            "Valentino.mcu"
         ],
        "Sensors":[
-           
+        {
+            "Name":"PowerStatusStructValues.hsd",
+            "Type":"Power Status"
+        }
        ],
        "Actuators":[
             "SFTPPublisher.had"
         ],
+        "Telepathons":[
+            "AquaBubbler1.tph"
+            
+        ],
        "Human Interface":[
-           "InfoBoxHomePagePanels.hud"
+           "AquaBubbler2FountainXBee.hud"
        ] ,
-       "Files":[
-           {
-               "File Source":"www.digitalgeppetto.com/avocado/files/single.py",
-               "File Destination":"/home/pi/Teleonome/single.py"
-           },
-           {
-               "File Source":"www.digitalgeppetto.com/avocado/files/tm1637.py",
-               "File Destination":"/home/pi/Teleonome/tm1637.py"
-           }
-       ]   
+       "Files":[]   
     }
 }

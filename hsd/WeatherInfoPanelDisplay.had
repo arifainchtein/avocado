@@ -18,8 +18,8 @@
         },
         {
             "Name":"Display 2",
-            "Clock Pin":26,
-            "Data Pin":19,
+            "Clock Pin":16,
+            "Data Pin":12,
             "External Data Source Pointer":"@Tlaloc:Purpose:Sensor Data:Daily Weather Forecast:Daily Forecast Day 1 Maximum Temperature",
             "Data Source":{
                 "Data Source Pointer":"@Egg:Purpose:External Data:Tlaloc:Daily Forecast Day 1 Maximum Temperature",
@@ -29,8 +29,8 @@
         },
         {
             "Name":"Display 3",
-            "Clock Pin":22,
-            "Data Pin":27,
+            "Clock Pin":7,
+            "Data Pin":8,
             "External Data Source Pointer":"@Tlaloc:Purpose:Sensor Data:Daily Weather Forecast:Daily Forecast Day 1 Minimum Temperature",
             "Data Source":{
                 "Data Source Pointer":"@Egg:Purpose:External Data:Tlaloc:Daily Forecast Day 1 Minimum Temperature",
@@ -40,8 +40,8 @@
         },
         {
             "Name":"Display 4",
-            "Clock Pin":6,
-            "Data Pin":5,
+            "Clock Pin":25,
+            "Data Pin":24,
             "External Data Source Pointer":"@WeatherInfoPanel:Purpose:Sensor Data:Network Sensor:NumberOfDevices",
             "Data Source":{
                 "Data Source Pointer":"@Egg:Purpose:Sensor Data:Network Sensor:NumberOfDevices",
@@ -51,8 +51,8 @@
         },
         {
             "Name":"Display 5",
-            "Clock Pin":9,
-            "Data Pin":11,
+            "Clock Pin":23,
+            "Data Pin":18,
             "External Data Source Pointer":"@WeatherInfoPanel:Purpose:Sensor Data:Network Sensor:UploadSpeed",
             "Data Source":{
                 "Data Source Pointer":"@Egg:Purpose:Sensor Data:Network Sensor:UploadSpeed",
@@ -62,8 +62,8 @@
         },
         {
             "Name":"Display 6",
-            "Clock Pin":23,
-            "Data Pin":24,
+            "Clock Pin":15,
+            "Data Pin":14,
             "External Data Source Pointer":"@WeatherInfoPanel:Purpose:Sensor Data:Network Sensor:DownloadSpeed",
             "Data Source":{
                 "Data Source Pointer":"@Egg:Purpose:Sensor Data:Network Sensor:DownloadSpeed",
