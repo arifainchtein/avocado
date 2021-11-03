@@ -2,7 +2,7 @@
     "Homeobox Definition Type":"Sensor",
     "Homeobox Name":"LangleyFieldSensor",
     "Sensor Name":"Langley Sensor",
-    "Microcontroller Pointer":"@Egg:Internal:Components:Mother Microcontroller",
+    "Microcontroller Pointer":"@Egg:Internal:Components:Main Arduino",
     "Container Page Identity Pointer":"@Egg:Human Interface:Home Page",
     "Reporting Value Dene Name":"Langley Sensor Reporting",
     "Human Interface Panel":"Langley Field Status" ,
