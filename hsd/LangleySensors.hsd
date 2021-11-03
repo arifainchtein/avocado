@@ -3,6 +3,9 @@
     "Homeobox Name":"LangleyFieldSensor",
     "Sensor Name":"Langley Sensor",
     "Microcontroller Pointer":"@Egg:Internal:Components:Mother Microcontroller",
+    "Container Page Identity Pointer":"@Egg:Human Interface:Home Page",
+    "Reporting Value Dene Name":"Langley Sensor",
+    "Human Interface Panel":"Langley Sensor" ,
     "Provider":"https://www.digitalstables.com",
     "Port":"Internal",
     "Values":[
