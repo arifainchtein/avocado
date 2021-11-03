@@ -1,10 +1,11 @@
 {
     "Containers":[],
     
-    
     "HomeBoxDefinitions":{
         
-        "Components":[],
+        "Components":[
+            "ArduinoMother.mcu"
+        ],
        "Sensors":[
             "LangleySensors.hsd"
        ],
