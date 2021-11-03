@@ -6,9 +6,7 @@
         
         "Components":[],
        "Sensors":[
-        {
-            "Name":"LangleySensors.hsd"
-        }
+            "LangleySensors.hsd"
        ],
        "Actuators":[
             "SFTPPublisher.had"
