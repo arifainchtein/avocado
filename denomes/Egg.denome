@@ -2226,14 +2226,14 @@
                                         "Target": "@Egg:Purpose:Analysis:Egg Database Pie Chart Data:Mutation Event",
                                         "DeneWord Type": "Update DeneWord Value",
                                         "Value": "@Egg:Purpose:Operational Data:System Data:Mutation Event Table Size",
-                                        "Name": "Set Remembered DeneWords Table Size",
+                                        "Name": "Set Mutation Event Table Size",
                                         "Value Type": "Dene Pointer"
                                     },
                                     {
                                         "Target": "@Egg:Purpose:Analysis:Egg Database Pie Chart Data:Command Requests",
                                         "DeneWord Type": "Update DeneWord Value",
                                         "Value": "@Egg:Purpose:Operational Data:System Data:Command Requests Table Size",
-                                        "Name": "Set Remembered DeneWords Table Size",
+                                        "Name": "Set Command Requests Table Size",
                                         "Value Type": "Dene Pointer"
                                     }
                                 ],
@@ -2922,6 +2922,113 @@
                                     }
                                 ],
                                 "Name": "Wifi Info"
+                            },
+                            {
+                                "DeneWords": [
+                                    {
+                                        "Required": true,
+                                        "Value": 30400,
+                                        "Units": "MB",
+                                        "Name": "Total Space",
+                                        "Value Type": "double"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": 19514,
+                                        "Units": "MB",
+                                        "Name": "Free Space",
+                                        "Value Type": "double"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": 18247,
+                                        "Units": "MB",
+                                        "Name": "Usable Space",
+                                        "Value Type": "double"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": 18247,
+                                        "Units": "MB",
+                                        "Name": "Usable Space",
+                                        "Value Type": "double"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": 753,
+                                        "Units": "MB",
+                                        "Name": "Database Size",
+                                        "Value Type": "double"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": 0.008192,
+                                        "Units": "MB",
+                                        "Name": "Pulse Table Size",
+                                        "Value Type": "double"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": 0.024,
+                                        "Units": "MB",
+                                        "Name": "Organism Pulse Table Size",
+                                        "Value Type": "double"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": 7.736192000000001,
+                                        "Units": "MB",
+                                        "Name": "Mutation Event Table Size",
+                                        "Value Type": "double"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": 1.688,
+                                        "Units": "MB",
+                                        "Name": "Command Requests Table Size",
+                                        "Value Type": "double"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": 488.7359999999986,
+                                        "Units": "MB",
+                                        "Name": "Remembered DeneWords Table Size",
+                                        "Value Type": "double"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": 488.7359999999986,
+                                        "Units": "MB",
+                                        "Name": "Mother Remembered Values Table Size",
+                                        "Value Type": "double"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": 238,
+                                        "Units": "MB",
+                                        "Name": "Life Cycle Event Table Size",
+                                        "Value Type": "double"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "08/09/2021 16:52",
+                                        "Name": "Hypothalamus Build Number",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "11/05/2018 10:23",
+                                        "Name": "Medula Build Number",
+                                        "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": "21/08/2019 07:12",
+                                        "Name": "Heart Build Number",
+                                        "Value Type": "String"
+                                    }
+                                ],
+                                "Name": "System Data"
                             }
                         ],
                         "Name": "Operational Data"
