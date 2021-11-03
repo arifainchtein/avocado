@@ -4,13 +4,13 @@
     "Container Page Identity":"@Egg:Human Interface:Home Page",
     "Panels":[
         {
-            "Name":"Now",
-            "Panel In Page Position":2,
+            "Name":"Field Unit 1",
+            "Panel In Page Position":1,
             "Panel Visualization Style": "Single Value Panel Complete Width",
             "Processor":"SingleValuePanelCompleteWidthGenerator",
             "Values":[
                 {
-                    "Panel Data Source Pointer": "@Egg:Purpose:External Data:Ra:BatteryVoltage",
+                    "Panel Data Source Pointer": "@Egg:Purpose:Sensor Data:Field Unit 1;BatteryVoltage",
                     "Panel In Panel Position":1,
                     "Panel Display Name":"Ra Battery Voltage",
                     "Visible":true

@@ -14,9 +14,7 @@
             "SFTPPublisher.had"
         ],
         "Telepathons":[],
-       "Human Interface":[
-           "LangleyHomePagePanels.hud"
-       ] ,
+       "Human Interface":[] ,
        "Files":[]   
     }
 }
