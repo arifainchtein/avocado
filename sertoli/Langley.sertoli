@@ -1,0 +1,22 @@
+{
+    "Containers":[],
+    
+    
+    "HomeBoxDefinitions":{
+        
+        "Components":[],
+       "Sensors":[
+        {
+            "Name":"LangleySensors.hsd"
+        }
+       ],
+       "Actuators":[
+            "SFTPPublisher.had"
+        ],
+        "Telepathons":[],
+       "Human Interface":[
+           "LangleyHomePagePanels.hud"
+       ] ,
+       "Files":[]   
+    }
+}

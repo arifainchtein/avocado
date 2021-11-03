@@ -1,0 +1,85 @@
+{
+    "Homeobox Definition Type":"Sensor",
+    "Homeobox Name":"LangleyFieldSensor",
+    "Sensor Name":"Langley Sensor",
+    "Microcontroller Pointer":"@Egg:Internal:Components:Mother Microcontroller",
+    "Provider":"https://www.digitalstables.com",
+    "Port":"Internal",
+    "Values":[
+        {
+            "Name": "FieldId",
+            "Units":"",
+            "Value Type":"int",
+            "Sensor Request Queue Position":1,
+            "Initial Value":0,
+            "Reporting Value Dene Name":"Field Unit 1",
+            "Human Interface Panel":"Field Unit 1", 
+            "Panel In Panel Position":1,
+            "Panel Display Name":"Samp Time"
+        },
+        {
+            "Name": "SampleTime",
+            "Units":"seconds",
+            "Value Type":"long",
+            "Sensor Request Queue Position":2,
+            "Initial Value":0,
+            "Reporting Value Dene Name":"Field Unit 1",
+            "Human Interface Panel":"Field Unit 1", 
+            "Panel In Panel Position":2,
+            "Panel Display Name":"Samp Time"
+        },
+        {
+            "Name": "capacitorvoltage",
+            "Units":"Volts",
+            "Value Type":"double",
+            "Sensor Request Queue Position":3,
+            "Range Maximum":8,
+            "Range Minimum":1,
+            "Initial Value":0,
+            "Reporting Value Dene Name":"Field Unit 1",
+            "Human Interface Panel":"Field Unit 1", 
+            "Panel In Panel Position":3,
+            "Panel Display Name":"Cap Voltage"
+        },
+        {
+            "Name": "ExternalBatterVoltage",
+            "Units":"Volts",
+            "Value Type":"double",
+            "Sensor Request Queue Position":4,
+            "Range Maximum":20,
+            "Range Minimum":0,
+            "Initial Value":0,
+            "Reporting Value Dene Name":"Field Unit 1",
+            "Human Interface Panel":"Field Unit 1", 
+            "Panel In Panel Position":4,
+            "Panel Display Name":"Ext Bat Volt"
+        },
+        {
+            "Name":"Temperature",
+            "Units":"C",
+            "Value Type":"double",
+            "Sensor Request Queue Position":5,
+            "Range Maximum":50,
+            "Range Minimum":-10,
+            "Initial Value":0,
+            "Reporting Value Dene Name":"Field Unit 1",
+            "Human Interface Panel":"Field Unit 1" ,
+            "Panel In Panel Position":5,
+            "Panel Display Name":"Temperature"
+        },
+        {
+            "Name":"FenceVoltage",
+            "Units":"Volts",
+            "Value Type":"double",
+            "Sensor Request Queue Position":6,
+            "Range Maximum":10000,
+            "Range Minimum":0,
+            "Initial Value":0,
+            "Reporting Value Dene Name":"Field Unit 1",
+            "Human Interface Panel":"Field Unit 1" ,
+            "Panel In Panel Position":6,
+            "Panel Display Name":"Fence Volts"
+        }
+    ]
+
+}
