@@ -1,0 +1,53 @@
+{
+    "Homeobox Definition Type":"ExternalDataMultiColorLED",
+    "Homeobox Name":"Sento Pump Status",
+    "Action Group Name":"Sento Pump Status",
+    "Microcontroller Pointer":"@Egg:Internal:Components:Mother Microcontroller",
+    "Actuator Action List Pointer":"@Egg:Internal:Actuators:Mother Actuator Actions",
+    "Provider":"https://www.digitalstables.com",
+    "External Data Source Pointer":"@Sento:Purpose:Operational Data:Pump:PumpStatus",
+    "Data Source":{
+        "Data Source Pointer":"@Egg:Purpose:External Data:Sento:PumpStatus",
+        "Units":"",
+        "Value Type":"String"
+    },
+    "LED Position":0,
+    "MicroControllerBaseCommand":"UpdateTeleonomeStatus",
+    "Thresholds":[
+        {
+            "Name":"CompareTo_OFF",
+            "Color Name":"Blue",
+            "Color RGB":"0,0,255",
+            "Status Value":"primary",
+            "Threshold Value":"@Egg:Internal:Descriptive:Constants:CompareTo_OFF"
+        },
+        {
+             "Name":"CompareTo_ON",
+             "Color":"Green",
+             "Color RGB":"0,255,0",
+            "Status Value":"success",
+            "Threshold Value":"@Egg:Internal:Descriptive:Constants:CompareTo_ON"
+        }
+    ],    
+    "Cases":[
+        {
+            "Name":"Sento Pump Is On",
+            "Condition Name":"SentoPumpIsOnCondition",
+            "Evaluation Position":1,
+            "Threshold":"CompareTo_ON",
+            "Expression":"PumpStatus==CompareTo_ON"  ,
+            "Generate Action Evaluation Panel":true , 
+            "Panel In Page Position":11
+        },
+        {
+            "Name":"Sento Pump Is Off",
+            "Condition Name":"SentoPumpIsOffCondition",
+            "Evaluation Position":2,
+            "Threshold":"CompareTo_OFF",
+            "Expression": "PumpStatus==CompareTo_OFF" ,
+            "Generate Action Evaluation Panel":true, 
+            "Panel In Page Position":12
+        }
+    ]
+
+}

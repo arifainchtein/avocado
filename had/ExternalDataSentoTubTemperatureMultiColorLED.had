@@ -1,0 +1,102 @@
+{
+    "Homeobox Definition Type":"ExternalDataMultiColorLED",
+    "Homeobox Name":"Sento Tub Temperature Status",
+    "Action Group Name":"Sento Tub Temperature Status",
+    "Microcontroller Pointer":"@Egg:Internal:Components:Mother Microcontroller",
+    "Actuator Action List Pointer":"@Egg:Internal:Actuators:Mother Actuator Actions",
+    "Provider":"https://www.digitalstables.com",
+     "External Data Source Pointer":"@Sento:Purpose:Sensor Data:Tub Temperature:TubTemperature",
+     "Data Source":{
+        "Data Source Pointer":"@Egg:Purpose:External Data:Sento:TubTemperature",
+        "Units":"Celsius",
+        "Value Type":"double"
+    },
+    "MicroControllerBaseCommand":"UpdateTeleonomeStatus",
+    "LED Position":3,
+    "Thresholds":[
+        {
+            "Name":"RedThreshold",
+            "Color":"Red",
+            "Threshold Value":41,
+            "Color RGB":"255,0,0",
+            "Status Value":"danger"
+            
+        },
+        {
+             "Name":"GreenThreshold",
+             "Color":"Green",
+             "Color RGB":"0,255,0",
+            "Status Value":"success",
+            "Threshold Value":38
+        },
+        {
+            "Name":"YellowThreshold",
+            "Color":"Yellow",
+            "Color RGB":"255,255,0",
+            "Status Value":"warning",
+            "Threshold Value":35
+        },
+        {
+            "Name":"BlueThreshold",
+            "Color Name":"Blue",
+            "Color RGB":"0,0,255",
+            "Status Value":"primary",
+            "Threshold Value":30
+        },
+        {
+            "Name":"OrangeThreshold",
+            "Color Name":"Orange",
+            "Color RGB":"148, 0, 21",
+            "Status Value":"crisis",
+            "Threshold Value":0
+        }
+    ],    
+    "Cases":[
+        {
+            "Name":"TubTemperature is Red",
+            "Condition Name":"TubTemperatureIsRedCondition",
+            "Evaluation Position":1,
+            "Threshold":"RedThreshold",
+            "Expression":"TubTemperature>=RedThreshold"  ,
+            "Generate Action Evaluation Panel":true, 
+            "Panel In Page Position":6
+        },
+        {
+            "Name":"TubTemperature is Green",
+            "Evaluation Position":2,
+            "Threshold":"GreenThreshold",
+            "Condition Name":"TubTemperatureIsGreenCondition",
+            "Expression": "TubTemperature>=GreenThreshold && TubTemperature<RedThreshold" ,
+            "Generate Action Evaluation Panel":true, 
+            "Panel In Page Position":7
+        },
+        {
+            "Name":"TubTemperature is Yellow",
+            "Evaluation Position":3,
+            "Threshold":"YellowThreshold",
+            "Condition Name":"TubTemperatureIsYellowCondition",
+            "Expression":"TubTemperature>=YellowThreshold && TubTemperature<GreenThreshold" ,
+            "Generate Action Evaluation Panel":true, 
+            "Panel In Page Position":8 
+        },
+        {
+            "Name":"TubTemperature is Blue",
+            "Evaluation Position":4,
+            "Threshold":"BlueThreshold",
+            "Condition Name":"TubTemperatureIsBlueCondition",
+            "Expression":"TubTemperature>=BlueThreshold && TubTemperature<YellowThreshold"  ,
+            "Generate Action Evaluation Panel":true , 
+            "Panel In Page Position":9
+        },
+        {
+            "Name":"TubTemperature is Orange",
+            "Evaluation Position":5,
+            "Threshold":"OrangeThreshold",
+            "Condition Name":"TubTemperatureIsOrangeCondition",
+            "Expression":"TubTemperature<BlueThreshold"   ,
+            "Generate Action Evaluation Panel":true, 
+            "Panel In Page Position":10
+        }
+    ]
+
+}
