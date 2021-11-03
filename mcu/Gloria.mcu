@@ -1,0 +1,22 @@
+{
+    "Firmware":"DigitalStables",
+    "Storage Manager":"SDCardDataStorageManager",
+    "Power Manager":"GloriaBasePowerManager",
+    "Time Manager":"GravityRTC",
+    "Sensors":[
+
+    ],
+    "Actuators":[
+
+    ],
+    "Telephatons":[
+        {
+            "Type":"I2C",
+            "Name":"InfoPanel"
+        },
+        {
+            "Type":"I2C",
+            "Name":"InfoPanel"
+        }
+    ]
+}

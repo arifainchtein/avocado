@@ -1,0 +1,45 @@
+{
+    "Firmware":"DigitalStables",
+    "Hardware":{
+        "Storage Manager":"SDCardDataStorageManager",
+        "Power Manager":"GloriaFieldPowerManager",
+        "Time Manager":"GravityRTC",
+        "Display":"OLED",
+        "Communications":[
+            {
+                "Class":"GloriaFieldRF24Communicator",
+                "Data":[
+                        {
+                            "Name":"GloriaFieldBaseData",
+                            "Values":[
+                                "Current Time", "Relay State", "Temperature", "Voltage","TankHeight"
+                            ]
+                        },
+                        {
+                            "Name":"GloriaFieldFlowData",
+                            "Values":[
+                                "Current Time", "FlowMeter1", "Volume1", "FlowMeter2","Volume2"
+                            ]
+                        }
+                ],
+                "Communication Parameters":{
+                    "ReadingPipe":"0xF0F0F0F0D2LL",
+                    "writingPipe":"0xF0F0F0F0E1LL",
+                    "ChipEnable":13,
+                    "ChipSelect":4
+                }
+                
+
+                
+            }
+        ]
+    },
+     "Sensors":[ 
+           "GloriaFieldMainEnergyValues.hsd",
+           "GloriaFieldSensors.hsd"
+        ],
+       "Actuators":[
+            "IntrusionDualLed.had",
+            "Relay.had"
+        ]
+}

@@ -1,0 +1,30 @@
+{
+    "Firmware":"DigitalStables",
+    "Hardware":{
+        "Storage Manager":"SDCardDataStorageManager",
+        "Power Manager":"GloriaBasePowerManager",
+        "Time Manager":"GravityRTC",
+        "Display":"OLED",
+        "Communications":[
+            "GloriaHomeRF24Communicator"
+        ]
+    },
+     "Sensors":[ 
+           "GloriaHomeMainEnergyValues.hsd",
+           "GloriaHomeSensors.hsd"
+        ],
+       "Actuators":[
+            "IntrusionDualLed.had",
+            "Relay.had"
+        ],
+    "Telephatons":[
+        {
+            "Communications":"GloriaHomeRF24Communicator",
+            "Name":"GloriaField1"
+        },
+        {
+            "Type":"I2C",
+            "Name":"InfoPanel"
+        }
+    ]
+}
