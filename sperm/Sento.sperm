@@ -172,7 +172,8 @@
 					}]
 				}, {
 					"Dene Type": "Sensor",
-					"DeneWords": [{
+					"DeneWords": [
+					{
 						"DeneWord Type": "Sensor Microcontroller Pointer",
 						"Required": true,
 						"Value": "@Sento:Internal:Components:Main Arduino",
@@ -210,7 +211,8 @@
 					"Target": "@Sento:Internal:Sensors"
 				}, {
 					"Dene Type": "Sensor Value Definition",
-					"DeneWords": [{
+					"DeneWords": [
+						{
 						"Required": true,
 						"Value": "Tub Thermometer",
 						"Name": "Codon",

@@ -4,8 +4,8 @@
     "Sensor Name":"Langley Sensor",
     "Microcontroller Pointer":"@Egg:Internal:Components:Mother Microcontroller",
     "Container Page Identity Pointer":"@Egg:Human Interface:Home Page",
-    "Reporting Value Dene Name":"Langley Sensor",
-    "Human Interface Panel":"Langley Sensor" ,
+    "Reporting Value Dene Name":"Langley Sensor Reporting",
+    "Human Interface Panel":"Langley Field Status" ,
     "Provider":"https://www.digitalstables.com",
     "Port":"Internal",
     "Values":[
@@ -18,7 +18,7 @@
             "Reporting Value Dene Name":"Field Unit 1",
             "Human Interface Panel":"Field Unit 1", 
             "Panel In Panel Position":1,
-            "Panel Display Name":"Samp Time"
+            "Panel Display Name":"Field Id"
         },
         {
             "Name": "SampleTime",
@@ -32,7 +32,7 @@
             "Panel Display Name":"Samp Time"
         },
         {
-            "Name": "capacitorvoltage",
+            "Name": "Capacitor Voltage",
             "Units":"Volts",
             "Value Type":"double",
             "Sensor Request Queue Position":3,
@@ -45,7 +45,7 @@
             "Panel Display Name":"Cap Voltage"
         },
         {
-            "Name": "ExternalBatterVoltage",
+            "Name": "External Battery Voltage",
             "Units":"Volts",
             "Value Type":"double",
             "Sensor Request Queue Position":4,
@@ -71,7 +71,7 @@
             "Panel Display Name":"Temperature"
         },
         {
-            "Name":"FenceVoltage",
+            "Name":"Fence Voltage",
             "Units":"Volts",
             "Value Type":"double",
             "Sensor Request Queue Position":6,
