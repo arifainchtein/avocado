@@ -1,0 +1,8 @@
+{
+    "Containers": [],
+    "HomeBoxDefinitions": {
+        "Human Interface": [
+            "HumanInterfacePages.hud"
+        ]
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "Homeobox Definition Type":"AquaBubblerTelepathon",
+    "Homeobox Name":"AquaBubbler1",
+    "Action Group Name":"AquaBubbler1",
+    "Provider":"https://www.aquabubbler.com.au",
+    "Processing Queue Position":1,
+    "Client Name":"Aquabubbler",
+    "Location Description":"Digital Stables Workshop",
+    "Latitud":-37,
+    "Longitud":141,
+    "Communication Protocol":"XBee",
+    "RTC":"GravityRtc",
+    "Storage":"SD Card", 
+    "Display":"No Display",
+    "Sensors":[
+        {
+            "Name":"XBeePowerStatusStructValues.hsd",
+            "Type":"Power Status"
+        },
+        {
+            "Name":"SGP30.hsd",
+            "Type":"Air Quality"
+        },
+        {
+            "Name":"Aquabubbler1FlowSensorNetwork.hsd",
+            "Type":"Flow Sensors"
+        }
+    ]
+
+}
+  

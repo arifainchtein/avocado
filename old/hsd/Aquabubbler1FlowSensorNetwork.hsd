@@ -1,0 +1,70 @@
+{
+    "Homeobox Definition Type":"FlowSensorNetwork",
+    "Homeobox Name":"AquaBubbler FlowSensorNetwork",
+    "Action Group Name":"AquaBubbler1s",
+    "Provider":"https://www.digitalstables.com",
+    "With Distribution Point":true,
+    "Sample Frequency Milliseconds":1000,
+    "FlowMeters":[
+    {
+         "Name":"Input",
+         "Position":0,
+         "Capacity":20,
+         "Capacity Units":"l/m",
+         "kFactor":4.5,
+         "Diameter":12,
+         "Pin":9,
+         "Diameter Units":"mm"
+     },
+     {
+        "Name":"First",
+        "Position":1,
+        "Capacity":20,
+        "Capacity Units":"l/m",
+        "kFactor":4.5,
+        "Diameter":12,
+        "Pin":8,
+        "Diameter Units":"mm"
+    },
+    {
+        "Name":"Second",
+        "Position":2,
+        "Capacity":20,
+        "Capacity Units":"l/m",
+        "kFactor":4.5,
+        "Diameter":12,
+        "Pin":7,
+        "Diameter Units":"mm"
+    },
+    {
+        "Name":"Third",
+        "Position":3,
+        "Capacity":20,
+        "Capacity Units":"l/m",
+        "kFactor":4.5,
+        "Diameter":12,
+        "Pin":6,
+        "Diameter Units":"mm"
+    },
+    {
+        "Name":"Fourth",
+        "Position":4,
+        "Capacity":20,
+        "Capacity Units":"l/m",
+        "kFactor":4.5,
+        "Diameter":12,
+        "Pin":46,
+        "Diameter Units":"mm"
+    },
+    {
+        "Name":"Waste",
+        "Position":5,
+        "Capacity":20,
+        "Capacity Units":"l/m",
+        "kFactor":4.5,
+        "Diameter":12,
+        "Pin":45,
+        "Diameter Units":"mm"
+    },
+    ]
+}

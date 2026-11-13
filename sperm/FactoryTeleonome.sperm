@@ -1,0 +1,70 @@
+{
+ "Sperm": {
+  "Purpose": {
+   "Teleonome Name": "Factory",
+   "Purpose Type": "Mutate",
+   "Description": "2026-11-13: what the Egg needs to run on factory2 as the Factory Teleonome. Fertilized into the Egg after Birth has named it Factory. Identity Mode Self, not Organism: in Organism every pulse pings the default gateway and reboots the machine when it does not answer (PulseThread), which must never happen to the factory server (and the Factory runs as user teleonome, without sudo, so it could not anyway). Self does not stop it hearing the other Teleonomes: that only needs a local network address. ~/Teleonome/InitOperationalMode holds Self too, so the Denome and the machine agree. Persist Organism Pulse True: the Factory stores the pulses it hears from the other Teleonomes (organismpulse), which is what it is for."
+  },
+  "Hypothalamus": {
+   "Actions": [
+    {
+     "Name": "Identity Mode Self",
+     "Dene Type": "Update DeneWord",
+     "DeneWords": [
+      {
+       "Name": "Execution Position",
+       "Value": 1,
+       "Value Type": "int",
+       "Required": true
+      },
+      {
+       "Name": "Execution Point",
+       "Value": "Post Homebox Insertion",
+       "Value Type": "String",
+       "Required": true
+      },
+      {
+       "Name": "DeneWords Update List",
+       "Value": "@Sperm:Hypothalamus:Identity Mode Self List",
+       "Value Type": "Dene Pointer",
+       "Required": true
+      }
+     ]
+    },
+    {
+     "Name": "Identity Mode Self List",
+     "DeneWords": [
+      {
+       "Name": "Update DeneWord",
+       "Target": "@Egg:Purpose:Operational Data:Vital:Initial Identity Mode",
+       "Value": "Self",
+       "Value Type": "String",
+       "Required": true
+      },
+      {
+       "Name": "Update DeneWord",
+       "Target": "@Egg:Purpose:Operational Data:Vital:Current Identity Mode",
+       "Value": "Self",
+       "Value Type": "String",
+       "Required": true
+      },
+      {
+       "Name": "Update DeneWord",
+       "Target": "@Egg:Internal:Descriptive:Vital:Persist Organism Pulse",
+       "Value": true,
+       "Value Type": "boolean",
+       "Required": true
+      }
+     ]
+    }
+   ],
+   "Homeoboxes": [],
+   "Mutations": []
+  },
+  "Medula": {
+   "Mutations": [
+    {}
+   ]
+  }
+ }
+}

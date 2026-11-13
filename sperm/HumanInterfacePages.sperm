@@ -1,0 +1,370 @@
+{"Sperm": {
+    "Purpose": {
+        "Teleonome Name": "HumanInterfacePages",
+        "Description": "",
+        "Purpose Type": "Mutate"
+    },
+    "Hypothalamus": {
+        "Mutations": [],
+        "Actions": [
+            {
+                "Target": "@Egg:Human Interface",
+                "Dene Type": "Create Dene Chain",
+                "DeneWords": [
+                    {
+                        "Required": true,
+                        "Value": true,
+                        "Name": "Active",
+                        "Value Type": "boolean"
+                    },
+                    {
+                        "Required": true,
+                        "Value": 1,
+                        "Name": "Execution Position",
+                        "Value Type": "int"
+                    },
+                    {
+                        "Required": true,
+                        "Value": "Pre Homebox Insertion",
+                        "Name": "Execution Point",
+                        "Value Type": "int"
+                    },
+                    {
+                        "Required": true,
+                        "Value": "Home Page Pills",
+                        "Name": "DeneChain Name",
+                        "Value Type": "String"
+                    }
+                ],
+                "Name": "Create Home Page Pills DeneChain"
+            },
+            {
+                "Target": "@Egg:Mutations",
+                "Dene Type": "Create Mutation",
+                "DeneWords": [
+                    {
+                        "Required": true,
+                        "Value": true,
+                        "Name": "Active",
+                        "Value Type": "boolean"
+                    },
+                    {
+                        "Required": true,
+                        "Value": 2,
+                        "Name": "Execution Position",
+                        "Value Type": "int"
+                    },
+                    {
+                        "Required": true,
+                        "Value": "Pre Homebox Insertion",
+                        "Name": "Execution Point",
+                        "Value Type": "int"
+                    },
+                    {
+                        "Required": true,
+                        "Value": "Create Human Interface Page",
+                        "Name": "Mutation Name",
+                        "Value Type": "String"
+                    },
+                    {
+                        "Required": true,
+                        "Value": "State",
+                        "Name": "Mutation Type",
+                        "Value Type": "String"
+                    },
+                    {
+                        "Required": true,
+                        "Value": "Immediate",
+                        "Name": "Execution Mode",
+                        "Value Type": "String"
+                    }
+                ],
+                "Name": "Create Human Interface Page"
+            },
+            {
+                "Target": "@Egg:Mutations",
+                "Dene Type": "Create Mutation",
+                "DeneWords": [
+                    {
+                        "Required": true,
+                        "Value": true,
+                        "Name": "Active",
+                        "Value Type": "boolean"
+                    },
+                    {
+                        "Required": true,
+                        "Value": 3,
+                        "Name": "Execution Position",
+                        "Value Type": "int"
+                    },
+                    {
+                        "Required": true,
+                        "Value": "Pre Homebox Insertion",
+                        "Name": "Execution Point",
+                        "Value Type": "int"
+                    },
+                    {
+                        "Required": true,
+                        "Value": "Update Human Interface Page",
+                        "Name": "Mutation Name",
+                        "Value Type": "String"
+                    },
+                    {
+                        "Required": true,
+                        "Value": "State",
+                        "Name": "Mutation Type",
+                        "Value Type": "String"
+                    },
+                    {
+                        "Required": true,
+                        "Value": "Immediate",
+                        "Name": "Execution Mode",
+                        "Value Type": "String"
+                    }
+                ],
+                "Name": "Update Human Interface Page"
+            },
+            {
+                "Target": "@Egg:Mutations",
+                "Dene Type": "Create Mutation",
+                "DeneWords": [
+                    {
+                        "Required": true,
+                        "Value": true,
+                        "Name": "Active",
+                        "Value Type": "boolean"
+                    },
+                    {
+                        "Required": true,
+                        "Value": 4,
+                        "Name": "Execution Position",
+                        "Value Type": "int"
+                    },
+                    {
+                        "Required": true,
+                        "Value": "Pre Homebox Insertion",
+                        "Name": "Execution Point",
+                        "Value Type": "int"
+                    },
+                    {
+                        "Required": true,
+                        "Value": "Delete Human Interface Page",
+                        "Name": "Mutation Name",
+                        "Value Type": "String"
+                    },
+                    {
+                        "Required": true,
+                        "Value": "State",
+                        "Name": "Mutation Type",
+                        "Value Type": "String"
+                    },
+                    {
+                        "Required": true,
+                        "Value": "Immediate",
+                        "Name": "Execution Mode",
+                        "Value Type": "String"
+                    }
+                ],
+                "Name": "Delete Human Interface Page"
+            }
+        ],
+        "Homeoboxes": [{
+            "Denes": [
+                {
+                    "Target": "",
+                    "Dene Type": "HomeoBox Metadata",
+                    "DeneWords": [
+                        {
+                            "Required": true,
+                            "Value": "10112026_0735",
+                            "Name": "Created On",
+                            "Value Type": "Dene Pointer"
+                        },
+                        {
+                            "Required": true,
+                            "Value": "A row of pills on the Home Page (the map of the devices, then the pages a person makes, then + New tab), and the mutations that let the web page create, change and delete those pages",
+                            "Name": "Description",
+                            "Value Type": "String"
+                        }
+                    ],
+                    "Name": "Meta Data"
+                },
+                {
+                    "Target": "@Egg:Create Human Interface Page:Mutation Configuration",
+                    "DeneWords": [{
+                        "Required": true,
+                        "Value": "Human Interface",
+                        "Name": "Allowed Payload Nucleus",
+                        "Value Type": "String"
+                    }],
+                    "Name": "Create Human Interface Page Payload Configuration"
+                },
+                {
+                    "Target": "@Egg:Update Human Interface Page:Mutation Configuration",
+                    "DeneWords": [{
+                        "Required": true,
+                        "Value": "Human Interface",
+                        "Name": "Allowed Payload Nucleus",
+                        "Value Type": "String"
+                    }],
+                    "Name": "Update Human Interface Page Payload Configuration"
+                },
+                {
+                    "Target": "@Egg:Delete Human Interface Page:Mutation Configuration",
+                    "DeneWords": [{
+                        "Required": true,
+                        "Value": "Human Interface",
+                        "Name": "Allowed Payload Nucleus",
+                        "Value Type": "String"
+                    }],
+                    "Name": "Delete Human Interface Page Payload Configuration"
+                },
+                {
+                    "Target": "@Egg:Human Interface:Home Page",
+                    "DeneWords": [
+                        {
+                            "Required": true,
+                            "DeneWord Type": "Panel DeneChain Pointer",
+                            "Value": "@Egg:Human Interface:Home Page Pills",
+                            "Name": "Pills Panel Pointer",
+                            "Value Type": "Dene Pointer"
+                        },
+                        {
+                            "Required": true,
+                            "DeneWord Type": "Panel Visualization Style",
+                            "Value": "Home Page Pills",
+                            "Name": "Pills Panel Style",
+                            "Value Type": "String"
+                        },
+                        {
+                            "Required": true,
+                            "DeneWord Type": "Panel In Page Position",
+                            "Value": 3,
+                            "Name": "Panel In Page Position",
+                            "Value Type": "int"
+                        },
+                        {
+                            "Required": true,
+                            "Value": true,
+                            "Name": "Visible",
+                            "Value Type": "boolean"
+                        }
+                    ],
+                    "Name": "Home Page Pills Panel"
+                },
+                {
+                    "Target": "@Egg:Human Interface:Home Page Pills",
+                    "Dene Type": "Built In Pill",
+                    "DeneWords": [
+                        {
+                            "Required": true,
+                            "Value": "Map",
+                            "Name": "Pill Name",
+                            "Value Type": "String"
+                        },
+                        {
+                            "Required": true,
+                            "Value": 1,
+                            "Name": "Pill Position",
+                            "Value Type": "int"
+                        },
+                        {
+                            "Required": true,
+                            "Value": "Telepathon Map",
+                            "Name": "Pill View",
+                            "Value Type": "String"
+                        },
+                        {
+                            "Required": true,
+                            "Value": true,
+                            "Name": "Visible",
+                            "Value Type": "boolean"
+                        }
+                    ],
+                    "Name": "Map"
+                },
+                {
+                    "Target": "@Egg:Human Interface:Home Page Pills",
+                    "DeneWords": [
+                        {
+                            "Required": true,
+                            "Value": true,
+                            "Name": "Allow New Pages",
+                            "Value Type": "boolean"
+                        },
+                        {
+                            "Required": true,
+                            "Value": "Create Human Interface Page",
+                            "Name": "Create Mutation",
+                            "Value Type": "String"
+                        },
+                        {
+                            "Required": true,
+                            "Value": "Update Human Interface Page",
+                            "Name": "Update Mutation",
+                            "Value Type": "String"
+                        },
+                        {
+                            "Required": true,
+                            "Value": "Delete Human Interface Page",
+                            "Name": "Delete Mutation",
+                            "Value Type": "String"
+                        }
+                    ],
+                    "Name": "Pill Settings"
+                },
+                {
+                    "Target": "",
+                    "Dene Type": "Homeobox Index",
+                    "DeneWords": [
+                        {
+                            "Required": true,
+                            "DeneWord Type": "Hox Dene Pointer",
+                            "Value": "@Sperm:Hypothalamus:Human Interface Pages:Create Human Interface Page Payload Configuration",
+                            "Name": "Create Human Interface Page Payload Configuration",
+                            "Value Type": "Dene Pointer"
+                        },
+                        {
+                            "Required": true,
+                            "DeneWord Type": "Hox Dene Pointer",
+                            "Value": "@Sperm:Hypothalamus:Human Interface Pages:Update Human Interface Page Payload Configuration",
+                            "Name": "Update Human Interface Page Payload Configuration",
+                            "Value Type": "Dene Pointer"
+                        },
+                        {
+                            "Required": true,
+                            "DeneWord Type": "Hox Dene Pointer",
+                            "Value": "@Sperm:Hypothalamus:Human Interface Pages:Delete Human Interface Page Payload Configuration",
+                            "Name": "Delete Human Interface Page Payload Configuration",
+                            "Value Type": "Dene Pointer"
+                        },
+                        {
+                            "Required": true,
+                            "DeneWord Type": "Hox Dene Pointer",
+                            "Value": "@Sperm:Hypothalamus:Human Interface Pages:Home Page Pills Panel",
+                            "Name": "Home Page Pills Panel",
+                            "Value Type": "Dene Pointer"
+                        },
+                        {
+                            "Required": true,
+                            "DeneWord Type": "Hox Dene Pointer",
+                            "Value": "@Sperm:Hypothalamus:Human Interface Pages:Map",
+                            "Name": "Map",
+                            "Value Type": "Dene Pointer"
+                        },
+                        {
+                            "Required": true,
+                            "DeneWord Type": "Hox Dene Pointer",
+                            "Value": "@Sperm:Hypothalamus:Human Interface Pages:Pill Settings",
+                            "Name": "Pill Settings",
+                            "Value Type": "Dene Pointer"
+                        }
+                    ],
+                    "Name": "Homeobox Index"
+                }
+            ],
+            "Name": "Human Interface Pages"
+        }]
+    },
+    "Medula": {"Mutations": [{}]}
+}}

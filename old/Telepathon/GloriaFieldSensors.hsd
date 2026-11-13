@@ -1,0 +1,147 @@
+{
+    "Homeobox Definition Type":"Sensor",
+    "Homeobox Name":"Gloria Field Sensor Values",
+    "Sensor Name":"Gloria Field Sensor Values",
+    "Microcontroller Pointer":"@Egg:Internal:Components:Mother Microcontroller",
+    "Provider":"https://www.digitalstables.com",
+    "Port":"Internal",
+    "Hardware":
+    [
+        {
+            "Sensors":
+            [
+                {
+                    "Name":"Voltage",
+                    "Type":"Calculation",
+                    "Values":["Voltage"]
+                },
+                {
+                    "Name":"Temperature",
+                    "Type":"Sensor",
+                    "Pin":"A0",
+                    "Values":["Temperature"]
+                },
+                {
+                    "Name":"Tank Height",
+                    "Pin":"A1",
+                    "Values":["TankHeight"]
+                },
+                {
+                    "Name":"Flow Network",
+                    "Type":"Flow Network",
+                    "Configuration":    
+                        {
+                            "Distribution Point":false,
+                            "Central Waste":false,
+                            "Sensors":
+                            [
+                                {
+                                    "Name":"Flow Meter 1",
+                                    "Pin":"2",
+                                    "QFactor":1.5,
+                                    "Values":["FlowMeter1"]
+                                },
+                                {
+                                    "Name":"Flow Meter 2",
+                                    "Pin":"10",
+                                    "QFactor":1.5,
+                                    "Values":["FlowMeter2"]
+                                }
+                            ]
+                        }
+                },
+            ],
+        }
+     ],
+    "Values":[
+        {
+            "Name":"TankHeight",
+            "Units":"mm",
+            "Value Type":"double",
+            "Range Maximum":10000,
+            "Range Minimum":0,
+            "Initial Value":0,
+            "Reporting Value Dene Name":"Tank Height",
+            "Human Interface Panel":"Sensors" ,
+            "Panel Display Name":"Tank"
+        },
+        {
+            "Name":"FlowMeter1",
+            "Units":"l/min",
+            "Value Type":"double",
+            "Range Maximum":120,
+            "Range Minimum":0,
+            "Initial Value":0,
+            "Reporting Value Dene Name":"Flow 1",
+            "Human Interface Panel":"Sensors" ,
+             "Panel Display Name":"Flow 1"
+        },
+        {
+            "Name":"Volume1",
+            "Units":"l",
+            "Value Type":"double",
+            "Range Maximum":120000,
+            "Range Minimum":0,
+            "Initial Value":0,
+            "Reporting Value Dene Name":"Volume 1",
+            "Human Interface Panel":"Sensors" ,
+            "Panel Display Name":"Volume 1"
+        },
+        {
+            "Name":"FlowMeter2",
+            "Units":"l/min",
+            "Value Type":"double",
+            "Range Maximum":120,
+            "Range Minimum":0,
+            "Initial Value":0,
+            "Reporting Value Dene Name":"Flow 2",
+            "Human Interface Panel":"Sensors" ,
+            "Panel Display Name":"Flow 2"
+        },
+        {
+            "Name":"Volume2",
+            "Units":"l",
+            "Value Type":"double",
+            "Range Maximum":120000,
+            "Range Minimum":0,
+            "Initial Value":0,
+            "Reporting Value Dene Name":"Volume 2",
+            "Human Interface Panel":"Sensors" ,
+            "Panel Display Name":"Volume 2"
+        },
+        {
+            "Name":"Temperature",
+            "Units":"l",
+            "Value Type":"double",
+            "Range Maximum":60,
+            "Range Minimum":-20,
+            "Initial Value":0,
+            "Reporting Value Dene Name":"Temp",
+            "Human Interface Panel":"Sensors" ,
+            "Panel Display Name":"Temperature"
+        },
+        {
+            "Name":"Voltage",
+            "Units":"V",
+            "Value Type":"double",
+            "Range Maximum":8,
+            "Range Minimum":0,
+            "Initial Value":0,
+            "Reporting Value Dene Name":"Cap Voltage",
+            "Human Interface Panel":"Sensors" ,
+            "Panel Display Name":"Capacitor Voltage"
+        },
+        {
+            "Name":"Relay State",
+            "Units":"",
+            "Value Type":"int",
+            "Initial Value":0,
+            "Reporting Value Dene Name":"Relay",
+            "Human Interface Panel":"Sensors" ,
+            "Panel Display Name":"Relay"
+        }
+    ]
+}
+
+
+

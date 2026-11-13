@@ -30,7 +30,7 @@
     "Hardware":{},
     "Configurable":[
         {
-            "Name": "Processing Queue Position",
+            "Name": "Software:Processing Queue Position",
             "Value Type": "int",
             "Automatic Generated":true,
             "Required":true

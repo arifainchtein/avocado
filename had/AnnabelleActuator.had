@@ -1,0 +1,11 @@
+{
+    "Homeobox Definition Type": "Actuator",
+    "Homeobox Name": "Annabelle Actuator",
+    "Display Name": "Annabelle actuator",
+    "Description": "Sends commands to Annabelle's ESP32; the device types and telepathon support add their actions to its list",
+    "Category": "Actuators",
+    "Requires": ["Annabelle.mcu"],
+    "Actuator Name": "Annabelle Actuator",
+    "Microcontroller Pointer": "@Egg:Internal:Components:Annabelle MicroController",
+    "Execution Position": 1
+}

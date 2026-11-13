@@ -1,0 +1,24 @@
+{
+    "Homeobox Definition Type": "MicroController",
+    "Homeobox Name": "Annabelle MicroController",
+    "Display Name": "Annabelle",
+    "Description": "Annabelle's ESP32 on the Pi's serial port: the readings of the devices she hears over LoRa come in through it",
+    "Category": "Microcontrollers",
+    "Requires": [],
+    "Component Name": "Annabelle MicroController",
+    "Class": "com.teleonome.framework.microcontroller.annabellemicrocontroller.AnnabelleController",
+    "Is Mother": false,
+    "Software": {
+        "Processing Queue Position": 1,
+        "Async Request Delay Millis": 3000,
+        "Async Execution Mode": "Continuous",
+        "Parameters": [
+            { "Name": "Serial Data Rate", "Value": 115200, "Value Type": "int" }
+        ]
+    },
+    "Configurable": [
+        { "Name": "Software:Processing Queue Position", "Value Type": "int", "Required": true, "Default": 1 },
+        { "Name": "Software:Async Request Delay Millis", "Value Type": "int", "Required": true, "Default": 3000 },
+        { "Name": "Software:Parameters:Serial Data Rate", "Value Type": "int", "Required": true, "Default": 115200 }
+    ]
+}

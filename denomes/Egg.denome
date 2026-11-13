@@ -829,6 +829,18 @@
                                         "Value": "success",
                                         "Name": "Operational Status Bootstrap Equivalent",
                                         "Value Type": "String"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": false,
+                                        "Name": "Persist Pulse",
+                                        "Value Type": "boolean"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": false,
+                                        "Name": "Persist Organism Pulse",
+                                        "Value Type": "boolean"
                                     }
                                 ],
                                 "Name": "Vital"
@@ -903,312 +915,15 @@
                                 "Name": "Constants"
                             },
                             {
-                                "DeneWords": [
-                                    {
-                                        "Required": true,
-                                        "Value": " 0",
-                                        "Name": "processor\t",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": " ARMv7 Processor rev 4 (v7l)",
-                                        "Name": "model name\t",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": " 76.80",
-                                        "Name": "BogoMIPS\t",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": " half thumb fastmult vfp edsp neon vfpv3 tls vfpv4 idiva idivt vfpd32 lpae evtstrm crc32 ",
-                                        "Name": "Features\t",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": " 0x41",
-                                        "Name": "CPU implementer\t",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": " 7",
-                                        "Name": "CPU architecture",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": " 0x0",
-                                        "Name": "CPU variant\t",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": " 0xd03",
-                                        "Name": "CPU part\t",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": " 4",
-                                        "Name": "CPU revision\t",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": " 1",
-                                        "Name": "processor\t",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": " ARMv7 Processor rev 4 (v7l)",
-                                        "Name": "model name\t",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": " 76.80",
-                                        "Name": "BogoMIPS\t",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": " half thumb fastmult vfp edsp neon vfpv3 tls vfpv4 idiva idivt vfpd32 lpae evtstrm crc32 ",
-                                        "Name": "Features\t",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": " 0x41",
-                                        "Name": "CPU implementer\t",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": " 7",
-                                        "Name": "CPU architecture",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": " 0x0",
-                                        "Name": "CPU variant\t",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": " 0xd03",
-                                        "Name": "CPU part\t",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": " 4",
-                                        "Name": "CPU revision\t",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": " 2",
-                                        "Name": "processor\t",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": " ARMv7 Processor rev 4 (v7l)",
-                                        "Name": "model name\t",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": " 76.80",
-                                        "Name": "BogoMIPS\t",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": " half thumb fastmult vfp edsp neon vfpv3 tls vfpv4 idiva idivt vfpd32 lpae evtstrm crc32 ",
-                                        "Name": "Features\t",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": " 0x41",
-                                        "Name": "CPU implementer\t",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": " 7",
-                                        "Name": "CPU architecture",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": " 0x0",
-                                        "Name": "CPU variant\t",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": " 0xd03",
-                                        "Name": "CPU part\t",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": " 4",
-                                        "Name": "CPU revision\t",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": " 3",
-                                        "Name": "processor\t",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": " ARMv7 Processor rev 4 (v7l)",
-                                        "Name": "model name\t",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": " 76.80",
-                                        "Name": "BogoMIPS\t",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": " half thumb fastmult vfp edsp neon vfpv3 tls vfpv4 idiva idivt vfpd32 lpae evtstrm crc32 ",
-                                        "Name": "Features\t",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": " 0x41",
-                                        "Name": "CPU implementer\t",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": " 7",
-                                        "Name": "CPU architecture",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": " 0x0",
-                                        "Name": "CPU variant\t",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": " 0xd03",
-                                        "Name": "CPU part\t",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": " 4",
-                                        "Name": "CPU revision\t",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": " BCM2709",
-                                        "Name": "Hardware\t",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": " a22082",
-                                        "Name": "Revision\t",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": " 00000000f68182fe",
-                                        "Name": "Serial\t\t",
-                                        "Value Type": "String"
-                                    }
-                                ],
+                                "DeneWords": [],
                                 "Name": "Processor Info"
                             },
                             {
-                                "DeneWords": [
-                                    {
-                                        "Required": true,
-                                        "Value": " ID 0d62:1000 Darfon Electronics Corp. ",
-                                        "Name": "Bus 001 Device 006",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": " ID 2a03:0043  ",
-                                        "Name": "Bus 001 Device 005",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": " ID 400c:107a  ",
-                                        "Name": "Bus 001 Device 004",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": " ID 0424:ec00 Standard Microsystems Corp. SMSC9512/9514 Fast Ethernet Adapter",
-                                        "Name": "Bus 001 Device 003",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": " ID 0424:9514 Standard Microsystems Corp. ",
-                                        "Name": "Bus 001 Device 002",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": " ID 1d6b:0002 Linux Foundation 2.0 root hub",
-                                        "Name": "Bus 001 Device 001",
-                                        "Value Type": "String"
-                                    }
-                                ],
+                                "DeneWords": [],
                                 "Name": "USB Devices"
                             },
                             {
-                                "DeneWords": [
-                                    {
-                                        "Required": true,
-                                        "Value": "Linux Egg 4.1.19-v7+ #858 SMP Tue Mar 15 15:56:00 GMT 2016 armv7l GNU/Linux",
-                                        "Name": "uname info",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "\tRaspbian",
-                                        "Name": "Distributor ID",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "\tjessie",
-                                        "Name": "Codename",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "Raspberry Pi 3 Model B",
-                                        "Name": "Computer Model",
-                                        "Value Type": "String"
-                                    }
-                                ],
+                                "DeneWords": [],
                                 "Name": "Computer Info"
                             }
                         ],
@@ -1235,45 +950,43 @@
                         "Name": "Organism Configuration"
                     },
                     {
-                        "Denes": [
-                            {
-                                "Dene Type": "Microcontroller",
-                                "DeneWords": [
-                                    {
-                                        "Required": true,
-                                        "Value": 1,
-                                        "Value Type": "int",
-                                        "Name": "Processing Queue Position"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": true,
-                                        "Name": "Mother Microcontroller",
-                                        "Value Type": "boolean"
-                                    },
-                                    {
-                                        "DeneWord Type": "Microcontroller Processing Class Name",
-                                        "Required": true,
-                                        "Value": "com.teleonome.framework.microcontroller.SimpleMicroController",
-                                        "Value Type": "String",
-                                        "Name": "Simple Microcontroller Processing Class Name"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "SimpleMicroController",
-                                        "Name": "Codon",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": false,
-                                        "Value": "http://www.digitalstables.com",
-                                        "Name": "SKU URL",
-                                        "Value Type": "String"
-                                    }
-                                ],
-                                "Name": "Simple Micro Controller"
-                            }
-                        ],
+                        "Denes": [{
+                            "Dene Type": "Microcontroller",
+                            "DeneWords": [
+                                {
+                                    "Required": true,
+                                    "Value": 1,
+                                    "Value Type": "int",
+                                    "Name": "Processing Queue Position"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": true,
+                                    "Name": "Mother Microcontroller",
+                                    "Value Type": "boolean"
+                                },
+                                {
+                                    "DeneWord Type": "Microcontroller Processing Class Name",
+                                    "Required": true,
+                                    "Value": "com.teleonome.framework.microcontroller.SimpleMicroController",
+                                    "Value Type": "String",
+                                    "Name": "Simple Microcontroller Processing Class Name"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": "SimpleMicroController",
+                                    "Name": "Codon",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": false,
+                                    "Value": "http://www.digitalstables.com",
+                                    "Name": "SKU URL",
+                                    "Value Type": "String"
+                                }
+                            ],
+                            "Name": "Simple Micro Controller"
+                        }],
                         "Name": "Components"
                     },
                     {
@@ -1888,15 +1601,13 @@
                                 "Name": "Create Daily Partitions"
                             },
                             {
-                                "DeneWords": [
-                                    {
-                                        "Target": "@Egg:Internal:Actuators:Create Daily Partitions:Active",
-                                        "DeneWord Type": "Update DeneWord Value",
-                                        "Value": false,
-                                        "Name": "Set Active",
-                                        "Value Type": "Dene Pointer"
-                                    }
-                                ],
+                                "DeneWords": [{
+                                    "Target": "@Egg:Internal:Actuators:Create Daily Partitions:Active",
+                                    "DeneWord Type": "Update DeneWord Value",
+                                    "Value": false,
+                                    "Name": "Set Active",
+                                    "Value Type": "Dene Pointer"
+                                }],
                                 "Name": "Create Daily Partitions Action Success Tasks"
                             },
                             {
@@ -2267,9 +1978,91 @@
                             }
                         ],
                         "Name": "Actuators"
+                    },
+                    {
+                        "Denes": [
+                            {
+                                "DeneWords": [{
+                                    "Required": true,
+                                    "Value": "@Egg:Mnemosyne:Mnemosyne Today",
+                                    "Name": "Hippocampus Pathology Mnemosyne Location",
+                                    "Value Type": "Dene Pointer"
+                                }],
+                                "Name": "Pathology"
+                            },
+                            {
+                                "DeneWords": [
+                                    {
+                                        "Required": true,
+                                        "Value": 300000,
+                                        "Name": "Global Limit",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": 270000,
+                                        "Name": "Warning Threshold",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": true,
+                                        "Name": "Preload Data",
+                                        "Value Type": "boolean"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": 24,
+                                        "Name": "Preload Hours",
+                                        "Value Type": "int"
+                                    }
+                                ],
+                                "Name": "Configuration"
+                            },
+                            {
+                                "DeneWords": [],
+                                "Name": "Data"
+                            }
+                        ],
+                        "Name": "Hippocampus"
+                    },
+                    {
+                        "Denes": [
+                            {
+                                "DeneWords": [{
+                                    "Required": true,
+                                    "Value": "@Egg:Mnemosyne:Mnemosyne Today",
+                                    "Name": "Cerebellum Pathology Mnemosyne Location",
+                                    "Value Type": "Dene Pointer"
+                                }],
+                                "Name": "Pathology"
+                            },
+                            {
+                                "DeneWords": [
+                                    {
+                                        "Required": true,
+                                        "Value": 7,
+                                        "Name": "Days in Temporary List",
+                                        "Value Type": "int"
+                                    },
+                                    {
+                                        "Required": true,
+                                        "Value": 3,
+                                        "Name": "Promotion Threshold",
+                                        "Value Type": "int"
+                                    }
+                                ],
+                                "Name": "Configuration"
+                            }
+                        ],
+                        "Name": "Cerebellum"
                     }
                 ],
                 "Name": "Internal"
+            },
+            {
+                "DeneChains": [],
+                "Name": "Telepathons"
             },
             {
                 "DeneChains": [
@@ -2303,19 +2096,19 @@
                                     },
                                     {
                                         "Required": true,
-                                        "Value": 27645,
+                                        "Value": 0,
                                         "Name": "Current Pulse Generation Duration",
                                         "Value Type": "int"
                                     },
                                     {
                                         "Required": true,
-                                        "Value": " OK 17:53",
+                                        "Value": "",
                                         "Name": "Status",
                                         "Value Type": "String"
                                     },
                                     {
                                         "Required": true,
-                                        "Value": "Pulse: 27",
+                                        "Value": "",
                                         "Name": "Alert Message",
                                         "Value Type": "String"
                                     },
@@ -2351,7 +2144,7 @@
                                     },
                                     {
                                         "Required": true,
-                                        "Value": 1,
+                                        "Value": 0,
                                         "Name": "Number of Alert Messages",
                                         "Value Type": "int"
                                     },
@@ -2368,662 +2161,116 @@
                                 "DeneWords": [
                                     {
                                         "Required": true,
-                                        "Value": "top - 17:53:03 ",
-                                        "Name": "Time",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": " 4 min",
-                                        "Name": "Up Time",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "0.41",
-                                        "Name": "Load Average 1 Minute",
-                                        "Value Type": "double"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "0.23",
-                                        "Name": "Load Average 5 Minute",
-                                        "Value Type": "double"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "0.1",
-                                        "Name": "Load Average 15 Minute",
-                                        "Value Type": "double"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "4.7",
-                                        "Units": "%",
-                                        "Name": "CPU Usage As Percent By User",
-                                        "Value Type": "double"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "1.8",
-                                        "Units": "%",
-                                        "Name": "CPU Usage As Percent By System",
-                                        "Value Type": "double"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "0.0",
-                                        "Units": "%",
-                                        "Name": "CPU Usage As Percent By Low Priority Services",
-                                        "Value Type": "double"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "90.5",
-                                        "Units": "%",
-                                        "Name": "CPU Usage As Percent By Idle Process",
-                                        "Value Type": "double"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "2.9",
-                                        "Units": "%",
-                                        "Name": "CPU Usage As Percent By IOWait",
-                                        "Value Type": "double"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "0.0",
-                                        "Units": "%",
-                                        "Name": "CPU Usage As Percent By Hardware Interrupt",
-                                        "Value Type": "double"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "0.1",
-                                        "Units": "%",
-                                        "Name": "Cpu Usage As Percent By Software Interrupts",
-                                        "Value Type": "double"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "0.0",
-                                        "Units": "%",
-                                        "Name": "CPU Usage As Percent By Steal Time",
-                                        "Value Type": "double"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "948012.0",
-                                        "Units": "Kb",
-                                        "Name": "Total System Memory",
-                                        "Value Type": "double"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "346152.0",
-                                        "Units": "Kb",
-                                        "Name": "Free System Memory",
-                                        "Value Type": "double"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "601860.0",
-                                        "Units": "Kb",
-                                        "Name": "Memory Used",
-                                        "Value Type": "double"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "10256.0",
-                                        "Units": "Kb",
-                                        "Name": "Buffer Cache",
-                                        "Value Type": "double"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "102396.0",
-                                        "Units": "Kb",
-                                        "Name": "Total Swap Available",
-                                        "Value Type": "double"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "0.0",
-                                        "Units": "Kb",
-                                        "Name": "Total Swap Used",
-                                        "Value Type": "double"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "102396.0",
-                                        "Units": "Kb",
-                                        "Name": "Total Swap Free",
-                                        "Value Type": "double"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "159736.0",
-                                        "Units": "Kb",
-                                        "Name": "Cached Memory",
-                                        "Value Type": "double"
-                                    }
-                                ],
-                                "Name": "Memory Status"
-                            },
-                            {
-                                "Dene Type": "Process Memory Info",
-                                "DeneWords": [
-                                    {
-                                        "Required": true,
-                                        "Value": "root",
-                                        "Name": "User",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "20",
-                                        "Name": "Priority",
-                                        "Value Type": "int"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "0",
-                                        "Name": "Nice Level",
-                                        "Value Type": ""
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "139716",
-                                        "Units": "Kb",
-                                        "Name": "Virtual Memory Used By Process",
-                                        "Value Type": "int"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "48388",
-                                        "Units": "Kb",
-                                        "Name": "Resident Memory Used By Process",
-                                        "Value Type": "int"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "10432",
-                                        "Units": "Kb",
-                                        "Name": "Shareable Memory",
-                                        "Value Type": "int"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "S",
-                                        "Units": "Kb",
-                                        "Name": "Current Status",
-                                        "Value Type": "int"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "6.6",
-                                        "Units": "Kb",
-                                        "Name": "CPU Used By Process As Percentage",
-                                        "Value Type": "double"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "0:05.84",
-                                        "Units": "Kb",
-                                        "Name": "Time Process Has Been Running",
-                                        "Value Type": "double"
-                                    }
-                                ],
-                                "Name": "Hypothalamus"
-                            },
-                            {
-                                "Dene Type": "Process Memory Info",
-                                "DeneWords": [
-                                    {
-                                        "Required": true,
-                                        "Value": "root",
-                                        "Name": "User",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "20",
-                                        "Name": "Priority",
-                                        "Value Type": "int"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "0",
-                                        "Name": "Nice Level",
-                                        "Value Type": ""
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "139080",
-                                        "Units": "Kb",
-                                        "Name": "Virtual Memory Used By Process",
-                                        "Value Type": "int"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "70436",
-                                        "Units": "Kb",
-                                        "Name": "Resident Memory Used By Process",
-                                        "Value Type": "int"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "10376",
-                                        "Units": "Kb",
-                                        "Name": "Shareable Memory",
-                                        "Value Type": "int"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "S",
-                                        "Units": "Kb",
-                                        "Name": "Current Status",
-                                        "Value Type": "int"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "0.0",
-                                        "Units": "Kb",
-                                        "Name": "CPU Used By Process As Percentage",
-                                        "Value Type": "double"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "0:13.18",
-                                        "Units": "Kb",
-                                        "Name": "Time Process Has Been Running",
-                                        "Value Type": "double"
-                                    }
-                                ],
-                                "Name": "Web Server"
-                            },
-                            {
-                                "Dene Type": "Process Memory Info",
-                                "DeneWords": [
-                                    {
-                                        "Required": true,
-                                        "Value": "root",
-                                        "Name": "User",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "20",
-                                        "Name": "Priority",
-                                        "Value Type": "int"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "0",
-                                        "Name": "Nice Level",
-                                        "Value Type": ""
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "131872",
-                                        "Units": "Kb",
-                                        "Name": "Virtual Memory Used By Process",
-                                        "Value Type": "int"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "38208",
-                                        "Units": "Kb",
-                                        "Name": "Resident Memory Used By Process",
-                                        "Value Type": "int"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "11304",
-                                        "Units": "Kb",
-                                        "Name": "Shareable Memory",
-                                        "Value Type": "int"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "S",
-                                        "Units": "Kb",
-                                        "Name": "Current Status",
-                                        "Value Type": "int"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "0.0",
-                                        "Units": "Kb",
-                                        "Name": "CPU Used By Process As Percentage",
-                                        "Value Type": "double"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "0:12.28",
-                                        "Units": "Kb",
-                                        "Name": "Time Process Has Been Running",
-                                        "Value Type": "double"
-                                    }
-                                ],
-                                "Name": "Heart"
-                            },
-                            {
-                                "DeneWords": [
-                                    {
-                                        "Required": true,
-                                        "Value": "7492",
+                                        "Value": 0,
                                         "Units": "MB",
                                         "Name": "Total Space",
                                         "Value Type": "double"
                                     },
                                     {
                                         "Required": true,
-                                        "Value": "4311",
+                                        "Value": 0,
                                         "Units": "MB",
                                         "Name": "Free Space",
                                         "Value Type": "double"
                                     },
                                     {
                                         "Required": true,
-                                        "Value": "3983",
+                                        "Value": 0,
                                         "Units": "MB",
                                         "Name": "Usable Space",
                                         "Value Type": "double"
                                     },
                                     {
                                         "Required": true,
-                                        "Value": "13.0",
+                                        "Value": 0,
                                         "Units": "MB",
                                         "Name": "Available Memory",
                                         "Value Type": "double"
                                     },
                                     {
                                         "Required": true,
-                                        "Value": "49.0",
+                                        "Value": 0,
                                         "Units": "MB",
                                         "Name": "Maximum Memory",
                                         "Value Type": "double"
                                     },
                                     {
                                         "Required": true,
-                                        "Value": "1365.0",
+                                        "Value": 0,
                                         "Units": "MB",
                                         "Name": "Database Size",
                                         "Value Type": "double"
                                     },
                                     {
                                         "Required": true,
-                                        "Value": "27/01/2018 15:21",
+                                        "Value": "",
                                         "Name": "PaceMaker Build Number",
                                         "Value Type": "String"
                                     },
                                     {
                                         "Required": true,
-                                        "Value": "17",
+                                        "Value": "",
                                         "Name": "Medula Build Number",
                                         "Value Type": "String"
-                                    }
-                                ],
-                                "Name": "System Data"
-                            },
-                            {
-                                "DeneWords": [
-                                    {
-                                        "Required": true,
-                                        "Value": "10.0.0.121",
-                                        "Name": "Host IP Address",
-                                        "Value Type": "String"
                                     },
                                     {
                                         "Required": true,
-                                        "Value": "wlan0",
-                                        "Name": "Interface",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": " IEEE 802.11bgn",
-                                        "Name": "Support",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "\"TP-LINK_ADA324\"",
-                                        "Name": "ESSID",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "Managed",
-                                        "Name": "Mode",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "2.457 GHz",
-                                        "Name": "Frequency",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": " E8",
-                                        "Name": "Access Point",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "72 Mb/s",
-                                        "Name": "Bit Rate",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "1496 dBm",
-                                        "Name": "Tx-Power",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "7",
-                                        "Name": "Retry short limit",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "off",
-                                        "Name": "RTS thr",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "off",
-                                        "Name": "Fragment thr",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "off",
-                                        "Name": "Encryption key",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "on",
-                                        "Name": "Power Management",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "70/70",
-                                        "Name": "Link Quality",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "-37 dBm",
-                                        "Name": "Signal level",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "0",
-                                        "Name": "Rx invalid nwid",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "0",
-                                        "Name": "Rx invalid crypt",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "0",
-                                        "Name": "Rx invalid frag",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "0",
-                                        "Name": "Tx excessive retries",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "0",
-                                        "Name": "Invalid misc",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "0",
-                                        "Name": "Missed beacon",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": " -34.00 dBm",
-                                        "Name": "SSID:TP-LINK_ADA324",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": " -86.00 dBm",
-                                        "Name": "SSID:edible forest shed antenna",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": " -88.00 dBm",
-                                        "Name": "SSID:Main House Antenna",
-                                        "Value Type": "String"
-                                    }
-                                ],
-                                "Name": "Wifi Info"
-                            },
-                            {
-                                "DeneWords": [
-                                    {
-                                        "Required": true,
-                                        "Value": 30400,
-                                        "Units": "MB",
-                                        "Name": "Total Space",
-                                        "Value Type": "double"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": 19514,
-                                        "Units": "MB",
-                                        "Name": "Free Space",
-                                        "Value Type": "double"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": 18247,
-                                        "Units": "MB",
-                                        "Name": "Usable Space",
-                                        "Value Type": "double"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": 18247,
-                                        "Units": "MB",
-                                        "Name": "Usable Space",
-                                        "Value Type": "double"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": 753,
-                                        "Units": "MB",
-                                        "Name": "Database Size",
-                                        "Value Type": "double"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": 0.008192,
+                                        "Value": 0,
                                         "Units": "MB",
                                         "Name": "Pulse Table Size",
                                         "Value Type": "double"
                                     },
                                     {
                                         "Required": true,
-                                        "Value": 0.024,
+                                        "Value": 0,
                                         "Units": "MB",
                                         "Name": "Organism Pulse Table Size",
                                         "Value Type": "double"
                                     },
                                     {
                                         "Required": true,
-                                        "Value": 7.736192000000001,
+                                        "Value": 0,
                                         "Units": "MB",
                                         "Name": "Mutation Event Table Size",
                                         "Value Type": "double"
                                     },
                                     {
                                         "Required": true,
-                                        "Value": 1.688,
+                                        "Value": 0,
                                         "Units": "MB",
                                         "Name": "Command Requests Table Size",
                                         "Value Type": "double"
                                     },
                                     {
                                         "Required": true,
-                                        "Value": 488.7359999999986,
+                                        "Value": 0,
                                         "Units": "MB",
                                         "Name": "Remembered DeneWords Table Size",
                                         "Value Type": "double"
                                     },
                                     {
                                         "Required": true,
-                                        "Value": 488.7359999999986,
+                                        "Value": 0,
                                         "Units": "MB",
                                         "Name": "Mother Remembered Values Table Size",
                                         "Value Type": "double"
                                     },
                                     {
                                         "Required": true,
-                                        "Value": 238,
+                                        "Value": 0,
                                         "Units": "MB",
                                         "Name": "Life Cycle Event Table Size",
                                         "Value Type": "double"
                                     },
                                     {
                                         "Required": true,
-                                        "Value": "08/09/2021 16:52",
+                                        "Value": "",
                                         "Name": "Hypothalamus Build Number",
                                         "Value Type": "String"
                                     },
                                     {
                                         "Required": true,
-                                        "Value": "11/05/2018 10:23",
-                                        "Name": "Medula Build Number",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": "21/08/2019 07:12",
+                                        "Value": "",
                                         "Name": "Heart Build Number",
                                         "Value Type": "String"
                                     }
@@ -3603,34 +2850,32 @@
                         "Name": "Configure Wifi"
                     },
                     {
-                        "Denes": [
-                            {
-                                "DeneWords": [
-                                    {
-                                        "Required": true,
-                                        "DeneWord Type": "NavBar Position",
-                                        "Value": 1,
-                                        "Name": "NavBar Position",
-                                        "Value Type": "int"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "DeneWord Type": "NavBar Pointer",
-                                        "Value": "@Mnemocyte:Human Interface:Update System Parameters",
-                                        "Name": "Update System Parameters",
-                                        "Value Type": "Dene Pointer"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "DeneWord Type": "NavBar Text",
-                                        "Value": "System",
-                                        "Name": "NavBar Text",
-                                        "Value Type": "String"
-                                    }
-                                ],
-                                "Name": "Update System Parameters"
-                            }
-                        ],
+                        "Denes": [{
+                            "DeneWords": [
+                                {
+                                    "Required": true,
+                                    "DeneWord Type": "NavBar Position",
+                                    "Value": 1,
+                                    "Name": "NavBar Position",
+                                    "Value Type": "int"
+                                },
+                                {
+                                    "Required": true,
+                                    "DeneWord Type": "NavBar Pointer",
+                                    "Value": "@Mnemocyte:Human Interface:Update System Parameters",
+                                    "Name": "Update System Parameters",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": true,
+                                    "DeneWord Type": "NavBar Text",
+                                    "Value": "System",
+                                    "Name": "NavBar Text",
+                                    "Value Type": "String"
+                                }
+                            ],
+                            "Name": "Update System Parameters"
+                        }],
                         "Name": "Update Parameters"
                     },
                     {
@@ -3706,40 +2951,38 @@
                     },
                     {
                         "DeneChain Type": "Human Interface Web Page",
-                        "Denes": [
-                            {
-                                "DeneWords": [
-                                    {
-                                        "Required": "true",
-                                        "DeneWord Type": "Panel DeneChain Pointer",
-                                        "Value": "@Egg:Human Interface:Diagnostics Info",
-                                        "Name": "Diagnostics Info Form Pointer",
-                                        "Value Type": "Dene Pointer"
-                                    },
-                                    {
-                                        "Required": "true",
-                                        "DeneWord Type": "Panel Visualization Style",
-                                        "Value": "Diagnostics Info",
-                                        "Name": "Diagnostics Info Style",
-                                        "Value Type": "String"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "DeneWord Type": "Panel In Page Position",
-                                        "Value": 1,
-                                        "Name": "Panel In Page Position",
-                                        "Value Type": "int"
-                                    },
-                                    {
-                                        "Required": true,
-                                        "Value": true,
-                                        "Name": "Visible",
-                                        "Value Type": "boolean"
-                                    }
-                                ],
-                                "Name": "Diagnostics Info Panel"
-                            }
-                        ],
+                        "Denes": [{
+                            "DeneWords": [
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Panel DeneChain Pointer",
+                                    "Value": "@Egg:Human Interface:Diagnostics Info",
+                                    "Name": "Diagnostics Info Form Pointer",
+                                    "Value Type": "Dene Pointer"
+                                },
+                                {
+                                    "Required": "true",
+                                    "DeneWord Type": "Panel Visualization Style",
+                                    "Value": "Diagnostics Info",
+                                    "Name": "Diagnostics Info Style",
+                                    "Value Type": "String"
+                                },
+                                {
+                                    "Required": true,
+                                    "DeneWord Type": "Panel In Page Position",
+                                    "Value": 1,
+                                    "Name": "Panel In Page Position",
+                                    "Value Type": "int"
+                                },
+                                {
+                                    "Required": true,
+                                    "Value": true,
+                                    "Name": "Visible",
+                                    "Value Type": "boolean"
+                                }
+                            ],
+                            "Name": "Diagnostics Info Panel"
+                        }],
                         "Name": "Diagnostics Page"
                     },
                     {

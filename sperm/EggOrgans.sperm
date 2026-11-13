@@ -1,0 +1,257 @@
+{
+ "Sperm": {
+  "Purpose": {
+   "Teleonome Name": "Egg",
+   "Purpose Type": "Mutate",
+   "Description": "2026-11-13: what every Teleonome needs for the Hippocampus and the Cerebellum, which came after the Egg (2023): the Internal:Hippocampus chain (Pathology; Configuration: Global Limit 300000, Warning Threshold 270000, Preload Data true, Preload Hours 24; Data: the telepathon types to remember, empty until a part adds them) and the Internal:Cerebellum chain (Pathology; Configuration: Days in Temporary List 7, Promotion Threshold 3; tasks come from parts). Both organs read these from the Denome and stop without them, so an Egg without them cannot run all its organs. Fertilized into the Egg itself (Avocado/denomes/Egg.denome)."
+  },
+  "Hypothalamus": {
+   "Actions": [
+    {
+     "Name": "Create Hippocampus DeneChain",
+     "Target": "@Egg:Internal",
+     "Dene Type": "Create Dene Chain",
+     "DeneWords": [
+      {
+       "Name": "Active",
+       "Value": true,
+       "Value Type": "boolean",
+       "Required": true
+      },
+      {
+       "Name": "Execution Position",
+       "Value": 1,
+       "Value Type": "int",
+       "Required": true
+      },
+      {
+       "Name": "Execution Point",
+       "Value": "Pre Homebox Insertion",
+       "Value Type": "String",
+       "Required": true
+      },
+      {
+       "Name": "DeneChain Name",
+       "Value": "Hippocampus",
+       "Value Type": "String",
+       "Required": true
+      }
+     ]
+    },
+    {
+     "Name": "Create Cerebellum DeneChain",
+     "Target": "@Egg:Internal",
+     "Dene Type": "Create Dene Chain",
+     "DeneWords": [
+      {
+       "Name": "Active",
+       "Value": true,
+       "Value Type": "boolean",
+       "Required": true
+      },
+      {
+       "Name": "Execution Position",
+       "Value": 2,
+       "Value Type": "int",
+       "Required": true
+      },
+      {
+       "Name": "Execution Point",
+       "Value": "Pre Homebox Insertion",
+       "Value Type": "String",
+       "Required": true
+      },
+      {
+       "Name": "DeneChain Name",
+       "Value": "Cerebellum",
+       "Value Type": "String",
+       "Required": true
+      }
+     ]
+    }
+   ],
+   "Homeoboxes": [
+    {
+     "Name": "Hippocampus Settings",
+     "Denes": [
+      {
+       "Name": "Metadata",
+       "Dene Type": "HomeoBox Metadata",
+       "Target": "",
+       "DeneWords": [
+        {
+         "Name": "Created On",
+         "Value": "13112026",
+         "Value Type": "String",
+         "Required": true
+        },
+        {
+         "Name": "Description",
+         "Value": "Internal:Hippocampus for the Factory Teleonome (settings the Hippocampus reads from the Denome)",
+         "Value Type": "String",
+         "Required": true
+        }
+       ]
+      },
+      {
+       "Name": "Homeobox Index",
+       "Dene Type": "Homeobox Index",
+       "Target": "",
+       "DeneWords": [
+        {
+         "Name": "Pathology",
+         "Value": "@Sperm:Hypothalamus:Hippocampus Settings:Pathology",
+         "Value Type": "Dene Pointer",
+         "Required": true,
+         "DeneWord Type": "Hox Dene Pointer"
+        },
+        {
+         "Name": "Configuration",
+         "Value": "@Sperm:Hypothalamus:Hippocampus Settings:Configuration",
+         "Value Type": "Dene Pointer",
+         "Required": true,
+         "DeneWord Type": "Hox Dene Pointer"
+        },
+        {
+         "Name": "Data",
+         "Value": "@Sperm:Hypothalamus:Hippocampus Settings:Data",
+         "Value Type": "Dene Pointer",
+         "Required": true,
+         "DeneWord Type": "Hox Dene Pointer"
+        }
+       ]
+      },
+      {
+       "Name": "Pathology",
+       "DeneWords": [
+        {
+         "Name": "Hippocampus Pathology Mnemosyne Location",
+         "Value": "@Egg:Mnemosyne:Mnemosyne Today",
+         "Value Type": "Dene Pointer",
+         "Required": true
+        }
+       ],
+       "Target": "@Egg:Internal:Hippocampus"
+      },
+      {
+       "Name": "Configuration",
+       "DeneWords": [
+        {
+         "Name": "Global Limit",
+         "Value": 300000,
+         "Value Type": "int",
+         "Required": true
+        },
+        {
+         "Name": "Warning Threshold",
+         "Value": 270000,
+         "Value Type": "int",
+         "Required": true
+        },
+        {
+         "Name": "Preload Data",
+         "Value": true,
+         "Value Type": "boolean",
+         "Required": true
+        },
+        {
+         "Name": "Preload Hours",
+         "Value": 24,
+         "Value Type": "int",
+         "Required": true
+        }
+       ],
+       "Target": "@Egg:Internal:Hippocampus"
+      },
+      {
+       "Name": "Data",
+       "DeneWords": [],
+       "Target": "@Egg:Internal:Hippocampus"
+      }
+     ]
+    },
+    {
+     "Name": "Cerebellum Settings",
+     "Denes": [
+      {
+       "Name": "Metadata",
+       "Dene Type": "HomeoBox Metadata",
+       "Target": "",
+       "DeneWords": [
+        {
+         "Name": "Created On",
+         "Value": "13112026",
+         "Value Type": "String",
+         "Required": true
+        },
+        {
+         "Name": "Description",
+         "Value": "Internal:Cerebellum for the Factory Teleonome (settings the Cerebellum reads from the Denome)",
+         "Value Type": "String",
+         "Required": true
+        }
+       ]
+      },
+      {
+       "Name": "Homeobox Index",
+       "Dene Type": "Homeobox Index",
+       "Target": "",
+       "DeneWords": [
+        {
+         "Name": "Pathology",
+         "Value": "@Sperm:Hypothalamus:Cerebellum Settings:Pathology",
+         "Value Type": "Dene Pointer",
+         "Required": true,
+         "DeneWord Type": "Hox Dene Pointer"
+        },
+        {
+         "Name": "Configuration",
+         "Value": "@Sperm:Hypothalamus:Cerebellum Settings:Configuration",
+         "Value Type": "Dene Pointer",
+         "Required": true,
+         "DeneWord Type": "Hox Dene Pointer"
+        }
+       ]
+      },
+      {
+       "Name": "Pathology",
+       "DeneWords": [
+        {
+         "Name": "Cerebellum Pathology Mnemosyne Location",
+         "Value": "@Egg:Mnemosyne:Mnemosyne Today",
+         "Value Type": "Dene Pointer",
+         "Required": true
+        }
+       ],
+       "Target": "@Egg:Internal:Cerebellum"
+      },
+      {
+       "Name": "Configuration",
+       "DeneWords": [
+        {
+         "Name": "Days in Temporary List",
+         "Value": 7,
+         "Value Type": "int",
+         "Required": true
+        },
+        {
+         "Name": "Promotion Threshold",
+         "Value": 3,
+         "Value Type": "int",
+         "Required": true
+        }
+       ],
+       "Target": "@Egg:Internal:Cerebellum"
+      }
+     ]
+    }
+   ],
+   "Mutations": []
+  },
+  "Medula": {
+   "Mutations": [
+    {}
+   ]
+  }
+ }
+}

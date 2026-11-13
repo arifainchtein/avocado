@@ -1,0 +1,45 @@
+{
+    "Homeobox Definition Type":"Sensor",
+    "Homeobox Name":"Gloria Home Sensor Values",
+    "Sensor Name":"Gloria Home Sensor Values",
+    "Microcontroller Pointer":"@Egg:Internal:Components:Mother Microcontroller",
+    "Provider":"https://www.digitalstables.com",
+    "Port":"Internal",
+
+    "Values":[
+        {
+            "Name":"TankHeight",
+            "Units":"mm",
+            "Value Type":"double",
+            "Range Maximum":10000,
+            "Range Minimum":0,
+            "Initial Value":0,
+            "Reporting Value Dene Name":"Tank Height",
+            "Human Interface Panel":"Sensors" ,
+            "Panel Display Name":"Tank"
+        },
+        {
+            "Name":"FlowMeter1",
+            "Units":"l/min",
+            "Value Type":"double",
+            "Range Maximum":120,
+            "Range Minimum":0,
+            "Initial Value":0,
+            "Reporting Value Dene Name":"Flow 1",
+            "Human Interface Panel":"Sensors" ,
+             "Panel Display Name":"Flow 1"
+        },
+        {
+            "Name":"FlowMeter2",
+            "Units":"l/min",
+            "Value Type":"double",
+            "Range Maximum":120,
+            "Range Minimum":0,
+            "Initial Value":0,
+            "Reporting Value Dene Name":"Flow 2",
+            "Human Interface Panel":"Sensors" ,
+            "Panel Display Name":"Flow 2"
+        }
+    ]
+
+}

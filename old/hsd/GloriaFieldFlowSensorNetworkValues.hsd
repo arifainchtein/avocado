@@ -1,0 +1,43 @@
+{
+    "Homeobox Definition Type":"FlowNetworkSensor",
+    "Homeobox Name":"Gloria Field Flow Sensor Network Values",
+    "Sensor Name":"Gloria Field Flow Sensor Network Values",
+    "Microcontroller Pointer":"@Egg:Internal:Components:Mother Microcontroller",
+    "Provider":"https://www.digitalstables.com",
+    "Port":"Internal",
+    "sampleFrequencySeconds":10,
+	"withDistributionPoint":false,
+	"withCentralWaste":false,
+    "Sensors":[
+        {
+            "Name":"Flow Meter 1",
+            "Units":"l/m",
+            "Value Type":"double",
+            "Range Maximum":120,
+            "Range Minimum":0,
+            "Initial Value":0,
+            "Reporting Value Dene Name":"Flow 1",
+            "Human Interface Panel":"Gloria Field Flow Data" ,
+            "Panel In Panel Position":1,
+            "Pin":10,
+            "QFactor":1,
+            "Panel Display Name":"Flow 1"
+        },
+        {
+            "Name":"Flow Meter 2",
+            "Units":"l/m",
+            "Value Type":"double",
+            "Range Maximum":120,
+            "Range Minimum":0,
+            "Initial Value":0,
+            "Reporting Value Dene Name":"Flow 2",
+            "Human Interface Panel":"Gloria Field Flow Data" ,
+            "Panel In Panel Position":2,
+            "Pin":2,
+            "QFactor":1,
+            "Panel Display Name":"Flow 2"
+        },
+        
+    ]
+
+}

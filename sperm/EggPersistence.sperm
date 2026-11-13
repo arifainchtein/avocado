@@ -1,0 +1,69 @@
+{
+ "Sperm": {
+  "Purpose": {
+   "Teleonome Name": "Egg",
+   "Purpose Type": "Mutate",
+   "Description": "2026-11-13: the two persistence DeneWords every Teleonome reads in Internal:Descriptive:Vital (PulseThread): Persist Pulse (store its own pulses in the pulse table) and Persist Organism Pulse (store the pulses it hears from other Teleonomes in organismpulse). Both False in the Egg, as on Annabelle; a Teleonome's own sperm turns them on (the Factory: Persist Organism Pulse). Same carrier as the old EggUpdate.sperm, which was never fertilized into this Egg."
+  },
+  "Hypothalamus": {
+   "Actions": [],
+   "Homeoboxes": [
+    {
+     "Name": "Persistence",
+     "Denes": [
+      {
+       "Name": "Metadata",
+       "Dene Type": "HomeoBox Metadata",
+       "Target": "",
+       "DeneWords": [
+        {
+         "Name": "Created On",
+         "Value": "13112026",
+         "Value Type": "String",
+         "Required": true
+        },
+        {
+         "Name": "Description",
+         "Value": "Persist Pulse and Persist Organism Pulse in Internal:Descriptive:Vital",
+         "Value Type": "String",
+         "Required": true
+        }
+       ]
+      },
+      {
+       "Name": "Homeobox Index",
+       "Dene Type": "Homeobox Index",
+       "Target": "",
+       "DeneWords": []
+      },
+      {
+       "Name": "DeneWord Carrier For Vital",
+       "Dene Type": "DeneWord Carrier",
+       "Target": "@Egg:Internal:Descriptive:Vital",
+       "DeneWords": [
+        {
+         "Name": "Persist Pulse",
+         "Value": false,
+         "Value Type": "boolean",
+         "Required": true
+        },
+        {
+         "Name": "Persist Organism Pulse",
+         "Value": false,
+         "Value Type": "boolean",
+         "Required": true
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "Mutations": []
+  },
+  "Medula": {
+   "Mutations": [
+    {}
+   ]
+  }
+ }
+}

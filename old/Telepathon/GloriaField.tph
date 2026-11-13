@@ -1,0 +1,94 @@
+{
+    "Containers":[
+       {
+           "Name":"Internal Power Hourly Stats" ,
+           "Panel Visualization Style":"Single Value Complete Width",
+           "Panel DeneChain Pointer":"@Egg:Human Interface:Internal Power Hourly Stats",
+           "Panel In Page Position":1,
+           "Visible":true,
+           "Target":"@Egg:Human interface:Home Page"
+       },
+       {
+           "Name":"Internal Power Hourly Stats" ,
+           "Panel Visualization Style":"Single Value Complete Width",
+           "Panel DeneChain Pointer":"@Egg:Human Interface:Internal Power Hourly Stats",
+           "Panel In Page Position":1,
+           "Visible":true,
+           "Target":"@Egg:Human interface:Home Page"
+       }
+
+   ],
+   "HomeBoxDefinitions":{
+      "Sensors":[ 
+          "GloriaFieldMainEnergyValues.hsd",
+          "GloriaFieldSensors.hsd",
+          "GloriaFieldFlowSensorNetworkValues.hsd"
+       ],
+      "Actuators":[
+           "IntrusionDualLed.had",
+           "SFTPPublisher.had"
+       ],
+      "Human Interface":[
+          "GloriaFieldHomePagePanels.hud"
+      ],
+      "Communication":[
+        "GloriaFieldRF24.hcd"
+    ]      
+   } 
+}
+
+
+
+{
+    "Sensors":[
+        {
+            "Flow Meter 2":{
+                "pin":10,
+                "Qfactor":1
+            } 
+        },
+        {
+            "Flow Meter 1":{
+                "pin":2,
+                "Qfactor":1
+            }
+        } ,
+        {
+            "tank height":{
+                "pin":"A1"
+            }
+        } 
+    ],
+    "Actuators":[
+        {
+            "Pump Relay":{
+                "Pin":15
+            }
+        }
+    ],
+    "Communications":{
+        "RF24":{
+            "reading":"",
+            "writing":""
+        }
+        
+    }
+}
+
+
+struct Data: public GData{
+    long secondsTime;
+     bool relayState;
+     float temperature;
+    float voltage;
+    float tankHeight;
+  };
+  Data data;
+  
+  struct FlowData: public GData{
+    long secondsTime;
+    float flowRate1;
+    float volume1;
+    float flowRate2;
+    float volume2;
+  };

@@ -1,0 +1,12 @@
+{
+     "Containers":[],
+    "HomeBoxDefinitions":{
+        "MicroControllers":[
+            "GloriaField.mcu"
+        ],
+        "Sensors":[],
+       "Actuators":[],
+       "Human Interface":[]    
+    }
+
+}

@@ -23,13 +23,7 @@
             }
         ]
     },
-    "Hardware":{
-        "Storage Manager":{
-        },
-        "Time Manager":{
-        },
-
-    },
+    "Hardware":{},
     "Configurable":[
         {
             "Name": "Software:Processing Queue Position",
@@ -38,7 +32,7 @@
             "Required":true
         },
         {
-            "Name": "Software:Parameters:Processing Queue Position",
+            "Name": "Software:Parameters:ArpScanRetryCount",
             "Value Type": "int",
             "Automatic Generated":false,
             "Required":true,

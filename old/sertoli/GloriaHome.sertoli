@@ -1,0 +1,45 @@
+{
+     "Containers":[
+        {
+            "Name":"Sensors" ,
+            "Panel Visualization Style":"Single Value Complete Width",
+            "Panel DeneChain Pointer":"@Egg:Human Interface:Sensors",
+            "Visible":true,
+            "Target":"@Egg:Human interface:Home Page"
+        },
+        {
+            "Name":"Internal Power Hourly Stats" ,
+            "Panel Visualization Style":"Single Value Complete Width",
+            "Panel DeneChain Pointer":"@Egg:Human Interface:Internal Power Hourly Stats",
+            "Visible":true,
+            "Target":"@Egg:Human interface:Home Page"
+        },
+        {
+            "Name":"Internal Power Hourly Stats" ,
+            "Panel Visualization Style":"Single Value Complete Width",
+            "Panel DeneChain Pointer":"@Egg:Human Interface:Internal Power Hourly Stats",
+           "Visible":true,
+            "Target":"@Egg:Human interface:Home Page"
+        }
+
+    ],
+    "HomeBoxDefinitions":{
+        "MicroControllers":[
+            "GloriaHome.mcu"
+        ],
+        "Sensors":[],
+       "Actuators":[
+            "SFTPPublisher.had",
+        ],
+       "Human Interface":[
+           "HomePagePanels.hud"
+       ]    
+    },
+    "Telepathons":[
+        {
+            "Gloria Field 1":"GloriaField1.tph",
+            "Gloria Field 2":"GloriaField2.tph"
+        }
+    ]
+
+}

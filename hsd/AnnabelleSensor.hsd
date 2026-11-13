@@ -1,0 +1,16 @@
+{
+    "Homeobox Definition Type": "Sensor",
+    "Homeobox Name": "Annabelle Sensor",
+    "Display Name": "Annabelle port status",
+    "Description": "Whether the Pi's serial port to Annabelle's ESP32 is open",
+    "Category": "Sensors",
+    "Requires": ["Annabelle.mcu"],
+    "Sensor Name": "Annabelle Sensor",
+    "Microcontroller Pointer": "@Egg:Internal:Components:Annabelle MicroController",
+    "Reporting Value Dene Name": "Annabelle",
+    "Provider": "http://digitalstables.com",
+    "Port": "Serial",
+    "Values": [
+        { "Name": "Port Status", "Units": "", "Value Type": "boolean", "Sensor Request Queue Position": 1 }
+    ]
+}

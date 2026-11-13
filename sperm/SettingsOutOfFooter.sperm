@@ -1,0 +1,39 @@
+{
+	"Sperm": {
+		"Purpose": {
+			"Teleonome Name": "SettingsOutOfFooter",
+			"Purpose Type": "Mutate",
+			"Description": "2026-11-13: the Settings page leaves the footer, as on Cleotilde. Restart and Turn off are on the Diagnostics page (DiagnosticsBar.js, teleonomewebapp), so the footer keeps Diagnostics only. The page itself stays in the Denome (Include in Navigation false), like Cleotilde's hidden pages."
+		},
+		"Hypothalamus": {
+			"Actions": [
+				{
+					"Name": "Hide Settings Page",
+					"Dene Type": "Update DeneWord",
+					"DeneWords": [
+						{ "Name": "Execution Position", "Value": 1, "Value Type": "int", "Required": true },
+						{ "Name": "Execution Point", "Value": "Post Homebox Insertion", "Value Type": "String", "Required": true },
+						{ "Name": "DeneWords Update List", "Value": "@Sperm:Hypothalamus:Hide Settings Page List", "Value Type": "Dene Pointer", "Required": true }
+					]
+				},
+				{
+					"Name": "Hide Settings Page List",
+					"DeneWords": [
+						{
+							"Name": "Update DeneWord",
+							"Target": "@Egg:Human Interface:Human Interface Control Parameters:Settings:Include in Navigation",
+							"Value": false,
+							"Value Type": "boolean",
+							"Required": true
+						}
+					]
+				}
+			],
+			"Homeoboxes": [],
+			"Mutations": []
+		},
+		"Medula": {
+			"Mutations": [{}]
+		}
+	}
+}

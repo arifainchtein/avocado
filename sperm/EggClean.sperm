@@ -1,0 +1,364 @@
+{
+ "Sperm": {
+  "Purpose": {
+   "Teleonome Name": "Egg",
+   "Purpose Type": "Mutate",
+   "Description": "2026-11-13: the Egg without the runtime data of the Raspberry Pi 3 it was taken from in 2016. Removed: Memory Status, the process denes Hypothalamus/Web Server/Heart, Wifi Info (TP-LINK_ADA324) - the Hypothalamus rebuilds them while it runs and nothing points at them. Emptied (removed and put back with no words, the Human Interface's Device Info points at them, the Hypothalamus fills them): Processor Info, USB Devices, Computer Info. The two System Data denes (a duplicate) become one with every word either had, values reset (the chart actions write into its table sizes). In Purpose:Operational Data:Vital the values a pulse rewrites are reset (Status, Alert Message, Current Pulse Generation Duration, Number of Alert Messages)."
+  },
+  "Hypothalamus": {
+   "Actions": [
+    {
+     "Name": "Reset Pulse Values",
+     "Dene Type": "Update DeneWord",
+     "DeneWords": [
+      {
+       "Name": "Execution Position",
+       "Value": 1,
+       "Value Type": "int",
+       "Required": true
+      },
+      {
+       "Name": "Execution Point",
+       "Value": "Post Homebox Insertion",
+       "Value Type": "String",
+       "Required": true
+      },
+      {
+       "Name": "DeneWords Update List",
+       "Value": "@Sperm:Hypothalamus:Reset Pulse Values List",
+       "Value Type": "Dene Pointer",
+       "Required": true
+      }
+     ]
+    },
+    {
+     "Name": "Reset Pulse Values List",
+     "DeneWords": [
+      {
+       "Name": "Update DeneWord",
+       "Value": "",
+       "Value Type": "String",
+       "Required": true,
+       "Target": "@Egg:Purpose:Operational Data:Vital:Status"
+      },
+      {
+       "Name": "Update DeneWord",
+       "Value": "",
+       "Value Type": "String",
+       "Required": true,
+       "Target": "@Egg:Purpose:Operational Data:Vital:Alert Message"
+      },
+      {
+       "Name": "Update DeneWord",
+       "Value": 0,
+       "Value Type": "int",
+       "Required": true,
+       "Target": "@Egg:Purpose:Operational Data:Vital:Current Pulse Generation Duration"
+      },
+      {
+       "Name": "Update DeneWord",
+       "Value": 0,
+       "Value Type": "int",
+       "Required": true,
+       "Target": "@Egg:Purpose:Operational Data:Vital:Number of Alert Messages"
+      }
+     ]
+    }
+   ],
+   "Homeoboxes": [
+    {
+     "Name": "Remove 2016 Pi Data",
+     "Denes": [
+      {
+       "Name": "Metadata",
+       "Dene Type": "HomeoBox Metadata",
+       "Target": "",
+       "DeneWords": [
+        {
+         "Name": "Created On",
+         "Value": "13112026",
+         "Value Type": "String",
+         "Required": true
+        },
+        {
+         "Name": "Description",
+         "Value": "Denes the Hypothalamus rebuilds while it runs, removed from the Egg",
+         "Value Type": "String",
+         "Required": true
+        }
+       ]
+      },
+      {
+       "Name": "Homeobox Index",
+       "Dene Type": "Homeobox Index",
+       "Target": "",
+       "DeneWords": []
+      },
+      {
+       "Name": "Runtime Denes",
+       "Dene Type": "Dene Remover",
+       "Target": "",
+       "DeneWords": [
+        {
+         "Name": "Processor Info",
+         "Value": "@Egg:Internal:Descriptive:Processor Info",
+         "Value Type": "Dene Pointer",
+         "Required": true
+        },
+        {
+         "Name": "USB Devices",
+         "Value": "@Egg:Internal:Descriptive:USB Devices",
+         "Value Type": "Dene Pointer",
+         "Required": true
+        },
+        {
+         "Name": "Computer Info",
+         "Value": "@Egg:Internal:Descriptive:Computer Info",
+         "Value Type": "Dene Pointer",
+         "Required": true
+        },
+        {
+         "Name": "Memory Status",
+         "Value": "@Egg:Purpose:Operational Data:Memory Status",
+         "Value Type": "Dene Pointer",
+         "Required": true
+        },
+        {
+         "Name": "Hypothalamus",
+         "Value": "@Egg:Purpose:Operational Data:Hypothalamus",
+         "Value Type": "Dene Pointer",
+         "Required": true
+        },
+        {
+         "Name": "Web Server",
+         "Value": "@Egg:Purpose:Operational Data:Web Server",
+         "Value Type": "Dene Pointer",
+         "Required": true
+        },
+        {
+         "Name": "Heart",
+         "Value": "@Egg:Purpose:Operational Data:Heart",
+         "Value Type": "Dene Pointer",
+         "Required": true
+        },
+        {
+         "Name": "System Data",
+         "Value": "@Egg:Purpose:Operational Data:System Data",
+         "Value Type": "Dene Pointer",
+         "Required": true
+        },
+        {
+         "Name": "Wifi Info",
+         "Value": "@Egg:Purpose:Operational Data:Wifi Info",
+         "Value Type": "Dene Pointer",
+         "Required": true
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "Name": "Empty Runtime Denes",
+     "Denes": [
+      {
+       "Name": "Metadata",
+       "Dene Type": "HomeoBox Metadata",
+       "Target": "",
+       "DeneWords": [
+        {
+         "Name": "Created On",
+         "Value": "13112026",
+         "Value Type": "String",
+         "Required": true
+        },
+        {
+         "Name": "Description",
+         "Value": "The runtime denes other denes point at, put back empty (System Data: one, with every word, reset)",
+         "Value Type": "String",
+         "Required": true
+        }
+       ]
+      },
+      {
+       "Name": "Homeobox Index",
+       "Dene Type": "Homeobox Index",
+       "Target": "",
+       "DeneWords": [
+        {
+         "Name": "Processor Info",
+         "Value": "@Sperm:Hypothalamus:Empty Runtime Denes:Processor Info",
+         "Value Type": "Dene Pointer",
+         "Required": true,
+         "DeneWord Type": "Hox Dene Pointer"
+        },
+        {
+         "Name": "USB Devices",
+         "Value": "@Sperm:Hypothalamus:Empty Runtime Denes:USB Devices",
+         "Value Type": "Dene Pointer",
+         "Required": true,
+         "DeneWord Type": "Hox Dene Pointer"
+        },
+        {
+         "Name": "Computer Info",
+         "Value": "@Sperm:Hypothalamus:Empty Runtime Denes:Computer Info",
+         "Value Type": "Dene Pointer",
+         "Required": true,
+         "DeneWord Type": "Hox Dene Pointer"
+        },
+        {
+         "Name": "System Data",
+         "Value": "@Sperm:Hypothalamus:Empty Runtime Denes:System Data",
+         "Value Type": "Dene Pointer",
+         "Required": true,
+         "DeneWord Type": "Hox Dene Pointer"
+        }
+       ]
+      },
+      {
+       "Name": "Processor Info",
+       "Target": "@Egg:Internal:Descriptive",
+       "DeneWords": []
+      },
+      {
+       "Name": "USB Devices",
+       "Target": "@Egg:Internal:Descriptive",
+       "DeneWords": []
+      },
+      {
+       "Name": "Computer Info",
+       "Target": "@Egg:Internal:Descriptive",
+       "DeneWords": []
+      },
+      {
+       "Name": "System Data",
+       "Target": "@Egg:Purpose:Operational Data",
+       "DeneWords": [
+        {
+         "Required": true,
+         "Value": 0,
+         "Units": "MB",
+         "Name": "Total Space",
+         "Value Type": "double"
+        },
+        {
+         "Required": true,
+         "Value": 0,
+         "Units": "MB",
+         "Name": "Free Space",
+         "Value Type": "double"
+        },
+        {
+         "Required": true,
+         "Value": 0,
+         "Units": "MB",
+         "Name": "Usable Space",
+         "Value Type": "double"
+        },
+        {
+         "Required": true,
+         "Value": 0,
+         "Units": "MB",
+         "Name": "Available Memory",
+         "Value Type": "double"
+        },
+        {
+         "Required": true,
+         "Value": 0,
+         "Units": "MB",
+         "Name": "Maximum Memory",
+         "Value Type": "double"
+        },
+        {
+         "Required": true,
+         "Value": 0,
+         "Units": "MB",
+         "Name": "Database Size",
+         "Value Type": "double"
+        },
+        {
+         "Required": true,
+         "Value": "",
+         "Name": "PaceMaker Build Number",
+         "Value Type": "String"
+        },
+        {
+         "Required": true,
+         "Value": "",
+         "Name": "Medula Build Number",
+         "Value Type": "String"
+        },
+        {
+         "Required": true,
+         "Value": 0,
+         "Units": "MB",
+         "Name": "Pulse Table Size",
+         "Value Type": "double"
+        },
+        {
+         "Required": true,
+         "Value": 0,
+         "Units": "MB",
+         "Name": "Organism Pulse Table Size",
+         "Value Type": "double"
+        },
+        {
+         "Required": true,
+         "Value": 0,
+         "Units": "MB",
+         "Name": "Mutation Event Table Size",
+         "Value Type": "double"
+        },
+        {
+         "Required": true,
+         "Value": 0,
+         "Units": "MB",
+         "Name": "Command Requests Table Size",
+         "Value Type": "double"
+        },
+        {
+         "Required": true,
+         "Value": 0,
+         "Units": "MB",
+         "Name": "Remembered DeneWords Table Size",
+         "Value Type": "double"
+        },
+        {
+         "Required": true,
+         "Value": 0,
+         "Units": "MB",
+         "Name": "Mother Remembered Values Table Size",
+         "Value Type": "double"
+        },
+        {
+         "Required": true,
+         "Value": 0,
+         "Units": "MB",
+         "Name": "Life Cycle Event Table Size",
+         "Value Type": "double"
+        },
+        {
+         "Required": true,
+         "Value": "",
+         "Name": "Hypothalamus Build Number",
+         "Value Type": "String"
+        },
+        {
+         "Required": true,
+         "Value": "",
+         "Name": "Heart Build Number",
+         "Value Type": "String"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "Mutations": []
+  },
+  "Medula": {
+   "Mutations": [
+    {}
+   ]
+  }
+ }
+}
