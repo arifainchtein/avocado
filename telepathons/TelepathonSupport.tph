@@ -1,0 +1,15 @@
+{
+    "Homeobox Definition Type": "TelepathonSupport",
+    "Homeobox Name": "Telepathon Support",
+    "Display Name": "Telepathon support",
+    "Description": "Shows the devices this Teleonome hears on the Home Page, lets the page delete one, and forgets the stale ones every hour",
+    "Category": "Telepathons",
+    "Requires": ["AnnabelleActuator.had"],
+    "Actuator Name": "Annabelle Actuator",
+    "Panel In Page Position": 2,
+    "Delete Telepathon Evaluation Position": 1,
+    "Delete Stale Telepathons Evaluation Position": 1,
+    "Configurable": [
+        { "Name": "Panel In Page Position", "Value Type": "int", "Required": true, "Default": 2 }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "Homeobox Definition Type": "DigitalStablesPublisher",
+    "Homeobox Name": "DigitalStables Publisher",
+    "Display Name": "DigitalStables Publisher",
+    "Description": "Sends the readings this Teleonome receives to devices.digitalstables.com over MQTT, once per pulse, and keeps them until acknowledged",
+    "Category": "Publishers",
+    "Requires": [],
+    "Processing Queue Position": 5,
+    "Upload To DigitalStables": true,
+    "DigitalStables Server": "wss://devices.digitalstables.com/mqtt",
+    "DigitalStables Settings File": "/home/pi/Teleonome/devicesheart.properties",
+    "Prepare Evaluation Position": 25,
+    "Publish Evaluation Position": 26,
+    "Keep Command Requests Days": 7,
+    "Configurable": [
+        { "Name": "Upload To DigitalStables", "Value Type": "boolean", "Required": true, "Default": true },
+        { "Name": "DigitalStables Server", "Value Type": "String", "Required": true, "Default": "wss://devices.digitalstables.com/mqtt" },
+        { "Name": "DigitalStables Settings File", "Value Type": "String", "Required": true, "Default": "/home/pi/Teleonome/devicesheart.properties" },
+        { "Name": "Processing Queue Position", "Value Type": "int", "Required": true, "Default": 5 },
+        { "Name": "Keep Command Requests Days", "Value Type": "int", "Required": true, "Default": 7 }
+    ]
+}

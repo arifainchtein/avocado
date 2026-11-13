@@ -1,0 +1,8 @@
+{
+    "Sertoli Component Type":"hsd",
+    "Sertoli Component Name":"NetworkSensor",
+    "Display Name":"Network<br>Sensor",
+    "Description":"The Network Sensor adds to the Teleonome,the functionality to monitor a network and implements a white list",
+    "Configurable":[
+   ]
+}

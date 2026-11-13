@@ -1,0 +1,20 @@
+{
+    "Sertoli Component Type":"pub",
+    "Sertoli Component Name":"SFTPPublisher",
+    "Display Name":"Publish<br>SFTP",
+    "Description":"The SFTPPublisher adds to the Teleonome,the functionality to upload a file to a remote server using sftp and a key file",
+    "Configurable":[
+        {
+            "Name": "SFTP Server Ip Address",
+            "Value Type": "IP4Address",
+            "Automatic Generated":false,
+            "Required":true
+        },
+        {
+            "Name": "Processing Queue Position",
+            "Value Type": "int",
+            "Automatic Generated":true,
+            "Required":true
+        }
+   ]
+}

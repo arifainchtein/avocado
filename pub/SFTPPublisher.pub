@@ -1,0 +1,21 @@
+{
+    "Homeobox Definition Type":"SFTPPublisher",
+    "Homeobox Name":"SFTPPublisher",
+    "SFTP Server Ip Address":"104.154.239.253",
+    "SFTP Key File Name":"/home/pi/.ssh/dg",
+    "Processing Queue Position":4,
+    "Configurable":[
+        {
+            "Name": "SFTP Server Ip Address",
+            "Value Type": "IP4Address",
+            "Automatic Generated":false,
+            "Required":true
+        },
+        {
+            "Name": "Processing Queue Position",
+            "Value Type": "int",
+            "Automatic Generated":true,
+            "Required":true
+        }
+   ]
+}

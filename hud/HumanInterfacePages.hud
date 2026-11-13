@@ -1,0 +1,15 @@
+{
+    "Homeobox Definition Type": "HumanInterfacePages",
+    "Homeobox Name": "Human Interface Pages",
+    "Display Name": "Home page pills and custom pages",
+    "Description": "A row of pills on the Home Page (the map of the devices, then the pages a person makes, then + New tab), and the mutations that let the web page create, change and delete those pages",
+    "Category": "Human Interface",
+    "Panel In Page Position": 3,
+    "Show Map": true,
+    "Allow New Pages": true,
+    "Configurable": [
+        { "Name": "Panel In Page Position", "Value Type": "int", "Required": true, "Default": 3 },
+        { "Name": "Show Map", "Value Type": "boolean", "Required": true, "Default": true },
+        { "Name": "Allow New Pages", "Value Type": "boolean", "Required": true, "Default": true }
+    ]
+}
