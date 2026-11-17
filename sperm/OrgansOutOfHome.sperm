@@ -1,0 +1,46 @@
+{
+	"Sperm": {
+		"Purpose": {
+			"Teleonome Name": "OrgansOutOfHome",
+			"Purpose Type": "Mutate",
+			"Description": "2026-11-17: the Organs panel (Hippocampus, Cerebellum, Heart buttons) leaves the Home page, as on Cleotilde. The organs are on the Diagnostics page now (DiagnosticsBar.js, teleonomewebapp), whose Hippocampus view shows what the Organs panel's Hippocampus showed. Only the Home Page dene goes; the Organs View chain it pointed at stays. The Organs panel also held the Emergency Channel banner, which nothing publishes to yet."
+		},
+		"Hypothalamus": {
+			"Actions": [],
+			"Homeoboxes": [
+				{
+					"Name": "Organs Out Of Home",
+					"Denes": [
+						{
+							"Name": "Metadata",
+							"Dene Type": "HomeoBox Metadata",
+							"Target": "",
+							"DeneWords": [
+								{ "Name": "Created On", "Value": "17112026", "Value Type": "String", "Required": true },
+								{ "Name": "Description", "Value": "The Organs panel leaves the Home page; the organs are on the Diagnostics page", "Value Type": "String", "Required": true }
+							]
+						},
+						{
+							"Name": "Homeobox Index",
+							"Dene Type": "Homeobox Index",
+							"Target": "",
+							"DeneWords": []
+						},
+						{
+							"Name": "Home Page Organs Panel",
+							"Dene Type": "Dene Remover",
+							"Target": "",
+							"DeneWords": [
+								{ "Name": "Organs Panel", "Value": "@Egg:Human Interface:Home Page:Organs Panel", "Value Type": "Dene Pointer", "Required": true }
+							]
+						}
+					]
+				}
+			],
+			"Mutations": []
+		},
+		"Medula": {
+			"Mutations": [{}]
+		}
+	}
+}
